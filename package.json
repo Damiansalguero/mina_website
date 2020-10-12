@@ -1,0 +1,23 @@
+{
+  "name": "mina_website",
+  "version": "1.0.0",
+  "description": "Mina Website",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Damiansalguero/mina_website.git"
+  },
+  "author": "Damian Salguero Avila",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Damiansalguero/mina_website/issues"
+  },
+  "homepage": "https://github.com/Damiansalguero/mina_website#readme",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1"
+  }
+}
