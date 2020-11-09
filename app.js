@@ -1,5 +1,10 @@
 const express = require("express");
 const app = express();
+const path = require("path");
+const mongoose = require("mongoose");
+const ejsMate = require("ejs-mate");
+const bodyParser = require("body-parser");
+const methodOverride = require("method-override");
 
 //////////////// VIEW ENGINSE SETUP ///////////////////
 app.engine("ejs", ejsMate);
@@ -10,7 +15,9 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 
-///////////////////// ROUTES /////////////////////////
+///////////////////////////////////////////////////////////////////////////////
+/////////////////////////////// ROUTES ////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
 app.get("/", function(req, res) {
   res.send("WORKING!!!!!!!!!!");
 });
