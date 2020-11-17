@@ -17,6 +17,12 @@ const methodOverride = require("method-override");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
 
+//////////////// MODEL IMPORT //////////////////
+const User = require("./models/user");
+
+//////////////// ROUTES IMPORT ///////////////////
+const userRoutes = require("./routes/users");
+
 //////////////// MONGO DB SETUP ///////////////////
 mongoose.connect("mongodb://localhost:27017/mina", {
   useNewUrlParser: true,
@@ -74,9 +80,7 @@ app.use((req, res, next) => {
 });
 
 //////////////// USE  ROUTEHANDLERS ///////////////////
-// app.use("/campgrounds", campgroundRoutes);
-// app.use("/campgrounds/:id/reviews", reviewRoutes);
-// app.use("/", userRoutes);
+app.use("/", userRoutes);
 
 ///////////////////////////////////////////////////////////////////////////////
 /////////////////////////////// ROUTES ////////////////////////////////////////
@@ -86,7 +90,7 @@ app.get("/", function(req, res) {
 });
 
 app.get("/landing", function(req, res) {
-  res.render("landing");
+  res.send("landing!!!!!!!!!!!!!!!!");
 });
 app.all("*", (req, res, next) => {
   next(new ExpressError("Page Not Found", 404));
