@@ -10,8 +10,8 @@ const mongoose = require("mongoose");
 const ejsMate = require("ejs-mate");
 const session = require("express-session");
 const flash = require("connect-flash");
-const { dataSchema } = require("./schemas.js");
-const ExpressError = require("./utils/ExpressError");
+// const { dataSchema } = require("./schemas.js");
+// const ExpressError = require("./utils/ExpressError");
 const bodyParser = require("body-parser");
 const methodOverride = require("method-override");
 const passport = require("passport");
@@ -74,9 +74,9 @@ app.use((req, res, next) => {
 });
 
 //////////////// USE  ROUTEHANDLERS ///////////////////
-app.use("/campgrounds", campgroundRoutes);
-app.use("/campgrounds/:id/reviews", reviewRoutes);
-app.use("/", userRoutes);
+// app.use("/campgrounds", campgroundRoutes);
+// app.use("/campgrounds/:id/reviews", reviewRoutes);
+// app.use("/", userRoutes);
 
 ///////////////////////////////////////////////////////////////////////////////
 /////////////////////////////// ROUTES ////////////////////////////////////////
