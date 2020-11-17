@@ -1,23 +1,28 @@
-<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <div class="mina-logo">
+      <a class="navbar-brand" href="#">
+        <img src="/img/Mina_Logo.png" alt="">
+        <p id="logo-subtitle">Leben in Vielfalt</p>
+      </a>
+    </div>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
+      <div class="navbar-nav ml-auto">
         <a class="nav-link" href="/">Home</a>
         <a class="nav-link" href="/campgrounds">Campgrounds</a>
         <a class="nav-link" href="/campgrounds/new">New Campground</a>
+        <!-- Template for conditional displaying -->
+        <% if(currentUser) {%>
+          <a class="nav-link" href="/login">Login</a>
+          <a class="nav-link" href="/register">Register</a>
+          <a class="nav-link" href="/logout">Logout</a>
+          <% } %>
       </div>
-      <!-- Template for conditional displaying -->
-      <div class="navbar-nav ml-auto">
-        <% if(!currentUser) {%>
-        <a class="nav-link" href="/login">Login</a>
-        <a class="nav-link" href="/register">Register</a>
-        <% } else {%>
-        <a class="nav-link" href="/logout">Logout</a>
-        <% } %>
+      <div class="symbol-box ml-auto">
+        <img src="/img/Group 1.svg" alt="" id="symbols">
       </div>
     </div>
   </div>

@@ -90,7 +90,7 @@ app.get("/", function(req, res) {
 });
 
 app.get("/landing", function(req, res) {
-  res.send("landing!!!!!!!!!!!!!!!!");
+  res.render("landing");
 });
 app.all("*", (req, res, next) => {
   next(new ExpressError("Page Not Found", 404));

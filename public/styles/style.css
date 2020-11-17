@@ -1,3 +1,4 @@
+/* NAVBAR STYLE */
 .navbar {
   background-color: #fff;
 }
@@ -8,7 +9,6 @@
 
 .navbar-nav {
   border-top: 3px solid #db2a6f;
-  padding-bottom: 15vh;
   margin-right: 1vw;
 }
 
@@ -22,3 +22,22 @@
   color: #fff;
   background-color: #db2a6f;
 }
+
+#symbols {
+  width: 200px;
+}
+
+.symbol-box {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 1vw;
+  padding-top: 2vh;
+}
+.navbar > .container-fluid {
+  align-items: baseline;
+}
+
+.navbar-collapse {
+  flex-direction: column;
+}
+/* NAVBAR STYLE */
