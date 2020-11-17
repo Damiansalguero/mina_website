@@ -5,6 +5,7 @@
 
 .navbar-dark .navbar-nav .nav-link {
   color: #000;
+  padding: 1rem;
 }
 
 .navbar-nav {
@@ -39,5 +40,12 @@
 
 .navbar-collapse {
   flex-direction: column;
+}
+.navbar-toggler {
+  background-color: #db2a6f;
+}
+
+.br-link {
+  text-align: center;
 }
 /* NAVBAR STYLE */
