@@ -1,7 +1,19 @@
-/* NAVBAR STYLE */
+body {
+  background-color: black;
+}
+h1 {
+  color: white;
+}
 
+.h1 {
+  color: #000;
+  text-decoration: underline;
+  text-decoration-color: #72c5d5;
+}
+
+/* NAVBAR STYLE */
 .navbar {
-  background-color: #adb5bd;
+  background-color: #fff;
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -49,17 +61,20 @@
 .br-link {
   text-align: center;
 }
+
 /* NAVBAR STYLE */
 
 /* DOCUMENT STYLE */
-
 .block-box {
   padding-top: 60vh;
 }
 .block {
   height: 300px;
   width: 100%;
-  background-color: #0dcaf0;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .rosa {
   background-color: #db2a6f;
@@ -67,7 +82,7 @@
 /* DOCUMENT STYLE */
 
 /* Container STYLE */
-.container {
+.container-fluid {
   padding: 0;
   margin-top: 0;
 }
@@ -78,3 +93,25 @@
   background-attachment: fixed;
 } */
 /* Container STYLE */
+
+/* LANDING STYLE */
+#path-1 {
+  margin-top: -25vh;
+}
+
+#path-3 {
+  margin-top: -5vh;
+  z-index: -1;
+}
+#aktuelles {
+  margin-top: -20vh;
+  padding-top: 5%;
+}
+
+#btn-flyer {
+  background-color: #db2a6f;
+  color: #fff;
+  font-weight: bold;
+  z-index: 2;
+}
+/* LANDING STYLE */
