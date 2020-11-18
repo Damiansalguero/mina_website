@@ -1,11 +1,12 @@
 /* NAVBAR STYLE */
+
 .navbar {
-  background-color: #fff;
+  background-color: #adb5bd;
 }
 
 .navbar-dark .navbar-nav .nav-link {
   color: #000;
-  padding: 1rem;
+  padding: 1.5rem;
 }
 
 .navbar-nav {
@@ -31,8 +32,8 @@
 .symbol-box {
   display: flex;
   justify-content: flex-end;
-  padding-right: 1vw;
-  padding-top: 2vh;
+  padding-right: 3vw;
+  padding-top: 5vh;
 }
 .navbar > .container-fluid {
   align-items: baseline;
@@ -49,3 +50,31 @@
   text-align: center;
 }
 /* NAVBAR STYLE */
+
+/* DOCUMENT STYLE */
+
+.block-box {
+  padding-top: 60vh;
+}
+.block {
+  height: 300px;
+  width: 100%;
+  background-color: #0dcaf0;
+}
+.rosa {
+  background-color: #db2a6f;
+}
+/* DOCUMENT STYLE */
+
+/* Container STYLE */
+.container {
+  padding: 0;
+  margin-top: 0;
+}
+/* .container-landing {
+  background-image: url(/img/photo-1529156069898-49953e39b3ac.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+} */
+/* Container STYLE */
