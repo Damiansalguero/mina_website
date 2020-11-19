@@ -139,7 +139,8 @@ h1 {
   font-weight: bold;
   z-index: 2;
 }
-#calendar {
+#calendar,
+#über {
   margin-top: -10vh;
 }
 #calendar-content {
@@ -157,6 +158,11 @@ h1 {
 .text-block {
   width: 50%;
   color: #fff;
+  padding-bottom: 10vh;
+}
+
+#block-box-blue {
+  margin-top: -20vh;
 }
 
 #map {
@@ -195,3 +201,34 @@ h1 {
   float: right;
 }
 /* LANDING STYLE */
+
+/* FOOTER STYLE */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-contact {
+  color: #fff;
+  list-style: none;
+  font-size: 12px;
+}
+
+.social-items {
+  margin-left: 8vw;
+}
+
+.social-items a {
+  padding: 0 1vw;
+  color: #fff;
+}
+
+.social-icon-mail {
+  color: #343a40;
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  padding: 1px;
+}
+/* FOOTER STYLE */
