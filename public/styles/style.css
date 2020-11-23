@@ -1,27 +1,19 @@
 /* FONT IMPORT */
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
-
+@font-face {
+  font-family: calibri;
+  src: local("/fonts/Calibri.ttf");
+}
 /* GENERAL STYLES */
 body {
   background-color: black;
-  font-family: "Lato", sans-serif;
+  font-family: calibri;
 }
 h1 {
-  color: white;
-  text-decoration: underline;
+  margin-bottom: 5vh;
 }
 
-.h1 {
-  text-decoration-color: #72c5d5;
-}
-.h1-green {
-  text-decoration-color: #5a793e;
-}
-.h1-blue {
-  text-decoration-color: #2c6a85;
-}
-.h1-rosa {
-  text-decoration-color: #db2a6f;
+.h1-black {
   color: #000;
 }
 /* GENERAL STYLES */
@@ -29,6 +21,7 @@ h1 {
 /* NAVBAR STYLE */
 .navbar {
   background-color: #fff;
+  z-index: 2;
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -77,15 +70,22 @@ h1 {
   text-align: center;
 }
 
+#path-nav {
+  z-index: 1;
+  margin-top: -25vh;
+}
+.mina-logo {
+  margin-left: 3vw;
+}
+
+.mina-logo > img {
+  padding-top: 2vh;
+}
+
 /* NAVBAR STYLE */
 
 /* DOCUMENT STYLE */
-.block-box {
-}
 
-#block-box {
-  padding-top: 60vh;
-}
 .block {
   height: auto;
   width: 100%;
@@ -111,17 +111,24 @@ h1 {
   padding: 0;
   margin-top: 0;
 }
-body {
-  background-image: url(/img/page1/photo-1529156069898-49953e39b3ac.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
+
 /* Container STYLE */
 
 /* LANDING STYLE */
 #path-1 {
   margin-top: -25vh;
+  z-index: 3;
+}
+
+#cover-image,
+.block-box {
+  margin-top: -15vh;
+}
+
+#cover-landing {
+  z-index: -1;
+  width: 100%;
+  height: 500px;
 }
 
 #path-3 {
@@ -158,7 +165,7 @@ body {
 .text-block {
   width: 50%;
   color: #fff;
-  padding-bottom: 10vh;
+  padding-bottom: 5vh;
 }
 
 #block-box-blue {
@@ -190,7 +197,6 @@ body {
 
 .sponsor {
   margin-top: -10vh;
-  padding-bottom: 5vh;
 }
 
 #btn-contact {
@@ -207,6 +213,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 20vh;
+  z-index: -1;
 }
 
 .footer-contact {
@@ -231,4 +239,26 @@ body {
   border-radius: 50%;
   padding: 1px;
 }
+#path-footer {
+  margin-bottom: -32vh;
+  margin-top: -25vh;
+  z-index: 3;
+}
 /* FOOTER STYLE */
+
+.title-line {
+  padding-bottom: 3px;
+  border-bottom: 3px solid #72c5d5;
+}
+
+.line-green {
+  border-bottom: 3px solid #5a793e;
+}
+
+.line-blue {
+  border-bottom: 3px solid #2c6a85;
+}
+
+.line-pink {
+  border-bottom: 3px solid #db2a6f;
+}
