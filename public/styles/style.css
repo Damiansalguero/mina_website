@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
 @font-face {
   font-family: calibri;
-  src: local("/fonts/Calibri.ttf");
+  src: url("/fonts/calibri.ttf");
 }
 /* GENERAL STYLES */
 body {
@@ -13,8 +13,8 @@ h1 {
   margin-bottom: 5vh;
 }
 
-.h1-black {
-  color: #000;
+.h1-white {
+  color: #fff;
 }
 /* GENERAL STYLES */
 
