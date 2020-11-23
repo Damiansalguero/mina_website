@@ -4,6 +4,8 @@
   font-family: calibri;
   src: url("/fonts/calibri.ttf");
 }
+/* FONT IMPORT */
+
 /* GENERAL STYLES */
 body {
   background-color: black;
@@ -15,6 +17,10 @@ h1 {
 
 .h1-white {
   color: #fff;
+}
+.container-fluid {
+  padding: 0;
+  margin-top: 0;
 }
 /* GENERAL STYLES */
 
@@ -45,15 +51,15 @@ h1 {
   color: #fff;
 }
 
-#symbols {
-  width: 200px;
+.symbol {
+  margin: 0 10px;
 }
 
 .symbol-box {
   display: flex;
   justify-content: flex-end;
-  padding-right: 3vw;
-  padding-top: 5vh;
+  padding-right: 5vw;
+  padding-top: 6vh;
 }
 .navbar > .container-fluid {
   align-items: baseline;
@@ -103,13 +109,6 @@ h1 {
 }
 .blue {
   background-color: #72c5d5;
-}
-/* DOCUMENT STYLE */
-
-/* Container STYLE */
-.container-fluid {
-  padding: 0;
-  margin-top: 0;
 }
 
 /* Container STYLE */
@@ -174,13 +173,14 @@ h1 {
 
 #map {
   height: 410px;
+  margin-right: 5vw;
 }
 .box {
   display: flex;
   z-index: 2;
 }
 .map-box {
-  justify-content: space-evenly;
+  justify-content: center;
   width: 100%;
 }
 
@@ -193,6 +193,7 @@ h1 {
   padding: 10px;
   color: #fff;
   margin-top: 5%;
+  margin-left: 5vw;
 }
 
 .sponsor {
@@ -223,13 +224,17 @@ h1 {
   font-size: 12px;
 }
 
-.social-items {
-  margin-left: 8vw;
-}
-
 .social-items a {
   padding: 0 1vw;
   color: #fff;
+}
+
+.social-items a:hover {
+  color: #db2a6f;
+}
+.social-icon-mail:hover {
+  color: #db2a6f;
+  background-color: #fff;
 }
 
 .social-icon-mail {
@@ -261,4 +266,11 @@ h1 {
 
 .line-pink {
   border-bottom: 3px solid #db2a6f;
+}
+
+/* MEDIA BREAKPOINTS */
+@media (min-width: 576px) {
+  .nav-link {
+    text-align: center;
+  }
 }

@@ -20,13 +20,21 @@
         <a class="nav-link" href="/campgrounds/new">Kontakt</a>
         <!-- Template for conditional displaying -->
         <% if(currentUser) {%>
-          <a class="nav-link" href="/login">Login</a>
-          <a class="nav-link" href="/register">Register</a>
-          <a class="nav-link" href="/logout">Logout</a>
-          <% } %>
+        <a class="nav-link" href="/login">Login</a>
+        <a class="nav-link" href="/register">Register</a>
+        <a class="nav-link" href="/logout">Logout</a>
+        <% } %>
       </div>
       <div class="symbol-box ml-auto">
-        <img src="/img/gesamt/Logos/Group 1.svg" alt="" id="symbols">
+        <a href="#">
+          <img class="symbol" src="/img/gesamt/Logos/search.svg" alt="">
+        </a>
+        <a href="#">
+          <img class="symbol" src="/img/gesamt/Logos/eye.svg" alt="">
+        </a>
+        <a href="#">
+          <img class="symbol" src="/img/gesamt/Logos/language.svg" alt="">
+        </a>
       </div>
     </div>
   </div>
