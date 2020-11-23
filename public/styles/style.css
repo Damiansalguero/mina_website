@@ -48,8 +48,8 @@ h1 {
 
 .navbar-dark .navbar-nav .nav-link:focus,
 .navbar-dark .navbar-nav .nav-link:hover {
-  color: #fff;
   background-color: #db2a6f;
+  color: #fff;
 }
 
 #symbols {
@@ -111,12 +111,12 @@ h1 {
   padding: 0;
   margin-top: 0;
 }
-/* .container-landing {
-  background-image: url(/img/photo-1529156069898-49953e39b3ac.png);
+body {
+  background-image: url(/img/page1/photo-1529156069898-49953e39b3ac.png);
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-} */
+}
 /* Container STYLE */
 
 /* LANDING STYLE */
