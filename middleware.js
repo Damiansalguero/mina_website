@@ -1,7 +1,6 @@
 const { dataSchema, reviewSchema } = require("./schemas.js");
 const ExpressError = require("./utils/ExpressError");
-// const Campground = require("./models/campground");
-// const Review = require("./models/review");
+const Post = require("./models/post");
 
 //isAuthenticated() is a passport method
 module.exports.isLoggedIn = (req, res, next) => {
