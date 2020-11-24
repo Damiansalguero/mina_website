@@ -22,8 +22,8 @@ const User = require("./models/user");
 const Post = require("./models/post");
 
 //////////////// ROUTES IMPORT ///////////////////
-const userRoutes = require("./routes/users");
 const postRoutes = require("./routes/posts");
+const userRoutes = require("./routes/users");
 
 //////////////// MONGO DB SETUP ///////////////////
 mongoose.connect("mongodb://localhost:27017/mina", {

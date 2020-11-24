@@ -1,4 +1,4 @@
-const { dataSchema, reviewSchema } = require("./schemas.js");
+const { dataSchema } = require("./schemas.js");
 const ExpressError = require("./utils/ExpressError");
 const Post = require("./models/post");
 
@@ -23,15 +23,15 @@ module.exports.validateData = (req, res, next) => {
   }
 };
 //////////////// VALIDATION AUTHOR //////////////////
-// module.exports.isAuthor = async (req, res, next) => {
-//   const { id } = req.params;
-//   const campground = await Campground.findById(id);
-//   if (!campground.author.equals(req.user._id)) {
-//     req.flash("error", "You do not have permission to do that");
-//     return res.redirect(`/campgrounds/${id}`);
-//   }
-//   next();
-// };
+module.exports.isAuthor = async (req, res, next) => {
+  const { id } = req.params;
+  const campground = await Campground.findById(id);
+  if (!campground.author.equals(req.user._id)) {
+    req.flash("error", "You do not have permission to do that");
+    return res.redirect(`/campgrounds/${id}`);
+  }
+  next();
+};
 
 //////////////// VALIDATION MIDDLEWARE //////////////////
 // module.exports.validateReview = (req, res, next) => {

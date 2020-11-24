@@ -1,6 +1,6 @@
 //////////////// MODEL IMPORT ///////////////////
 const Post = require("../models/post");
-const { dataSchema, reviewSchema } = require("../schemas.js");
+const { dataSchema } = require("../schemas.js");
 const { cloudinary } = require("../cloudinary");
 
 module.exports.index = async (req, res) => {
