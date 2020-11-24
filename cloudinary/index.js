@@ -10,8 +10,22 @@ cloudinary.config({
 const storage = new CloudinaryStorage({
   cloudinary,
   params: {
-    folder: "Yelp Camp",
-    allowedFormats: ["jpeg", "png", "jpg"]
+    folder: "Mina",
+    allowedFormats: [
+      "jpeg",
+      "png",
+      "jpg",
+      "avi",
+      "mkv",
+      "flv",
+      "ogg",
+      "ogv",
+      "gif",
+      "wmv",
+      "mp4",
+      "mpeg",
+      "webm"
+    ]
   }
 });
 

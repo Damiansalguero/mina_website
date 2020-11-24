@@ -12,53 +12,46 @@ module.exports.renderNewForm = (req, res) => {
   res.render("posts/new");
 };
 
-module.exports.createCampground = async (req, res, next) => {
-  const campground = await new Campground(req.body.campground);
-  campground.images = req.files.map(file => ({
+module.exports.createPost = async (req, res, next) => {
+  const post = await new Post(req.body.post);
+  post.images = req.files.map(file => ({
     url: file.path,
     filename: file.filename
   }));
-  campground.author = req.user._id;
-  await campground.save();
-  console.log(campground);
+  post.author = req.user._id;
+  await post.save();
+  console.log(post);
   //Flash message needs to be specified and declared here + Setup in app.js (middleware in app.use)
-  req.flash("success", "Successfully made a new campground!");
-  res.redirect(`/campgrounds/${campground._id}`);
+  req.flash("success", "Der Post wurde erfolgreich erstellt !");
+  res.redirect(`/posts/${post._id}`);
 };
 
-module.exports.showCampground = async (req, res) => {
-  const campground = await Campground.findById(req.params.id)
-    .populate({
-      path: "reviews",
-      populate: {
-        path: "author"
-      }
-    })
-    .populate("author");
-  if (!campground) {
-    req.flash("error", "Campground does not exist");
-    return res.redirect("/campgrounds");
+module.exports.showPost = async (req, res) => {
+  const post = await Post.findById(req.params.id).populate("author");
+  if (!post) {
+    req.flash("error", "Dieser Post existiert nicht mehr !");
+    return res.redirect("/posts");
   }
-  res.render("campgrounds/show", { campground });
+  res.render("posts/show", { post });
 };
 
 module.exports.renderEditForm = async (req, res) => {
   const { id } = req.params;
-  const campground = await Campground.findById(req.params.id);
-  res.render("campgrounds/edit", { campground });
+  const post = await Post.findById(req.params.id);
+  res.render("posts/edit", { post });
 };
 
-module.exports.updateCampground = async (req, res) => {
+module.exports.updatePost = async (req, res) => {
   const { id } = req.params;
-  const campground = await Campground.findByIdAndUpdate(id, {
-    ...req.body.campground
+  const post = await Post.findByIdAndUpdate(id, {
+    ...req.body.post
   });
   const imgs = req.files.map(file => ({
     url: file.path,
     filename: file.filename
   }));
-  campground.images.push(...imgs);
-  await campground.save();
+  post.images.push(...imgs);
+  await post.save();
   //This line makes sure not the whole array is getting deleted
   if (req.body.deleteImages) {
     //This line deletes the images from cloudinary
@@ -66,16 +59,16 @@ module.exports.updateCampground = async (req, res) => {
       await cloudinary.uploader.destroy(filename);
     }
     //Deletes it also from mongo
-    await campground.updateOne({
+    await post.updateOne({
       $pull: { images: { filename: { $in: req.body.deleteImages } } }
     });
   }
-  req.flash("success", "Successfully updated campground");
-  res.redirect(`/campgrounds/${campground._id}`);
+  req.flash("success", "Der Post wurde erfolgreich aktualisiert !");
+  res.redirect(`/posts/${post._id}`);
 };
 
-module.exports.deleteCampground = async (req, res) => {
+module.exports.deletePost = async (req, res) => {
   const { id } = req.params;
-  await Campground.findByIdAndDelete(id);
-  res.redirect("/campgrounds");
+  await Post.findByIdAndDelete(id);
+  res.redirect("/posts");
 };

@@ -12,8 +12,11 @@ module.exports.registerUser = async (req, res) => {
     //login() method makes sure a user gets logged in right after register
     req.login(registeredUser, err => {
       if (err) return next(err);
-      req.flash("success", "You have been signed up. Welcome!!!");
-      res.redirect("/campgrounds");
+      req.flash(
+        "success",
+        "Deine Registrierung wurde erfolgreich abgeschlossen. Willkommen !"
+      );
+      res.redirect("/posts");
     });
   } catch (err) {
     req.flash("error", err.message);
@@ -29,7 +32,7 @@ module.exports.loginRedirect = (req, res) => {
   req.flash("success", "Welcome Back");
   //This guarantees, that the last path is being saved and returns after login
   //Setup in middleware.js
-  const redirectUrl = req.session.returnTo || "/campgrounds";
+  const redirectUrl = req.session.returnTo || "/posts";
   //This takes the returnTo info out so it cannot be seen
   delete req.session.returnTo;
   res.redirect(redirectUrl);
@@ -37,6 +40,6 @@ module.exports.loginRedirect = (req, res) => {
 
 module.exports.logout = (req, res) => {
   req.logout();
-  req.flash("info", "You logged out Successfully");
-  res.redirect("/campgrounds");
+  req.flash("info", "Du bist jetzt ausgeloggt !");
+  res.redirect("/posts");
 };
