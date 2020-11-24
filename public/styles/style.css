@@ -22,6 +22,24 @@ h1 {
   padding: 0;
   margin-top: 0;
 }
+.block {
+  height: auto;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.rosa {
+  background-color: #db2a6f;
+}
+.green {
+  background-color: #9fb039;
+  margin-top: -15vh;
+}
+.blue {
+  background-color: #72c5d5;
+}
 /* GENERAL STYLES */
 
 /* NAVBAR STYLE */
@@ -87,31 +105,7 @@ h1 {
 .mina-logo > img {
   padding-top: 2vh;
 }
-
 /* NAVBAR STYLE */
-
-/* DOCUMENT STYLE */
-
-.block {
-  height: auto;
-  width: 100%;
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.rosa {
-  background-color: #db2a6f;
-}
-.green {
-  background-color: #9fb039;
-  margin-top: -15vh;
-}
-.blue {
-  background-color: #72c5d5;
-}
-
-/* Container STYLE */
 
 /* LANDING STYLE */
 #path-1 {
@@ -165,6 +159,7 @@ h1 {
   width: 50%;
   color: #fff;
   padding-bottom: 5vh;
+  text-align: justify;
 }
 
 #block-box-blue {
@@ -234,7 +229,8 @@ h1 {
 }
 .social-icon-mail:hover {
   color: #db2a6f;
-  background-color: #fff;
+  background-color: none;
+  border: none;
 }
 
 .social-icon-mail {
