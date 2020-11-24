@@ -10,8 +10,8 @@ const mongoose = require("mongoose");
 const ejsMate = require("ejs-mate");
 const session = require("express-session");
 const flash = require("connect-flash");
-// const { dataSchema } = require("./schemas.js");
-// const ExpressError = require("./utils/ExpressError");
+const { dataSchema } = require("./schemas.js");
+const ExpressError = require("./utils/ExpressError");
 const bodyParser = require("body-parser");
 const methodOverride = require("method-override");
 const passport = require("passport");
@@ -19,9 +19,11 @@ const LocalStrategy = require("passport-local");
 
 //////////////// MODEL IMPORT //////////////////
 const User = require("./models/user");
+const Post = require("./models/post");
 
 //////////////// ROUTES IMPORT ///////////////////
 const userRoutes = require("./routes/users");
+const postRoutes = require("./routes/posts");
 
 //////////////// MONGO DB SETUP ///////////////////
 mongoose.connect("mongodb://localhost:27017/mina", {
@@ -86,10 +88,6 @@ app.use("/posts", postRoutes);
 ///////////////////////////////////////////////////////////////////////////////
 /////////////////////////////// ROUTES ////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
-app.get("/", function(req, res) {
-  res.send("WORKING!!!!!!!!!!");
-});
-
 app.get("/landing", function(req, res) {
   res.render("landing");
 });
@@ -97,14 +95,14 @@ app.get("/workshops", function(req, res) {
   res.render("workshops");
 });
 app.all("*", (req, res, next) => {
-  next(new ExpressError("Page Not Found", 404));
+  next(new ExpressError("Seite nicht gefunden", 404));
 });
 
 ////////////////// ERROR HANDLER /////////////////////////
 app.use((err, req, res, next) => {
   const { statusCode = 500 } = err;
   if (!err.message) {
-    err.message = "Something went wrong";
+    err.message = "Ups, etwas ist schief gelaufen";
   }
 
   res.status(statusCode).render("error", { err });
