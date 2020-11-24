@@ -13,10 +13,3 @@ module.exports.dataSchema = Joi.object({
   //needs to be included in order to work on the form
   deleteImages: Joi.array()
 });
-
-module.exports.reviewSchema = Joi.object({
-  review: Joi.object({
-    rating: Joi.number().required(),
-    body: Joi.string().required()
-  }).required()
-});
