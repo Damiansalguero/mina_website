@@ -3,8 +3,14 @@
 - Nav
   - Logos klickbar
 - Aktuelles Upload
+  - 
 - Flyer + Button
 - Kalender Upload
+  - Datum
+  - Uhrzeit
+  - Titel
+  - Ort
+  - Text
 - Karte mit Pin
 - Partner Link Images
 - Footer
