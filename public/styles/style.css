@@ -63,11 +63,15 @@ h1 {
   margin-left: 25px;
 }
 
-.nav-link:focus,
-.nav-link:hover,
-.nav-link.active {
+.nav-link:hover {
   background-color: #72c5d5;
   color: #fff;
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #db2a6f;
+  font-weight: bold;
+  background-color: none;
 }
 
 .symbol {
