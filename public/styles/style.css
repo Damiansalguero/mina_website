@@ -165,7 +165,7 @@ h1 {
 .text-block {
   width: 50%;
   color: #fff;
-  padding-bottom: 5vh;
+  padding-bottom: 10vh;
   text-align: justify;
 }
 
@@ -199,7 +199,7 @@ h1 {
 }
 
 .sponsor {
-  margin-top: -10vh;
+  margin: -10vh 0 10vh 0;
 }
 
 #btn-contact {
@@ -250,6 +250,9 @@ h1 {
   margin-bottom: -32vh;
   margin-top: -25vh;
   z-index: 3;
+}
+.footer-content {
+  padding-top: 10vh;
 }
 /* FOOTER STYLE */
 
