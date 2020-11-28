@@ -94,6 +94,10 @@ app.get("/landing", function(req, res) {
 app.get("/workshops", function(req, res) {
   res.render("workshops");
 });
+
+app.get("/prozess", function(req, res) {
+  res.render("prozess");
+});
 app.all("*", (req, res, next) => {
   next(new ExpressError("Seite nicht gefunden", 404));
 });
