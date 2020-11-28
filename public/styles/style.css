@@ -57,7 +57,9 @@ h1 {
   border-top: 3px solid #db2a6f;
   margin-right: 1vw;
 }
-
+.logo {
+  margin: 5vh 0;
+}
 #logo-subtitle {
   color: #000;
   margin-left: 25px;
@@ -101,7 +103,7 @@ h1 {
 
 #path-nav {
   z-index: 1;
-  margin-top: -25vh;
+  margin-top: -20vh;
 }
 .mina-logo {
   margin-left: 3vw;
@@ -133,7 +135,7 @@ h1 {
   margin-top: -5vh;
   z-index: -1;
 }
-#aktuelles {
+.aktuelles {
   margin-top: -20vh;
   padding-top: 5%;
 }
