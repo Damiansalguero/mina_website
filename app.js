@@ -101,6 +101,9 @@ app.get("/prozess", function(req, res) {
 app.get("/partizip", function(req, res) {
   res.render("partizip");
 });
+app.get("/kontakt", function(req, res) {
+  res.render("kontakt");
+});
 app.all("*", (req, res, next) => {
   next(new ExpressError("Seite nicht gefunden", 404));
 });
