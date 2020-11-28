@@ -98,6 +98,9 @@ app.get("/workshops", function(req, res) {
 app.get("/prozess", function(req, res) {
   res.render("prozess");
 });
+app.get("/partizip", function(req, res) {
+  res.render("partizip");
+});
 app.all("*", (req, res, next) => {
   next(new ExpressError("Seite nicht gefunden", 404));
 });
