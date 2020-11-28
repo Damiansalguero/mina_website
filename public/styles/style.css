@@ -139,7 +139,6 @@ h1 {
 }
 .aktuelles {
   margin-top: -20vh;
-  padding-top: 5%;
 }
 
 #btn-flyer {
@@ -306,7 +305,9 @@ h1 {
   margin-bottom: 15vh;
 }
 
-.gallery h3 {
+.gallery h3,
+h4,
+p {
   margin-left: 2vw;
   color: #fff;
   font-weight: bold;
@@ -316,6 +317,21 @@ h1 {
   margin: 10px;
   height: 200px;
 }
+.gallery-partizip {
+  width: 70%;
+}
+
+.gallery-partizip h3,
+h4,
+p {
+  margin-left: 0;
+}
+
+.gallery-partizip h4,
+p {
+  font-weight: normal;
+}
+
 /* WORKSHOP STYLES */
 
 /* CONTACT STYLES */
@@ -367,5 +383,8 @@ a {
   display: inline-block;
   width: 1em;
   margin-left: -1em;
+}
+.more {
+  padding-bottom: 5vh;
 }
 /* PROZESS STYLES */
