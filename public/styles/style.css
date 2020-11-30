@@ -12,7 +12,7 @@ body {
   font-family: calibri;
 }
 h1 {
-  margin-bottom: 5vh;
+  margin: 5vh 0 5vh 0;
 }
 
 .h1-white {
@@ -132,14 +132,14 @@ h1 {
 /********** NAVBAR STYLES ***********/
 
 /********** LANDING STYLES ***********/
-#path-1 {
+#path-rosa-lg {
   margin-top: -25vh;
   z-index: 3;
 }
-.cover-image {
+.header-bg {
   padding-top: 5vh;
 }
-.cover-image,
+.header-bg,
 .block-box {
   margin-top: -15vh;
 }
@@ -150,7 +150,7 @@ h1 {
   height: 500px;
 }
 
-#path-3 {
+#path-white-2 {
   margin-top: -5vh;
   z-index: -1;
 }
@@ -189,8 +189,8 @@ h1 {
   text-align: justify;
 }
 
-.block-box-blue {
-  margin-top: -20vh;
+#last-text {
+  padding-bottom: 20vh;
 }
 
 #map {
@@ -266,7 +266,7 @@ h1 {
   border-radius: 50%;
   padding: 1px;
 }
-#path-footer {
+#path-white-4 {
   margin-bottom: -32vh;
   margin-top: -25vh;
   z-index: 3;
@@ -395,5 +395,22 @@ a {
   .nav-link {
     text-align: center;
   }
+  .block-box,
+  .block-box-blue {
+    margin-top: -3vh;
+  }
 }
+@media (min-width: 768px) {
+  .block-box,
+  .block-box-blue {
+    margin-top: -5vh;
+  }
+}
+
+@media (min-width: 992px) {
+  .block-box {
+    margin-top: -15vh;
+  }
+}
+
 /************* BREAKPOINTS *************/
