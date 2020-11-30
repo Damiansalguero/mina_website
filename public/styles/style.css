@@ -337,19 +337,20 @@ p {
 /* CONTACT STYLES */
 .worker-box {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   justify-content: space-evenly;
-  margin-bottom: 10vh;
   margin-top: 5vh;
 }
 .worker {
   display: flex;
   align-items: center;
   margin: 0 10px;
+  width: 30vw;
 }
 .contact-img {
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
   border-radius: 50%;
   margin-right: 15px;
   margin-bottom: 10px;
@@ -394,4 +395,5 @@ a {
 #btn-contact {
   margin-bottom: 5vh;
 }
+
 /* KONTAKT */
