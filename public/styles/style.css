@@ -8,11 +8,12 @@
 
 /* GENERAL STYLES */
 body {
-  background-color: black;
+  background-color: #fff;
   font-family: calibri;
 }
 h1 {
   margin-bottom: 5vh;
+  text-align: center;
 }
 
 .h1-white {
@@ -369,3 +370,14 @@ a {
   margin-left: -1em;
 }
 /* PROZESS STYLES */
+
+/* REGISTER STYLES */
+.btn-mina {
+  background-color: #db2a6f;
+  border-color: #db2a6f;
+}
+
+.register {
+  margin-top: -4vh;
+}
+/* REGISTER STYLES */

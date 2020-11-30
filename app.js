@@ -39,7 +39,7 @@ db.once("open", () => {
   console.log("MONGO DATABASE CONNECTED");
 });
 
-//////////////// VIEW ENGINSE SETUP ///////////////////
+//////////////// VIEW ENGINE SETUP ///////////////////
 app.engine("ejs", ejsMate);
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
