@@ -1,12 +1,12 @@
-/* FONT IMPORT */
+/********** FONTS  ***********/
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
 @font-face {
   font-family: calibri;
   src: url("/fonts/calibri.ttf");
 }
-/* FONT IMPORT */
+/********** FONTS  ***********/
 
-/* GENERAL STYLES */
+/********** GENERAL STYLES ***********/
 body {
   background-color: black;
   font-family: calibri;
@@ -40,9 +40,26 @@ h1 {
 .blue {
   background-color: #72c5d5;
 }
-/* GENERAL STYLES */
 
-/* NAVBAR STYLE */
+.title-line {
+  padding-bottom: 3px;
+  border-bottom: 3px solid #72c5d5;
+}
+
+.line-green {
+  border-bottom: 3px solid #5a793e;
+}
+
+.line-blue {
+  border-bottom: 3px solid #2c6a85;
+}
+
+.line-pink {
+  border-bottom: 3px solid #db2a6f;
+}
+/********** GENERAL STYLES ***********/
+
+/********** NAVBAR STYLES ***********/
 .navbar {
   background-color: #fff;
   z-index: 2;
@@ -112,9 +129,9 @@ h1 {
 .mina-logo > img {
   padding-top: 2vh;
 }
-/* NAVBAR STYLE */
+/********** NAVBAR STYLES ***********/
 
-/* LANDING STYLE */
+/********** LANDING STYLES ***********/
 #path-1 {
   margin-top: -25vh;
   z-index: 3;
@@ -212,9 +229,9 @@ h1 {
   font-weight: bold;
   float: right;
 }
-/* LANDING STYLE */
+/********** LANDING STYLES ***********/
 
-/* FOOTER STYLE */
+/********** FOOTER STYLES ***********/
 .footer {
   display: flex;
   justify-content: space-between;
@@ -257,33 +274,9 @@ h1 {
 .footer-content {
   padding-top: 10vh;
 }
-/* FOOTER STYLE */
+/********** FOOTER STYLES ***********/
 
-.title-line {
-  padding-bottom: 3px;
-  border-bottom: 3px solid #72c5d5;
-}
-
-.line-green {
-  border-bottom: 3px solid #5a793e;
-}
-
-.line-blue {
-  border-bottom: 3px solid #2c6a85;
-}
-
-.line-pink {
-  border-bottom: 3px solid #db2a6f;
-}
-
-/* MEDIA BREAKPOINTS */
-@media (min-width: 576px) {
-  .nav-link {
-    text-align: center;
-  }
-}
-
-/* WORKSHOP STYLES */
+/********** WS STYLES ***********/
 #table-ws {
   width: 50%;
 }
@@ -331,10 +324,9 @@ p {
 p {
   font-weight: normal;
 }
+/********** WS STYLES ***********/
 
-/* WORKSHOP STYLES */
-
-/* CONTACT STYLES */
+/********** CONTACT STYLES ***********/
 .worker-box {
   display: flex;
   flex-wrap: wrap;
@@ -367,9 +359,9 @@ a {
 .worker-title {
   font-weight: bold;
 }
-/* CONTACT STYLES */
+/********** WS STYLES ***********/
 
-/* PROZESS STYLES */
+/********** PROZESS STYLES ***********/
 #timeline-block {
   padding-bottom: 15vh;
 }
@@ -389,17 +381,19 @@ a {
 .more {
   padding-bottom: 5vh;
 }
-/* PROZESS STYLES */
+/********** PROZESS STYLES ***********/
 
-/* KONTAKT */
+/********** KONTAKT STYLES ***********/
 #btn-contact {
   margin-bottom: 5vh;
 }
 
-/* KONTAKT */
+/********** KONTAKT STYLES ***********/
 
-@media (max-width: 575.98px) {
-  .worker-box {
-    flex-direction: column;
+/************* BREAKPOINTS *************/
+@media (min-width: 576px) {
+  .nav-link {
+    text-align: center;
   }
 }
+/************* BREAKPOINTS *************/
