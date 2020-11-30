@@ -383,7 +383,7 @@ a {
   width: 1em;
   margin-left: -1em;
 }
-<<<<<<< HEAD
+
 /* PROZESS STYLES */
 
 /* REGISTER STYLES */
@@ -393,7 +393,7 @@ a {
 }
 
 .register {
-  margin-top: -4vh;
+  margin-top: 20vh;
 }
 /* REGISTER STYLES */
 =======
@@ -431,6 +431,3 @@ a {
     margin-top: -15vh;
   }
 }
-
-/************* BREAKPOINTS *************/
->>>>>>> 045fa9b3eb069f3ccde85634e39a3c9d43efe162
