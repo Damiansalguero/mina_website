@@ -12,12 +12,9 @@ body {
   font-family: calibri;
 }
 h1 {
-<<<<<<< HEAD
-  margin-bottom: 5vh;
   text-align: center;
-=======
+
   margin: 5vh 0 5vh 0;
->>>>>>> 045fa9b3eb069f3ccde85634e39a3c9d43efe162
 }
 
 .h1-white {
@@ -396,7 +393,6 @@ a {
   margin-top: 20vh;
 }
 /* REGISTER STYLES */
-=======
 .more {
   padding-bottom: 5vh;
 }
