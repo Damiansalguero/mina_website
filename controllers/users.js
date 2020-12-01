@@ -14,13 +14,14 @@ module.exports.registerUser = async (req, res) => {
       if (err) return next(err);
       req.flash(
         "success",
-        "Deine Registrierung wurde erfolgreich abgeschlossen. Willkommen !"
+        "Deine Registrierung wurde erfolgreich abgeschlossen. Willkommen, " +
+          user.username
       );
-      res.redirect("/posts");
+      res.redirect("/landing");
     });
   } catch (err) {
     req.flash("error", err.message);
-    res.redirect("/register");
+    res.redirect("/landing");
   }
 };
 
@@ -29,10 +30,10 @@ module.exports.renderLogin = (req, res) => {
 };
 
 module.exports.loginRedirect = (req, res) => {
-  req.flash("success", "Welcome Back");
+  req.flash("success", "Willkommen zurück !");
   //This guarantees, that the last path is being saved and returns after login
   //Setup in middleware.js
-  const redirectUrl = req.session.returnTo || "/posts";
+  const redirectUrl = req.session.returnTo || "/landing";
   //This takes the returnTo info out so it cannot be seen
   delete req.session.returnTo;
   res.redirect(redirectUrl);
@@ -41,5 +42,5 @@ module.exports.loginRedirect = (req, res) => {
 module.exports.logout = (req, res) => {
   req.logout();
   req.flash("info", "Du bist jetzt ausgeloggt !");
-  res.redirect("/posts");
+  res.redirect("/landing");
 };

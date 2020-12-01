@@ -30,7 +30,7 @@ module.exports.showPost = async (req, res) => {
   const post = await Post.findById(req.params.id).populate("author");
   if (!post) {
     req.flash("error", "Dieser Post existiert nicht mehr !");
-    return res.redirect("/posts");
+    return res.redirect("/landing");
   }
   res.render("posts/show", { post });
 };

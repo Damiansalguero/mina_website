@@ -403,8 +403,35 @@ a {
 #btn-contact {
   margin-bottom: 5vh;
 }
-
 /********** KONTAKT STYLES ***********/
+
+/********** ALERT STYLES ***********/
+.alert {
+  width: 50%;
+  height: 500px;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.alert-success,
+.alert-info {
+  background-color: #db2a6f;
+  color: #fff;
+  font-weight: bold;
+  font-size: 32px;
+  text-align: center;
+}
+
+.flash-img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  margin-top: 5vh;
+}
+/********** ALERT STYLES ***********/
 
 /************* BREAKPOINTS *************/
 @media (min-width: 576px) {
