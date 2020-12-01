@@ -167,6 +167,10 @@ h1 {
   z-index: 2;
   margin: 2vh 0;
 }
+
+.list-group {
+  width: 75%;
+}
 #calendar,
 .block-margin,
 .block-worker,
@@ -388,6 +392,7 @@ a {
 .btn-mina {
   background-color: #db2a6f;
   border-color: #db2a6f;
+  color: #fff;
 }
 
 .btn-mina-white {
