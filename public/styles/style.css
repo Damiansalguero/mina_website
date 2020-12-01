@@ -390,6 +390,13 @@ a {
   border-color: #db2a6f;
 }
 
+.btn-mina-white {
+  border-color: #fff;
+  color: #ffffff;
+  font-weight: bold;
+  z-index: 1;
+}
+
 .mina-form {
   margin-top: 20vh;
 }
