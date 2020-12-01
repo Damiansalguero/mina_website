@@ -5,7 +5,7 @@ const { cloudinary } = require("../cloudinary");
 
 module.exports.index = async (req, res) => {
   const posts = await Post.find({});
-  res.render("posts/index", { posts });
+  res.render("posts/landing", { posts });
 };
 
 module.exports.renderNewForm = (req, res) => {
@@ -23,11 +23,12 @@ module.exports.createPost = async (req, res, next) => {
   console.log(post);
   //Flash message needs to be specified and declared here + Setup in app.js (middleware in app.use)
   req.flash("success", "Der Post wurde erfolgreich erstellt !");
-  res.redirect(`/posts/${post._id}`);
+  // res.redirect(`/posts/${post._id}`);
+  res.redirect(`/posts/landing`);
 };
 
 module.exports.showPost = async (req, res) => {
-  const post = await Post.findById(req.params.id).populate("author");
+  const post = await Post.findById(req.params.id);
   if (!post) {
     req.flash("error", "Dieser Post existiert nicht mehr !");
     return res.redirect("/landing");
@@ -70,5 +71,5 @@ module.exports.updatePost = async (req, res) => {
 module.exports.deletePost = async (req, res) => {
   const { id } = req.params;
   await Post.findByIdAndDelete(id);
-  res.redirect("/posts");
+  res.redirect("/landing");
 };
