@@ -24,6 +24,7 @@ const Post = require("./models/post");
 //////////////// ROUTES IMPORT ///////////////////
 const postRoutes = require("./routes/posts");
 const userRoutes = require("./routes/users");
+const showRoutes = require("./routes/shows");
 
 //////////////// MONGO DB SETUP ///////////////////
 mongoose.connect("mongodb://localhost:27017/mina", {
@@ -84,6 +85,7 @@ app.use((req, res, next) => {
 //////////////// USE  ROUTEHANDLERS ///////////////////
 app.use("/", userRoutes);
 app.use("/posts", postRoutes);
+app.use("/mina", showRoutes);
 
 ///////////////////////////////////////////////////////////////////////////////
 /////////////////////////////// ROUTES ////////////////////////////////////////
