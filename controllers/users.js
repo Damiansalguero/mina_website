@@ -17,11 +17,11 @@ module.exports.registerUser = async (req, res) => {
         "Deine Registrierung wurde erfolgreich abgeschlossen. Willkommen, " +
           user.username
       );
-      res.redirect("/landing");
+      res.redirect("/mina");
     });
   } catch (err) {
     req.flash("error", err.message);
-    res.redirect("/landing");
+    res.redirect("/register");
   }
 };
 
@@ -33,7 +33,7 @@ module.exports.loginRedirect = (req, res) => {
   req.flash("success", "Willkommen zurück !");
   //This guarantees, that the last path is being saved and returns after login
   //Setup in middleware.js
-  const redirectUrl = req.session.returnTo || "/landing";
+  const redirectUrl = req.session.returnTo || "/mina";
   //This takes the returnTo info out so it cannot be seen
   delete req.session.returnTo;
   res.redirect(redirectUrl);
@@ -42,5 +42,5 @@ module.exports.loginRedirect = (req, res) => {
 module.exports.logout = (req, res) => {
   req.logout();
   req.flash("info", "Du bist jetzt ausgeloggt !");
-  res.redirect("/landing");
+  res.redirect("/mina");
 };
