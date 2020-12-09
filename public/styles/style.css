@@ -59,12 +59,32 @@ h1 {
 .line-pink {
   border-bottom: 3px solid #db2a6f;
 }
+
+.contact-box {
+  clip-path: polygon(0 28%, 100% 0, 100% 100%, 0% 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 350px;
+  background-color: #db2a6f;
+  padding-top: 15vh;
+  height: auto;
+}
+.row-contact {
+  margin: 0 5vw;
+}
 /********** GENERAL STYLES ***********/
 
 /********** NAVBAR STYLES ***********/
 .navbar {
   background-color: #fff;
   z-index: 2;
+}
+.nav-box {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 71%);
+  background-color: #fff;
+  height: auto;
+  padding-bottom: 3vh;
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -462,24 +482,5 @@ a {
 }
 
 /*************** TEST STYLES ****************/
-.test-box {
-  clip-path: polygon(0 28%, 100% 0, 100% 100%, 0% 100%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 350px;
-  background-color: #db2a6f;
-  padding-top: 15vh;
-  height: auto;
-}
-.row-contact {
-  margin: 0 5vw;
-}
 
-.nav-box {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 71%);
-  background-color: #fff;
-  height: auto;
-  padding-bottom: 5vh;
-}
 /*************** TEST STYLES ****************/
