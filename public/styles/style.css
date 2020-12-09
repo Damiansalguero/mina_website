@@ -154,6 +154,12 @@ h1 {
 /********** NAVBAR STYLES ***********/
 
 /********** LANDING STYLES ***********/
+.aktuelles {
+  clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
+  height: auto;
+  padding: 10vh 0;
+  margin-top: -10vh;
+}
 #path-rosa-lg {
   margin-top: -25vh;
   z-index: 3;
@@ -175,9 +181,6 @@ h1 {
 #path-white-2 {
   margin-top: -5vh;
   z-index: -1;
-}
-.aktuelles {
-  margin-top: -20vh;
 }
 
 #btn-flyer {
