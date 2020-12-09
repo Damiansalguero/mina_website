@@ -72,6 +72,12 @@ h1 {
   padding: 1.5rem;
 }
 
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #db2a6f;
+  font-weight: bold;
+  background-color: none;
+}
+
 .navbar-nav {
   border-top: 3px solid #db2a6f;
   margin-right: 1vw;
@@ -87,12 +93,6 @@ h1 {
 .nav-link:hover {
   background-color: #72c5d5;
   color: #fff;
-}
-
-.navbar-dark .navbar-nav .nav-link.active {
-  color: #db2a6f;
-  font-weight: bold;
-  background-color: none;
 }
 
 .symbol {

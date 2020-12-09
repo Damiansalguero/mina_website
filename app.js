@@ -61,6 +61,7 @@ const sessionConfig = {
     maxAge: 1000 * 60 * 60 * 24 * 7
   }
 };
+
 app.use(session(sessionConfig));
 
 //////////////// USE  FLASH ///////////////////
@@ -90,22 +91,26 @@ app.use("/mina", showRoutes);
 ///////////////////////////////////////////////////////////////////////////////
 /////////////////////////////// ROUTES ////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
+
+app.get("/square", (req, res) => {
+  res.render("square");
+});
 // app.get("/landing", function(req, res) {
 //   res.render("landing");
 // });
-app.get("/workshops", function(req, res) {
-  res.render("workshops");
-});
-
-app.get("/prozess", function(req, res) {
-  res.render("prozess");
-});
-app.get("/partizip", function(req, res) {
-  res.render("partizip");
-});
-app.get("/kontakt", function(req, res) {
-  res.render("kontakt");
-});
+// app.get("/workshops", function(req, res) {
+//   res.render("workshops");
+// });
+//
+// app.get("/prozess", function(req, res) {
+//   res.render("prozess");
+// });
+// app.get("/partizip", function(req, res) {
+//   res.render("partizip");
+// });
+// app.get("/kontakt", function(req, res) {
+//   res.render("kontakt");
+// });
 app.all("*", (req, res, next) => {
   next(new ExpressError("Seite nicht gefunden", 404));
 });
