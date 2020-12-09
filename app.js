@@ -92,8 +92,8 @@ app.use("/mina", showRoutes);
 /////////////////////////////// ROUTES ////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
 
-app.get("/square", (req, res) => {
-  res.render("square");
+app.get("/test", (req, res) => {
+  res.render("test");
 });
 // app.get("/landing", function(req, res) {
 //   res.render("landing");
