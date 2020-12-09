@@ -336,16 +336,11 @@ p {
 /********** CONTACT STYLES ***********/
 .worker-box {
   display: flex;
-  flex-wrap: wrap;
-  width: 100%;
   justify-content: space-evenly;
-  margin-top: 5vh;
 }
 .worker {
   display: flex;
   align-items: center;
-  margin: 0 10px;
-  width: 30vw;
 }
 .contact-img {
   height: 150px;
