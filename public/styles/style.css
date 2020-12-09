@@ -333,10 +333,6 @@ p {
 /********** WS STYLES ***********/
 
 /********** CONTACT STYLES ***********/
-.worker-box {
-  display: flex;
-  justify-content: center;
-}
 .worker {
   display: flex;
   align-items: center;
