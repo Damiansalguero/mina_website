@@ -173,7 +173,6 @@ h1 {
 }
 #calendar,
 .block-margin,
-.block-worker,
 .contact {
   margin-top: -10vh;
 }
@@ -336,7 +335,7 @@ p {
 /********** CONTACT STYLES ***********/
 .worker-box {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 .worker {
   display: flex;
