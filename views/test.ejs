@@ -1,10 +1,39 @@
 <% layout("layouts/boilerplate") %>
-<div class="block aktuelles">
-  <h1 class=""><span class="title-line">Aktuelles</span></h1>
-  <h3>Während der Corona Zeit – Korona döneminde - خلالة فترة أزمة كورونا</h3>
-  <p>Hier finden Sie hilfreiche Informationen rund um das Thema Corona-Virus</p>
-  <p>Bu sayfalarda Korona virüsu ve yardımlaşma konusunda yararlı bilgiler bulabilirsini</p>
-  <p>نقدم لكم تاليا مجموعة من الروابط المفيدة المتعلقة بآزمة كورونا
-  </p>
-  <a href="#" class="btn" id="btn-flyer">Unser aktueller Flyer</a>
-</div>
+  <div class="calendar-box">
+    <h1 class="h1-white"><span class="title-line">Kalender</span> </h1>
+    <div class="list-group mb-3">
+      <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Mina Basket</h5>
+          <small>20.11.2020</small>
+        </div>
+        <p class="mb-1">Basketballgruppe für Menschen mit Behinderung</p>
+        <small>16:00 Uhr, VHS Neukölln</small>
+        <br>
+        <small>Karlsgartenstraße, 12049 Berlin</small>
+      </a>
+      <a href="#" class="list-group-item list-group-item-action">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Theater Gruppe</h5>
+          <small class="text-muted">21.11.2020</small>
+        </div>
+        <p class="mb-1">Wir machen kreatives Theater</p>
+        <small class="text-muted">12:00 Uhr, MINA-Leben in Vielfalt e.V.</small>
+        <br>
+        <small>Friedrichstr. 1, 10969 Berlin</small>
+      </a>
+      <a href="#" class="list-group-item list-group-item-action">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Winterfest</h5>
+          <small class="text-muted">06.12.2020</small>
+        </div>
+        <p class="mb-1">Unsere kleine Feier mit Kaffee & Kuchen</p>
+        <small class="text-muted">14:00 Uhr, MINA-Leben in Vielfalt e.V.</small>
+        <br>
+        <small>Friedrichstr. 1, 10969 Berlin</small>
+      </a>
+    </div>
+    <% if(currentUser) {%>
+    <a href="/posts/new" class="btn btn-mina-white">Eintrag Hinzufügen</a>
+    <% } %>
+  </div>
