@@ -1,0 +1,37 @@
+.footer {
+  z-index: -1;
+}
+
+.footer-contact {
+  color: #fff;
+  list-style: none;
+  font-size: 12px;
+}
+
+.social-items a {
+  padding: 0 1vw;
+  color: #fff;
+}
+
+.social-items a:hover {
+  color: #db2a6f;
+}
+.social-icon-mail:hover {
+  color: #db2a6f;
+  background-color: none;
+  border: none;
+}
+
+.social-icon-mail {
+  color: #343a40;
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  padding: 1px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
