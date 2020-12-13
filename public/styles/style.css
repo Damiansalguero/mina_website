@@ -74,6 +74,11 @@ h1 {
 .row-contact {
   margin: 0 5vw;
 }
+
+iframe {
+  margin: 5vh 0;
+  border: 5px solid #db2a6f;
+}
 /********** GENERAL STYLES ***********/
 
 /********** NAVBAR STYLES ***********/
@@ -392,14 +397,31 @@ h1 {
 .gallery h3,
 .gallery h4,
 .galery p {
-  margin-left: 2vw;
   color: #fff;
   font-weight: bold;
 }
 
+.gallery h3,
+.galery p {
+  margin-left: 2vw;
+}
+
 .gallery-img {
-  margin: 10px;
   height: 200px;
+}
+
+#ws-contact,
+#part-contact,
+#header-part {
+  margin-top: -15vh;
+}
+/********** WS STYLES ***********/
+
+/********** PARTIZIP STYLES ***********/
+.img-container-partizip {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 .gallery-partizip {
   width: 70%;
@@ -415,10 +437,8 @@ p {
 p {
   font-weight: normal;
 }
-#ws-contact {
-  margin-top: -15vh;
-}
-/********** WS STYLES ***********/
+
+/********** PARTIZIP STYLES ***********/
 
 /********** CONTACT STYLES ***********/
 .worker {
