@@ -1,0 +1,26 @@
+/********** PARTIZIP STYLES ***********/
+.img-container-partizip {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.gallery-partizip {
+  width: 70%;
+}
+
+.gallery-partizip h3,
+h4,
+p {
+  margin-left: 0;
+}
+
+.gallery-partizip h4,
+p {
+  font-weight: normal;
+}
+iframe {
+  margin: 5vh 0;
+  border: 5px solid #db2a6f;
+}
+
+/********** PARTIZIP STYLES ***********/
