@@ -5,6 +5,10 @@
 #block-prozess {
   margin-top: -15vh;
   padding-bottom: 20vh;
+  clip-path: polygon(0 0, 100% 7%, 100% 90%, 0 100%);
+  height: auto;
+  padding-top: 10vh;
+  margin-top: -15vh;
 }
 .prozess-list {
   list-style: none;
