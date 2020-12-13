@@ -340,6 +340,19 @@ h1 {
 /********** FOOTER STYLES ***********/
 
 /********** WS STYLES ***********/
+
+.ws-tabelle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  clip-path: polygon(0 0, 100% 7%, 100% 90%, 0 100%);
+  height: auto;
+  padding-top: 10vh;
+  padding-bottom: 15vh;
+  margin-top: -10vh;
+  background-color: #fff;
+}
+
 #table-ws {
   width: 50%;
 }
