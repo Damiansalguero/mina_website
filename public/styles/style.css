@@ -78,11 +78,11 @@ h1 {
   margin: 0 5vw;
 }
 .aktuelles {
-  clip-path: polygon(0 0, 100% 6%, 100% 90%, 0 100%);
+  clip-path: polygon(0 0, 100% 15%, 100% 90%, 0 100%);
   height: auto;
   padding-top: 10vh;
-  padding-bottom: 10vh;
-  margin-top: -10vh;
+  padding-bottom: 15vh;
+  margin-top: -15vh;
 }
 .header-bg {
   padding-top: 5vh;
@@ -132,7 +132,8 @@ h1 {
 
 #ws-contact,
 #header-part,
-#prozess-contact {
+#prozess-contact,
+.about-box {
   margin-top: -15vh;
 }
 /********** GENERAL STYLES ***********/
@@ -183,7 +184,7 @@ h1 {
   z-index: 2;
 }
 .nav-box {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 71%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
   background-color: #fff;
   height: auto;
   padding-bottom: 3vh;
