@@ -24,7 +24,7 @@ module.exports.createPost = async (req, res, next) => {
   //Flash message needs to be specified and declared here + Setup in app.js (middleware in app.use)
   req.flash("success", "Der Post wurde erfolgreich erstellt !");
   // res.redirect(`/posts/${post._id}`);
-  res.redirect(`/posts/landing`);
+  res.redirect(`/mina`);
 };
 
 module.exports.showPost = async (req, res) => {
