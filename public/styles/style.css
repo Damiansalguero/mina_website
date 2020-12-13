@@ -67,9 +67,10 @@ h1 {
   align-items: center;
   height: 350px;
   background-color: #db2a6f;
-  padding-top: 15vh;
+  padding: 15vh 0;
   height: auto;
 }
+
 .row-contact {
   margin: 0 5vw;
 }
@@ -364,7 +365,7 @@ h1 {
 .ws-text {
   color: #000;
   width: 50%;
-  text-align: justify;
+  text-align: center;
 }
 
 .img-container {
@@ -375,7 +376,7 @@ h1 {
 }
 
 .gallery-block {
-  clip-path: polygon(0 4%, 100% 0%, 100% 94%, 0% 100%);
+  clip-path: polygon(0 4%, 100% 0%, 100% 96%, 0% 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -413,6 +414,9 @@ p {
 .gallery-partizip h4,
 p {
   font-weight: normal;
+}
+#ws-contact {
+  margin-top: -15vh;
 }
 /********** WS STYLES ***********/
 
