@@ -82,7 +82,7 @@ h1 {
   z-index: 2;
 }
 .nav-box {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 71%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
   background-color: #fff;
   height: auto;
   padding-bottom: 3vh;

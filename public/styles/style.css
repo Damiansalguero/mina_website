@@ -161,7 +161,7 @@ iframe {
 
 /********** LANDING STYLES ***********/
 .aktuelles {
-  clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
+  clip-path: polygon(0 0, 100% 6%, 100% 90%, 0 100%);
   height: auto;
   padding-top: 10vh;
   padding-bottom: 10vh;
@@ -401,10 +401,10 @@ margin-top: -15vh;
   font-weight: bold;
 }
 
-.gallery h3,
+/* .gallery h3,
 .galery p {
   margin-left: 2vw;
-}
+} */
 
 .gallery-img {
   height: 200px;
@@ -412,7 +412,8 @@ margin-top: -15vh;
 
 #ws-contact,
 #part-contact,
-#header-part {
+#header-part,
+#prozess-contact {
   margin-top: -15vh;
 }
 /********** WS STYLES ***********/
@@ -473,6 +474,7 @@ a {
 
 #block-prozess {
   margin-top: -15vh;
+  padding-bottom: 20vh;
 }
 .prozess-list {
   list-style: none;
@@ -485,6 +487,10 @@ a {
   display: inline-block;
   width: 1em;
   margin-left: -1em;
+}
+
+.img-prozess {
+  margin: 5vh 0;
 }
 
 /* PROZESS STYLES */
@@ -509,6 +515,9 @@ a {
 /* REGISTER STYLES */
 .more {
   padding-bottom: 5vh;
+}
+.img-container-prozess {
+  margin-bottom: 0;
 }
 /********** PROZESS STYLES ***********/
 
