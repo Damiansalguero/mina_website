@@ -1,5 +1,18 @@
 ### Startseite
 
+- footer
+  - Adresse zusammenstauchen eine Zeile
+  - Tel eine Zeile 
+  - Ipressum 
+  - Datenschutz
+  - schmaler
+- Blocks
+  - unten gerade
+- Logo
+  - größe
+- Menuleiste 
+  - rechter Rand
+
 - Nav
   - Logos klickbar
 - Aktuelles Upload

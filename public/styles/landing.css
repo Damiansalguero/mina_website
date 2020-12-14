@@ -17,7 +17,7 @@
   font-weight: bold
 }
 .text-aktuelles {
-  width: 50%;
+  width: 75%;
   font-size: 20px;
   text-align: center;
 }
@@ -51,6 +51,10 @@
 .list-group-item,
 .list-group-item.active {
   color: #000;
+}
+.stadt
+ {
+  font-weight: bold;
 }
 
 .about-box {

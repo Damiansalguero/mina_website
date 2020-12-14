@@ -87,7 +87,7 @@ h1 {
   margin: 0 5vw;
 }
 .aktuelles {
-  clip-path: polygon(0 0, 100% 15%, 100% 90%, 0 100%);
+  clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
   height: auto;
   padding-top: 10vh;
   padding-bottom: 15vh;
