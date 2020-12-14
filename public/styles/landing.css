@@ -1,11 +1,25 @@
 /********* LANDING STYLES ***********/
-.block-box {
+/* .block-box {
   margin-top: -15vh;
+} */
+.text-box-aktuelles{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  border: 2px solid #db2a6f;
+  border-radius: 10px;
+  padding-top: 20px;
 }
 
-#path-white-2 {
-  margin-top: -5vh;
-  z-index: -1;
+.text-box-aktuelles h3 {
+  color: #db2a6f;
+  font-weight: bold
+}
+.text-aktuelles {
+  width: 50%;
+  font-size: 20px;
+  text-align: center;
 }
 
 #btn-flyer {
