@@ -53,6 +53,16 @@
 .gallery-img {
   height: 200px;
 }
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  background-color: #db2a6f;
+}
+
+.modal-title {
+  color: #db2a6f;
+  font-weight: bold;
+  font-size: 30px;
+}
 
 #ws-contact {
   margin-top: -15vh;

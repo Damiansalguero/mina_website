@@ -134,6 +134,7 @@ h1 {
 
 .gallery-img {
   height: 200px;
+  margin: 10px;
 }
 
 .img-prozess {
@@ -590,6 +591,7 @@ a {
   background-color: #db2a6f;
   border-color: #db2a6f;
   color: #fff;
+  font-weight: bold;
 }
 
 .btn-mina-white {
