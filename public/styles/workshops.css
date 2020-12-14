@@ -35,6 +35,10 @@
   font-weight: bold;
   text-decoration: none;
 }
+
+.ws-active a {
+  color: #9fb039;
+}
 #ws-gallery {
   margin-top: -18vh;
 }
