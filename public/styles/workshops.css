@@ -17,7 +17,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  clip-path: polygon(0 0, 100% 5%, 100% 90%, 0 100%);
+  clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%);
   height: auto;
   padding-top: 10vh;
   padding-bottom: 17vh;
