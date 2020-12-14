@@ -22,13 +22,7 @@
   text-align: center;
 }
 
-#btn-flyer {
-  background-color: #db2a6f;
-  color: #fff;
-  font-weight: bold;
-  z-index: 2;
-  margin: 2vh 0;
-}
+
 .calendar-block {
   clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
     background-color: #db2a6f;
