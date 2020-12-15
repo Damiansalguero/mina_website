@@ -13,6 +13,13 @@
   list-style: none;
 }
 
+.prozess-list a {
+  color: #000;
+}
+.prozess-list a:hover {
+  color: #db2a6f;
+}
+
 .prozess-list li::before {
   content: "\2022";
   color: #db2a6f;
