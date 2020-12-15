@@ -9,7 +9,7 @@
 }
 
 #ws-intro {
-  font-size: 20px;
+  font-size: 18px;
   text-align: justify;
   padding: 20px 0;
 }
@@ -56,6 +56,9 @@
 
 .gallery-img {
   height: 200px;
+}
+.gallery-2 {
+  width: 300px;
 }
 .carousel-control-next-icon,
 .carousel-control-prev-icon {
