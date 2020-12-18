@@ -1,0 +1,134 @@
+/********* LANDING STYLES ***********/
+/* .block-box {
+  margin-top: -15vh;
+} */
+.text-box-aktuelles{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  border: 2px solid #db2a6f;
+  border-radius: 10px;
+  padding-top: 20px;
+}
+
+.text-box-aktuelles h3 {
+  color: #db2a6f;
+  font-weight: bold
+}
+.text-aktuelles {
+  width: 75%;
+  font-size: 20px;
+  text-align: center;
+}
+
+
+.calendar-block {
+  clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%);
+    background-color: #db2a6f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10vh;
+    margin-top: -17vh;
+    padding-bottom: 20vh;
+}
+.list-group {
+  width: 75%;
+}
+#calendar,
+.block-margin,
+.contact {
+  margin-top: -10vh;
+}
+#calendar-content {
+  padding-top: 15vh;
+}
+.list-group-item.active {
+  background-color: #72c5d5;
+  border-color: #72c5d5;
+}
+.list-group-item,
+.list-group-item.active {
+  color: #000;
+}
+.stadt
+ {
+  font-weight: bold;
+}
+
+.about-block {
+  clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
+    background-color: #9fb039;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10vh;
+}
+
+.text-block {
+  width: 50%;
+  color: #fff;
+  text-align: justify;
+  font-size: 22px;
+}
+
+#last-text {
+  padding-bottom: 20vh;
+}
+
+.map-block {
+  clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
+  background-color: #72c5d5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10vh;
+  margin-top: -15vh;
+}
+
+#map {
+  height: 410px;
+  margin-right: 5vw;
+}
+.box {
+  display: flex;
+  z-index: 2;
+}
+.map-box {
+  justify-content: center;
+  width: 100%;
+}
+
+.text-box {
+  background-color: #2c6a85;
+  border: 2px solid #2c6a85;
+  height: 300px;
+  width: 400px;
+  text-align: center;
+  padding: 10px;
+  color: #fff;
+  margin-top: 5%;
+  margin-left: 5vw;
+}
+
+.sponsor-block {
+  clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0 95%);
+  background-color: #fff;
+  padding-bottom: 10vh;
+  margin-top: -8vh;
+  margin-bottom: -5vh;
+}
+
+.sponsor-box {
+  padding-top: 5vh;
+}
+
+#btn-contact {
+  background-color: #72c5d5;
+  border-color: #72c5d5;
+  color: #fff;
+  font-weight: bold;
+  float: right;
+}
+/********** LANDING STYLES **********
