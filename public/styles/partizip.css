@@ -1,0 +1,41 @@
+/********** PARTIZIP STYLES ***********/
+.img-container-partizip {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.gallery-partizip {
+  width: 70%;
+}
+
+.gallery-partizip h3,
+h4,
+p {
+  margin-left: 0;
+}
+
+.gallery-partizip h4,
+p {
+  font-weight: normal;
+}
+iframe {
+  margin: 5vh 0;
+  border: 5px solid #db2a6f;
+}
+video {
+  height: 350px;
+  width: auto;
+  margin-bottom: 7vh;
+}
+
+#header-part {
+  clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%);
+  height: auto;
+  padding-top: 10vh;
+  padding-bottom: 15vh;
+  margin-top: -10vh;
+}
+#bg-partizip {
+  padding-top: 10vh;
+}
+/********** PARTIZIP STYLES ***********/

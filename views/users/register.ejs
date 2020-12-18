@@ -1,0 +1,21 @@
+<% layout('layouts/boilerplate')%>
+<div class="container mina-form">
+  <div class="row">
+    <h1 class=""><span class="title-line line-pink">Admin Registrierung</span></h1>
+    <form class="validated-form col-6 offset-3 mb-5 mt-5" action="/register" method="post" novalidate>
+      <div class="mb-3">
+        <label class="form-label" for="username">Benutzername</label>
+        <input class="form-control" type="text" id="username" name="username" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="email">Email</label>
+        <input class="form-control" type="email" id="email" name="email" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="password">Passwort</label>
+        <input class="form-control" type="password" id="password" name="password" required>
+      </div>
+      <button  class="btn btn-success   btn-mina">Registrieren</button>
+    </form>
+  </div>
+</div>

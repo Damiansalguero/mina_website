@@ -1,0 +1,126 @@
+<% layout("layouts/boilerplate") %>
+<!-- Block Aktuelles -->
+<div class="container-fluid">
+  <!-- Path Nav -->
+  <div class="header-bg">
+    <img src="/img/gesamt/Projekt/bg-landing.png" class="img-fluid cover-header">
+  </div>
+  <div class="block-box">
+    <img src="/img/gesamt/Elemente/path_white_1.svg" alt="" class="img-fluid">
+    <div class="block aktuelles">
+      <h1 class=""><span class="title-line">Aktuelles</span></h1>
+      <h3>Während der Corona Zeit – Korona döneminde - خلالة فترة أزمة كورونا</h3>
+      <p>Hier finden Sie hilfreiche Informationen rund um das Thema Corona-Virus</p>
+      <p>Bu sayfalarda Korona virüsu ve yardımlaşma konusunda yararlı bilgiler bulabilirsini</p>
+      <p>نقدم لكم تاليا مجموعة من الروابط المفيدة المتعلقة بآزمة كورونا
+      </p>
+      <a href="#" class="btn" id="btn-flyer">Unser aktueller Flyer</a>
+    </div>
+    <img src="/img/gesamt/Elemente/path_white_2.svg" alt="" class="img-fluid" id="path-white-2">
+  </div>
+  <!-- Block Kalender -->
+  <div class="block-box" id="calendar">
+    <div class="block rosa" id="calendar-content">
+      <h1 class="white"><span class="title-line">Kalender</span> </h1>
+      <div class="list-group mb-3">
+        <% for(let post of posts) {%>
+        <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1"><%=post.title%></h5>
+            <small>20.11.2020</small>
+          </div>
+          <p class="mb-1">Basketballgruppe für Menschen mit Behinderung</p>
+          <small><%=post.description%></small>
+          <br>
+          <small>Karlsgartenstraße, 12049 Berlin</small>
+        </a>
+        <% }%>
+        <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Mina Basket</h5>
+            <small>20.11.2020</small>
+          </div>
+          <p class="mb-1">Basketballgruppe für Menschen mit Behinderung</p>
+          <small>16:00 Uhr, VHS Neukölln</small>
+          <br>
+          <small>Karlsgartenstraße, 12049 Berlin</small>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Theater Gruppe</h5>
+            <small class="text-muted">21.11.2020</small>
+          </div>
+          <p class="mb-1">Wir machen kreatives Theater</p>
+          <small class="text-muted">12:00 Uhr, MINA-Leben in Vielfalt e.V.</small>
+          <br>
+          <small>Friedrichstr. 1, 10969 Berlin</small>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Winterfest</h5>
+            <small class="text-muted">06.12.2020</small>
+          </div>
+          <p class="mb-1">Unsere kleine Feier mit Kaffee & Kuchen</p>
+          <small class="text-muted">14:00 Uhr, MINA-Leben in Vielfalt e.V.</small>
+          <br>
+          <small>Friedrichstr. 1, 10969 Berlin</small>
+        </a>
+      </div>
+      <% if(currentUser) {%>
+      <a href="/posts/new" class="btn btn-mina-white">Eintrag Hinzufügen</a>
+      <% } %>
+    </div>
+    <img src="/img/gesamt/Elemente/path_rosa_lg.png" alt="" class="img-fluid" id="path-rosa-lg">
+  </div>
+
+  <!-- Über Block -->
+  <div class="block-box">
+    <img src="/img/gesamt/Elemente/path_green.png" alt="" class="img-fluid">
+    <div class="block green">
+      <h1 class="white"><span class="title-line line-green">Hintergrund des Projekts</span></h1>
+      <p class="text-block">Das Projekt Ehrenamt in Vielfalt widmet sich der Schnittstelle Flucht, Migration und Behinderung und arbeitet seit 2019 mit dem Ziel, das Wissen rund um die Themen der Schnittstelle zu multiplizieren. Im Rahmen des
+        Projekts fanden 2019 mehrere zweitägige Workshops sowie die Fachtagung Geflüchtete Menschen und Behinderung statt. 2020 werden insgesamt vier mehrtägige bundesweite Workshops stattfinden. Des Weiteren gibt es die Möglichkeit für
+        ausgewählteMitgliedsorganisationen des Bundesverbandes für körper- mehrfachbehinderte Menschen (bvkm) an einer Prozessbegleitung teilzunehmen mit dem Ziel, Menschen mit Migrations- und/ oder Fluchterfahrung und einer Behinderung wirksam zu
+        erreichen und zu begleiten. Die Sensibilisierung der Öffentlichkeit für die Themen der Schnittstelle ist ein weiterer Schwerpunkt des Projekts.</p>
+      <h1 class="white"><span class="title-line line-green">Über Ehrenamt in Vielfalt</span></h1>
+
+      <p class="text-block" id="last-text">Das Projekt Ehrenamt in Vielfalt widmet sich der Schnittstelle Flucht, Migration und Behinderung und arbeitet seit 2019 mit dem Ziel, das Wissen rund um die Themen der Schnittstelle zu multiplizieren. Im Rahmen des
+        Projekts fanden 2019 mehrere zweitägige Workshops sowie die Fachtagung Geflüchtete Menschen und Behinderung statt. 2020 werden insgesamt vier mehrtägige bundesweite Workshops stattfinden. Des Weiteren gibt es die Möglichkeit für ausgewählte
+        Mitgliedsorganisationen des Bundesverbandes für körper- mehrfachbehinderte Menschen (bvkm) an einer Prozessbegleitung teilzunehmen mit dem Ziel, Menschen mit Migrations- und/ oder Fluchterfahrung und einer Behinderung wirksam zu erreichen und
+        zu begleiten. Die Sensibilisierung der Öffentlichkeit für die Themen der Schnittstelle ist ein weiterer Schwerpunkt des Projekts.</p>
+    </div>
+  </div>
+
+  <!-- Map Block -->
+  <div class="block-box">
+    <img src="/img/gesamt/Elemente/path_blue.png" class="img-fluid" alt="">
+    <div class="block blue block-margin" >
+      <h1 class="white"><span class="title-line line-blue">MINA Standorte in Deutschland</span></h1>
+      <div class="map-box box mt-5 mb-5 pb-5">
+        <img class="img-fluid" id="map" src="/img/gesamt/Logos/deutschland_karte@2x.png" alt="">
+        <div class="text-box">
+          <h3>Berlin</h3>
+          <hr>
+          <p>Berlin MINA – Leben in Vielfalt e. V.</p>
+          <p>Friedrichstraße 1</p>
+          <p>10969 Berlin</p>
+          <p>030 62 93 40 31</p>
+          <p>vielfalt@mina­berlin.de</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sponsor Block -->
+  <div class="sponsor">
+    <img src="/img/gesamt/Elemente/path_white_3.svg" alt="" class="img-fluid">
+    <div class="block sponsor">
+      <h1 class=""><span class="title-line line-pink">Unsere Partner und Kooperationen</span></h1>
+      <div class="box">
+        <img class="img-fluid" src="/img/gesamt/Logos/Logo_Gefoerdert.png" alt="">
+        <img class="img-fluid" src="/img/gesamt/Logos/Logo_kooperation.png" alt="">
+      </div>
+    </div>
+    <img src="/img/gesamt/Elemente/path_white_4.svg" alt="" class="img-fluid" id="path-white-4">
+  </div>
+</div>

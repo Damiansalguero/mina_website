@@ -1,0 +1,34 @@
+<% layout("layouts/boilerplate") %>
+<div class="row">
+  <h1 class=""><span class="title-line line-pink">Post Hinzufügen</span></h1>
+  <div class="col-6 offset-3">
+    <!-- Class given to form needs to macth the querySelectorAll in js code -->
+    <form action="/posts" method="post" novalidate class="validated-form" enctype="multipart/form-data">
+      <div class="mb-3">
+        <label class="form-label" for="title">Überschrift</label>
+        <input class="form-control" type="text" id="title" name="post[title]" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="location">Ort</label>
+        <input class="form-control" type="text" id="location" name="post[location]">
+      </div>
+      <div class="mb-3">
+        <div class="form-file custom-file">
+          <input class="form-file-input" id="image" type="file" name="image" multiple>
+          <label for="image" class="form-file-label">
+            <span class="form-file-text custom-file-label">Bild(er) auswählen ...</span>
+            <span class="form-file-button btn-mina">Durchsuchen</span>
+          </label>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="description">Beschreibung</label>
+        <textarea class="form-control" type="text" id="description" name="post[description]" required></textarea>
+      </div>
+      <div class="mb-3">
+        <button class="btn btn-success btn-mina">Speichern</button>
+      </div>
+    </form>
+    <a href="/posts">Alle Posts</a>
+  </div>
+</div>

@@ -1,0 +1,46 @@
+<% layout("layouts/boilerplate") %>
+<link rel="stylesheet" href="/styles/stars.css">
+<div class="row">
+  <div class="col-6">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <% post.images.forEach((img, i) => { %>
+
+    <div class="carousel-item <%= i === 0 ? 'active' : '' %>">
+      <img src="<%= img.url %>" class="d-block w-100" alt="">
+    </div>
+    <% }) %>
+  <!-- Conditional displaying of arrows -->
+  <% if(post.images.length > 1) { %>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </a>
+  <% } %>
+</div>
+  <div class="card mb-3">
+    <!-- url comes from the campground model in images -->
+    <div class="card-body">
+      <h5 class="card-title"><%=post.title%></h5>
+      <p class="card-text"><%= post.description %></p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item text-muted"><%=post.location%></li>
+      <% if (currentUser) {%>
+      <li class="list-group-item">Erstellt von <%=post.author.username%></li>
+      <% }%>
+    </ul>
+    <!-- This hides/shows content atatched to a single user FRONTEND -->
+    <div class="card-body">
+      <a class="card-link btn btn-info" href="/posts/<%=post._id%>/edit">Bearbeiten</a>
+      <form class="d-inline" action="/posts/<%=post._id%>?_method=DELETE" method="post">
+        <button class="btn btn-danger">Löschen</button>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
