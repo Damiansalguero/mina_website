@@ -152,7 +152,7 @@ h1 {
 #header-part,
 #part-contact,
 #prozess-contact,
-.time-box,
+.timeline-block,
 .about-block {
   margin-top: -15vh;
 }
@@ -218,7 +218,6 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding-top: 5vh;
 }
 /********** FOOTER STYLES ***********/
 
