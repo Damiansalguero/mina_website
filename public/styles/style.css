@@ -169,7 +169,7 @@ h1 {
 /********** GENERAL STYLES ***********/
 /********** footer STYLES ***********/
 .footer {
-  z-index: -1;
+  z-index: 1000000;
 }
 
 .footer-contact {
@@ -190,7 +190,12 @@ h1 {
   color: #72c5d5;
 }
 
-.social-items a:hover {
+.impress-data a {
+  color: #6c757d;
+}
+
+.social-items a:hover,
+.impress-data a:hover {
   color: #db2a6f;
 }
 .social-icon-mail:hover {
