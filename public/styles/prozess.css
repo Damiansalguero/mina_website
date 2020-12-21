@@ -9,25 +9,6 @@
   padding-top: 10vh;
   margin-top: -15vh;
 }
-.prozess-list {
-  list-style: none;
-}
-
-.prozess-list a {
-  color: #000;
-}
-.prozess-list a:hover {
-  color: #db2a6f;
-}
-
-.prozess-list li::before {
-  content: "\2022";
-  color: #db2a6f;
-  font-weight: bold;
-  display: inline-block;
-  width: 1em;
-  margin-left: -1em;
-}
 
 .timeline-block {
   clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);

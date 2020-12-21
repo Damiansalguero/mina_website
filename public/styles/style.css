@@ -170,6 +170,35 @@ h1 {
   font-weight: bold;
   font-size: 30px;
 }
+
+.about-block {
+  clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
+  background-color: #9fb039;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10vh;
+}
+
+.prozess-list {
+  list-style: none;
+}
+
+.prozess-list a {
+  color: #000;
+}
+.prozess-list a:hover {
+  color: #db2a6f;
+}
+
+.prozess-list li::before {
+  content: "\2022";
+  color: #db2a6f;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
 /********** GENERAL STYLES ***********/
 /********** footer STYLES ***********/
 .footer {
