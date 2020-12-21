@@ -18,6 +18,10 @@ module.exports.renderDoku = (req, res) => {
 module.exports.renderZweiNeunzehn = (req, res) => {
   res.render("praxisseminar");
 };
+
+module.exports.renderFach = (req, res) => {
+  res.render("fach");
+};
 module.exports.renderKontakt = (req, res) => {
   res.render("kontakt");
 };

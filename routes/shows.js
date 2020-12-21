@@ -9,5 +9,6 @@ router.get("/prozess-begleitung", shows.renderProzess);
 router.get("/dokumentation", shows.renderDoku);
 router.get("/dokumentation/praxisseminare-2019", shows.renderZweiNeunzehn);
 router.get("/kontakt", shows.renderKontakt);
+router.get("/dokumentation/Fachtagung", shows.renderFach);
 
 module.exports = router;
