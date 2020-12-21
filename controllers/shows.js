@@ -16,7 +16,7 @@ module.exports.renderDoku = (req, res) => {
   res.render("dokumentation");
 };
 module.exports.renderZweiNeunzehn = (req, res) => {
-  res.render("zweineunzehn");
+  res.render("praxisseminar");
 };
 module.exports.renderKontakt = (req, res) => {
   res.render("kontakt");
