@@ -12,6 +12,12 @@ module.exports.renderPartizip = (req, res) => {
 module.exports.renderProzess = (req, res) => {
   res.render("prozess");
 };
+module.exports.renderDoku = (req, res) => {
+  res.render("dokumentation");
+};
+module.exports.renderZweiNeunzehn = (req, res) => {
+  res.render("zweineunzehn");
+};
 module.exports.renderKontakt = (req, res) => {
   res.render("kontakt");
 };
