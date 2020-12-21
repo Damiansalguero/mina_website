@@ -118,6 +118,10 @@ h1 {
   font-size: 20px;
 }
 
+.text-centered {
+  text-align: center;
+}
+
 .gallery-block {
   clip-path: polygon(0 2%, 100% 0%, 100% 100%, 0% 100%);
   display: flex;
