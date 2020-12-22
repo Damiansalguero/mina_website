@@ -284,13 +284,14 @@ h1 {
 .navbar-nav {
   border-top: 3px solid #db2a6f;
   margin-right: 1vw;
+  margin-left: 25%;
 }
 .logo {
   margin: 5vh 0;
 }
 #logo-subtitle {
   color: #000;
-  margin-left: 25px;
+  margin-left: 15px;
 }
 
 .nav-link:hover {
@@ -331,8 +332,9 @@ h1 {
   margin-left: 3vw;
 }
 
-.mina-logo > img {
+.mina-logo img {
   padding-top: 2vh;
+  height: 120px;
 }
 /********** NAVBAR STYLES ***********/
 /********** ALERT STYLES ***********/

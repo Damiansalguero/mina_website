@@ -3,7 +3,7 @@
     <div class="container-fluid">
       <div class="mina-logo">
         <a class="navbar-brand" href="/landing">
-          <img src="/img/gesamt/Logos/Mina_Logo.png" alt="">
+          <img id="nav-logo" src="/img/gesamt/Logos/Mina_Logo.png" alt="">
           <p id="logo-subtitle">Ehrenamt in Vielfalt</p>
         </a>
       </div>
@@ -11,7 +11,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav ml-auto">
+        <div class="navbar-nav">
           <li><a class="nav-link" href="/mina">Home</a></li>
           <li><a class="nav-link" href="/mina/workshops">Workshops</a></li>
           <li><a class="nav-link" href="/mina/partizipatives-projekt">Partizipative <br> Projekte</a></li>
@@ -19,7 +19,7 @@
           <!-- <li><a class="nav-link" href="#">Online <br> Bibliothek</a></li> -->
           <li><a class="nav-link" href="/mina/dokumentation">Dokumentation</a></li>
           <li><a class="nav-link" href="/mina/kontakt">Kontakt</a></li>
-          
+
           <!-- Template for conditional displaying -->
           <% if(currentUser) {%>
           <a class="nav-link" href="/register">Register</a>
