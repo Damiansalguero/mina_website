@@ -24,7 +24,9 @@ h1 {
 .about-block,
 .link-box,
 .video-box,
-.alert {
+.alert,
+.impress-info,
+.impress-text {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -183,7 +185,7 @@ h1 {
   background-color: #9fb039;
   padding-top: 10vh;
 }
-
+ul,
 .prozess-list {
   list-style: none;
 }
