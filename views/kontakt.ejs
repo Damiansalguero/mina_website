@@ -11,7 +11,7 @@
     <div class="block aktuelles">
       <h1 class=""><span class="title-line">Kontakt</span></h1>
       <!-- Kontakt Form -->
-      <form class="validated-form" action="#" method="post" novalidate>
+      <form class="validated-form mina-form" action="#" method="post" novalidate>
         <div class="mb-3">
           <label class="form-label" for="name">Name</label>
           <input class="form-control" type="text" id="name" name="name" required>
@@ -21,10 +21,14 @@
           <input class="form-control" type="email" id="email" name="email" required>
         </div>
         <div class="mb-3">
+          <label class="form-label" for="subject">Betreff</label>
+          <input class="form-control" type="text" id="subject" name="subject" required>
+        </div>
+        <div class="mb-3">
           <label class="form-label" for="description">Nachricht</label>
           <textarea class="form-control" type="text" id="description" name="campground[description]" required></textarea>
         </div>
-        <button class="btn btn-success" id="btn-contact">Senden</button>
+        <button class="btn btn-success btn-mina" id="btn-contact">Senden</button>
       </form>
     </div>
     <img src="/img/gesamt/Elemente/Path 31-1.svg" alt="" class="img-fluid" id="path-3">
