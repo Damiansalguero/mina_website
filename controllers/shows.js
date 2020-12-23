@@ -22,6 +22,11 @@ module.exports.renderZweiNeunzehn = (req, res) => {
 module.exports.renderFach = (req, res) => {
   res.render("fach");
 };
+
+module.exports.renderImpressum = (req, res) => {
+  res.render("impressum");
+};
+
 module.exports.renderKontakt = (req, res) => {
   res.render("kontakt");
 };
