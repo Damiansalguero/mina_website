@@ -3,8 +3,14 @@
   text-align: justify;
 }
 
-.datenschutz-text a {
+.datenschutz-text a,
+.rechte {
   color: #72c5d5;
+}
+
+.datenschutz-text h3 {
+  font-weight: bold;
+  width: 50%;
 }
 .datenschutz-text a:hover,
 h4 {
@@ -16,7 +22,17 @@ h4 {
 }
 
 .first-datenschutz {
-  margin: 10vh 0;
+  margin-top: 10vh;
+  margin-bottom: 5vh;
+}
+
+.next-datenschutz {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+#last {
+  margin-bottom: 10vh;
 }
 
 h4 {
@@ -25,10 +41,29 @@ h4 {
 }
 
 h4,
-ul {
+ul,
+h3 {
   align-self: flex-start;
   margin-left: 25%;
 }
 #contact-datenschutz {
   padding: 0;
+}
+
+ul {
+  width: 40%;
+  line-height: 1.5;
+}
+
+.rechte li::before {
+  content: "\2022";
+  color: #db2a6f;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.rechte {
+  font-weight: bold;
 }
