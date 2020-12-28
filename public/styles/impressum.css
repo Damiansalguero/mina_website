@@ -9,8 +9,9 @@ h4,
   color: #db2a6f;
 }
 
-.impress-box a {
-  color: #000;
+.impress-box a,
+.impress-box span {
+  color: #72c5d5;
 }
 
 .impress-info {
