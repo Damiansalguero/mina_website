@@ -3,6 +3,32 @@
   text-align: justify;
 }
 
+.datenschutz-text a {
+  color: #72c5d5;
+}
+.datenschutz-text a:hover,
+h4 {
+  color: #db2a6f;
+}
+
 #h1-datenschutz {
   padding-bottom: 0;
+}
+
+.first-datenschutz {
+  margin: 10vh 0;
+}
+
+h4 {
+  font-weight: bold;
+  margin: 3vh 0;
+}
+
+h4,
+ul {
+  align-self: flex-start;
+  margin-left: 25%;
+}
+#contact-datenschutz {
+  padding: 0;
 }
