@@ -10,6 +10,7 @@ router.get("/dokumentation", shows.renderDoku);
 router.get("/dokumentation/praxisseminare-2019", shows.renderZweiNeunzehn);
 router.get("/dokumentation/Fachtagung", shows.renderFach);
 router.get("/impressum", shows.renderImpressum);
+router.get("/datenschutz-erklaerung", shows.renderDatenschutz);
 router.get("/kontakt", shows.renderKontakt);
 
 module.exports = router;

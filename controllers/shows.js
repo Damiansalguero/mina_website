@@ -27,6 +27,10 @@ module.exports.renderImpressum = (req, res) => {
   res.render("impressum");
 };
 
+module.exports.renderDatenschutz = (req, res) => {
+  res.render("datenschutz");
+};
+
 module.exports.renderKontakt = (req, res) => {
   res.render("kontakt");
 };
