@@ -214,12 +214,12 @@ ul,
   position: fixed;
   bottom: 20px;
   right: 30px;
-  z-index: 99;
+  z-index: 10000000000000000000;
   font-size: 18px;
-  border: none;
+  border: 3px solid #903b5c;
   outline: none;
-  background-color: #db2a6f;
-  color: white;
+  background-color: #fff;
+  color: #db2a6f;
   font-weight: bold;
   cursor: pointer;
   padding: 15px;
