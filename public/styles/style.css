@@ -228,8 +228,12 @@ ul,
 
 /********** GENERAL STYLES ***********/
 /********** footer STYLES ***********/
+footer {
+  padding-bottom: 5px;
+}
 .footer {
   z-index: 1000000;
+  background-color: #073b4c;
 }
 
 .footer-contact {
@@ -250,8 +254,9 @@ ul,
   color: #72c5d5;
 }
 
-.impress-data a {
-  color: #6c757d;
+.impress-data a,
+.impress-data {
+  color: #fff;
 }
 
 .social-items a:hover,
@@ -291,7 +296,7 @@ ul,
   background-color: #fff;
   z-index: 2;
 }
-.nav-box {
+#nav-box {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
   background-color: #fff;
   height: auto;

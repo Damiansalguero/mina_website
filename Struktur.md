@@ -1,46 +1,28 @@
 ### Startseite
 
-- footer
-  - Adresse zusammenstauchen eine Zeile
-  - Tel eine Zeile 
-  - Ipressum 
-  - Datenschutz
-  - schmaler
-- Blocks
-  - unten gerade
-- Logo
-  - größe
-- Menuleiste 
-  - rechter Rand
-
-- Nav
-  - Logos klickbar
 - Aktuelles Upload
-  - 
+  - CKeditor einbetten
+    - conditional
 - Flyer + Button
+  - upload für Admin
 - Kalender Upload
-  - Datum
-  - Uhrzeit
-  - Titel
-  - Ort
-  - Text
-- Karte mit Pin
-- Partner Link Images
-- Footer
+  - Datum, Text, Uhrzeit, Titel, Ort
+  - nur die jeweils ersten 3 Einträge
+  - Extra Seite (infinite load für rest)
+- Karte
+  - evtl. Maps Udemy
 
 
 
 ### Workshops
 
-- Nav + Kopf
-- Button + Flyer 
-- Upload Workshops
-  - Datum
-  - Thema/Titel
-  - Offen/ausgebucht
+- Button + Flyer
+  - upload 
 - Bildgalerie Upload
-- Ansprechpartner
-  - klickbare Email
+- Kalender Upload
+  - Datum, Text, Uhrzeit, Titel, Ort
+  - nur die jeweils ersten 3 Einträge
+  - Extra Seite (infinite load für rest)
 
 
 
@@ -50,36 +32,23 @@
 - Button + flyer
 - Zeitstrahl
 - Bildgalerie
-- Ansprech
-  - klickbare Email
-
-
 
 ### Partizipatives Projekt 
 
-- Nav + Kopf
 - video upload
 - Aktuelles
-  - Blog Upload
-- Ansprechpartner
+  - CK editor
 
 
 
 ### Kontakt
 
-- Nav + Kopf
 - Kontaktformular
+
+  - email einbinden
+
 - Team
-  - klickbare email
 
+  - ggf dynamisch
 
-
-### Nav 
-
-- konditionales Display
-
-
-
-### Uploads 
-
-- formulare
+  
