@@ -17,7 +17,7 @@ module.exports.registerUser = async (req, res) => {
         "Deine Registrierung wurde erfolgreich abgeschlossen. Willkommen, " +
           user.username
       );
-      res.redirect("/mina");
+      res.redirect("/mina/home");
     });
   } catch (err) {
     req.flash("error", err.message);
@@ -33,7 +33,7 @@ module.exports.loginRedirect = (req, res) => {
   req.flash("success", "Willkommen zurück !");
   //This guarantees, that the last path is being saved and returns after login
   //Setup in middleware.js
-  const redirectUrl = req.session.returnTo || "/mina";
+  const redirectUrl = req.session.returnTo || "/mina/home";
   //This takes the returnTo info out so it cannot be seen
   delete req.session.returnTo;
   res.redirect(redirectUrl);
