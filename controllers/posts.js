@@ -5,7 +5,7 @@ const { cloudinary } = require("../cloudinary");
 
 module.exports.index = async (req, res) => {
   const posts = await Post.find({});
-  res.render("posts/index", { posts });
+  res.render("posts/posts", { posts });
 };
 
 module.exports.renderNewForm = (req, res) => {
