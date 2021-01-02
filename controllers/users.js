@@ -42,5 +42,5 @@ module.exports.loginRedirect = (req, res) => {
 module.exports.logout = (req, res) => {
   req.logout();
   req.flash("info", "Du bist jetzt ausgeloggt !");
-  res.redirect("/mina");
+  res.redirect("/mina/home");
 };

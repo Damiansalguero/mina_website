@@ -20,11 +20,10 @@ module.exports.createPost = async (req, res, next) => {
   }));
   post.author = req.user._id;
   await post.save();
-  console.log("LAST POST !!!", post);
   //Flash message needs to be specified and declared here + Setup in app.js (middleware in app.use)
   req.flash("success", "Der Post wurde erfolgreich erstellt !");
   // res.redirect(`/posts/${post._id}`);
-  res.redirect(`/mina/home`);
+  res.redirect(`/posts/posts`);
 };
 
 module.exports.showPost = async (req, res) => {

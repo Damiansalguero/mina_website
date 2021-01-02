@@ -25,8 +25,8 @@ module.exports.validateData = (req, res, next) => {
 //////////////// VALIDATION AUTHOR //////////////////
 module.exports.isAuthor = async (req, res, next) => {
   const { id } = req.params;
-  const campground = await Campground.findById(id);
-  if (!campground.author.equals(req.user._id)) {
+  const post = await Post.findById(id);
+  if (!post.author.equals(req.user._id)) {
     req.flash("error", "You do not have permission to do that");
     return res.redirect(`/campgrounds/${id}`);
   }
