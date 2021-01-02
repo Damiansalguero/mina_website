@@ -13,7 +13,7 @@ const Post = require("../models/post");
 
 //////////////// MAIN OV ///////////////////
 // campgrounds.index comes from the controller
-router.get("/", catchAsync(posts.index));
+router.get("/index", catchAsync(posts.index));
 
 //////////////// ADD ROUTE GET ///////////////////
 router.get("/new", isLoggedIn, posts.renderNewForm);

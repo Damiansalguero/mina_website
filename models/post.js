@@ -15,6 +15,7 @@ const PostSchema = new Schema({
   images: [ImageSchema],
   description: String,
   location: String,
+  date: String,
   author: {
     type: Schema.Types.ObjectId,
     ref: "User"
