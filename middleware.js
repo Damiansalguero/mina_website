@@ -1,4 +1,4 @@
-const { dataSchema } = require("./schemas.js");
+const { dataSchema, testdataSchema } = require("./schemas.js");
 const ExpressError = require("./utils/ExpressError");
 const Post = require("./models/post");
 
@@ -15,6 +15,16 @@ module.exports.isLoggedIn = (req, res, next) => {
 //////////////// VALIDATION MIDDLEWARE ///////////////////
 module.exports.validateData = (req, res, next) => {
   const { error } = dataSchema.validate(req.body);
+  if (error) {
+    const msg = error.details.map(el => el.message).join(",");
+    throw new ExpressError(msg, 400);
+  } else {
+    next();
+  }
+};
+
+module.exports.validatetestData = (req, res, next) => {
+  const { error } = testdataSchema.validate(req.body);
   if (error) {
     const msg = error.details.map(el => el.message).join(",");
     throw new ExpressError(msg, 400);

@@ -10,3 +10,14 @@ module.exports.dataSchema = Joi.object({
   //needs to be included in order to work on the form
   deleteImages: Joi.array()
 });
+
+module.exports.testdataSchema = Joi.object({
+  test: Joi.object({
+    title: Joi.string().required(),
+    location: Joi.string().required(),
+    date: Joi.string().required(),
+    description: Joi.string().required()
+  }).required(),
+  //needs to be included in order to work on the form
+  deleteImages: Joi.array()
+});

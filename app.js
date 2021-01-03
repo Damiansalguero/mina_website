@@ -10,7 +10,7 @@ const mongoose = require("mongoose");
 const ejsMate = require("ejs-mate");
 const session = require("express-session");
 const flash = require("connect-flash");
-const { dataSchema } = require("./schemas.js");
+const { dataSchema, testDataSchema } = require("./schemas.js");
 const ExpressError = require("./utils/ExpressError");
 const bodyParser = require("body-parser");
 const methodOverride = require("method-override");
@@ -25,6 +25,7 @@ const Post = require("./models/post");
 const postRoutes = require("./routes/posts");
 const userRoutes = require("./routes/users");
 const showRoutes = require("./routes/shows");
+const testRoutes = require("./routes/tests");
 
 //////////////// MONGO DB SETUP ///////////////////
 mongoose.connect("mongodb://localhost:27017/mina", {
@@ -87,14 +88,15 @@ app.use((req, res, next) => {
 app.use("/", userRoutes);
 app.use("/posts", postRoutes);
 app.use("/mina", showRoutes);
+app.use("/test", testRoutes);
 
 ///////////////////////////////////////////////////////////////////////////////
 /////////////////////////////// ROUTES ////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
 
-app.get("/test", async (req, res) => {
-  res.render("test");
-});
+// app.get("/test", async (req, res) => {
+//   res.render("test");
+// });
 
 app.all("*", (req, res, next) => {
   next(new ExpressError("Seite nicht gefunden", 404));
