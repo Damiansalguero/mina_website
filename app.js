@@ -93,9 +93,7 @@ app.use("/mina", showRoutes);
 ///////////////////////////////////////////////////////////////////////////////
 
 app.get("/test", async (req, res) => {
-  const { id } = req.params;
-  const news = await News.findById(req.params.id);
-  res.render("test", { news });
+  res.render("test");
 });
 
 app.all("*", (req, res, next) => {

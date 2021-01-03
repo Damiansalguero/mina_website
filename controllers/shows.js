@@ -1,5 +1,9 @@
-module.exports.renderLanding = (req, res) => {
-  res.render("landing");
+const Post = require("../models/post");
+const { dataSchema } = require("../schemas.js");
+
+module.exports.renderLanding = async (req, res) => {
+  const posts = await Post.find({});
+  res.render("landing", { posts });
 };
 
 module.exports.renderWorkshops = (req, res) => {
