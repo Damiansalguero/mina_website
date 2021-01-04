@@ -1,4 +1,12 @@
 <link rel="stylesheet" href="/styles/landing.css">
 <% layout("layouts/boilerplate") %>
-
+<h1>Yooooooooooo</h1>
 <h1> <%= test.title %> </h1>
+
+<div class="box">
+  <textarea type="text" name="textarea" readonly >Write somethinghere</textarea>
+  <input name="Edit" type="button" value="Edit">
+  <script>
+          CKEDITOR.replace( 'textarea' );
+  </script>
+</div>
