@@ -16,7 +16,8 @@ const bodyParser = require("body-parser");
 const methodOverride = require("method-override");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
-
+const dbUrl = process.env.DB_URL || "mongodb://localhost:27017/mina";
+const MongoStore = require("connect-mongo")(session);
 //////////////// MODEL IMPORT //////////////////
 const User = require("./models/user");
 const Post = require("./models/post");
@@ -28,7 +29,9 @@ const showRoutes = require("./routes/shows");
 const testRoutes = require("./routes/tests");
 
 //////////////// MONGO DB SETUP ///////////////////
-mongoose.connect("mongodb://localhost:27017/mina", {
+//Online DB dbUrl
+//
+mongoose.connect(dbUrl, {
   useNewUrlParser: true,
   useCreateIndex: true,
   useUnifiedTopology: true,
@@ -52,8 +55,22 @@ app.use(methodOverride("_method"));
 app.use(express.static(path.join(__dirname, "public")));
 
 //////////////// USE SESSION ///////////////////
+
+const secret = process.env.SECRET || "newSecret";
+const store = new MongoStore({
+  url: dbUrl,
+  secret,
+  touchAfter: 24 * 60 * 60
+});
+
+store.on("error", function(e) {
+  console.log("SESSION STROE ERROR", e);
+});
+
 const sessionConfig = {
-  secret: "newSecret",
+  store,
+  name: "session",
+  secret,
   resave: false,
   saveUninitialized: true,
   cookie: {
