@@ -1,6 +1,0 @@
-- Aktueles der projektseite
-  - Prozessbegleitung
-  - WS
-  - Partizipative Projekte
-  - Dokumentation
-- Rechnung bis Mitte Dezember gestellt werden
