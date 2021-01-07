@@ -19,11 +19,13 @@ body {
   padding: 0 1rem;
 }
 
-.nav-item:hover {
+.nav-item:hover,
+.dropdown-item:hover {
   background-color: #72c5d5;
 }
 
-.nav-item:hover .nav-link {
+.nav-item:hover .nav-link,
+.dropdown-item:hover {
   color: #fff;
 }
 
@@ -31,6 +33,10 @@ body {
   color: #db2a6f;
   font-weight: bold;
   background-color: none;
+}
+
+.dropdown-menu {
+  border: none;
 }
 
 .nav-link {
