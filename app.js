@@ -16,7 +16,8 @@ const bodyParser = require("body-parser");
 const methodOverride = require("method-override");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
-const dbUrl = process.env.DB_URL || "mongodb://localhost:27017/mina";
+//process.env.DB_URL ||
+const dbUrl = "mongodb://localhost:27017/mina";
 const MongoStore = require("connect-mongo")(session);
 //////////////// MODEL IMPORT //////////////////
 const User = require("./models/user");

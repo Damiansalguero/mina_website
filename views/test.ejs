@@ -1,2 +1,46 @@
-<link rel="stylesheet" href="/styles/landing.css">
+<link rel="stylesheet" href="/styles/test.css">
 <% layout("layouts/boilerplate") %>
+
+<div class="nav-box">
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <div class="mina-logo">
+        <a class="navbar-brand" href="/landing">
+          <img id="nav-logo" src="/img/gesamt/Logos/Mina_Logo.png" alt="">
+          <p id="logo-subtitle">Ehrenamt in Vielfalt</p>
+        </a>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/mina/home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/mina/workshops">Workshops</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/mina/partizipatives-projekt">Partizipatives <br> Projekt</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/mina/prozess-begleitung">Prozess- <br> Begleitung</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dokumentation
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="/mina/dokumentation/praxisseminare-2019">Dokumentation 2019</a></li>
+              <li><a class="dropdown-item" href="/mina/dokumentation/fachtagung">Fachtagung</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/mina/kontakt">Kontakt</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>

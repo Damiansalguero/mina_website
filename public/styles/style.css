@@ -296,7 +296,7 @@ footer {
   background-color: #fff;
   z-index: 2;
 }
-#nav-box {
+.nav-box {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
   background-color: #fff;
   height: auto;
