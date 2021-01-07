@@ -300,7 +300,6 @@ footer {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
   background-color: #fff;
   height: auto;
-  padding-bottom: 3vh;
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -314,11 +313,6 @@ footer {
   background-color: none;
 }
 
-.navbar-nav {
-  border-top: 3px solid #db2a6f;
-  margin-right: 1vw;
-  margin-left: 25%;
-}
 .logo {
   margin: 5vh 0;
 }
@@ -328,7 +322,7 @@ footer {
   font-size: 16px;
 }
 
-.nav-link:hover {
+.nav-item:hover {
   background-color: #72c5d5;
   color: #fff;
 }

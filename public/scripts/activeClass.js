@@ -14,7 +14,7 @@ function setActive() {
 $(function() {
   var current = location.pathname;
   console.log(location.pathname);
-  $(".navbar-nav li a").each(function() {
+  $(".navbar-nav .nav-item a").each(function() {
     var $this = $(this);
     // if the current path is like this link, make it active
     if ($this.attr("href").indexOf(current) !== -1) {

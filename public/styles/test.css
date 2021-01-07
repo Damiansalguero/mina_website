@@ -10,3 +10,29 @@ body {
 .navbar ul {
   margin-right: 0;
 }
+
+.navbar-nav {
+  border-top: 3px solid #db2a6f;
+}
+
+.navbar-nav .nav-item {
+  padding: 0 1rem;
+}
+
+.nav-item:hover {
+  background-color: #72c5d5;
+}
+
+.nav-item:hover .nav-link {
+  color: #fff;
+}
+
+.navbar-nav .nav-item .nav-link.active {
+  color: #db2a6f;
+  font-weight: bold;
+  background-color: none;
+}
+
+.nav-link {
+  color: #000;
+}
