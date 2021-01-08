@@ -47,3 +47,8 @@ body {
   padding-bottom: 15vh;
   text-align: center;
 }
+
+.symbol-box {
+  align-self: flex-end;
+  padding-right: 0;
+}
