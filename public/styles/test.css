@@ -1,54 +1,8 @@
-body {
-  background-color: darkgrey;
+.carousel-box {
+  display: flex;
+  justify-content: center;
 }
 
-.navbar {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-.navbar ul {
-  margin-right: 0;
-}
-
-.navbar-nav {
-  border-top: 3px solid #db2a6f;
-}
-
-.navbar-nav .nav-item {
-  padding: 0 1rem;
-}
-
-.nav-item:hover,
-.dropdown-item:hover {
-  background-color: #72c5d5;
-}
-
-.nav-item:hover .nav-link,
-.dropdown-item:hover {
-  color: #fff;
-}
-
-.navbar-nav .nav-item .nav-link.active {
-  color: #db2a6f;
-  font-weight: bold;
-  background-color: none;
-}
-
-.dropdown-menu {
-  border: none;
-}
-
-.nav-link {
-  color: #000;
-}
-
-#navbarNavDropdown {
-  padding-bottom: 15vh;
-  text-align: center;
-}
-
-.symbol-box {
-  align-self: flex-end;
-  padding-right: 0;
+#carouselExampleControls {
+  width: 50%;
 }
