@@ -51,6 +51,10 @@ h1 {
   margin-top: -15vh;
 }
 
+.btn {
+  width: 200px;
+}
+
 #btn-flyer {
   background-color: #db2a6f;
   color: #fff;
@@ -437,13 +441,6 @@ a {
   border-color: #db2a6f;
   color: #fff;
   font-weight: bold;
-}
-
-.btn-mina-white {
-  border-color: #fff;
-  color: #fff;
-  font-weight: bold;
-  z-index: 1;
 }
 
 .mina-form {

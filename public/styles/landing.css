@@ -1,7 +1,4 @@
-/********* LANDING STYLES ***********/
-/* .block-box {
-  margin-top: -15vh;
-} */
+/********* Block Aktuelles ***********/
 .text-box-aktuelles{
   display: flex;
   flex-direction: column;
@@ -9,7 +6,7 @@
   width: 40%;
   border: 2px solid #db2a6f;
   border-radius: 10px;
-  padding-top: 20px;
+  padding: 20px;
 }
 
 .text-box-aktuelles h3 {
@@ -22,7 +19,23 @@
   text-align: center;
 }
 
+.btn-aktuelles {
+  border-color: #0dcaf0;
+  color: #0dcaf0;
+  font-weight: bold;
+  margin-top: 3vh;
 
+}
+
+.btn-aktuelles:hover {
+  background-color: #0dcaf0;
+  border-color: #0dcaf0;
+  color: #fff;
+  font-weight: bold
+
+}
+
+/********* Block Calendar ***********/
 .calendar-block {
   clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%);
     background-color: #db2a6f;
@@ -54,6 +67,18 @@
 }
 .stadt
  {
+  font-weight: bold;
+}
+.btn-mina-calendar {
+  border-color: #fff;
+  color: #fff;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.btn-mina-calendar:hover {
+  background-color:  #fff;
+  color: #db2a6f;
   font-weight: bold;
 }
 

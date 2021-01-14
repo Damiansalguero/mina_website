@@ -12,11 +12,10 @@
 
       <h3><%= aktuell.title %></h3>
       <p class="text-aktuelles"><%- aktuell.description %></p>
-      
+
     </div>
     <% if(currentUser) {%>
-    <a href="/aktuelles/<%= aktuell._id %>" class="btn btn-mina">Eintrag Bearbeiten</a>
-    <a href="/aktuelles/neu" class="btn btn-mina">Eintrag Hinzufügen</a>
+    <a href="/aktuelles/<%= aktuell._id %>" class="btn btn btn-aktuelles">Eintrag Bearbeiten</a>
     <% } %>
     <a href="/downloads/flyer-landing.pdf" class="btn" id="btn-flyer" target="_blank">Unser aktueller Flyer</a>
   </div>
@@ -49,7 +48,7 @@
       </a>
     </div>
     <% if(currentUser) {%>
-    <a href="/posts/new" class="btn btn-mina-white">Eintrag Hinzufügen</a>
+    <a href="/posts/new" class="btn btn-mina-calendar">Eintrag Hinzufügen</a>
     <% } %>
   </div>
   <!-- Über Block -->
