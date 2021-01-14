@@ -1,10 +1,12 @@
 const Test = require("../models/test");
+const Post = require("../models/post");
 const { testdataSchema } = require("../schemas.js");
 const { cloudinary } = require("../cloudinary");
 
 module.exports.renderTest = async (req, res) => {
-  const test = await Test.find({});
-  res.render("test", { test });
+  const tests = await Test.find({});
+  const posts = await Post.find({});
+  res.render("test", { tests, posts });
 };
 
 module.exports.renderTestform = (req, res) => {
@@ -33,5 +35,26 @@ module.exports.showTest = async (req, res) => {
     req.flash("error", "Dieser Post existiert nicht mehr !");
     return res.redirect("/mina/home");
   }
-  res.render("testaktuell", { test });
+  res.render("testshow", { test });
+};
+
+module.exports.renderEditForm = async (req, res) => {
+  const { id } = req.params;
+  const test = await Test.findById(req.params.id);
+  res.render("testedit", { test });
+};
+
+module.exports.updatetest = async (req, res) => {
+  const { id } = req.params;
+  const test = await Test.findByIdAndUpdate(id, {
+    ...req.body.test
+  });
+  req.flash("success", "Successfully updated campground");
+  res.redirect(`/test`);
+};
+
+module.exports.deletetest = async (req, res) => {
+  const { id } = req.params;
+  await Test.findByIdAndDelete(id);
+  res.redirect("/test");
 };

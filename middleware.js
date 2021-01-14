@@ -23,6 +23,7 @@ module.exports.validateData = (req, res, next) => {
   }
 };
 
+//////////////// TEST /////////////
 module.exports.validatetestData = (req, res, next) => {
   const { error } = testdataSchema.validate(req.body);
   if (error) {

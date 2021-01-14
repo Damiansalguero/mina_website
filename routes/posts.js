@@ -36,12 +36,11 @@ router.post(
 router.get("/:id", catchAsync(posts.showPost));
 
 //////////////// EDIT ROUTE GET ///////////////////
-router.get("/:id/edit", isLoggedIn, isAuthor, catchAsync(posts.renderEditForm));
+router.get("/:id/edit", isLoggedIn, catchAsync(posts.renderEditForm));
 //////////////// EDIT ROUTE POST ///////////////////
 router.put(
   "/:id",
   isLoggedIn,
-  isAuthor,
   upload.array("image"),
   validateData,
   catchAsync(posts.updatePost)

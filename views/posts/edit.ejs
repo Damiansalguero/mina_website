@@ -24,6 +24,9 @@
           <div class="mb-3">
             <label class="form-label" for="description">Beshreibung</label>
             <textarea class="form-control" type="text" id="description" name="post[description]" required><%=post.description%></textarea>
+            <script type="text/javascript">
+                    CKEDITOR.replace( 'description' );
+                </script>
           </div>
           <div class="mb-3">
             <% post.images.forEach(function(img, i) { %>

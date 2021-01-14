@@ -19,9 +19,9 @@ const Test = require("../models/test");
 
 router.get("/", catchAsync(tests.renderTest));
 
-router.get("/testaktuell", catchAsync(tests.showTest));
-
 router.get("/form", tests.renderTestform);
+
+router.get("/:id", catchAsync(tests.showTest));
 
 router.post(
   "/",
@@ -30,5 +30,11 @@ router.post(
   validatetestData,
   catchAsync(tests.createTest)
 );
+
+router.get("/:id/edit", isLoggedIn, catchAsync(tests.renderEditForm));
+
+router.put("/:id", isLoggedIn, validatetestData, catchAsync(tests.updatetest));
+
+router.delete("/:id", catchAsync(tests.deletetest));
 
 module.exports = router;

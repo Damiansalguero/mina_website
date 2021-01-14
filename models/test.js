@@ -12,7 +12,6 @@ const Schema = mongoose.Schema;
 
 const TestSchema = new Schema({
   title: String,
-  // images: [ImageSchema],
   description: String,
   location: String,
   date: String
