@@ -7,19 +7,20 @@
     <img src="/img/gesamt/Projekt/bg-landing.png" class="img-fluid cover-header">
   </div>
   <div class="block aktuelles">
-    <!-- <h1 class=""><span class="title-line">Aktuelles</span></h1>
-    <h3>Während der Corona Zeit – Korona döneminde - خلالة فترة أزمة كورونا</h3>
-    <p>Hier finden Sie hilfreiche Informationen rund um das Thema Corona-Virus</p>
-    <p>Bu sayfalarda Korona virüsu ve yardımlaşma konusunda yararlı bilgiler bulabilirsini</p>
-    <p>نقدم لكم تاليا مجموعة من الروابط المفيدة المتعلقة بآزمة كورونا
-    </p> -->
     <h1 class=""><span class="title-line">Aktuelles</span></h1>
     <div class="text-box-aktuelles">
-      <h3>Weihnachtsferien</h3>
-      <p class="text-aktuelles">Vom <strong>21.12.2020 bis 03.01.2021</strong> sind unsere Büros <strong>geschlossen</strong>. Wir wünschen allen fröhliche Festtage und einen guten Rutsch. Bleibt gesund!</p>
+
+      <h3><%= aktuell.title %></h3>
+      <p class="text-aktuelles"><%- aktuell.description %></p>
+      
     </div>
+    <% if(currentUser) {%>
+    <a href="/aktuelles/<%= aktuell._id %>" class="btn btn-mina">Eintrag Bearbeiten</a>
+    <a href="/aktuelles/neu" class="btn btn-mina">Eintrag Hinzufügen</a>
+    <% } %>
     <a href="/downloads/flyer-landing.pdf" class="btn" id="btn-flyer" target="_blank">Unser aktueller Flyer</a>
   </div>
+
   <!-- Block Kalender -->
   <div class="calendar-block">
     <h1 class="white"><span class="title-line">Kalender</span> </h1>

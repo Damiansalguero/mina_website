@@ -1,9 +1,9 @@
-const Post = require("../models/post");
-const { dataSchema } = require("../schemas.js");
+const Aktuell = require("../models/aktuell");
+const { aktuellesSchema } = require("../schemas.js");
 
 module.exports.renderLanding = async (req, res) => {
-  const posts = await Post.find({});
-  res.render("landing", { posts });
+  const aktuell = await Aktuell.findOne({});
+  res.render("landing", { aktuell });
 };
 
 module.exports.renderWorkshops = (req, res) => {

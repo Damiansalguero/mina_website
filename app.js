@@ -24,10 +24,11 @@ const User = require("./models/user");
 const Post = require("./models/post");
 
 //////////////// ROUTES IMPORT ///////////////////
-const postRoutes = require("./routes/posts");
+const aktuellesRoutes = require("./routes/aktuelles");
 const userRoutes = require("./routes/users");
 const showRoutes = require("./routes/shows");
 const testRoutes = require("./routes/tests");
+const postRoutes = require("./routes/posts");
 
 //////////////// MONGO DB SETUP ///////////////////
 //Online DB dbUrl
@@ -104,8 +105,9 @@ app.use((req, res, next) => {
 
 //////////////// USE  ROUTEHANDLERS ///////////////////
 app.use("/", userRoutes);
-app.use("/posts", postRoutes);
+app.use("/aktuelles", aktuellesRoutes);
 app.use("/mina", showRoutes);
+app.use("/posts", postRoutes);
 app.use("/test", testRoutes);
 
 ///////////////////////////////////////////////////////////////////////////////
