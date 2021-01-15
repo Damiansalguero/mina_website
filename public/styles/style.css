@@ -443,6 +443,21 @@ a {
   font-weight: bold;
 }
 
+.btn-mina:hover {
+  background-color: #fff;
+  border-color: #db2a6f;
+  color: #db2a6f;
+}
+
+.btn-info {
+  color: #fff;
+}
+
+.btn-info:hover {
+  color: #0dcaf0;
+  background-color: #fff;
+  border-color: #0dcaf0;
+}
 .mina-form {
   width: 50%;
 }
