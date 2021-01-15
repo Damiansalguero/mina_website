@@ -1,0 +1,27 @@
+<% layout("layouts/boilerplate") %>
+    <div class="row">
+      <h1 class="text-center">Kalendereintrag Bearbeiten</h1>
+      <div class="col-6 offset-3">
+        <form action="/calendars/<%=calendar._id%>?_method=PUT" method="post" novalidate class="validated-form" enctype="multipart/form-data">
+          <div class="mb-3">
+            <label class="form-label" for="title">Überschrift</label>
+            <input class="form-control" type="text" id="title" name="calendar[title]" required value="<%=calendar.title%>">
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="date">Datum</label>
+            <input class="form-control" type="text" id="date" name="calendar[date]" required value="<%=calendar.date%>">
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="description">Beshreibung</label>
+            <textarea class="form-control" type="text" id="description" name="calendar[description]" required><%=calendar.description%></textarea>
+            <script type="text/javascript">
+                    CKEDITOR.replace( 'description' );
+                </script>
+          </div>
+          <div class="mb-3">
+            <button class="btn btn-info">Aktuallisieren</button>
+          </div>
+        </form>
+        <a class="btn btn-primary btn-mina" href="/mina/home">Zurück</a>
+      </div>
+    </div>

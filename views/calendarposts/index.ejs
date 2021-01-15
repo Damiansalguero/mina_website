@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="/styles/calendar.css">
+<% layout("layouts/boilerplate") %>
+<h1>Alle Kalendereinträge</h1>
+
+<div class="calendar-box">
+      <% for(let calendar of calendars) {%>
+        <div class="card mb-3">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5><%=calendar.title%></h5>
+                <p class= "card-text"><%=calendar.description%></p>
+                <p class= "card-text">
+                  <small class="text-muted"><%=calendar.date%></small>
+                </p>
+                <a href="/posts/<%=calendar._id%>" class="btn btn-primary">Anzeigen</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% }%>
+    </div>

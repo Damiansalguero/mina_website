@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="/styles/calendar.css">
+<% layout("layouts/boilerplate") %>
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"><%= calendar.title %></h5>
+    <p class="card-text"><%- calendar.description %></p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><%= calendar.date %></li>
+    <li class="list-group-item"><%= calendar.phone %></li>
+  </ul>
+  <div class="card-body">
+    <a href="mailto:<%= calendar.email %>" class="card-link"><%= calendar.email %></a>
+  </div>
+</div>
+<% if (currentUser) {%>
+  <div class="btn-aktuelles-edit">
+    <a class="card-link btn btn-info" href="/calendars/<%=calendar._id%>/edit">Bearbeiten</a>
+    <a class="btn btn-primary btn-mina" href="/calendars/übersicht">Zurück</a>
+  </div>
+  <% } else { %>
+    <a class="btn btn-primary btn-mina" href="/calendars/übersicht"">Zurück</a>
+    <% } %>

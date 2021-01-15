@@ -19,6 +19,16 @@ module.exports.aktuellesSchema = Joi.object({
   deleteImages: Joi.array()
 });
 
+module.exports.calendarSchema = Joi.object({
+  calendar: Joi.object({
+    title: Joi.string().required(),
+    date: Joi.string().required(),
+    email: Joi.string(),
+    phone: Joi.string(),
+    description: Joi.string().required()
+  }).required()
+});
+
 module.exports.testdataSchema = Joi.object({
   test: Joi.object({
     title: Joi.string().required(),

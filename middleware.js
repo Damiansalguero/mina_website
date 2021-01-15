@@ -33,6 +33,17 @@ module.exports.validateAktuelles = (req, res, next) => {
   }
 };
 
+//////////////// CALENDAR POSTS ///////////////////
+module.exports.validateCalendar = (req, res, next) => {
+  const { error } = calendarSchema.validate(req.body);
+  if (error) {
+    const msg = error.details.map(el => el.message).join(",");
+    throw new ExpressError(msg, 400);
+  } else {
+    next();
+  }
+};
+
 //////////////// TEST /////////////
 module.exports.validatetestData = (req, res, next) => {
   const { error } = testdataSchema.validate(req.body);
