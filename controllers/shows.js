@@ -1,9 +1,11 @@
 const Aktuell = require("../models/aktuell");
-const { aktuellesSchema } = require("../schemas.js");
+const Calendar = require("../models/calendar");
+const { cloudinary } = require("../cloudinary");
 
 module.exports.renderLanding = async (req, res) => {
   const aktuell = await Aktuell.findOne({});
-  res.render("landing", { aktuell });
+  const calendars = await Calendar.find({});
+  res.render("landing", { aktuell, calendars });
 };
 
 module.exports.renderWorkshops = (req, res) => {

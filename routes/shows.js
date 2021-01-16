@@ -1,6 +1,14 @@
 const express = require("express");
 const router = express.Router();
 const shows = require("../controllers/shows");
+const {
+  isLoggedIn,
+  validateAktuelles,
+  validateCalendar
+} = require("../middleware");
+const multer = require("multer");
+const { storage } = require("../cloudinary");
+const upload = multer({ storage });
 
 router.get("/home", shows.renderLanding);
 router.get("/workshops", shows.renderWorkshops);

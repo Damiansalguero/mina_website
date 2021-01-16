@@ -14,9 +14,7 @@ module.exports.createAktuelles = async (req, res, next) => {
   }));
   aktuell.author = req.user._id;
   await aktuell.save();
-  //Flash message needs to be specified and declared here + Setup in app.js (middleware in app.use)
   req.flash("success", "Der Eintrag wurde erfolgreich erstellt !");
-  // res.redirect(`/posts/${post._id}`);
   res.redirect("/mina/home");
 };
 

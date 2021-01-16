@@ -25,6 +25,7 @@ const Post = require("./models/post");
 
 //////////////// ROUTES IMPORT ///////////////////
 const aktuellesRoutes = require("./routes/aktuelles");
+const calendarRoutes = require("./routes/calendars");
 const userRoutes = require("./routes/users");
 const showRoutes = require("./routes/shows");
 const testRoutes = require("./routes/tests");
@@ -106,6 +107,7 @@ app.use((req, res, next) => {
 //////////////// USE  ROUTEHANDLERS ///////////////////
 app.use("/", userRoutes);
 app.use("/aktuelles", aktuellesRoutes);
+app.use("/calendars", calendarRoutes);
 app.use("/mina", showRoutes);
 app.use("/posts", postRoutes);
 app.use("/test", testRoutes);
@@ -130,6 +132,7 @@ app.use((err, req, res, next) => {
   }
 
   res.status(statusCode).render("error", { err });
+  console.log("ERROR-MESSAGE !!!!!!", err);
 });
 
 //////////////// SERVER ROUTE ///////////////////

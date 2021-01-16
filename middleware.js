@@ -1,4 +1,4 @@
-const { aktuellesSchema } = require("./schemas.js");
+const { aktuellesSchema, calendarSchema } = require("./schemas.js");
 const ExpressError = require("./utils/ExpressError");
 const Post = require("./models/post");
 

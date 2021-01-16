@@ -1,6 +1,6 @@
 const Test = require("../models/test");
 const Post = require("../models/post");
-const { testdataSchema } = require("../schemas.js");
+// const { testdataSchema } = require("../schemas.js");
 const { cloudinary } = require("../cloudinary");
 
 module.exports.renderTest = async (req, res) => {

@@ -10,3 +10,28 @@ const { storage } = require("../cloudinary");
 const upload = multer({ storage });
 
 const Calendar = require("../models/calendar");
+
+router.get("/übersicht", catchAsync(calendars.index));
+
+router.get("/neu", isLoggedIn, calendars.renderNewCalendar);
+
+router.post(
+  "/",
+  isLoggedIn,
+  validateCalendar,
+  catchAsync(calendars.createCalendar)
+);
+
+router.get("/:id", catchAsync(calendars.showCalendar));
+
+router.get("/:id/edit", isLoggedIn, catchAsync(calendars.renderEditCalendar));
+
+router.put(
+  "/:id",
+  isLoggedIn,
+  validateCalendar,
+  catchAsync(calendars.updateCalendar)
+);
+
+router.delete("/:id", catchAsync(calendars.deleteCalendar));
+module.exports = router;
