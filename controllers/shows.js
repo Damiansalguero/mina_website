@@ -4,7 +4,8 @@ const { cloudinary } = require("../cloudinary");
 
 module.exports.renderLanding = async (req, res) => {
   const aktuell = await Aktuell.findOne({});
-  const calendars = await Calendar.find({});
+  const calendars = await // limitieren auf ... Einträge
+  Calendar.find({});
   res.render("landing", { aktuell, calendars });
 };
 

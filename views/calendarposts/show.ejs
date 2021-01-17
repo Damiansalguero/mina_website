@@ -13,12 +13,15 @@
   <div class="card-body">
     <a href="mailto:<%= calendar.email %>" class="card-link"><%= calendar.email %></a>
   </div>
-</div>
 <% if (currentUser) {%>
-  <div class="btn-aktuelles-edit">
+  <div class="btn-edit">
     <a class="card-link btn btn-info" href="/calendars/<%=calendar._id%>/edit">Bearbeiten</a>
-    <a class="btn btn-primary btn-mina" href="/calendars/übersicht">Zurück</a>
+    <form class="d-inline" action="/calendars/<%=calendar._id%>?_method=DELETE" method="post">
+      <button class="btn btn-danger">Löschen</button>
+    </form>
   </div>
+</div>
+  <a class="btn btn-primary btn-mina" href="/calendars/übersicht">Zurück</a>
   <% } else { %>
     <a class="btn btn-primary btn-mina" href="/calendars/übersicht"">Zurück</a>
     <% } %>

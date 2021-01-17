@@ -29,6 +29,16 @@ module.exports.calendarSchema = Joi.object({
   }).required()
 });
 
+module.exports.workshopSchema = Joi.object({
+  workshop: Joi.object({
+    date: Joi.string().required(),
+    title: Joi.string().required(),
+    location: Joi.string().required(),
+    capacity: Joi.string().required(),
+    description: Joi.string().required()
+  }).required()
+});
+
 module.exports.testdataSchema = Joi.object({
   test: Joi.object({
     title: Joi.string().required(),

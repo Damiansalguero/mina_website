@@ -35,7 +35,19 @@ module.exports.validateAktuelles = (req, res, next) => {
 
 //////////////// CALENDAR POSTS ///////////////////
 module.exports.validateCalendar = (req, res, next) => {
+  console.log(req.body);
   const { error } = calendarSchema.validate(req.body);
+  if (error) {
+    const msg = error.details.map(el => el.message).join(",");
+    throw new ExpressError(msg, 400);
+  } else {
+    next();
+  }
+};
+
+//////////////// WORKSHOPS /////////////
+module.exports.validateWorkshops = (req, res, next) => {
+  const { error } = WorkshopSchema.validate(req.body);
   if (error) {
     const msg = error.details.map(el => el.message).join(",");
     throw new ExpressError(msg, 400);

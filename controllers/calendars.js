@@ -13,10 +13,9 @@ module.exports.renderNewCalendar = (req, res) => {
 
 module.exports.createCalendar = async (req, res, next) => {
   const calendar = await new Calendar(req.body.calendar);
-  calendar.author = req.user._id;
   await calendar.save();
   req.flash("success", "Der Kalendareintrag wurde erfolgreich erstellt !");
-  res.redirect("/calendars/<%=calendar._id%>");
+  res.redirect("/mina/home");
 };
 
 module.exports.renderEditCalendar = async (req, res) => {
