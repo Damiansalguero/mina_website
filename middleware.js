@@ -1,4 +1,8 @@
-const { aktuellesSchema, calendarSchema } = require("./schemas.js");
+const {
+  aktuellesSchema,
+  calendarSchema,
+  workshopSchema
+} = require("./schemas.js");
 const ExpressError = require("./utils/ExpressError");
 const Post = require("./models/post");
 
@@ -47,7 +51,7 @@ module.exports.validateCalendar = (req, res, next) => {
 
 //////////////// WORKSHOPS /////////////
 module.exports.validateWorkshops = (req, res, next) => {
-  const { error } = WorkshopSchema.validate(req.body);
+  const { error } = workshopSchema.validate(req.body);
   if (error) {
     const msg = error.details.map(el => el.message).join(",");
     throw new ExpressError(msg, 400);
