@@ -296,14 +296,15 @@ footer {
 /********** FOOTER STYLES ***********/
 
 /********** NAVBAR STYLES ***********/
-.navbar {
-  background-color: #fff;
-  z-index: 2;
-}
 .nav-box {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
   background-color: #fff;
   height: auto;
+}
+
+.navbar {
+  background-color: #fff;
+  z-index: 2;
 }
 
 .navbar-dark .navbar-nav .nav-link {
