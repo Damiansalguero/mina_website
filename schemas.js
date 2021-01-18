@@ -34,7 +34,8 @@ module.exports.workshopSchema = Joi.object({
     date: Joi.string().required(),
     title: Joi.string().required(),
     location: Joi.string().required(),
-    capacity: Joi.string().required(),
+    // capacity: Joi.string().required(),
+    capacity: Joi.string().optional(),
     description: Joi.string().required()
   }).required()
 });

@@ -1,4 +1,4 @@
-const Workshop = require("../models/post");
+const Workshop = require("../models/workshop");
 const { workshopSchema } = require("../schemas.js");
 const { cloudinary } = require("../cloudinary");
 
@@ -17,11 +17,12 @@ module.exports.createWorkshop = async (req, res, next) => {
   res.redirect("/mina/workshops");
 };
 
-// module.exports.showCalendar = async (req, res) => {
-//   const workshop = await Workshop.findById(req.params.id);
-//   if (!workshop) {
-//     req.flash("error", "Dieser Eintrag existiert nicht mehr !");
-//     return res.redirect("/mina/home");
-//   }
-//   res.render("wsposts/show", { workshop });
-// };
+module.exports.showWorkshop = async (req, res) => {
+  const workshop = await Workshop.findById(req.params.id);
+  if (!workshop) {
+    req.flash("error", "Dieser Eintrag existiert nicht mehr !");
+    return res.redirect("/mina/home");
+  }
+
+  res.render("wsposts/show", { workshop });
+};

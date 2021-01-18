@@ -17,43 +17,29 @@
       <!-- Table 1 -->
       <table class="table table-responsive table-hover" id="table-ws">
         <thead>
+
           <tr>
-            <th scope="col">#</th>
             <th scope="col">Datum</th>
             <th scope="col">Workshop</th>
             <th scope="col">Ort</th>
             <th scope="col">Verfügbarkeit</th>
+            <th scope="col">Info</th>
           </tr>
         </thead>
         <tbody>
+          <% for(let workshop of workshops) {%>
           <tr>
-            <th scope="row">1</th>
-            <td>21.10. – 23.10.2020</td>
-            <td>Workshop in digitaler Form</td>
-            <td>Online</td>
-            <td><a href="#">ausgebucht</a></td>
+            <td><%= workshop.date %></td>
+            <td><%= workshop.title %></td>
+            <td><%= workshop.location %></td>
+            <% if(workshop.capacity === "ausgebucht") { %>
+            <td class= "ausgebucht"><%= workshop.capacity %></td>
+            <%} else { %>
+              <td class="anmelden"><%= workshop.capacity %></td>
+            <% } %>
+            <td><a href="/workshops/<%= workshop._id %>"> Mehr ...</a></td>
           </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>11.11. – 13.11.2020</td>
-            <td>Workshop in digitaler Form</td>
-            <td>Online</td>
-            <td><a href="#">ausgebucht</a></td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>25.11. – 27.11.2020</td>
-            <td>Workshop in digitaler Form</td>
-            <td>Online</td>
-            <td><a href="#">ausgebucht</a></td>
-          </tr>
-          <tr>
-            <th scope="row">4</th>
-            <td>09.12. – 11.12.2020</td>
-            <td>Workshop in digitaler Form</td>
-            <td>Online</td>
-            <td><a href="#">ausgebucht</a></td>
-          </tr>
+          <% }%>
         </tbody>
       </table>
       <a href="/downloads/flyer-workshops.pdf" class="btn" id="btn-flyer" target="_blank">Unser aktueller Workshop Flyer</a>

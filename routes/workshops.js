@@ -13,15 +13,15 @@ const Workshop = require("../models/workshop");
 
 router.get("/", catchAsync(workshops.index));
 
-router.get("/new", isLoggedIn, workshops.renderNewWorkshop);
+router.get("/new", workshops.renderNewWorkshop);
 
 router.post(
   "/",
-  isLoggedIn,
+
   validateWorkshops,
   catchAsync(workshops.createWorkshop)
 );
 
-// router.get("/:id", catchAsync(workshops.showWorkshop));
+router.get("/:id", catchAsync(workshops.showWorkshop));
 
 module.exports = router;

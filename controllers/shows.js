@@ -1,16 +1,17 @@
 const Aktuell = require("../models/aktuell");
 const Calendar = require("../models/calendar");
+const Workshop = require("../models/workshop");
 const { cloudinary } = require("../cloudinary");
 
 module.exports.renderLanding = async (req, res) => {
   const aktuell = await Aktuell.findOne({});
-  const calendars = await // limitieren auf ... Einträge
-  Calendar.find({});
+  const calendars = await Calendar.find({});
   res.render("landing", { aktuell, calendars });
 };
 
-module.exports.renderWorkshops = (req, res) => {
-  res.render("workshops");
+module.exports.renderWorkshops = async (req, res) => {
+  const workshops = await Workshop.find({});
+  res.render("workshops", { workshops });
 };
 
 module.exports.renderPartizip = (req, res) => {

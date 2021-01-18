@@ -31,7 +31,7 @@
   font-size: 18px;
 }
 .table a {
-  color: #db2a6f;
+  color: #72c5d5;
   font-weight: bold;
   text-decoration: none;
 }
@@ -64,5 +64,15 @@
 
 #ws-contact {
   margin-top: -15vh;
+}
+
+.ausgebucht {
+  color: #db2a6f;
+  font-weight: bold;
+}
+
+.anmelden {
+  color: #9fb039;
+  font-weight: bold;
 }
 /********** WS STYLES ***********/
