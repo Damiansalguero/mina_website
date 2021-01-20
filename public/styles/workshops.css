@@ -39,6 +39,29 @@
 .ws-active a {
   color: #9fb039;
 }
+
+.ausgebucht {
+  color: #db2a6f;
+  font-weight: bold;
+}
+
+.anmelden {
+  color: #9fb039;
+  font-weight: bold;
+}
+
+.card {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.btn-ws-group {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+  margin: 0 25%;
+}
+
 #ws-gallery {
   margin-top: -18vh;
   padding-bottom: 15vh;
@@ -66,13 +89,4 @@
   margin-top: -15vh;
 }
 
-.ausgebucht {
-  color: #db2a6f;
-  font-weight: bold;
-}
-
-.anmelden {
-  color: #9fb039;
-  font-weight: bold;
-}
 /********** WS STYLES ***********/

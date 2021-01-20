@@ -134,7 +134,6 @@ app.use((err, req, res, next) => {
   }
 
   res.status(statusCode).render("error", { err });
-  console.log("ERROR-MESSAGE !!!!!!", err);
 });
 
 //////////////// SERVER ROUTE ///////////////////

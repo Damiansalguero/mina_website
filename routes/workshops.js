@@ -24,4 +24,13 @@ router.post(
 
 router.get("/:id", catchAsync(workshops.showWorkshop));
 
+router.get("/:id/edit", isLoggedIn, catchAsync(workshops.renderEditWorkshop));
+
+router.put(
+  "/:id",
+  isLoggedIn,
+  validateWorkshops,
+  catchAsync(workshops.updateWorkshop)
+);
+
 module.exports = router;
