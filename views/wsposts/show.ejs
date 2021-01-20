@@ -16,18 +16,18 @@
   </div>
 </div>
 <% if (currentUser) {%>
-  <div class="btn-ws-group">
+<div class="btn-ws-group">
   <div class="btn-edit">
     <a class="card-link btn btn-info" href="/workshops/<%=workshop._id%>/edit">Bearbeiten</a>
   </div>
-    <form class="d-inline" action="/workshops/<%=workshop._id%>?_method=DELETE" method="post">
-      <button class="btn btn-danger">Löschen</button>
-    </form>
-    <div class="">
-      <a class="btn btn-primary btn-mina" href="/mina/workshops">Zurück</a>
-    </div>
+  <form class="d-inline" action="/workshops/<%=workshop._id%>?_method=DELETE" method="post">
+    <button class="btn btn-danger">Löschen</button>
+  </form>
+  <div class="">
+    <a class="btn btn-primary btn-mina" href="/mina/workshops">Zurück</a>
   </div>
+</div>
 
-  <% } else { %>
-    <a class="btn btn-primary btn-mina" href="/calendars/übersicht"">Zurück</a>
+<% } else { %>
+<a class="btn btn-primary btn-mina" href="/calendars/übersicht"">Zurück</a>
     <% } %>

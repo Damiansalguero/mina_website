@@ -33,4 +33,6 @@ router.put(
   catchAsync(workshops.updateWorkshop)
 );
 
+router.delete("/:id", catchAsync(workshops.deleteWorkshop));
+
 module.exports = router;

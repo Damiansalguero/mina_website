@@ -39,7 +39,7 @@ module.exports.updateWorkshop = async (req, res) => {
     ...req.body.workshop
   });
   await workshop.save();
-  req.flash("success", "Der Kalendareintrag wurde erfolgreich aktualisiert !");
+  req.flash("success", "Der Workshop wurde erfolgreich aktualisiert !");
   res.redirect("/mina/workshops");
 };
 
