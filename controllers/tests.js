@@ -6,11 +6,11 @@ const { cloudinary } = require("../cloudinary");
 module.exports.renderTest = async (req, res) => {
   const tests = await Test.find({});
   const posts = await Post.find({});
-  res.render("test", { tests, posts });
+  res.render("tests/test", { tests, posts });
 };
 
 module.exports.renderTestform = (req, res) => {
-  res.render("testform");
+  res.render("tests/new");
 };
 
 module.exports.createTest = async (req, res, next) => {
@@ -35,7 +35,7 @@ module.exports.showTest = async (req, res) => {
     req.flash("error", "Dieser Post existiert nicht mehr !");
     return res.redirect("/mina/home");
   }
-  res.render("testshow", { test });
+  res.render("tests/show", { test });
 };
 
 module.exports.renderEditForm = async (req, res) => {
