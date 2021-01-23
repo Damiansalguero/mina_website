@@ -10,3 +10,14 @@
   width: 50%;
   margin: 0 auto;
 }
+
+.gallery2 {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.gallery-img {
+  width: 200px;
+  height: 200px;
+}

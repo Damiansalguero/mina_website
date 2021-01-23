@@ -42,5 +42,12 @@
       </div>
       <% }%>
     </div>
+
+    <div class="gallery2">
+    <% test.images.forEach((img, i) => { %>
+          <img src="<%= img.url %>" class="d-block gallery-img" alt="">
+    <% }) %>
+  </div>
+
   </div>
 </div>
