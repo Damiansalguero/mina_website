@@ -1,12 +1,12 @@
 const Test = require("../models/test");
 const Post = require("../models/post");
-// const { testdataSchema } = require("../schemas.js");
+const { dataSchema, testdataSchema } = require("../schemas.js");
 const { cloudinary } = require("../cloudinary");
 
 module.exports.renderTest = async (req, res) => {
   const tests = await Test.find({});
   const posts = await Post.find({});
-  res.render("tests/test", { tests, posts });
+  res.render("tests/index", { tests, posts });
 };
 
 module.exports.renderTestform = (req, res) => {
@@ -14,7 +14,6 @@ module.exports.renderTestform = (req, res) => {
 };
 
 module.exports.createTest = async (req, res, next) => {
-  console.log("req.body.test", req.body.test);
   const test = await new Test(req.body.test);
   test.images = req.files.map(file => ({
     url: file.path,
@@ -22,11 +21,12 @@ module.exports.createTest = async (req, res, next) => {
   }));
   test.author = req.user._id;
   await test.save();
-
+  console.log(test);
   //Flash message needs to be specified and declared here + Setup in app.js (middleware in app.use)
   req.flash("success", "Der Test wurde erfolgreich erstellt !");
   // res.redirect(`/posts/${post._id}`);
-  res.redirect("/test");
+  // res.redirect("/test");
+  res.send("Test Post Worked!!!");
 };
 
 module.exports.showTest = async (req, res) => {
@@ -35,7 +35,7 @@ module.exports.showTest = async (req, res) => {
     req.flash("error", "Dieser Test existiert nicht mehr !");
     return res.redirect("/mina/home");
   }
-  res.render("tests/show", { test });
+  res.render("tests/test", { test });
 };
 
 module.exports.renderEditForm = async (req, res) => {
@@ -49,8 +49,22 @@ module.exports.updatetest = async (req, res) => {
   const test = await Test.findByIdAndUpdate(id, {
     ...req.body.test
   });
+  const imgs = req.files.map(file => ({
+    url: file.path,
+    filename: file.filename
+  }));
+  test.images.push(...imgs);
+  await test.save();
+  if (req.body.deleteImages) {
+    for (let filename of req.body.deleteImages) {
+      await cloudinary.uploader.destroy(filename);
+    }
+    await campground.updateOne({
+      $pull: { images: { filename: { $in: req.body.deleteImages } } }
+    });
+  }
   req.flash("success", "Test wurde erfolgreich aktualisiert");
-  res.redirect(`/test`);
+  res.redirect(`/test/${test._id}`);
 };
 
 module.exports.deletetest = async (req, res) => {

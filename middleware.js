@@ -1,10 +1,11 @@
 const {
   aktuellesSchema,
   calendarSchema,
-  workshopSchema
+  workshopSchema,
+  testdataSchema,
+  dataSchema
 } = require("./schemas.js");
 const ExpressError = require("./utils/ExpressError");
-const Post = require("./models/post");
 
 //isAuthenticated() is a passport method
 module.exports.isLoggedIn = (req, res, next) => {

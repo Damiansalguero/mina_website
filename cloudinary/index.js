@@ -24,6 +24,7 @@ const storage = new CloudinaryStorage({
       "wmv",
       "mp4",
       "mpeg",
+      "pdf",
       "webm"
     ]
   }

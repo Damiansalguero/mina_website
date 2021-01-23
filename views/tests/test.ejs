@@ -1,12 +1,49 @@
 <link rel="stylesheet" href="/styles/test.css">
-<link rel="stylesheet" href="/styles/landing.css">
 <% layout("layouts/boilerplate") %>
+<div class="row">
+  <div class="col-6 offset-3">
+      <div class="card mb-3">
+        <!-- url comes from the campground model in images -->
+        <div class="card-body">
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <% test.images.forEach((img, i) => { %>
 
-<h1>Yooooooooooooooo</h1>
-<% for(let test of tests) {%>
-<h1><%= test.title%></h1>
-<% }%>
-
-<% for(let post of posts) {%>
-<h1><%= post.title%></h1>
-<% }%>
+              <div class="carousel-item <%= i === 0 ? 'active' : '' %>">
+                <img src="<%= img.url %>" class="d-block carousel-img" alt="">
+              </div>
+              <% }) %>
+              <!-- Conditional displaying of arrows -->
+              <% if(test.images.length > 1) { %>
+              <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </a>
+              <% } %>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title"><%=test.title%></h5>
+          <p class="card-text"><%= test.description %></p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item text-muted"><%=test.location%></li>
+          <li class="list-group-item"> <%=test.date%></li>
+        </ul>
+        <!-- This hides/shows content atatched to a single user FRONTEND -->
+        <% if (currentUser) {%>
+        <div class="card-body">
+          <a class="card-link btn btn-info" href="/test/<%=test._id%>/edit">Bearbeiten</a>
+          <form class="d-inline" action="/test/<%=test._id%>?_method=DELETE" method="post">
+            <button class="btn btn-danger">Löschen</button>
+          </form>
+        </div>
+        <% }%>
+      </div>
+  </div>
+</div>

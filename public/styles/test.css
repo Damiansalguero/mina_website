@@ -1,9 +1,7 @@
-.text-box-aktuelles {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 40%;
-  border: 2px solid #db2a6f;
-  border-radius: 10px;
-  padding-top: 20px;
+.card {
+  width: 50%;
+  margin: 0 auto;
+}
+.card img {
+  height: 200px;
 }

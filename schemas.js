@@ -45,5 +45,6 @@ module.exports.testdataSchema = Joi.object({
     location: Joi.string().required(),
     date: Joi.string().required(),
     description: Joi.string().required()
-  }).required()
+  }).required(),
+  deleteImages: Joi.array()
 });
