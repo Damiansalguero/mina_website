@@ -7,7 +7,6 @@
 }
 
 #carouselExampleControls {
-  width: 50%;
   margin: 0 auto;
 }
 
@@ -20,4 +19,12 @@
 .gallery-img {
   width: 200px;
   height: 200px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.carousel-img {
+  height: 300px;
 }

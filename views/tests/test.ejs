@@ -2,26 +2,8 @@
 <% layout("layouts/boilerplate") %>
 <div class="row">
   <div class="col-6 offset-3">
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <% test.images.forEach((img, i) => { %>
-        <div class="carousel-item <%= i === 0 ? 'active' : '' %>">
-          <img src="<%= img.url %>" class="d-block w-100" alt="">
-        </div>
-        <% }) %>
-        <!-- Conditional displaying of arrows -->
-        <% if(test.images.length > 1) { %>
-        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </a>
-        <% } %>
-      </div>
-    </div>
+
+    <!-- Card -->
     <div class="card mb-3">
       <!-- url comes from the campground model in images -->
       <div class="card-body">
@@ -42,12 +24,56 @@
       </div>
       <% }%>
     </div>
+<!-- Card -->
 
+
+<!-- Test Gallery -->
     <div class="gallery2">
     <% test.images.forEach((img, i) => { %>
-          <img src="<%= img.url %>" class="d-block gallery-img" alt="">
+          <img src="<%= img.url %>" class="d-block gallery-img pointer" data-bs-toggle="modal" data-bs-target="#exampleModal" alt="">
     <% }) %>
   </div>
+<!-- Test Gallery -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Carousel -->
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <% test.images.forEach((img, i) => { %>
+            <div class="carousel-item <%= i === 0 ? 'active' : '' %>">
+              <img src="<%= img.url %>" class="d-block w-100 carousel-img" alt="">
+            </div>
+            <% }) %>
+            <!-- Conditional displaying of arrows -->
+            <% if(test.images.length > 1) { %>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </a>
+            <% } %>
+          </div>
+        </div>
+        <!-- Carousel -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-mina" data-bs-dismiss="modal">Schließen</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Test Modal -->
 
   </div>
 </div>
