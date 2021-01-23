@@ -5,3 +5,8 @@
 .card img {
   height: 200px;
 }
+
+#carouselExampleControls {
+  width: 50%;
+  margin: 0 auto;
+}

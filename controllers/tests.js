@@ -25,8 +25,7 @@ module.exports.createTest = async (req, res, next) => {
   //Flash message needs to be specified and declared here + Setup in app.js (middleware in app.use)
   req.flash("success", "Der Test wurde erfolgreich erstellt !");
   // res.redirect(`/posts/${post._id}`);
-  // res.redirect("/test");
-  res.send("Test Post Worked!!!");
+  res.redirect("/test");
 };
 
 module.exports.showTest = async (req, res) => {
