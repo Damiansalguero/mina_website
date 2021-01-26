@@ -1,4 +1,4 @@
-/********** WS STYLES ***********/
+/********** WS PAGE STYLES ***********/
 .ws-title {
   width: 50%;
 }
@@ -50,18 +50,6 @@
   font-weight: bold;
 }
 
-.card {
-  margin: 0 auto;
-  width: 50%;
-}
-
-.btn-ws-group {
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
-  margin: 0 25%;
-}
-
 #ws-gallery {
   margin-top: -18vh;
   padding-bottom: 15vh;
@@ -103,14 +91,14 @@
   font-weight: bold;
 }
 
-.btn-workshop {
+.btn-workshop:hover {
   border-color: #0dcaf0;
+  background-color: #fff;
   color: #0dcaf0;
   font-weight: bold;
-  margin-top: 3vh;
 }
 
-.btn-workshop:hover {
+.btn-workshop {
   background-color: #0dcaf0;
   border-color: #0dcaf0;
   color: #fff;
@@ -121,5 +109,49 @@
   display: flex;
   flex-wrap: wrap;
 }
+/********** WS PAGE STYLES ***********/
 
-/********** WS STYLES ***********/
+/********** WS DV STYLES ***********/
+.card {
+  margin: 0 auto;
+  width: 25%;
+  border: 2px solid #db2a6f;
+}
+
+.btn-ws-dv {
+  margin: 10px 0;
+}
+
+.ws-dv-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.btn-danger:hover {
+  border-color: #dc3545;
+  background-color: #fff;
+  color: #dc3545;
+  font-weight: bold;
+}
+
+.btn-danger {
+  border-color: #dc3545;
+  background-color: #dc3545;
+  color: #fff;
+  font-weight: bold;
+}
+
+ul li span,
+h5,
+.card-title,
+.description {
+  font-weight: bold;
+}
+
+.dv-title {
+  text-align: center;
+}
+.card-title {
+  color: #0dcaf0;
+}
+/********** WS DV STYLES ***********/

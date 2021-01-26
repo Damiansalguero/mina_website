@@ -1,33 +1,40 @@
 <% layout("layouts/boilerplate") %>
 <link rel="stylesheet" href="/styles/workshops.css">
-
+<div class="ws-dv-box">
+<h1 class=""><span class="title-line line-pink">Seminarübersicht</span></h1>
 <div class="card">
-  <div class="card-body">
-    <h5 class="card-title"><%= workshop.title %></h5>
+  <div class="card-body dv-title">
+    <h5>Titel:</h5>
+    <h6 class="card-title"><%= workshop.title %></h6>
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item">Datum: <%= workshop.date %></li>
-    <li class="list-group-item">Seminarort: <%= workshop.location %></li>
-    <li class="list-group-item"><%= workshop.capacity %></li>
+    <li class="list-group-item"><span>Datum:</span>  <%= workshop.date %></li>
+    <li class="list-group-item"> <span>Seminarort:</span> <%= workshop.location %></li>
+    <% if(workshop.capacity === "ausgebucht") { %>
+      <li class="list-group-item ausgebucht"><%= workshop.capacity %></li>
+    <%} else { %>
+      <a href="#"><li class="list-group-item anmelden"><%= workshop.capacity %></li></a>
+    <% } %>
   </ul>
   <div class="card-body">
+    <h6 class="description">Details:</h6>
     <p class="card-text"><%- workshop.description %></p>
-    <a href="#" class="card-link"><%- workshop.description %></a>
   </div>
 </div>
 <% if (currentUser) {%>
 <div class="btn-ws-group">
-  <div class="btn-edit">
-    <a class="card-link btn btn-info" href="/workshops/<%=workshop._id%>/edit">Bearbeiten</a>
+  <div>
+    <a class="card-link btn btn-workshop btn-ws-dv" href="/workshops/<%=workshop._id%>/edit">Bearbeiten</a>
   </div>
-  <form class="d-inline" action="/workshops/<%=workshop._id%>?_method=DELETE" method="post">
+  <form class="d-inline btn-ws-dv" action="/workshops/<%=workshop._id%>?_method=DELETE" method="post">
     <button class="btn btn-danger">Löschen</button>
   </form>
-  <div class="">
-    <a class="btn btn-primary btn-mina" href="/mina/workshops">Zurück</a>
+  <div>
+    <a class="btn btn-primary btn-mina btn-ws-dv" href="/mina/workshops">Zurück</a>
   </div>
 </div>
 
 <% } else { %>
 <a class="btn btn-primary btn-mina" href="/calendars/übersicht"">Zurück</a>
     <% } %>
+</div>
