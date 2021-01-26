@@ -7,13 +7,13 @@
     <div class="card mb-3">
       <!-- url comes from the campground model in images -->
       <div class="card-body">
-        <h5 class="card-title"><%=workshopgallery.title%></h5>
-        <p class="card-text"><%= workshopgallery.description %></p>
+        <h5 class="card-title"><%=wsg.title%></h5>
+        <p class="card-text"><%= wsg.description %></p>
       </div>
       <% if (currentUser ) {%>
       <div class="card-body">
-        <a class="card-link btn btn-info" href="/workshops/gallery/<%=workshopgallery._id%>/edit">Bearbeiten</a>
-        <form class="d-inline" action="/workshops/gallery/<%=workshopgallery._id%>?_method=DELETE" method="post">
+        <a class="card-link btn btn-info" href="/workshops/gallery/<%=wsg._id%>/edit">Bearbeiten</a>
+        <form class="d-inline" action="/workshops/gallery/<%=wsg._id%>?_method=DELETE" method="post">
           <button class="btn btn-danger">Löschen</button>
         </form>
       </div>
@@ -24,7 +24,7 @@
 
 <!-- Test Gallery -->
     <div class="gallery2">
-    <% workshopgallery.images.forEach((img, i) => { %>
+    <% wsg.images.forEach((img, i) => { %>
           <img src="<%= img.url %>" class="d-block gallery-img pointer" data-bs-toggle="modal" data-bs-target="#exampleModal" alt="">
     <% }) %>
   </div>
@@ -42,13 +42,13 @@
         <!-- Carousel -->
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
-            <% workshopgallery.images.forEach((img, i) => { %>
+            <% wsg.images.forEach((img, i) => { %>
             <div class="carousel-item <%= i === 0 ? 'active' : '' %>">
               <img src="<%= img.url %>" class="d-block w-100 carousel-img" alt="">
             </div>
             <% }) %>
             <!-- Conditional displaying of arrows -->
-            <% if(test.images.length > 1) { %>
+            <% if(wsg.images.length > 1) { %>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
@@ -60,8 +60,8 @@
             <% } %>
           </div>
         </div>
-        <!-- Carousel -->
       </div>
+      <!-- Carousel -->
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary btn-mina" data-bs-dismiss="modal">Schließen</button>
       </div>

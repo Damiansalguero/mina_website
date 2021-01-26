@@ -89,4 +89,23 @@
   margin-top: -15vh;
 }
 
+.btn-gallery {
+  border-color: #fff;
+  color: #fff;
+  font-weight: bold;
+  margin-top: 3vh;
+}
+
+.btn-gallery:hover {
+  background-color: #fff;
+  border-color: #fff;
+  color: #0dcaf0;
+  font-weight: bold;
+}
+
+.img-container-ws {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 /********** WS STYLES ***********/

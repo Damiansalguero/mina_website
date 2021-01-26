@@ -1,6 +1,7 @@
 const Aktuell = require("../models/aktuell");
 const Calendar = require("../models/calendar");
 const Workshop = require("../models/workshop");
+const Workshopgallery = require("../models/workshopgallery");
 const { cloudinary } = require("../cloudinary");
 
 module.exports.renderLanding = async (req, res) => {
@@ -11,7 +12,8 @@ module.exports.renderLanding = async (req, res) => {
 
 module.exports.renderWorkshops = async (req, res) => {
   const workshops = await Workshop.find({});
-  res.render("workshops", { workshops });
+  const workshopgalleries = await Workshopgallery.find({});
+  res.render("workshops", { workshops, workshopgalleries });
 };
 
 module.exports.renderPartizip = (req, res) => {
