@@ -233,79 +233,7 @@ ul,
 /********** GENERAL STYLES ***********/
 
 /********** NAVBAR STYLES ***********/
-.nav-box {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
-  background-color: #fff;
-  height: auto;
-}
 
-.navbar {
-  background-color: #fff;
-  z-index: 2;
-}
-
-.navbar-dark .navbar-nav .nav-link {
-  color: #000;
-  padding: 1.5rem;
-}
-
-.navbar-dark .navbar-nav .nav-link.active {
-  color: #db2a6f;
-  font-weight: bold;
-  background-color: none;
-}
-
-.logo {
-  margin: 5vh 0;
-}
-#logo-subtitle {
-  color: #000;
-  margin-left: 10%;
-  font-size: 16px;
-}
-
-.nav-item:hover {
-  background-color: #72c5d5;
-  color: #fff;
-}
-
-.symbol {
-  margin: 0 10px;
-}
-
-.symbol-box {
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 5vw;
-  padding-top: 6vh;
-}
-.navbar > .container-fluid {
-  align-items: baseline;
-}
-
-.navbar-collapse {
-  flex-direction: column;
-}
-.navbar-toggler {
-  background-color: #db2a6f;
-}
-
-.br-link {
-  text-align: center;
-}
-
-#path-nav {
-  z-index: 1;
-  margin-top: -20vh;
-}
-.mina-logo {
-  margin-left: 3vw;
-}
-
-.mina-logo img {
-  padding-top: 2vh;
-  height: 120px;
-}
 /********** NAVBAR STYLES ***********/
 /********** ALERT STYLES ***********/
 .alert {
