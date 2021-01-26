@@ -10,6 +10,10 @@ module.exports.renderNewWorkshop = (req, res) => {
   res.render("wsposts/new");
 };
 
+module.exports.renderNewWorkshopGallery = (req, res) => {
+  res.render("wsimgposts/new");
+};
+
 module.exports.createWorkshop = async (req, res, next) => {
   const workshop = await new Workshop(req.body.workshop);
   await workshop.save();

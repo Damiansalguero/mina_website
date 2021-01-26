@@ -1,20 +1,11 @@
 <% layout("layouts/boilerplate") %>
     <div class="row">
-      <h1 class="text-center">Test Bearbeiten</h1>
+      <h1 class="text-center">Gallerie Bearbeiten</h1>
       <div class="col-6 offset-3">
-        <!-- For image uploads the form needs to be set enctype="multipart/form-data" -->
-        <form action="/test/<%=test._id%>?_method=PUT" method="post" novalidate class="validated-form" enctype="multipart/form-data">
+        <form action="/workshopgalleries/<%=wsg._id%>?_method=PUT" method="post" novalidate class="validated-form" enctype="multipart/form-data">
           <div class="mb-3">
             <label class="form-label" for="title">Title</label>
-            <input class="form-control" type="text" id="title" name="test[title]" required value="<%=test.title%>">
-          </div>
-          <div class="mb-3">
-            <label class="form-label" for="location">Location</label>
-            <input class="form-control" type="text" id="location" name="test[location]" required value="<%=test.location%>">
-          </div>
-          <div class="mb-3">
-            <label class="form-label" for="date">Datum</label>
-            <input class="form-control" type="text" id="date" name="test[date]" required value="<%=test.date%>">
+            <input class="form-control" type="text" id="title" name="wsg[title]" required value="<%=wsg.title%>">
           </div>
           <div class="mb-3">
             <div class="form-file custom-file">
@@ -27,10 +18,13 @@
           </div>
           <div class="mb-3">
             <label class="form-label" for="description">Beschreibung</label>
-            <textarea class="form-control" type="text" id="description" name="test[description]" required><%=test.description%></textarea>
+            <textarea class="form-control" type="text" id="description" name="wsg[description]" required><%=wsg.description%></textarea>
+            <script>
+                    CKEDITOR.replace( 'description' );
+                </script>
           </div>
           <div class="mb-3">
-            <% test.images.forEach(function(img, i) { %>
+            <% wsg.images.forEach(function(img, i) { %>
               <img src="<%= img.thumbnail %>" class="img-thumbnail" alt="">
               <div class="form-check-inline">
                 <!-- id here add index of the images -->
@@ -44,6 +38,6 @@
             <button class="btn btn-info">Speichern</button>
           </div>
         </form>
-        <a href="/mina/home">Zurück</a>
+        <a href="/mina/workshops">Zurück</a>
       </div>
     </div>

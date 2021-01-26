@@ -2,6 +2,7 @@ const {
   aktuellesSchema,
   calendarSchema,
   workshopSchema,
+  workshopGallerySchema,
   testdataSchema,
   dataSchema
 } = require("./schemas.js");
@@ -53,6 +54,17 @@ module.exports.validateCalendar = (req, res, next) => {
 //////////////// WORKSHOPS /////////////
 module.exports.validateWorkshops = (req, res, next) => {
   const { error } = workshopSchema.validate(req.body);
+  if (error) {
+    const msg = error.details.map(el => el.message).join(",");
+    throw new ExpressError(msg, 400);
+  } else {
+    next();
+  }
+};
+
+/////////////// WORKSHOP GALLERY /////////////
+module.exports.validateWorkshopGallery = (req, res, next) => {
+  const { error } = workshopGallerySchema.validate(req.body);
   if (error) {
     const msg = error.details.map(el => el.message).join(",");
     throw new ExpressError(msg, 400);

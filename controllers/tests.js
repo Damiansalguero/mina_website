@@ -21,10 +21,7 @@ module.exports.createTest = async (req, res, next) => {
   }));
   test.author = req.user._id;
   await test.save();
-  console.log(test);
-  //Flash message needs to be specified and declared here + Setup in app.js (middleware in app.use)
   req.flash("success", "Der Test wurde erfolgreich erstellt !");
-  // res.redirect(`/posts/${post._id}`);
   res.redirect("/test");
 };
 
@@ -53,12 +50,21 @@ module.exports.updatetest = async (req, res) => {
     filename: file.filename
   }));
   test.images.push(...imgs);
+  if (req.body.deleteImages) {
+    for (let filename of req.body.deleteImages) {
+      await cloudinary.uploader.destroy(filename);
+    }
+    await test.updateOne({
+      $pull: { images: { filename: { $in: req.body.deleteImages } } }
+    });
+  }
+
   await test.save();
   if (req.body.deleteImages) {
     for (let filename of req.body.deleteImages) {
       await cloudinary.uploader.destroy(filename);
     }
-    await campground.updateOne({
+    await test.updateOne({
       $pull: { images: { filename: { $in: req.body.deleteImages } } }
     });
   }
