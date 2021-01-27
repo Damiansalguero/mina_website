@@ -3,8 +3,7 @@
 }
 
 body {
-  background: #92bde7;
-  color: #485e74;
+  color: #000;
   line-height: 1.6;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   padding: 1em;
@@ -20,6 +19,15 @@ body {
 ul {
   list-style: none;
   padding: 0;
+}
+#header-contact {
+  color: #000;
+}
+
+li,
+i,
+h3 {
+  color: #fff;
 }
 
 .brand {
@@ -39,7 +47,7 @@ ul {
 }
 
 .company-info {
-  background: #c9e6ff;
+  background: #db2a6f;
 }
 
 .company-info h3,
@@ -49,7 +57,7 @@ ul {
 }
 
 .contact {
-  background: #f9feff;
+  background: #fff;
 }
 
 /* FORM STYLES */
@@ -76,21 +84,25 @@ ul {
 .contact form textarea {
   width: 100%;
   padding: 1em;
-  border: 1px solid #c9e6ff;
+  border: 1px solid #0dcaf0;
 }
 
 .contact form button {
-  background: #c9e6ff;
-  border: 0;
+  background-color: #db2a6f;
+  border-color: #db2a6f;
+  color: #fff;
   text-transform: uppercase;
+  font-weight: bold;
 }
 
 .contact form button:hover,
-.contact form button:focus {
-  background: #92bde7;
-  color: #fff;
-  outline: 0;
-  transition: background-color 2s ease-out;
+.contact form button:focus,
+.contact form input:focus,
+.contact form textarea:focus {
+  background-color: #fff;
+  border: 1px solid #db2a6f;
+  scolor: #db2a6f;
+  /* transition: background-color 2s ease-out; */
 }
 
 /* LARGE SCREENS */

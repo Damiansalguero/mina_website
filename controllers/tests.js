@@ -21,7 +21,7 @@ module.exports.createTest = async (req, res, next) => {
     <h3>Contact Details</h3>
     <ul>
       <li>Name: ${req.body.name}</li>
-      <li>Company: ${req.body.company}</li>
+      <li>Company: ${req.body.betreff}</li>
       <li>Email: ${req.body.email}</li>
       <li>Phone: ${req.body.phone}</li>
     </ul>

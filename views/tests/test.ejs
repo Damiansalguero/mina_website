@@ -1,41 +1,44 @@
 <link rel="stylesheet" href="/styles/test.css">
 <% layout("layouts/boilerplate") %>
 <div class="container">
-  <h1 class="brand"><span>Acme</span> Web Design</h1>
+  <h1 class=""><span class="title-line line-pink">Kontakt</span></h1>
   <div class="wrapper animated bounceInLeft">
     <div class="company-info">
-      <h3>Acme Web Design</h3>
+      <h3>Berlin MINA – Leben in Vielfalt e. V.</h3>
       <ul>
-        <li><i class="fa fa-road"></i> 44 Something st</li>
-        <li><i class="fa fa-phone"></i> (555) 555-5555</li>
-        <li><i class="fa fa-envelope"></i> test@acme.test</li>
+        <li><i class="fa fa-map-marker-alt"></i> Friedrichstraße 1,
+        10969 Berlin</li>
+        <li><i class="fas fa-phone-alt"></i> 030 62 93 40 31</li>
+        <a href="mailto:vielfalt@mina-berlin.de">
+        <li><i class="fa fa-envelope"></i> vielfalt@mina­berlin.de</li>
+        </a>
       </ul>
     </div>
     <div class="contact">
-      <h3>Email Us</h3>
+      <h3 id="header-contact">Schreiben Sie uns</h3>
       <form method="POST" action="/test">
         <p>
           <label>Name</label>
           <input type="text" name="name">
         </p>
         <p>
-          <label>Company</label>
-          <input type="text" name="company">
+          <label>Betreff</label>
+          <input type="text" name="betreff">
         </p>
         <p>
-          <label>Email Address</label>
+          <label>Emailaddresse</label>
           <input type="email" name="email">
         </p>
         <p>
-          <label>Phone Number</label>
+          <label>Telefonnummer</label>
           <input type="text" name="phone">
         </p>
         <p class="full">
-          <label>Message</label>
+          <label>Nachricht</label>
           <textarea name="message" rows="5"></textarea>
         </p>
-        <p class="full">
-          <button>Submit</button>
+        <p class="full btn-mina">
+          <button>Senden</button>
         </p>
       </form>
     </div>
