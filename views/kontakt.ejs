@@ -11,25 +11,47 @@
     <div class="block aktuelles">
       <h1 class=""><span class="title-line">Kontakt</span></h1>
       <!-- Kontakt Form -->
-      <form class="validated-form mina-form" action="#" method="post" novalidate>
-        <div class="mb-3">
-          <label class="form-label" for="name">Name</label>
-          <input class="form-control" type="text" id="name" name="name" required>
+      <div class="wrapper animated bounceInLeft">
+        <div class="company-info">
+          <h3>Berlin MINA – Leben in Vielfalt e. V.</h3>
+          <ul>
+            <li><i class="fa fa-map-marker-alt"></i> Friedrichstraße 1,
+            10969 Berlin</li>
+            <li><i class="fas fa-phone-alt"></i> 030 62 93 40 31</li>
+            <a href="mailto:vielfalt@mina-berlin.de">
+            <li><i class="fa fa-envelope"></i> vielfalt@mina­berlin.de</li>
+            </a>
+          </ul>
         </div>
-        <div class="mb-3">
-          <label class="form-label" for="email">Email</label>
-          <input class="form-control" type="email" id="email" name="email" required>
+        <div class="contact">
+          <h3 id="header-contact">Schreiben Sie uns</h3>
+          <form method="POST" action="/test">
+            <p>
+              <label>Name</label>
+              <input type="text" name="name">
+            </p>
+            <p>
+              <label>Betreff</label>
+              <input type="text" name="betreff">
+            </p>
+            <p>
+              <label>Emailaddresse</label>
+              <input type="email" name="email">
+            </p>
+            <p>
+              <label>Telefonnummer</label>
+              <input type="text" name="phone">
+            </p>
+            <p class="full">
+              <label>Nachricht</label>
+              <textarea name="message" rows="5"></textarea>
+            </p>
+            <p class="full btn-mina">
+              <button>Senden</button>
+            </p>
+          </form>
         </div>
-        <div class="mb-3">
-          <label class="form-label" for="subject">Betreff</label>
-          <input class="form-control" type="text" id="subject" name="subject" required>
-        </div>
-        <div class="mb-3">
-          <label class="form-label" for="description">Nachricht</label>
-          <textarea class="form-control" type="text" id="description" name="campground[description]" required></textarea>
-        </div>
-        <button class="btn btn-success btn-mina" id="btn-contact">Senden</button>
-      </form>
+      </div>
     </div>
     <img src="/img/gesamt/Elemente/Path 31-1.svg" alt="" class="img-fluid" id="path-3">
   </div>
