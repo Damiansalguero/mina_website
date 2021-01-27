@@ -30,6 +30,7 @@ footer {
 }
 
 .social-items a:hover,
+.social-items i:hover,
 .impress-data a:hover {
   color: #db2a6f;
 }
