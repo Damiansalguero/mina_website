@@ -1,79 +1,43 @@
 <link rel="stylesheet" href="/styles/test.css">
 <% layout("layouts/boilerplate") %>
-<div class="row">
-  <div class="col-6 offset-3">
-
-    <!-- Card -->
-    <div class="card mb-3">
-      <!-- url comes from the campground model in images -->
-      <div class="card-body">
-        <h5 class="card-title"><%=test.title%></h5>
-        <p class="card-text"><%= test.description %></p>
-      </div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item text-muted"><%=test.location%></li>
-        <li class="list-group-item"><%=test.date%></li>
+<div class="container">
+  <h1 class="brand"><span>Acme</span> Web Design</h1>
+  <div class="wrapper animated bounceInLeft">
+    <div class="company-info">
+      <h3>Acme Web Design</h3>
+      <ul>
+        <li><i class="fa fa-road"></i> 44 Something st</li>
+        <li><i class="fa fa-phone"></i> (555) 555-5555</li>
+        <li><i class="fa fa-envelope"></i> test@acme.test</li>
       </ul>
-      <!-- This hides/shows content atatched to a single user FRONTEND -->
-      <% if (currentUser ) {%>
-      <div class="card-body">
-        <a class="card-link btn btn-info" href="/test/<%=test._id%>/edit">Bearbeiten</a>
-        <form class="d-inline" action="/test/<%=test._id%>?_method=DELETE" method="post">
-          <button class="btn btn-danger">Löschen</button>
-        </form>
-      </div>
-      <% }%>
     </div>
-<!-- Card -->
-
-
-<!-- Test Gallery -->
-    <div class="gallery2">
-    <% test.images.forEach((img, i) => { %>
-          <img src="<%= img.url %>" class="d-block gallery-img pointer" data-bs-toggle="modal" data-bs-target="#exampleModal" alt="">
-    <% }) %>
-  </div>
-<!-- Test Gallery -->
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <!-- Carousel -->
-        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <% test.images.forEach((img, i) => { %>
-            <div class="carousel-item <%= i === 0 ? 'active' : '' %>">
-              <img src="<%= img.url %>" class="d-block w-100 carousel-img" alt="">
-            </div>
-            <% }) %>
-            <!-- Conditional displaying of arrows -->
-            <% if(test.images.length > 1) { %>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </a>
-            <% } %>
-          </div>
-        </div>
-        <!-- Carousel -->
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary btn-mina" data-bs-dismiss="modal">Schließen</button>
-      </div>
+    <div class="contact">
+      <h3>Email Us</h3>
+      <form method="POST" action="/test">
+        <p>
+          <label>Name</label>
+          <input type="text" name="name">
+        </p>
+        <p>
+          <label>Company</label>
+          <input type="text" name="company">
+        </p>
+        <p>
+          <label>Email Address</label>
+          <input type="email" name="email">
+        </p>
+        <p>
+          <label>Phone Number</label>
+          <input type="text" name="phone">
+        </p>
+        <p class="full">
+          <label>Message</label>
+          <textarea name="message" rows="5"></textarea>
+        </p>
+        <p class="full">
+          <button>Submit</button>
+        </p>
+      </form>
     </div>
-  </div>
-</div>
-<!-- Test Modal -->
-
   </div>
 </div>

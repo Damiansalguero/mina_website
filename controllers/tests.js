@@ -1,12 +1,14 @@
 const Test = require("../models/test");
 const Post = require("../models/post");
+const nodemailer = require("nodemailer");
+
 const { dataSchema, testdataSchema } = require("../schemas.js");
 const { cloudinary } = require("../cloudinary");
 
 module.exports.renderTest = async (req, res) => {
-  const tests = await Test.find({});
-  const posts = await Post.find({});
-  res.render("tests/index", { tests, posts });
+  // const tests = await Test.find({});
+  // const posts = await Post.find({});
+  res.render("tests/test");
 };
 
 module.exports.renderTestform = (req, res) => {
@@ -14,15 +16,55 @@ module.exports.renderTestform = (req, res) => {
 };
 
 module.exports.createTest = async (req, res, next) => {
-  const test = await new Test(req.body.test);
-  test.images = req.files.map(file => ({
-    url: file.path,
-    filename: file.filename
-  }));
-  test.author = req.user._id;
-  await test.save();
-  req.flash("success", "Der Test wurde erfolgreich erstellt !");
-  res.redirect("/test");
+  const output = `
+    <p>You have a new contact request</p>
+    <h3>Contact Details</h3>
+    <ul>
+      <li>Name: ${req.body.name}</li>
+      <li>Company: ${req.body.company}</li>
+      <li>Email: ${req.body.email}</li>
+      <li>Phone: ${req.body.phone}</li>
+    </ul>
+    <h3>Message</h3>
+    <p>${req.body.message}</p>
+  `;
+
+  // create reusable transporter object using the default SMTP transport
+  const transporter = nodemailer.createTransport({
+    host: "mail.aikq.de",
+    port: 25,
+    secure: false, // true for 465, false for other ports
+    auth: {
+      user: process.env.EMAIL, // generated ethereal user
+      pass: process.env.MAIL_PW // generated ethereal password
+    },
+    tls: {
+      rejectUnauthorized: false
+    }
+  });
+
+  // setup email data with unicode symbols
+  const mailOptions = {
+    from: '"Nodemailer Contact" damian.salguero@aikq.de', // sender address
+    to: "damian.salguero@posteo.de", // list of receivers
+    subject: "Node Contact Request", // Subject line
+    text: "Test, um zu sehen, ob die Email geendet wird", // plain text body
+    html: output // html body
+  };
+
+  // send mail with defined transport object
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      return console.log(error);
+    }
+    console.log("Message sent: %s", info.messageId);
+    console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+    console.log("BODYYYYYYYYYYYYYY", req.body);
+    res.send("Email Route Worked");
+    // req.flash("success", "Die Email wurde erfolgreich versendet!");
+    // res.render("tests/test");
+  });
+  // res.redirect("/test");
 };
 
 module.exports.showTest = async (req, res) => {

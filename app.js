@@ -10,7 +10,6 @@ const mongoose = require("mongoose");
 const ejsMate = require("ejs-mate");
 const session = require("express-session");
 const flash = require("connect-flash");
-const nodemailer = require("nodemailer");
 const { dataSchema, testDataSchema } = require("./schemas.js");
 const ExpressError = require("./utils/ExpressError");
 const bodyParser = require("body-parser");
