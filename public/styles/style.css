@@ -297,7 +297,10 @@ a {
   color: #fff;
   text-decoration: none;
 }
-
+.worker-info ul,
+a:hover {
+  color: #0dcaf0;
+}
 .worker-title {
   font-weight: bold;
 }
