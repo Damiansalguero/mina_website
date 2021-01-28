@@ -1,14 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const shows = require("../controllers/shows");
-const {
-  isLoggedIn,
-  validateAktuelles,
-  validateCalendar
-} = require("../middleware");
-const multer = require("multer");
-const { storage } = require("../cloudinary");
-const upload = multer({ storage });
+const catchAsync = require("../utils/catchAsync");
 
 router.get("/home", shows.renderLanding);
 router.get("/workshops", shows.renderWorkshops);
@@ -20,5 +13,6 @@ router.get("/dokumentation/Fachtagung", shows.renderFach);
 router.get("/impressum", shows.renderImpressum);
 router.get("/datenschutz-erklaerung", shows.renderDatenschutz);
 router.get("/kontakt", shows.renderKontakt);
+router.post("/kontakt", catchAsync(shows.createKontakt));
 
 module.exports = router;

@@ -31,8 +31,8 @@ module.exports.createTest = async (req, res, next) => {
 
   // create reusable transporter object using the default SMTP transport
   const transporter = nodemailer.createTransport({
-    host: "mail.aikq.de",
-    port: 25,
+    host: process.env.HOST,
+    port: process.env.PORT1 || process.env.PORT2,
     secure: false, // true for 465, false for other ports
     auth: {
       user: process.env.EMAIL, // generated ethereal user

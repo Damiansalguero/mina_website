@@ -2,6 +2,7 @@ const Aktuell = require("../models/aktuell");
 const Calendar = require("../models/calendar");
 const Workshop = require("../models/workshop");
 const Workshopgallery = require("../models/workshopgallery");
+const nodemailer = require("nodemailer");
 const { cloudinary } = require("../cloudinary");
 
 module.exports.renderLanding = async (req, res) => {
@@ -43,4 +44,53 @@ module.exports.renderDatenschutz = (req, res) => {
 
 module.exports.renderKontakt = (req, res) => {
   res.render("kontakt");
+};
+
+module.exports.createKontakt = async (req, res, next) => {
+  const output = `
+    <p>You have a new contact request</p>
+    <h3>Contact Details</h3>
+    <ul>
+      <li>Name: ${req.body.name}</li>
+      <li>Company: ${req.body.betreff}</li>
+      <li>Email: ${req.body.email}</li>
+      <li>Phone: ${req.body.phone}</li>
+    </ul>
+    <h3>Message</h3>
+    <p>${req.body.message}</p>
+  `;
+
+  // create reusable transporter object using the default SMTP transport
+  const transporter = nodemailer.createTransport({
+    host: process.env.HOST,
+    port: process.env.PORT3,
+    secure: false, // true for 465, false for other ports
+    auth: {
+      user: process.env.EMAIL, // generated ethereal user
+      pass: process.env.MAIL_PW // generated ethereal password
+    },
+    tls: {
+      rejectUnauthorized: false
+    }
+  });
+
+  // setup email data with unicode symbols
+  const mailOptions = {
+    from: '"Nodemailer Contact" damian.salguero@aikq.de', // sender address
+    to: "damian.salguero@posteo.de", // list of receivers
+    subject: "Node Contact Request", // Subject line
+    text: "Test, um zu sehen, ob die Email geendet wird", // plain text body
+    html: output // html body
+  };
+
+  // send mail with defined transport object
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      return console.log(error);
+    }
+    console.log("Message sent: %s", info.messageId);
+    console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+    req.flash("success", "Die Email wurde erfolgreich versendet!");
+    res.redirect("/mina/kontakt");
+  });
 };
