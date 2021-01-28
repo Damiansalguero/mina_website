@@ -78,8 +78,8 @@ module.exports.createKontakt = async (req, res, next) => {
   const mailOptions = {
     from: '"Nodemailer Contact" damian.salguero@aikq.de', // sender address
     to: "damian.salguero@posteo.de", // list of receivers
-    subject: "Node Contact Request", // Subject line
-    text: "Test, um zu sehen, ob die Email geendet wird", // plain text body
+    subject: "Neue Kontaktanrage", // Subject line
+    text: "Folgende Nachricht wurde Per Kontaktformular gesendet", // plain text body
     html: output // html body
   };
 
