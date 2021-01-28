@@ -3,6 +3,7 @@ const {
   calendarSchema,
   workshopSchema,
   workshopGallerySchema,
+  timelineSchema,
   testdataSchema,
   dataSchema
 } = require("./schemas.js");
@@ -65,6 +66,17 @@ module.exports.validateWorkshops = (req, res, next) => {
 /////////////// WORKSHOP GALLERY /////////////
 module.exports.validateWorkshopGallery = (req, res, next) => {
   const { error } = workshopGallerySchema.validate(req.body);
+  if (error) {
+    const msg = error.details.map(el => el.message).join(",");
+    throw new ExpressError(msg, 400);
+  } else {
+    next();
+  }
+};
+
+/////////////// TIMELINE /////////////
+module.exports.validateTimeline = (req, res, next) => {
+  const { error } = timelineSchema.validate(req.body);
   if (error) {
     const msg = error.details.map(el => el.message).join(",");
     throw new ExpressError(msg, 400);

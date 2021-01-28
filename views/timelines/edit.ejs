@@ -1,0 +1,31 @@
+<% layout("layouts/boilerplate") %>
+    <div class="row">
+    <h1 class=""><span class="title-line line-pink">Zeitstrahl Bearbeiten</span></h1>
+      <div class="col-6 offset-3">
+        <form action="/zeitstrahl/<%=timeline._id%>?_method=PUT" method="post" novalidate class="validated-form">
+          <div class="mb-3">
+            <label class="form-label" for="title">Überschrift</label>
+            <input class="form-control" type="text" id="title" name="timeline[title]" required value="<%=timeline.title%>">
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="date">Datum</label>
+            <input class="form-control" type="text" id="date" name="timeline[date]" required value="<%=timeline.date%>">
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="phase">Ort</label>
+            <input class="form-control" type="text" id="phase" name="timeline[phase]"required value="<%=timeline.location%>">
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="description">Beshreibung</label>
+            <textarea class="form-control" type="text" id="description" name="timeline[description]" required><%=timeline.description%></textarea>
+            <script type="text/javascript">
+                    CKEDITOR.replace( 'description' );
+                </script>
+          </div>
+          <div class="mb-3">
+            <button class="btn btn-info">Aktuallisieren</button>
+          </div>
+        </form>
+        <a class="btn btn-primary btn-mina" href="/mina/home">Zurück</a>
+      </div>
+    </div>

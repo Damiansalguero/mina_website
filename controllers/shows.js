@@ -2,6 +2,7 @@ const Aktuell = require("../models/aktuell");
 const Calendar = require("../models/calendar");
 const Workshop = require("../models/workshop");
 const Workshopgallery = require("../models/workshopgallery");
+const Timeline = require("../models/timeline");
 const nodemailer = require("nodemailer");
 const { cloudinary } = require("../cloudinary");
 
@@ -20,8 +21,9 @@ module.exports.renderWorkshops = async (req, res) => {
 module.exports.renderPartizip = (req, res) => {
   res.render("partizip");
 };
-module.exports.renderProzess = (req, res) => {
-  res.render("prozess");
+module.exports.renderProzess = async (req, res) => {
+  const timelines = await Timeline.find({});
+  res.render("prozess", { timelines });
 };
 module.exports.renderDoku = (req, res) => {
   res.render("dokumentation");

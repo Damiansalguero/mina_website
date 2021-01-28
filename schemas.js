@@ -45,6 +45,15 @@ module.exports.workshopGallerySchema = Joi.object({
   deleteImages: Joi.array()
 });
 
+module.exports.timelineSchema = Joi.object({
+  timeline: Joi.object({
+    title: Joi.string().required(),
+    date: Joi.string().required(),
+    phase: Joi.string().required(),
+    description: Joi.string().required()
+  }).required()
+});
+
 module.exports.testdataSchema = Joi.object({
   test: Joi.object({
     title: Joi.string().required(),
