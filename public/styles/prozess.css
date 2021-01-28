@@ -19,3 +19,9 @@
   padding-top: 10vh;
   padding-bottom: 15vh;
 }
+
+#timeline {
+  height: 400px;
+  background-image: url("/img/gesamt/Zeitstrahl/Zeitstrahl 1.png");
+  background-size: cover;
+}
