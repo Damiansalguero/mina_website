@@ -64,12 +64,12 @@ module.exports.createKontakt = async (req, res, next) => {
 
   // create reusable transporter object using the default SMTP transport
   const transporter = nodemailer.createTransport({
-    host: process.env.HOST,
-    port: process.env.PORT3,
+    host: process.env.MINA_HOST,
+    port: process.env.MINA_PORT2 || process.env.MINA_PORT1,
     secure: false, // true for 465, false for other ports
     auth: {
-      user: process.env.EMAIL, // generated ethereal user
-      pass: process.env.MAIL_PW // generated ethereal password
+      user: process.env.MINA_MAIL, // generated ethereal user
+      pass: process.env.MINA_PW // generated ethereal password
     },
     tls: {
       rejectUnauthorized: false
@@ -78,7 +78,7 @@ module.exports.createKontakt = async (req, res, next) => {
 
   // setup email data with unicode symbols
   const mailOptions = {
-    from: '"Nodemailer Contact" damian.salguero@aikq.de', // sender address
+    from: '"Nodemailer Contact" vielfalt@mina-berlin.de', // sender address
     to: "damian.salguero@posteo.de", // list of receivers
     subject: "Neue Kontaktanrage", // Subject line
     text: "Folgende Nachricht wurde Per Kontaktformular gesendet", // plain text body
@@ -92,7 +92,7 @@ module.exports.createKontakt = async (req, res, next) => {
     }
     console.log("Message sent: %s", info.messageId);
     console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-    req.flash("success", "Die Email wurde erfolgreich versendet!");
+    req.flash("info", "Die Email wurde erfolgreich versendet!");
     res.redirect("/mina/kontakt");
   });
 };

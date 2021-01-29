@@ -2,6 +2,22 @@ body {
   background: #9fb039;
 }
 
+/************* TEST ****************/
+/* .container-timeline::-webkit-scrollbar {
+  width: 12px;
+}
+
+.container-timeline::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+.container-timeline::-webkit-scrollbar-thumb {
+  background-color: #db2a6f;
+  border-radius: 20px;
+  border: 3px solid #fff;
+} */
+/************* TEST ****************/
+
 #timeline .timeline-item:after,
 #timeline .timeline-item:before {
   content: "";
@@ -38,6 +54,8 @@ a:hover {
 .container-timeline {
   max-width: 700px;
   margin: 0 auto;
+  /* height: 700px;
+  overflow-y: auto; */
 }
 
 h2 {
