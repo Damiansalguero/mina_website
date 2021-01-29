@@ -125,9 +125,9 @@ app.use("/test", testRoutes);
 //   res.render("test");
 // });
 
-app.all("*", (req, res, next) => {
-  next(new ExpressError("Seite nicht gefunden", 404));
-});
+// app.all("*", (req, res, next) => {
+//   next(new ExpressError("Seite nicht gefunden", 404));
+// });
 
 ////////////////// ERROR HANDLER /////////////////////////
 app.use((err, req, res, next) => {
