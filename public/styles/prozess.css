@@ -37,6 +37,10 @@ ul,
   list-style: none;
 }
 
+.prozess-list a {
+  color: #000;
+}
+
 .prozess-list a:hover {
   color: #db2a6f;
 }
