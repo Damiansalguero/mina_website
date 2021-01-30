@@ -12,7 +12,9 @@ const upload = multer({ storage });
 
 const Test = require("../models/test");
 
-router.get("/", catchAsync(tests.renderTest));
+router.get("/", catchAsync(tests.index));
+
+router.get("/test", catchAsync(tests.renderTest));
 
 router.get("/new", tests.renderTestform);
 

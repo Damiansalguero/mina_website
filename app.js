@@ -10,7 +10,7 @@ const mongoose = require("mongoose");
 const ejsMate = require("ejs-mate");
 const session = require("express-session");
 const flash = require("connect-flash");
-const { dataSchema, testDataSchema } = require("./schemas.js");
+const { dataSchema, testDataSchema, timelineSchema } = require("./schemas.js");
 const ExpressError = require("./utils/ExpressError");
 const bodyParser = require("body-parser");
 const methodOverride = require("method-override");
@@ -18,11 +18,12 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local");
 //"mongodb://localhost:27017/mina"
 //process.env.DB_URL ||
-const dbUrl = "mongodb://localhost:27017/mina";
+const dbUrl = process.env.DB_URL;
 const MongoStore = require("connect-mongo")(session);
 //////////////// MODEL IMPORT //////////////////
 const User = require("./models/user");
 const Post = require("./models/post");
+const Timeline = require("./models/timeline");
 
 //////////////// ROUTES IMPORT ///////////////////
 const aktuellesRoutes = require("./routes/aktuelles");

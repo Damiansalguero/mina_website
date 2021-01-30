@@ -58,7 +58,10 @@ module.exports.testdataSchema = Joi.object({
   test: Joi.object({
     title: Joi.string().required(),
     location: Joi.string().required(),
+    location2: Joi.string(),
+    location3: Joi.string(),
     date: Joi.string().required(),
+    online: Joi.string().optional(),
     description: Joi.string().required()
   }).required(),
   deleteImages: Joi.array()

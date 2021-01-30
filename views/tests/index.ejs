@@ -1,22 +1,19 @@
 <link rel="stylesheet" href="/styles/test.css">
 <% layout("layouts/boilerplate") %>
-    <h1>Alle Tests</h1>
-      <% for(let test of tests) {%>
-        <div class="card mb-3">
-          <div class="row">
-            <div class="col-md-4">
-              <img class="img-fluid" alt="" src= "<%= test.images[0].url %>">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5><%=test.title%></h5>
-                <p class= "card-text"><%=test.description%></p>
-                <p class= "card-text">
-                  <small class="text-muted"><%=test.location%></small>
-                </p>
-                <a href="/test/<%=test._id%>" class="btn btn-primary">View</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      <% }%>
+<h1>Alle Tests</h1>
+
+<% for(let test of tests) {%>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title"><%=test.title%></h5>
+      <p class="card-text"><%test.description%></p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item"><%=test.location%></li>
+      <li class="list-group-item"><%=test.location2%></li>
+      <li class="list-group-item"><%=test.location3%></li>
+      <li class="list-group-item"><%=test.online%></li>
+      <li class="list-group-item"><%=test.date%></li>
+    </ul>
+  </div>
+<% }%>

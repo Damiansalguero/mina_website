@@ -11,12 +11,7 @@ const upload = multer({ storage });
 
 router.get("/neu", timelines.renderNewTimeline);
 
-router.post(
-  "/",
-
-  validateTimeline,
-  catchAsync(timelines.createTimenline)
-);
+router.post("/", validateTimeline, catchAsync(timelines.createTimenline));
 
 router.get("/:id", catchAsync(timelines.showTimeline));
 
