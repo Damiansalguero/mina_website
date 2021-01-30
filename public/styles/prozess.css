@@ -66,21 +66,21 @@ ul,
   -moz-box-sizing: border-box;
 }
 
-a {
+.timeline-content a {
   text-decoration: none;
   color: #72c5d5;
   font-size: 18px;
   font-weight: bold;
 }
 
-a:hover {
+.timeline-content a:hover {
   text-decoration: underline;
   color: #72c5d5;
   font-weight: bold;
 }
 
-.vernetzung,
-.vernetzung:hover {
+a.vernetzung,
+a.vernetzung:hover {
   color: #db2a6f;
 }
 
@@ -230,8 +230,6 @@ ul {
   color: #db2a6f;
   display: inline-block;
   position: relative;
-  text-transform: uppercase;
-  font-size: 12px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
