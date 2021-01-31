@@ -15,7 +15,7 @@ module.exports.createAktuelles = async (req, res, next) => {
   aktuell.author = req.user._id;
   await aktuell.save();
   req.flash("success", "Der Eintrag wurde erfolgreich erstellt !");
-  res.redirect("/mina/home");
+  res.redirect("/home");
 };
 
 module.exports.renderEditAktuelles = async (req, res) => {
@@ -28,7 +28,7 @@ module.exports.showAktuelles = async (req, res) => {
   const aktuell = await Aktuell.findById(req.params.id);
   if (!aktuell) {
     req.flash("error", "Dieser Eintrag existiert nicht mehr !");
-    return res.redirect("/mina/home");
+    return res.redirect("/home");
   }
   res.render("aktuellposts/show", { aktuell });
 };
@@ -56,5 +56,5 @@ module.exports.updateAktuelles = async (req, res) => {
     });
   }
   req.flash("success", "Der Eintrag wurde erfolgreich aktualisiert !");
-  res.redirect("/mina/home");
+  res.redirect("/home");
 };

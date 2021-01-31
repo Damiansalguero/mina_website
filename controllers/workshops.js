@@ -66,7 +66,7 @@ module.exports.showWorkshopGallery = async (req, res) => {
   const wsg = await Workshopgallery.findById(req.params.id);
   if (!wsg) {
     req.flash("error", "Dieser Eintrag existiert nicht mehr !");
-    return res.redirect("/mina/home");
+    return res.redirect("/home");
   }
 
   res.render("wsimgposts/show", { wsg });
