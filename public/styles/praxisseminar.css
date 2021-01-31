@@ -1,3 +1,6 @@
+#block-praxis {
+  margin-top: -5vh;
+}
 .konzeption,
 .seminar-ov {
   display: flex;
@@ -19,6 +22,10 @@
 .text-praxis,
 .praxis-list a {
   color: #fff;
+}
+
+#block-konzeption {
+  clip-path: polygon(0 3%, 100% 0%, 100% 100%, 0% 100%);
 }
 
 #block-konzeption,
