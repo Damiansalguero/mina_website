@@ -18,7 +18,7 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local");
 //"mongodb://localhost:27017/mina"
 //process.env.DB_URL ||
-const dbUrl = process.env.DB_URL;
+const dbUrl = "mongodb://localhost:27017/mina";
 const MongoStore = require("connect-mongo")(session);
 //////////////// MODEL IMPORT //////////////////
 const User = require("./models/user");
@@ -109,12 +109,12 @@ app.use((req, res, next) => {
 });
 
 //////////////// USE  ROUTEHANDLERS ///////////////////
-app.use("/", userRoutes);
+app.use("/admin", userRoutes);
 app.use("/aktuelles", aktuellesRoutes);
 app.use("/calendars", calendarRoutes);
 app.use("/workshops", workshopRoutes);
 app.use("/zeitstrahl", timelineRoutes);
-app.use("/mina", showRoutes);
+app.use("/", showRoutes);
 app.use("/posts", postRoutes);
 app.use("/test", testRoutes);
 
