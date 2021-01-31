@@ -24,13 +24,13 @@
 <% if (currentUser) {%>
 <div class="btn-ws-group">
   <div>
-    <a class="card-link btn btn-workshop btn-ws-dv" href="/workshops/<%=workshop._id%>/edit">Bearbeiten</a>
+    <a class="card-link btn btn-workshop btn-ws-dv" href="/workshop/<%=workshop._id%>/edit">Bearbeiten</a>
   </div>
-  <form class="d-inline btn-ws-dv" action="/workshops/<%=workshop._id%>?_method=DELETE" method="post">
+  <form class="d-inline btn-ws-dv" action="/workshop/<%=workshop._id%>?_method=DELETE" method="post">
     <button class="btn btn-danger">Löschen</button>
   </form>
   <div>
-    <a class="btn btn-primary btn-mina btn-ws-dv" href="/mina/workshops">Zurück</a>
+    <a class="btn btn-primary btn-mina btn-ws-dv" href="/workshops">Zurück</a>
   </div>
 </div>
 

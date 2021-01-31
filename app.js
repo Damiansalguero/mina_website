@@ -109,12 +109,12 @@ app.use((req, res, next) => {
 });
 
 //////////////// USE  ROUTEHANDLERS ///////////////////
+app.use("/", showRoutes);
 app.use("/admin", userRoutes);
 app.use("/aktuelles", aktuellesRoutes);
 app.use("/calendars", calendarRoutes);
-app.use("/workshops", workshopRoutes);
+app.use("/workshop", workshopRoutes);
 app.use("/zeitstrahl", timelineRoutes);
-app.use("/", showRoutes);
 app.use("/posts", postRoutes);
 app.use("/test", testRoutes);
 

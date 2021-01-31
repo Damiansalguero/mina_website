@@ -24,7 +24,7 @@ module.exports.createWorkshop = async (req, res, next) => {
   const workshop = await new Workshop(req.body.workshop);
   await workshop.save();
   req.flash("success", "Der Workshop wurde erfolgreich erstellt !");
-  res.redirect("/mina/workshops");
+  res.redirect("/workshops");
 };
 
 module.exports.createWorkshopGallery = async (req, res, next) => {
@@ -56,7 +56,7 @@ module.exports.showWorkshop = async (req, res) => {
   const workshop = await Workshop.findById(req.params.id);
   if (!workshop) {
     req.flash("error", "Dieser Eintrag existiert nicht mehr !");
-    return res.redirect("/mina/home");
+    return res.redirect("/home");
   }
 
   res.render("wsposts/show", { workshop });
@@ -79,7 +79,7 @@ module.exports.updateWorkshop = async (req, res) => {
   });
   await workshop.save();
   req.flash("success", "Der Workshop wurde erfolgreich aktualisiert !");
-  res.redirect("/mina/workshops");
+  res.redirect("/workshops");
 };
 
 module.exports.updateWorkshopGallery = async (req, res) => {
@@ -102,17 +102,17 @@ module.exports.updateWorkshopGallery = async (req, res) => {
   }
   await wsg.save();
   req.flash("success", "Die Gallerie wurde erfolgreich aktualisiert !");
-  res.redirect("/mina/workshops");
+  res.redirect("/workshops");
 };
 
 module.exports.deleteWorkshop = async (req, res) => {
   const { id } = req.params;
   await Workshop.findByIdAndDelete(id);
-  res.redirect("/mina/workshops");
+  res.redirect("/workshops");
 };
 
 module.exports.deleteWorkshopGallery = async (req, res) => {
   const { id } = req.params;
   await Workshopgallery.findByIdAndDelete(id);
-  res.redirect("/mina/workshops");
+  res.redirect("/workshops");
 };

@@ -38,13 +38,13 @@
             <%} else { %>
               <td class="anmelden"><%= workshop.capacity %></td>
             <% } %>
-            <td><a href="/workshops/<%= workshop._id %>"> Mehr ...</a></td>
+            <td><a href="/workshop/<%= workshop._id %>"> Mehr ...</a></td>
           </tr>
           <% }%>
         </tbody>
       </table>
       <% if(currentUser) {%>
-      <a href="/workshops/new" class="btn btn btn-workshop">Workshop Hinzufügen</a>
+      <a href="/workshop/new" class="btn btn btn-workshop">Workshop Hinzufügen</a>
       <% } %>
 
       <a href="/downloads/flyer-workshops.pdf" class="btn" id="btn-flyer" target="_blank">Unser aktueller Workshopflyer</a>
