@@ -9,3 +9,12 @@ $(function() {
     }
   });
 });
+
+// $(".navbar-nav .nav-item").on("click", function() {
+//   $(".navbar-nav .nav-item a")
+//     .find("a.active")
+//     .removeClass("active");
+//   $(this)
+//     .parent("a")
+//     .addClass("active");
+// });

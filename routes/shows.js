@@ -4,6 +4,7 @@ const shows = require("../controllers/shows");
 const catchAsync = require("../utils/catchAsync");
 
 router.get("/", shows.renderLanding);
+router.get("/home", shows.renderhome);
 router.get("/workshops", shows.renderWorkshops);
 router.get("/partizipatives-projekt", shows.renderPartizip);
 router.get("/prozess-begleitung", shows.renderProzess);
