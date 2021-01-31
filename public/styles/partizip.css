@@ -29,7 +29,7 @@ video {
 }
 
 #header-part {
-  clip-path: polygon(0 0, 100% 2%, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 3%, 100% 100%, 0 100%);
   height: auto;
   padding-top: 10vh;
   padding-bottom: 15vh;
@@ -37,6 +37,7 @@ video {
 }
 #bg-partizip {
   padding-top: 10vh;
+  height: 470px;
 }
 
 .video-box {

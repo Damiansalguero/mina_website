@@ -1,5 +1,11 @@
+#datenschutz-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .daten-box {
-  margin-top: -10vh;
+  margin-top: -5vh;
 }
 
 .datenschutz-text .ws-text {
@@ -7,17 +13,14 @@
   text-align: justify;
 }
 
-.datenschutz-text a,
-.rechte {
+.datenschutz-text a {
   color: #72c5d5;
 }
 
 .datenschutz-text h3 {
   font-weight: bold;
-  width: 50%;
 }
-.datenschutz-text a:hover,
-h4 {
+.datenschutz-text a:hover {
   color: #db2a6f;
 }
 
@@ -39,27 +42,31 @@ h4 {
   margin-bottom: 10vh;
 }
 
+h3,
 h4 {
-  font-weight: bold;
-  margin: 3vh 0;
-}
-
-h4,
-ul,
-h3 {
   align-self: flex-start;
   margin-left: 25%;
-}
-#contact-datenschutz {
-  padding: 0;
+  width: 50%;
 }
 
-ul {
-  width: 40%;
+h4 {
+  font-weight: bold;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+}
+
+#contact-datenschutz {
+  padding: 0;
+  margin: 2vh 0;
+}
+
+.rechte {
+  width: 50%;
   line-height: 1.5;
 }
 
-.rechte li::before {
+.rechte li::before,
+#contact-datenschutz li::before {
   content: "\2022";
   color: #db2a6f;
   font-weight: bold;
