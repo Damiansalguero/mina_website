@@ -21,7 +21,7 @@ module.exports.registerUser = async (req, res) => {
     });
   } catch (err) {
     req.flash("error", err.message);
-    res.redirect("/register");
+    res.redirect("/admin/register");
   }
 };
 
