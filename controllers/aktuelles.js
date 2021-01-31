@@ -15,7 +15,7 @@ module.exports.createAktuelles = async (req, res, next) => {
   aktuell.author = req.user._id;
   await aktuell.save();
   req.flash("success", "Der Eintrag wurde erfolgreich erstellt !");
-  res.redirect("/home");
+  res.redirect("/");
 };
 
 module.exports.renderEditAktuelles = async (req, res) => {
@@ -28,7 +28,7 @@ module.exports.showAktuelles = async (req, res) => {
   const aktuell = await Aktuell.findById(req.params.id);
   if (!aktuell) {
     req.flash("error", "Dieser Eintrag existiert nicht mehr !");
-    return res.redirect("/home");
+    return res.redirect("/");
   }
   res.render("aktuellposts/show", { aktuell });
 };
@@ -56,5 +56,5 @@ module.exports.updateAktuelles = async (req, res) => {
     });
   }
   req.flash("success", "Der Eintrag wurde erfolgreich aktualisiert !");
-  res.redirect("/home");
+  res.redirect("/");
 };

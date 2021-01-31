@@ -56,7 +56,7 @@ module.exports.showWorkshop = async (req, res) => {
   const workshop = await Workshop.findById(req.params.id);
   if (!workshop) {
     req.flash("error", "Dieser Eintrag existiert nicht mehr !");
-    return res.redirect("/home");
+    return res.redirect("/workshops");
   }
 
   res.render("wsposts/show", { workshop });
@@ -66,7 +66,7 @@ module.exports.showWorkshopGallery = async (req, res) => {
   const wsg = await Workshopgallery.findById(req.params.id);
   if (!wsg) {
     req.flash("error", "Dieser Eintrag existiert nicht mehr !");
-    return res.redirect("/home");
+    return res.redirect("/workshops");
   }
 
   res.render("wsimgposts/show", { wsg });
