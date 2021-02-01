@@ -18,9 +18,10 @@
 .card {
   width: 50%;
 }
-.card-body a {
+.card-body a,
+h5 {
   color: #db2a6f;
-  font-size: bold;
+  font-weight: bold;
 }
 
 .card-body a:hover {
