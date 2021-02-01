@@ -15,7 +15,7 @@ module.exports.createCalendar = async (req, res, next) => {
   const calendar = await new Calendar(req.body.calendar);
   await calendar.save();
   req.flash("success", "Der Kalendareintrag wurde erfolgreich erstellt !");
-  res.redirect("/");
+  res.redirect("/home");
 };
 
 module.exports.renderEditCalendar = async (req, res) => {
@@ -28,7 +28,7 @@ module.exports.showCalendar = async (req, res) => {
   const calendar = await Calendar.findById(req.params.id);
   if (!calendar) {
     req.flash("error", "Dieser Eintrag existiert nicht mehr !");
-    return res.redirect("/");
+    return res.redirect("/home");
   }
   res.render("calendarposts/show", { calendar });
 };
@@ -40,11 +40,12 @@ module.exports.updateCalendar = async (req, res) => {
   });
   await calendar.save();
   req.flash("success", "Der Kalendareintrag wurde erfolgreich aktualisiert !");
-  res.redirect("/");
+  res.redirect("/home");
 };
 
 module.exports.deleteCalendar = async (req, res) => {
   const { id } = req.params;
   await Calendar.findByIdAndDelete(id);
-  res.redirect("/");
+  req.flash("success", "Der Kalendareintrag wurde erfolgreich gelöscht !");
+  res.redirect("/home");
 };

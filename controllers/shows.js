@@ -13,7 +13,10 @@ module.exports.renderLanding = async (req, res) => {
 module.exports.renderhome = async (req, res) => {
   const aktuell = await Aktuell.findOne({});
   const calendars = await Calendar.find({});
-  res.render("landing", { aktuell, calendars });
+  res.render("landing", {
+    aktuell,
+    calendars
+  });
 };
 
 module.exports.renderWorkshops = async (req, res) => {
