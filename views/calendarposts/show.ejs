@@ -2,17 +2,18 @@
 <% layout("layouts/boilerplate") %>
 
 <div class="calendar-card">
+<h1 class=""><span class="title-line line-pink">Übersicht <%= calendar.title %></span></h1>
 <div class="card">
   <div class="card-body">
-    <h5 class="card-title"><span>Titel:</span> <%= calendar.title %></h5>
+    <h5 class="card-title"><span class="span">Titel:</span> <%= calendar.title %></h5>
     <p class="card-text"><%- calendar.description %></p>
   </div>
   <ul class="list-group list-group-flush">
-    <li class="list-group-item"><span>Datum:</span> <%= calendar.date %></li>
-    <li class="list-group-item"><span>Telefonnummer:</span> <%= calendar.phone %></li>
+    <li class="list-group-item"><span class="span">Datum:</span> <%= calendar.date %></li>
+    <li class="list-group-item"><span class="span">Telefonnummer:</span> <%= calendar.phone %></li>
   </ul>
   <div class="card-body">
-    <a href="mailto:<%= calendar.email %>" class="card-link"><span>Email:</span> <%= calendar.email %></a>
+    <a href="mailto:<%= calendar.email %>" class="card-link"><span class="span">Email:</span> <%= calendar.email %></a>
   </div>
 </div>
 

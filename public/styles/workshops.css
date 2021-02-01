@@ -116,16 +116,20 @@
 
 /********** WS DV STYLES ***********/
 .card {
-  margin: 0 auto;
-  width: 25%;
-  border: 2px solid #db2a6f;
+  width: 50%;
+}
+
+.btn-group {
+  align-self: flex-start;
+  margin-left: 25%;
 }
 
 .btn-ws-dv {
-  margin: 10px 0;
+  margin: 5px 0;
 }
 
-.ws-dv-box {
+.ws-dv-box,
+.btn-group {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -154,7 +158,5 @@ h5,
 .dv-title {
   text-align: center;
 }
-.card-title {
-  color: #0dcaf0;
-}
+
 /********** WS DV STYLES ***********/

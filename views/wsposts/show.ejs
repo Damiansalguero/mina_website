@@ -1,11 +1,10 @@
 <% layout("layouts/boilerplate") %>
 <link rel="stylesheet" href="/styles/workshops.css">
 <div class="ws-dv-box">
-<h1 class=""><span class="title-line line-pink">Seminarübersicht</span></h1>
+<h1 class=""><span class="title-line line-pink">Übersicht <%= workshop.title %> </span></h1>
 <div class="card">
   <div class="card-body dv-title">
-    <h5>Titel:</h5>
-    <h6 class="card-title"><%= workshop.title %></h6>
+    <h5><span>Titel:</span> <%= workshop.title %></h5>
   </div>
   <ul class="list-group list-group-flush">
     <li class="list-group-item"><span>Datum:</span>  <%= workshop.date %></li>
@@ -22,7 +21,7 @@
   </div>
 </div>
 <% if (currentUser) {%>
-<div class="btn-ws-group">
+<div class="btn-group">
   <div>
     <a class="card-link btn btn-workshop btn-ws-dv" href="/workshop/<%=workshop._id%>/edit">Bearbeiten</a>
   </div>
