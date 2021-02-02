@@ -1,46 +1,36 @@
 <link rel="stylesheet" href="/styles/test.css">
 <% layout("layouts/boilerplate") %>
 <div class="row">
-  <h1 class=""><span class="title-line line-pink">Workshop Hinzufügen</span></h1>
+  <h1 class=""><span class="title-line line-pink">Kalendereintrag Hinzufügen</span></h1>
   <div class="col-6 offset-3">
     <form action="/test" method="post" novalidate class="validated-form" enctype="multipart/form-data">
       <div class="mb-3">
-        <label class="form-label" for="title">Seminartitel</label>
+        <label class="form-label" for="title">Überschrift</label>
         <input class="form-control" type="text" id="title" name="test[title]" required>
       </div>
       <div class="mb-3">
-        <label class="form-label" for="location">Ort 1</label>
-        <input class="form-control" type="text" id="location" name="test[location]" required>
-      </div>
-      <div class="mb-3">
-        <label class="form-label" for="location2">Ort 2</label>
-        <input class="form-control" type="text" id="location2" name="test[location2]" >
-      </div>
-      <div class="mb-3">
-        <label class="form-label" for="location3">Ort 3</label>
-        <input class="form-control" type="text" id="location3" name="test[location3]" >
-      </div>
-      <div class="mb-3">
         <label class="form-label" for="date">Datum</label>
-        <input class="form-control" type="text" id="date" name="test[date]">
+        <input class="form-control" type="text" id="date" name="test[date]" required>
       </div>
       <div class="mb-3">
-        <label class="form-label" for="online">Onlineseminar</label>
-        <select class="form-control" id="online" name="test[online]">
-          <option value="ja">Ja</option>
-          <option value="nein">Nein</option>
-        </select>
+        <div class="form-file custom-file">
+          <input class="form-file-input" id="image" type="file" name="image" multiple>
+          <label for="image" class="form-file-label">
+            <span class="form-file-text custom-file-label">Choose image(s) ...</span>
+            <span class="form-file-button">Browse</span>
+          </label>
+        </div>
       </div>
-      <div class="mb-3">
-        <label for="formFile" class="form-label">Bilder</label>
-        <input class="form-control" id="image" type="file" name="image" multiple>
-      </div>
+      <!-- <div class="mb-3">
+        <label for="image" class="form-label" name="image">Multiple files input example</label>
+        <input class="form-control" type="file" id="image" multiple>
+      </div> -->
       <div class="mb-3">
         <label class="form-label" for="description">Beschreibung</label>
         <textarea class="form-control" type="text" id="description" name="test[description]" required></textarea>
         <script>
-          CKEDITOR.replace('description');
-        </script>
+                CKEDITOR.replace( 'description' );
+            </script>
       </div>
       <div class="mb-3">
         <button class="btn btn-success btn-mina">Speichern</button>

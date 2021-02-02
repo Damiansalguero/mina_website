@@ -20,12 +20,8 @@ ImageSchema.virtual("thumbnail").get(function() {
 
 const TestSchema = new Schema({
   title: String,
-  location: String,
-  location2: String,
-  location3: String,
-  online: String,
-  images: [ImageSchema],
   date: String,
+  images: [ImageSchema],
   description: String
 });
 

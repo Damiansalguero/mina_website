@@ -20,7 +20,13 @@ router.get("/new", tests.renderTestform);
 
 router.get("/:id", catchAsync(tests.showTest));
 
-router.post("/", isLoggedIn, catchAsync(tests.createTest));
+router.post(
+  "/",
+  isLoggedIn,
+  upload.array("image"),
+  validatetestData,
+  catchAsync(tests.createTest)
+);
 
 router.get("/:id/edit", isLoggedIn, catchAsync(tests.renderEditForm));
 
