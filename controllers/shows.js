@@ -3,6 +3,7 @@ const Calendar = require("../models/calendar");
 const Workshop = require("../models/workshop");
 const Workshopgallery = require("../models/workshopgallery");
 const Timeline = require("../models/timeline");
+const Flyer = require("../models/flyer");
 const nodemailer = require("nodemailer");
 const { cloudinary } = require("../cloudinary");
 
@@ -13,9 +14,11 @@ module.exports.renderLanding = async (req, res) => {
 module.exports.renderhome = async (req, res) => {
   const aktuell = await Aktuell.findOne({});
   const calendars = await Calendar.find({});
+  const flyer = await Flyer.findOne({});
   res.render("landing", {
     aktuell,
-    calendars
+    calendars,
+    flyer
   });
 };
 

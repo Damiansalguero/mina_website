@@ -10,7 +10,12 @@ const mongoose = require("mongoose");
 const ejsMate = require("ejs-mate");
 const session = require("express-session");
 const flash = require("connect-flash");
-const { dataSchema, testDataSchema, timelineSchema } = require("./schemas.js");
+const {
+  dataSchema,
+  testDataSchema,
+  timelineSchema,
+  flyerSchema
+} = require("./schemas.js");
 const ExpressError = require("./utils/ExpressError");
 const bodyParser = require("body-parser");
 const methodOverride = require("method-override");
@@ -24,12 +29,14 @@ const MongoStore = require("connect-mongo")(session);
 const User = require("./models/user");
 const Post = require("./models/post");
 const Timeline = require("./models/timeline");
+const Flyer = require("./models/flyer");
 
 //////////////// ROUTES IMPORT ///////////////////
 const aktuellesRoutes = require("./routes/aktuelles");
 const calendarRoutes = require("./routes/calendars");
 const workshopRoutes = require("./routes/workshops");
 const timelineRoutes = require("./routes/timelines");
+const flyerRoutes = require("./routes/flyers");
 const userRoutes = require("./routes/users");
 const showRoutes = require("./routes/shows");
 const testRoutes = require("./routes/tests");
@@ -115,6 +122,7 @@ app.use("/aktuelles", aktuellesRoutes);
 app.use("/calendars", calendarRoutes);
 app.use("/workshop", workshopRoutes);
 app.use("/zeitstrahl", timelineRoutes);
+app.use("/flyers", flyerRoutes);
 app.use("/posts", postRoutes);
 app.use("/test", testRoutes);
 

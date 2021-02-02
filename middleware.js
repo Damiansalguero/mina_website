@@ -4,6 +4,7 @@ const {
   workshopSchema,
   workshopGallerySchema,
   timelineSchema,
+  flyerSchema,
   testdataSchema,
   dataSchema
 } = require("./schemas.js");
@@ -77,6 +78,17 @@ module.exports.validateWorkshopGallery = (req, res, next) => {
 /////////////// TIMELINE /////////////
 module.exports.validateTimeline = (req, res, next) => {
   const { error } = timelineSchema.validate(req.body);
+  if (error) {
+    const msg = error.details.map(el => el.message).join(",");
+    throw new ExpressError(msg, 400);
+  } else {
+    next();
+  }
+};
+
+/////////////// Flyer /////////////
+module.exports.validateFlyer = (req, res, next) => {
+  const { error } = flyerSchema.validate(req.body);
   if (error) {
     const msg = error.details.map(el => el.message).join(",");
     throw new ExpressError(msg, 400);
