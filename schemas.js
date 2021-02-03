@@ -45,6 +45,14 @@ module.exports.workshopGallerySchema = Joi.object({
   deleteImages: Joi.array()
 });
 
+module.exports.workshopregisterSchema = Joi.object({
+  wsg: Joi.object({
+    title: Joi.string().required(),
+    description: Joi.string().required()
+  }).required(),
+  deleteImages: Joi.array()
+});
+
 module.exports.timelineSchema = Joi.object({
   timeline: Joi.object({
     title: Joi.string().required(),
@@ -65,7 +73,7 @@ module.exports.flyerSchema = Joi.object({
 module.exports.testdataSchema = Joi.object({
   test: Joi.object({
     title: Joi.string().required(),
-    date: Joi.string().required(),
+    date: Joi.array().required(),
     description: Joi.string().required()
   }).required(),
   deleteImages: Joi.array()

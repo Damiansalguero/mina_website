@@ -97,6 +97,17 @@ module.exports.validateFlyer = (req, res, next) => {
   }
 };
 
+/////////////// Flyer /////////////
+module.exports.validateWsRegister = (req, res, next) => {
+  const { error } = workshopregisterSchema.validate(req.body);
+  if (error) {
+    const msg = error.details.map(el => el.message).join(",");
+    throw new ExpressError(msg, 400);
+  } else {
+    next();
+  }
+};
+
 //////////////// TEST /////////////
 module.exports.validatetestData = (req, res, next) => {
   const { error } = testdataSchema.validate(req.body);
