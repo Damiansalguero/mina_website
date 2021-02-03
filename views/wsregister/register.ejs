@@ -6,41 +6,41 @@
       <!-- Seminarort -->
       <div class="mb-3">
         <label class="form-label" for="location">Seminarort</label>
-        <input class="form-control" type="text" id="location" name="wsregister[location]"required>
+        <input class="form-control" type="text" id="location" name="wsr[location]"required>
       </div>
       <!-- Datum -->
       <div class="mb-3">
         <label class="form-label" for="date">Datum</label>
-        <input class="form-control" type="text" id="date" name="wsregister[date]" required>
+        <input class="form-control" type="text" id="date" name="wsr[date]" required>
       </div>
       <!-- Name Person -->
       <div class="mb-3">
         <label class="form-label" for="name">Name</label>
-        <input class="form-control" type="text" id="name" name="wsregister[name]" required>
+        <input class="form-control" type="text" id="name" name="wsr[name]" required>
       </div>
       <!-- Organisation -->
       <div class="mb-3">
         <label class="form-label" for="organisation">Wie ist der Name der Organisation, für die Sie arbeiten?</label>
-        <input class="form-control" type="text" id="organisation" name="wsregister[organisation]" required>
+        <input class="form-control" type="text" id="organisation" name="wsr[organisation]" required>
       </div>
       <!-- Mitgliedschaft -->
       <div class="mb-3">
         <label class="form-label">Ist Ihre Organisation Mitglied beim Bundesverband für körper- und mehrfachbehinderte Menschen e. V. (bvkm)?
         </label>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="Ja" id="membership" name="test[membership]">
+          <input class="form-check-input" type="checkbox" value="Ja" id="membership" name="wsr[membership]">
           <label class="form-check-label" for="membership">
             Ja
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="Nein" id="membership" name="test[membership]" >
+          <input class="form-check-input" type="checkbox" value="Nein" id="membership" name="wsr[membership]" >
           <label class="form-check-label" for="membership">
             Nein
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="Vielleicht" id="membership" name="test[membership]" >
+          <input class="form-check-input" type="checkbox" value="Vielleicht" id="membership" name="wsr[membership]" >
           <label class="form-check-label" for="membership">
             Vielleicht
           </label>
@@ -49,8 +49,8 @@
       <!-- Adresse -->
       <div class="mb-3">
         <label class="form-label" for="street">Adresse</label>
-        <input class="form-control" type="text" id="street" name="wsregister[street]" placeholder="Straße & Hausnummer" required>
-        <input class="form-control" type="text" id="zip" name="wsregister[zip]" placeholder="PLZ & Ort" required>
+        <input class="form-control" type="text" id="street" name="wsr[street]" placeholder="Straße & Hausnummer" required>
+        <input class="form-control" type="text" id="zip" name="wsr[zip]" placeholder="PLZ & Ort" required>
       </div>
       <!-- Telefon -->
       <div class="mb-3">
@@ -66,13 +66,13 @@
       <div class="mb-3">
         <label class="form-label" for="assistance">Haben Sie Assistenzbedarf?</label>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="ja" id="assistance" name="test[assistance]">
+          <input class="form-check-input" type="checkbox" value="ja" id="assistance" name="wsr[assistance]">
           <label class="form-check-label" for="assistance">
             Ja
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="nein" id="assistance" name="test[assistance]" >
+          <input class="form-check-input" type="checkbox" value="nein" id="assistance" name="wsr[assistance]" >
           <label class="form-check-label" for="assistance">
             Nein
           </label>
@@ -81,19 +81,19 @@
       <!-- Assistenzbedarf Konkret -->
       <div class="mb-3">
         <label class="form-label" for="assistanceneed">Wenn ja, welche Art von Assistenz benötigen Sie?</label>
-        <input class="form-control" type="text" id="assistanceneed" name="wsregister[assistanceneed]" required>
+        <input class="form-control" type="text" id="assistanceneed" name="wsr[assistanceneed]" required>
       </div>
       <!-- Hilfsmittel -->
       <div class="mb-3">
         <label class="form-label" for="aid">Bringen Sie Hilfsmittel mit?</label>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="ja" id="aid" name="test[aid]">
+          <input class="form-check-input" type="checkbox" value="ja" id="aid" name="wsr[aid]">
           <label class="form-check-label" for="aid">
             Ja
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="nein" id="aid" name="test[aid]">
+          <input class="form-check-input" type="checkbox" value="nein" id="aid" name="wsr[aid]">
           <label class="form-check-label" for="aid">
             Nein
           </label>
@@ -109,13 +109,13 @@
         <label class="form-label" for="care">Benötigen Sie Informationen zur Betreuung von Kindern oder Angehörigen mit Behinderung während der Seminare?
         </label>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="ja" id="care" name="test[care]">
+          <input class="form-check-input" type="checkbox" value="ja" id="care" name="wsr[care]">
           <label class="form-check-label" for="care">
             Ja
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="nein" id="care" name="test[care]" >
+          <input class="form-check-input" type="checkbox" value="nein" id="care" name="wsr[care]" >
           <label class="form-check-label" for="care">
             Nein
           </label>
@@ -126,13 +126,13 @@
         <label class="form-label" for="caretaker">Ich bringe eine Assitenzperson mit
         </label>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="ja" id="caretaker" name="test[caretaker]">
+          <input class="form-check-input" type="checkbox" value="ja" id="caretaker" name="wsr[caretaker]">
           <label class="form-check-label" for="caretaker">
             Ja
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="nein" id="caretaker" name="test[caretaker]" >
+          <input class="form-check-input" type="checkbox" value="nein" id="caretaker" name="wsr[caretaker]" >
           <label class="form-check-label" for="care">
             Nein
           </label>
@@ -143,13 +143,13 @@
         <label class="form-label" for="volunteer">Ich nehme als Ehrenamtliche*r teil
         </label>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="ja" id="volunteer" name="test[volunteer]">
+          <input class="form-check-input" type="checkbox" value="ja" id="volunteer" name="wsr[volunteer]">
           <label class="form-check-label" for="volunteer">
             Ja
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="nein" id="volunteer" name="test[volunteer]" >
+          <input class="form-check-input" type="checkbox" value="nein" id="volunteer" name="wsr[volunteer]" >
           <label class="form-check-label" for="care">
             Nein
           </label>
@@ -160,14 +160,14 @@
         <label class="form-label" for="allergy">Besteht bei Ihnen eine Lebensmittelallergie?
         </label>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="ja" id="allergy" name="test[allergy]">
+          <input class="form-check-input" type="checkbox" value="ja" id="allergy" name="wsr[allergy]">
           <label class="form-check-label" for="allergy">
             Ja
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="nein" id="food" name="test[food]" >
-          <label class="form-check-label" for="food">
+          <input class="form-check-input" type="checkbox" value="nein" id="allergy" name="wsr[allergy]" >
+          <label class="form-check-label" for="allergy">
             Nein
           </label>
         </div>
@@ -175,38 +175,38 @@
       <!-- Allergie 2 -->
       <div class="mb-3">
         <label class="form-label" for="allergies">Wenn ja, welche?</label>
-        <input class="form-control" type="text" id="allergies" name="wsregister[allergies]" placeholder="z.B. Nüsse, Gluten, Laktose etc." required>
+        <input class="form-control" type="text" id="allergies" name="wsr[allergies]" placeholder="z.B. Nüsse, Gluten, Laktose etc." required>
       </div>
       <!-- Verpflegungswunsch -->
       <div class="mb-3">
         <label class="form-label" for="dietwish">Bitte nennen Sie us Ihren Verpflegungswunsch, wir versuchen diesen dann zu berücksichtigen
         </label>
-        <input class="form-control" type="text" id="dietwish" name="wsregister[dietwish]" placeholder="z.B. vegan, vegetarisch, halal, glutenfrei" required>
+        <input class="form-control" type="text" id="dietwish" name="wsr[dietwish]" placeholder="z.B. vegan, vegetarisch, halal, glutenfrei" required>
       </div>
       <!-- Organisation Feld -->
       <div class="mb-3">
         <label class="form-label" for="orgafield">Meine Organisation gehört zur
         </label>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="Behindertenhilfe" id="orgafield" name="test[orgafield]">
+          <input class="form-check-input" type="checkbox" value="Behindertenhilfe" id="orgafield" name="wsr[orgafield]">
           <label class="form-check-label" for="orgafield">
             Behindertenhilfe
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="Migrantenselbstorganisation" id="orgafield" name="test[orgafield]" >
+          <input class="form-check-input" type="checkbox" value="Migrantenselbstorganisation" id="orgafield" name="wsr[orgafield]" >
           <label class="form-check-label" for="orgafield">
             Migrantenselbstorganisation
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="Geflüchtetenhilfe" id="orgafield" name="test[orgafield]" >
+          <input class="form-check-input" type="checkbox" value="Geflüchtetenhilfe" id="orgafield" name="wsr[orgafield]" >
           <label class="form-check-label" for="orgafield">
             Geflüchtetenhilfe
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="Verwaltung und Politik" id="orgafield" name="test[orgafield]" >
+          <input class="form-check-input" type="checkbox" value="Verwaltung und Politik" id="orgafield" name="wsr[orgafield]" >
           <label class="form-check-label" for="orgafield">
             Verwaltung und Politik
           </label>
@@ -215,31 +215,31 @@
       <!-- Erfahrungen Schnittstelle -->
       <div class="mb-3">
         <label class="form-label" for="description">Bitte beschreiben Sie kurz, welche Erfahrungen Sie an der Schnittstelle haben</label>
-        <textarea class="form-control" type="text" id="description" name="wsregister[description]" required></textarea>
+        <textarea class="form-control" type="text" id="description" name="wsr[description]" required></textarea>
       </div>
       <!-- Wünsche WS -->
       <div class="mb-3">
         <label class="form-label" for="wishes">Haben Sie Wünsche an die Workshops? Beschreiben Sie diese kurz.</label>
-        <textarea class="form-control" type="text" id="wishes" name="wsregister[wishes]" required></textarea>
+        <textarea class="form-control" type="text" id="wishes" name="wsr[wishes]" required></textarea>
       </div>
       <!-- Daten -->
       <div class="mb-3">
         <label class="form-label" for="personal">Persönliche Daten
         </label>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="ja" id="personal" name="test[personal]">
+          <input class="form-check-input" type="checkbox" value="ja" id="personal" name="wsr[personal]">
           <label class="form-check-label" for="personal">
             Meine Daten dürfen zu Anmeldezwecken verarbeitet werden
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="ja" id="personal" name="test[personal]" >
+          <input class="form-check-input" type="checkbox" value="ja" id="personal" name="wsr[personal]" >
           <label class="form-check-label" for="personal">
             Meine Kontaktdaten dürfen an alle Teilnehmer*innen der Veranstaltung weitergegeben werden
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="ja" id="personal" name="test[personal]" >
+          <input class="form-check-input" type="checkbox" value="ja" id="personal" name="wsr[personal]" >
           <label class="form-check-label" for="personal">
             Ich bin damit einverstanden, dass auf der Veranstaltung aufgenommene Fotos mit mir veröffentlicht werden dürfen
           </label>
@@ -248,7 +248,7 @@
       <!-- Newsletter -->
       <div class="mb-3">
         <label class="form-label" for="newsletter">Möchten Sie in der Zukunft unseren Projektnewsletter erhalten?</label>
-        <select class="form-control" id="newsletter" name="workshop[newsletter]">
+        <select class="form-control" id="newsletter" name="wsr[newsletter]">
           <option value="ja">Ja</option>
           <option value="nein">Nein</option>
         </select>
