@@ -7,7 +7,11 @@
       <!-- Seminarort -->
       <div class="mb-3">
         <label class="form-label" for="location">Seminarort</label>
-        <input class="form-control" type="text" id="location" name="wsr[location]"required>
+        <select class="form-control" id="location" name="wsr[location]">
+          <% for(let workshop of workshops) {%>
+          <option value="<%=workshop.location%>"><%=workshop.location%></option>
+          <% }%>
+        </select>
       </div>
       <!-- Datum -->
       <div class="mb-3">
