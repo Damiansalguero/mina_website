@@ -2,3 +2,7 @@
   background-color: #db2a6f;
   border-color: #db2a6f;
 }
+
+label {
+  font-weight: bold;
+}

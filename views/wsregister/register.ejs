@@ -1,29 +1,34 @@
 <link rel="stylesheet" href="/styles/anmeldung.css">
 <% layout("layouts/boilerplate") %>
 <div class="row">
-  <h1 class=""><span class="title-line line-pink">Zum Workshop Anmelden</span></h1>
+  <h1 class=""><span class="title-line line-pink">Zum Workshop anmelden</span></h1>
   <div class="col-6 offset-3">
     <form action="/workshop" method="post" novalidate class="validated-form">
+      <div class="mb-3">
+        <label class="form-label" for="title">Name des Seminars</label>
+        <input class="form-control" type="text" id="title" name="wsr[title]" value="<%=workshop.title%>" disabled>
+      </div>
       <!-- Seminarort -->
-      <% if(workshop.type === "Präsenzseminar") { %>
+      <% if(workshop.type = "Präsenzseminar") { %>
       <div class="mb-3">
         <label class="form-label" for="location">Seminarort</label>
-        <select class="form-control" id="location" name="wsr[location]">
-          <option value="<%=workshop.location%>"><%=workshop.location%></option>
-          <option value="<%=workshop.location2%>"><%=workshop.location%></option>
-          <option value="<%=workshop.location3%>"><%=workshop.location%></option>
-        </select>
+        <input class="form-control" type="text" id="location" name="wsr[location]" value="<%=workshop.location%>" disabled>
       </div>
+      <% } else { %>
+        <div class="mb-3">
+          <label class="form-label" for="location">Seminarort</label>
+          <input class="form-control" type="text" id="location" name="wsr[location]" value="Online" disabled>
+        </div>
       <% } %>
       <!-- Datum -->
       <div class="mb-3">
         <label class="form-label" for="date">Datum</label>
-        <input class="form-control" type="text" id="date" name="wsr[date]" required>
+        <input class="form-control" type="text" id="date" name="wsr[date]" value="<%=workshop.date%>" disabled>
       </div>
       <!-- Name Person -->
       <div class="mb-3">
         <label class="form-label" for="name">Name</label>
-        <input class="form-control" type="text" id="name" name="wsr[name]" required>
+        <input class="form-control" type="text" id="name" name="wsr[name]" placeholder="Vorname & Nachname" required>
       </div>
       <!-- Organisation -->
       <div class="mb-3">
@@ -110,7 +115,7 @@
       </div>
       <!-- Hilfsmittel Konkret -->
       <div class="mb-3">
-        <label class="form-label" for="aids">Wenn ja, welche konkret?</label>
+        <label class="form-label" for="aids">Wenn ja, bitte listen Sie kurz auf, welche Hilfsmittel Sie mitbringen.</label>
         <input class="form-control" type="text" id="aids" name="wsregister[aids]" required>
       </div>
       <!-- Betreuung -->

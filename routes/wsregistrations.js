@@ -7,6 +7,6 @@ const ExpressError = require("../utils/ExpressError");
 const { isLoggedIn, validateWsRegister } = require("../middleware");
 const Anmeldung = require("../models/wsregistration");
 
-router.get("/new", wsregisters.renderAnmeldung);
+router.get("/:id/new", wsregisters.renderAnmeldung);
 
 module.exports = router;

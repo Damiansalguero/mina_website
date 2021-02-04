@@ -32,8 +32,6 @@ module.exports.workshopSchema = Joi.object({
     date: Joi.string().required(),
     title: Joi.string().required(),
     location: Joi.string().required(),
-    location2: Joi.string().required(),
-    location3: Joi.string().required(),
     type: Joi.string().optional(),
     capacity: Joi.string().optional(),
     description: Joi.string().required()

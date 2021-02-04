@@ -12,7 +12,7 @@
     <% if(workshop.capacity === "ausgebucht") { %>
       <li class="list-group-item ausgebucht"><%= workshop.capacity %></li>
     <%} else { %>
-      <a href="#"><li class="list-group-item anmelden"><%= workshop.capacity %></li></a>
+      <a href="/anmeldung/<%= workshop._id %>/new"><li class="list-group-item anmelden"><%= workshop.capacity %></li></a>
     <% } %>
   </ul>
   <div class="card-body">
