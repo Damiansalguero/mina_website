@@ -32,11 +32,17 @@
           <tr>
             <td><%= workshop.date %></td>
             <td><%= workshop.title %></td>
-            <td><%= workshop.location %></td>
+            <td>
+              <ul>
+                <li><%= workshop.location %></li>
+                <li> <%= workshop.location2%></li>
+                <li> <%= workshop.location3%></li>
+              </ul>
+            </td>
             <% if(workshop.capacity === "ausgebucht") { %>
             <td class= "ausgebucht"><%= workshop.capacity %></td>
             <%} else { %>
-              <td class="anmelden"><%= workshop.capacity %></td>
+              <td class="anmelden"><a href="/anmeldung/new"><%= workshop.capacity %></a></td>
             <% } %>
             <td><a href="/workshop/<%= workshop._id %>"> Mehr ...</a></td>
           </tr>

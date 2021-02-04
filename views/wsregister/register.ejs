@@ -5,14 +5,16 @@
   <div class="col-6 offset-3">
     <form action="/workshop" method="post" novalidate class="validated-form">
       <!-- Seminarort -->
+      <% if(workshop.type === "Präsenzseminar") { %>
       <div class="mb-3">
         <label class="form-label" for="location">Seminarort</label>
         <select class="form-control" id="location" name="wsr[location]">
-          <% for(let workshop of workshops) {%>
           <option value="<%=workshop.location%>"><%=workshop.location%></option>
-          <% }%>
+          <option value="<%=workshop.location2%>"><%=workshop.location%></option>
+          <option value="<%=workshop.location3%>"><%=workshop.location%></option>
         </select>
       </div>
+      <% } %>
       <!-- Datum -->
       <div class="mb-3">
         <label class="form-label" for="date">Datum</label>

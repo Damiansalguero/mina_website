@@ -12,8 +12,23 @@
         <input class="form-control" type="text" id="title" name="workshop[title]" required>
       </div>
       <div class="mb-3">
-        <label class="form-label" for="location">Ort</label>
+        <label class="form-label" for="type">Seminarort</label>
+        <select class="form-control" id="type" name="workshop[type]">
+          <option value="Online">Online</option>
+          <option value="Präsenzseminar">Präsenzseminar</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="location">Seminarort 1</label>
         <input class="form-control" type="text" id="location" name="workshop[location]"required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="location2">Seminarort 2</label>
+        <input class="form-control" type="text" id="location2" name="workshop[location2]"required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="location3">Seminarort 3</label>
+        <input class="form-control" type="text" id="location3" name="workshop[location3]"required>
       </div>
       <div class="mb-3">
         <label class="form-label" for="capacity">Verfügbarkeit</label>
