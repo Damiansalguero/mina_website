@@ -78,7 +78,10 @@ module.exports.createAnmeldung = async (req, res, next) => {
     }
     console.log("Message sent: %s", info.messageId);
     console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-    req.flash("info", "Sie haben sich erfolgreich angemeldet!");
+    req.flash(
+      "info",
+      "Sie haben sich erfolgreich angemeldet und erhalten bald eine Email von uns!"
+    );
     res.redirect("/workshops");
   });
 };

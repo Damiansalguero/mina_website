@@ -42,7 +42,7 @@
             <% if(workshop.capacity === "ausgebucht") { %>
             <td class= "ausgebucht"><%= workshop.capacity %></td>
             <%} else { %>
-              <td class="anmelden"><a href="#"><%= workshop.capacity %></a></td>
+              <td class="anmelden"><a href="/anmeldung/<%= workshop._id %>/new""><%= workshop.capacity %></a></td>
             <% } %>
             <td><a href="/workshop/<%= workshop._id %>"> Mehr ...</a></td>
           </tr>
