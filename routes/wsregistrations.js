@@ -9,4 +9,6 @@ const Anmeldung = require("../models/wsregistration");
 
 router.get("/:id/new", wsregisters.renderAnmeldung);
 
+router.post("/:id/new", catchAsync(wsregisters.createAnmeldung));
+
 module.exports = router;

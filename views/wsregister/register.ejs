@@ -3,27 +3,27 @@
 <div class="row">
   <h1 class=""><span class="title-line line-pink">Zum Workshop anmelden</span></h1>
   <div class="col-6 offset-3">
-    <form action="/workshop" method="post" novalidate class="validated-form">
+    <form action="/anmeldung/<%= workshop._id %>/new" method="post" novalidate class="validated-form">
       <div class="mb-3">
         <label class="form-label" for="title">Name des Seminars</label>
-        <input class="form-control" type="text" id="title" name="wsr[title]" value="<%=workshop.title%>" disabled>
+        <input class="form-control" type="text" id="title" name="wsr[title]" value="<%=workshop.title%>" readonly>
       </div>
       <!-- Seminarort -->
       <% if(workshop.type = "Präsenzseminar") { %>
       <div class="mb-3">
         <label class="form-label" for="location">Seminarort</label>
-        <input class="form-control" type="text" id="location" name="wsr[location]" value="<%=workshop.location%>" disabled>
+        <input class="form-control" type="text" id="location" name="wsr[location]" value="<%=workshop.location%>" readonly>
       </div>
       <% } else { %>
         <div class="mb-3">
           <label class="form-label" for="location">Seminarort</label>
-          <input class="form-control" type="text" id="location" name="wsr[location]" value="Online" disabled>
+          <input class="form-control" type="text" id="location" name="wsr[location]" value="Online" readonly>
         </div>
       <% } %>
       <!-- Datum -->
       <div class="mb-3">
         <label class="form-label" for="date">Datum</label>
-        <input class="form-control" type="text" id="date" name="wsr[date]" value="<%=workshop.date%>" disabled>
+        <input class="form-control" type="text" id="date" name="wsr[date]" value="<%=workshop.date%>" readonly>
       </div>
       <!-- Name Person -->
       <div class="mb-3">
@@ -69,12 +69,12 @@
       <!-- Telefon -->
       <div class="mb-3">
         <label class="form-label" for="phone">Telefon</label>
-        <input class="form-control" type="text" id="phone" name="wsregister[phone]" required>
+        <input class="form-control" type="text" id="phone" name="wsr[phone]" required>
       </div>
       <!-- Email -->
       <div class="mb-3">
         <label class="form-label" for="email">Email</label>
-        <input class="form-control" type="text" id="email" name="wsregister[email]" required>
+        <input class="form-control" type="text" id="email" name="wsr[email]" required>
       </div>
       <!-- Assistenzbedarf -->
       <div class="mb-3">
@@ -95,7 +95,7 @@
       <!-- Assistenzbedarf Konkret -->
       <div class="mb-3">
         <label class="form-label" for="assistanceneed">Wenn ja, welche Art von Assistenz benötigen Sie?</label>
-        <input class="form-control" type="text" id="assistanceneed" name="wsr[assistanceneed]" required>
+        <input class="form-control" type="text" id="assistanceneed" name="wsr[assistanceneed]">
       </div>
       <!-- Hilfsmittel -->
       <div class="mb-3">
@@ -116,7 +116,7 @@
       <!-- Hilfsmittel Konkret -->
       <div class="mb-3">
         <label class="form-label" for="aids">Wenn ja, bitte listen Sie kurz auf, welche Hilfsmittel Sie mitbringen.</label>
-        <input class="form-control" type="text" id="aids" name="wsregister[aids]" required>
+        <input class="form-control" type="text" id="aids" name="wsr[aids]">
       </div>
       <!-- Betreuung -->
       <div class="mb-3">
@@ -189,13 +189,13 @@
       <!-- Allergie 2 -->
       <div class="mb-3">
         <label class="form-label" for="allergies">Wenn ja, welche?</label>
-        <input class="form-control" type="text" id="allergies" name="wsr[allergies]" placeholder="z.B. Nüsse, Gluten, Laktose etc." required>
+        <input class="form-control" type="text" id="allergies" name="wsr[allergies]" placeholder="z.B. Nüsse, Gluten, Laktose etc.">
       </div>
       <!-- Verpflegungswunsch -->
       <div class="mb-3">
         <label class="form-label" for="dietwish">Bitte nennen Sie us Ihren Verpflegungswunsch, wir versuchen diesen dann zu berücksichtigen
         </label>
-        <input class="form-control" type="text" id="dietwish" name="wsr[dietwish]" placeholder="z.B. vegan, vegetarisch, halal, glutenfrei" required>
+        <input class="form-control" type="text" id="dietwish" name="wsr[dietwish]" placeholder="z.B. vegan, vegetarisch, halal, glutenfrei">
       </div>
       <!-- Organisation Feld -->
       <div class="mb-3">
@@ -229,12 +229,12 @@
       <!-- Erfahrungen Schnittstelle -->
       <div class="mb-3">
         <label class="form-label" for="description">Bitte beschreiben Sie kurz, welche Erfahrungen Sie an der Schnittstelle haben</label>
-        <textarea class="form-control" type="text" id="description" name="wsr[description]" required></textarea>
+        <textarea class="form-control" type="text" id="description" name="wsr[description]"></textarea>
       </div>
       <!-- Wünsche WS -->
       <div class="mb-3">
         <label class="form-label" for="wishes">Haben Sie Wünsche an die Workshops? Beschreiben Sie diese kurz.</label>
-        <textarea class="form-control" type="text" id="wishes" name="wsr[wishes]" required></textarea>
+        <textarea class="form-control" type="text" id="wishes" name="wsr[wishes]"></textarea>
       </div>
       <!-- Daten -->
       <div class="mb-3">
