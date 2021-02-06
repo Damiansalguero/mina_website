@@ -91,6 +91,15 @@ module.exports.flyerSchema = Joi.object({
   deleteImages: Joi.array()
 });
 
+module.exports.aboutSchema = Joi.object({
+  about: Joi.object({
+    title: Joi.string().required(),
+    description: Joi.string().required(),
+    secondtitle: Joi.string().required(),
+    seconddescription: Joi.string().required()
+  }).required()
+});
+
 module.exports.testdataSchema = Joi.object({
   test: Joi.object({
     title: Joi.string().required(),

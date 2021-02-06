@@ -1,5 +1,6 @@
 const Aktuell = require("../models/aktuell");
 const Calendar = require("../models/calendar");
+const About = require("../models/about");
 const Workshop = require("../models/workshop");
 const Workshopgallery = require("../models/workshopgallery");
 const Timeline = require("../models/timeline");
@@ -14,11 +15,13 @@ module.exports.renderLanding = async (req, res) => {
 module.exports.renderhome = async (req, res) => {
   const aktuell = await Aktuell.findOne({});
   const calendars = await Calendar.find({});
+  const about = await About.findOne({});
   const flyer = await Flyer.findOne({});
   res.render("landing", {
     aktuell,
     calendars,
-    flyer
+    flyer,
+    about
   });
 };
 

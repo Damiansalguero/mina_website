@@ -27,13 +27,11 @@ const dbUrl = "mongodb://localhost:27017/mina";
 const MongoStore = require("connect-mongo")(session);
 //////////////// MODEL IMPORT //////////////////
 const User = require("./models/user");
-const Post = require("./models/post");
-const Timeline = require("./models/timeline");
-const Flyer = require("./models/flyer");
 
 //////////////// ROUTES IMPORT ///////////////////
 const aktuellesRoutes = require("./routes/aktuelles");
 const calendarRoutes = require("./routes/calendars");
+const aboutRoutes = require("./routes/abouts");
 const workshopRoutes = require("./routes/workshops");
 const wsregisterRoutes = require("./routes/wsregistrations");
 const timelineRoutes = require("./routes/timelines");
@@ -121,6 +119,7 @@ app.use("/", showRoutes);
 app.use("/admin", userRoutes);
 app.use("/aktuelles", aktuellesRoutes);
 app.use("/calendars", calendarRoutes);
+app.use("/ueberehrenamt", aboutRoutes);
 app.use("/workshop", workshopRoutes);
 app.use("/anmeldung", wsregisterRoutes);
 app.use("/zeitstrahl", timelineRoutes);

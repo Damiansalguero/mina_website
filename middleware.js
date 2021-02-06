@@ -5,6 +5,7 @@ const {
   workshopGallerySchema,
   timelineSchema,
   flyerSchema,
+  aboutSchema,
   testdataSchema,
   dataSchema
 } = require("./schemas.js");
@@ -97,9 +98,20 @@ module.exports.validateFlyer = (req, res, next) => {
   }
 };
 
-/////////////// Flyer /////////////
+/////////////// Anmeldung /////////////
 module.exports.validateWsRegister = (req, res, next) => {
   const { error } = workshopregisterSchema.validate(req.body);
+  if (error) {
+    const msg = error.details.map(el => el.message).join(",");
+    throw new ExpressError(msg, 400);
+  } else {
+    next();
+  }
+};
+
+/////////////// About /////////////
+module.exports.validateAbouts = (req, res, next) => {
+  const { error } = aboutSchema.validate(req.body);
   if (error) {
     const msg = error.details.map(el => el.message).join(",");
     throw new ExpressError(msg, 400);

@@ -9,14 +9,12 @@
   <div class="block aktuelles">
     <h1 class=""><span class="title-line">Aktuelles</span></h1>
     <div class="text-box-aktuelles">
-
       <h3><%= aktuell.title %></h3>
       <p class="text-aktuelles"><%- aktuell.description %></p>
-
     </div>
     <% if(currentUser) {%>
-    <a href="/aktuelles/<%= aktuell._id %>" class="btn btn btn-aktuelles">Eintrag Bearbeiten</a>
-    <a href="/flyers/<%= flyer._id %>" class="btn btn btn-aktuelles">Flyer Ändern </a>
+    <a href="/aktuelles/<%= aktuell._id %>/edit" class="btn btn btn-aktuelles">Eintrag Bearbeiten</a>
+    <!-- <a href="/flyers/<%= flyer._id %>" class="btn btn btn-aktuelles">Flyer Ändern </a> -->
     <% } %>
     <a href="/downloads/flyer-landing.pdf" class="btn" id="btn-flyer" target="_blank">Unser aktueller Flyer</a>
   </div>
@@ -42,14 +40,13 @@
   </div>
   <!-- Über Block -->
   <div class="about-block">
-    <h1 class="white"><span class="title-line line-green">Über Ehrenamt in Vielfalt</span></h1>
-    <p class="text-block">Das Projekt Ehrenamt in Vielfalt widmet sich der Schnittstelle Flucht, Migration und Behinderung und arbeitet seit 2019 mit dem Ziel, das Wissen rund um die Themen der Schnittstelle zu multiplizieren. Im Rahmen des Projekts fanden 2019 mehrere zweitägige Workshops sowie die Fachtagung Geflüchtete Menschen und Behinderung statt.</p>
-    <p class="text-block">2020 und 2021 werden mehrtägige bundesweite Workshops angeboten. Des Weiteren gibt es die Möglichkeit für ausgewählte Mitgliedsorganisationen des Bundesverbandes für körper- mehrfachbehinderte Menschen (bvkm) an einer Prozessbegleitung mit dem Ziel, Menschen mit Migrations- und/ oder Fluchterfahrung und einer Behinderung wirksam zu erreichen und zu begleiten, teilzunehmen. Die Sensibilisierung der Öffentlichkeit für die Themen der Schnittstelle ist ein weiterer Schwerpunkt des Projekts.</p>
-
-    <h1 class="white"><span class="title-line line-green">Hintergrund des Projekts</span></h1>
-    <p class="text-block" id="last-text">In Deutschland leben geschätzt 2 Millionen Menschen mit Migrationserfahrung und einer Behinderung. 10 bis 20 Prozent der Menschen mit Fluchterfahrung haben nach Schätzungen eine Beeinträchtigung. Viele Menschen werden
-      statistisch nicht erfasst und ein großer Teil kommt im Hilfesystem nicht an – sie bleiben unsichtbar. Menschen mit Flucht- und Migrationserfahrung haben aber einen schlechteren Zugang zur Gesundheitsvorsorge und zu Angeboten der
-      Behindertenhilfe. Sie werden erheblich früher Pflegefälle und haben ein höheres Risiko einer Beeinträchtigung – beispielsweise durch eine Traumatisierung und medizinische Unterversorgung.</p>
+    <h1 class="white"><span class="title-line line-green"><%= about.title %></span></h1>
+    <div class="text-block"><%- about.description %></div>
+    <h1 class="white"><span class="title-line line-green"><%= about.secondtitle %></span></h1>
+    <div class="text-block" id="last-text"><%- about.seconddescription %></div>
+    <% if(currentUser) {%>
+    <a href="/ueberehrenamt/<%= about._id %>/edit" class="btn btn-mina-about">Eintrag Bearbeiten</a>
+    <% } %>
   </div>
   <!-- Map Block -->
   <div class="map-block">
@@ -67,7 +64,6 @@
       </div>
     </div>
   </div>
-
   <!-- Sponsor Block -->
   <div class="sponsor-block">
     <div class="block sponsor-box">
