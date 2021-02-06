@@ -15,7 +15,6 @@ body {
   background-size: cover;
   margin: 0;
   padding: 0;
-  font-family: helvetica, arial, tahoma, verdana;
   line-height: 20px;
   font-size: 14px;
 }
@@ -27,6 +26,10 @@ body {
 #orgas-list,
 #orgas-list li {
   margin: 5px 0;
+}
+
+#intro-text {
+  text-align: justify;
 }
 /************ TIMELINE *************/
 .timeline-block {

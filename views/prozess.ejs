@@ -9,9 +9,9 @@
     <!-- TABLE BLOCK -->
     <div class="block aktuelles" id="block-prozess">
       <img class="logo" src="/img/gesamt/Logos/icon_prozess.png" alt="">
-      <h1 class=""><span class="title-line">Workshops Flucht Migration Behinderung</span></h1>
-      <p class="ws-text">Als Mitgliedsorganisation des Bundesverbandes für köper- und mehrfachbehinderte Menschen (bvkm) bietet MINA anderen Mitgliedsorganisationen eine Prozessbegleitung an. Gemeinsam erarbeiten wir konkrete Lösungswege, um Menschen
-        mit Migrations- und/ oder Fluchterfahrung und einer Behinderung wirksam zu erreichen und zu begleiten.
+      <h1 class=""><span class="title-line">Prozessbegleitung</span></h1>
+      <p class="ws-text" id="intro-text">Als Mitgliedsorganisation des Bundesverbandes für köper- und mehrfachbehinderte Menschen (bvkm) bietet MINA anderen Mitgliedsorganisationen eine Prozessbegleitung an. Gemeinsam erarbeiten wir konkrete Lösungswege, um Menschen
+      mit Migrations- und/ oder Fluchterfahrung und einer Behinderung wirksam zu erreichen und zu begleiten.
       </p>
 
       <p class="ws-text">Folgende Organisationen wurden für eine Kooperation und enge Zusammenarbeit im Rahmen der Prozessbegleitung ausgewählt:</p>
@@ -34,7 +34,8 @@
             </div>
             <div class="timeline-content">
               <h2>März - Juni 2020</h2>
-              <a href="#">Bewerbungsphase</a>
+
+              <a href="#" data-bs-toggle="modal" data-bs-target="#timeline-modal">Bewerbungsphase</a>
               <ul class="prozess-list">
                 <li> Anmelde- & Auswahlverfahren</li>
               </ul>
@@ -45,7 +46,7 @@
             </div>
             <div class="timeline-content right">
               <h2>Juli</h2>
-              <a href="#" >Kennenlernphase</a>
+              <a href="#" data-bs-toggle="modal" data-bs-target="#timeline-modal" >Kennenlernphase</a>
               <ul class="prozess-list">
                 <li>Kennenlernen & Austausch; Bildung einer Arbeitsgruppe</li>
               </ul>
@@ -56,7 +57,7 @@
               </div>
             <div class="timeline-content">
               <h2>ab September</h2>
-              <a href="#" >Bedarfsanalyse</a>
+              <a href="#" data-bs-toggle="modal" data-bs-target="#timeline-modal">Bedarfsanalyse</a>
             </div>
           </div>
           <div class="timeline-item">
@@ -64,7 +65,7 @@
             </div>
             <div class="timeline-content right">
               <h2>Januar - Februar 2021</h2>
-              <a href="#" >Standpunkt definieren</a>
+              <a href="#" data-bs-toggle="modal" data-bs-target="#timeline-modal">Standpunkt definieren</a>
               <ul class="prozess-list">
                 <li>Konkretisierung der Bedarfe zur Ideenentwicklung
                 </li>
@@ -76,7 +77,7 @@
               </div>
             <div class="timeline-content">
               <h2>März</h2>
-              <a class="vernetzung" href="#" >Vernetzungstreffen</a>
+              <a class="vernetzung" href="#" data-bs-toggle="modal" data-bs-target="#timeline-modal">Vernetzungstreffen</a>
             </div>
           </div>
           <div class="timeline-item">
@@ -88,7 +89,7 @@
                 Partizipations- & Gestaltungsphase
               </p>
               <ul class="prozess-list">
-                <li><a href="#" >Ideen- & Lösungsentwicklung</a></li>
+                <li><a href="#"data-bs-toggle="modal" data-bs-target="#timeline-modal">Ideen- & Lösungsentwicklung</a></li>
               </ul>
             </div>
           </div>
@@ -97,7 +98,7 @@
               </div>
             <div class="timeline-content">
               <h2>Mai</h2>
-              <a class="vernetzung" href="#" >Vernetzungstreffen</a>
+              <a class="vernetzung" href="#" data-bs-toggle="modal" data-bs-target="#timeline-modal">Vernetzungstreffen</a>
             </div>
           </div>
           <div class="timeline-item">
@@ -110,7 +111,7 @@
               </p>
               <ul class="prozess-list">
                 <li>
-                  <a href="#" >Konzipierung, Planung & Testen</a>
+                  <a href="#" data-bs-toggle="modal" data-bs-target="#timeline-modal">Konzipierung, Planung & Testen</a>
                 </li>
               </ul>
             </div>
@@ -125,10 +126,10 @@
               </p>
               <ul class="prozess-list">
                 <li>
-                  <a href="#" >Durchführung der Maßnahmen</a>
+                  <a href="#" data-bs-toggle="modal" data-bs-target="#timeline-modal">Durchführung der Maßnahmen</a>
                 </li>
                 <li>
-                  <a href="#" >Evaluation & Reflektion</a>
+                  <a href="#" data-bs-toggle="modal" data-bs-target="#timeline-modal">Evaluation & Reflektion</a>
                 </li>
               </ul>
             </div>
@@ -138,7 +139,7 @@
             </div>
             <div class="timeline-content right">
               <h2>Oktober</h2>
-              <a class="vernetzung" href="#" >Großes Vernetzungstreffen</a>
+              <a class="vernetzung" href="#" data-bs-toggle="modal" data-bs-target="#timeline-modal">Großes Vernetzungstreffen</a>
               <ul>
                 <li>in Berlin</li>
               </ul>
@@ -153,7 +154,7 @@
                 Transferphase
               </p>
               <ul class="prozess-list">
-                <li><a href="#" >Ergebnissicherung & Dokumentation</a></li>
+                <li><a href="#" data-bs-toggle="modal" data-bs-target="#timeline-modal">Ergebnissicherung & Dokumentation</a></li>
               </ul>
             </div>
           </div>
@@ -338,4 +339,21 @@
       </div>
     </div>
   </div>
+  <!-- MODAL Timeline -->
+  <div class="modal fade" id="timeline-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Informtion</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Nähere Informtionen zu den einzelnen Phasen und Beschreibungen folgen in Kürze.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-mina" data-bs-dismiss="modal">Schließen</button>
+      </div>
+    </div>
+  </div>
+</div>
 </main>
