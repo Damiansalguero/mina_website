@@ -4,6 +4,7 @@
 }
 .ws-title {
   width: 50%;
+  line-height: 1.5;
 }
 #ws-subtitle {
   color: #72c5d5;
@@ -26,6 +27,10 @@
   padding-bottom: 17vh;
   margin-top: -15vh;
   background-color: #fff;
+}
+
+#nähere {
+  font-weight: bold;
 }
 
 #table-ws {
