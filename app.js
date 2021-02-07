@@ -23,7 +23,8 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local");
 //"mongodb://localhost:27017/mina"
 //process.env.DB_URL ||
-const dbUrl = "mongodb://localhost:27017/mina";
+// const dbUrl = "mongodb://localhost:27017/mina";
+const dbUrl = process.env.DB_URL;
 const MongoStore = require("connect-mongo")(session);
 //////////////// MODEL IMPORT //////////////////
 const User = require("./models/user");
@@ -147,7 +148,7 @@ app.use((err, req, res, next) => {
 });
 
 //////////////// SERVER ROUTE ///////////////////
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 1024;
 app.listen(port, () => {
-  console.log("LISTENING ON PORT 8080");
+  console.log("LISTENING ON PORT 1024");
 });
