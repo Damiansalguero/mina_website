@@ -22,7 +22,6 @@ module.exports.renderhome = async (req, res) => {
     res.render("landing", {
       aktuell,
       calendars,
-      flyer,
       about
     });
   }

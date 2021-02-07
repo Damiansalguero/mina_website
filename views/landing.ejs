@@ -24,13 +24,23 @@
     <h3 class="white">Hier finden Sie im neuen Jahr aktuelle Termine </h3>
     <div class="list-group mb-3">
       <% for(let calendar of calendars) {%>
-      <a href="/calendars/<%= calendar._id %>" class="list-group-item list-group-item-action" aria-current="true">
-        <div class="d-flex w-100 justify-content-between">
-          <h5 class="mb-1"><%= calendar.title %></h5>
-          <small><%= calendar.date %></small>
-        </div>
-        <p class="mb-1"><%- calendar.description %></p>
-      </a>
+      <% if(!calendar || !calendars) {%>
+        <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Neueigkeiten</h5>
+            <small>08.02.2021</small>
+          </div>
+          <p class="mb-1">Hier informieren wie Sie in Kürze über unsere Termine</p>
+        </a>
+      <% } else { %>
+        <a href="/calendars/<%= calendar._id %>" class="list-group-item list-group-item-action" aria-current="true">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1"><%= calendar.title %></h5>
+            <small><%= calendar.date %></small>
+          </div>
+          <p class="mb-1"><%- calendar.description %></p>
+        </a>
+        <% } %>
       <% }%>
     </div>
     <% if(currentUser) {%>
