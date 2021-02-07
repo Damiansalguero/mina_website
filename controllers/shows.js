@@ -16,15 +16,11 @@ module.exports.renderhome = async (req, res) => {
   const aktuell = await Aktuell.findOne({});
   const calendars = await Calendar.find({});
   const about = await About.findOne({});
-  if (!calendars || !aktuell || !about) {
-    res.render("landing");
-  } else {
-    res.render("landing", {
-      aktuell,
-      calendars,
-      about
-    });
-  }
+  res.render("landing", {
+    aktuell,
+    calendars,
+    about
+  });
 };
 
 module.exports.renderWorkshops = async (req, res) => {
