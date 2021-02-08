@@ -37,7 +37,7 @@
 
 /********* Block Calendar ***********/
 .calendar-block {
-  clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 7%, 100% 100%, 0 100%);
     background-color: #db2a6f;
     display: flex;
     flex-direction: column;
