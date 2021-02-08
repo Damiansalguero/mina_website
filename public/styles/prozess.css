@@ -33,7 +33,7 @@ body {
 }
 /************ TIMELINE *************/
 .timeline-block {
-  clip-path: polygon(0 2%, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 4%, 100% 0%, 100% 100%, 0% 100%);
   background-color: #9fb039;
   display: flex;
   flex-direction: column;
@@ -141,7 +141,7 @@ a {
   padding: 15px;
   background: #db2a6f;
   color: #fff;
-  margin: -20px -20px 0 -20px;
+  margin: -20px -20px 15px -20px;
   font-weight: 300;
   -webkit-border-radius: 3px 3px 0 0;
   -moz-border-radius: 3px 3px 0 0;

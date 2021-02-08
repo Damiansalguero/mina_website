@@ -12,7 +12,7 @@
   height: auto;
   padding-top: 10vh;
   padding-bottom: 15vh;
-  margin-top: -15vh;
+  margin-top: -10vh;
 }
 
 ul {
@@ -21,6 +21,11 @@ ul {
 }
 #header-contact {
   color: #000;
+}
+
+#header-img {
+  height: 550px;
+  padding-top: 5vh;
 }
 
 li,

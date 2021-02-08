@@ -25,12 +25,14 @@
 }
 
 #block-konzeption {
-  clip-path: polygon(0 3%, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
 }
 
-#block-konzeption,
-.konzeption {
+#block-konzeption {
   padding-bottom: 5vh;
+}
+.konzeption {
+  padding-bottom: 10vh;
 }
 
 #block-konzeption h3 {
