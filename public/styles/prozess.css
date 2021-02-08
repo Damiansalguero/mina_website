@@ -47,7 +47,7 @@ body {
   clip-path: polygon(0 0, 100% 4%, 100% 100%, 0 100%);
   height: auto;
   padding-top: 10vh;
-  margin-top: -15vh;
+  margin-top: -7vh;
 }
 
 #timeline .timeline-item:after,
@@ -60,6 +60,10 @@ body {
 
 img {
   max-width: 100%;
+}
+
+#header-img {
+  padding-top: 10vh;
 }
 
 a {
