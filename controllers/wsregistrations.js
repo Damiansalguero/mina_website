@@ -65,8 +65,8 @@ module.exports.createAnmeldung = async (req, res, next) => {
   // setup email data with unicode symbols
   const mailOptions = {
     from: '"Nodemailer Contact" vielfalt@mina-berlin.de', // sender address
-    to: "damian.salguero@posteo.de", // list of receivers
-    subject: "Neue Kontaktanrage", // Subject line
+    to: "vielfalt@mina-berlin.de", // list of receivers
+    subject: "Neue Workshopanmeldung", // Subject line
     text: "Folgende Nachricht wurde Per Kontaktformular gesendet", // plain text body
     html: output // html body
   };
