@@ -1,6 +1,7 @@
 const Aktuell = require("../models/aktuell");
 const Calendar = require("../models/calendar");
 const About = require("../models/about");
+const Wsnew = require("../models/wsaktuell");
 const Workshop = require("../models/workshop");
 const Workshopgallery = require("../models/workshopgallery");
 const Timeline = require("../models/timeline");
@@ -24,9 +25,10 @@ module.exports.renderhome = async (req, res) => {
 };
 
 module.exports.renderWorkshops = async (req, res) => {
+  const wsnew = await Wsnew.findOne({});
   const workshops = await Workshop.find({});
   const workshopgalleries = await Workshopgallery.find({});
-  res.render("workshops", { workshops, workshopgalleries });
+  res.render("workshops", { workshops, workshopgalleries, wsnew });
 };
 
 module.exports.renderPartizip = (req, res) => {

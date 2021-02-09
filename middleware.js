@@ -3,6 +3,7 @@ const {
   calendarSchema,
   workshopSchema,
   workshopGallerySchema,
+  wsnewSchema,
   timelineSchema,
   flyerSchema,
   aboutSchema,
@@ -112,6 +113,17 @@ module.exports.validateWsRegister = (req, res, next) => {
 /////////////// About /////////////
 module.exports.validateAbouts = (req, res, next) => {
   const { error } = aboutSchema.validate(req.body);
+  if (error) {
+    const msg = error.details.map(el => el.message).join(",");
+    throw new ExpressError(msg, 400);
+  } else {
+    next();
+  }
+};
+
+/////////////// Wsnew /////////////
+module.exports.validateWsnew = (req, res, next) => {
+  const { error } = wsnewSchema.validate(req.body);
   if (error) {
     const msg = error.details.map(el => el.message).join(",");
     throw new ExpressError(msg, 400);

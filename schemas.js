@@ -100,6 +100,13 @@ module.exports.aboutSchema = Joi.object({
   }).required()
 });
 
+module.exports.wsnewSchema = Joi.object({
+  wsnew: Joi.object({
+    title: Joi.string().required(),
+    description: Joi.string().required()
+  }).required()
+});
+
 module.exports.testdataSchema = Joi.object({
   test: Joi.object({
     title: Joi.string().required(),

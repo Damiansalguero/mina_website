@@ -1,0 +1,24 @@
+<% layout("layouts/boilerplate") %>
+<div class="row">
+  <h1 class=""><span class="title-line line-pink">Workshop Titel Hinzufügen</span></h1>
+  <div class="col-6 offset-3">
+    <form action="/ueberworkshops" method="post" novalidate class="validated-form">
+      <div class="mb-3">
+        <label class="form-label" for="title">Überschrift</label>
+        <input class="form-control" type="text" id="title" name="wsnew[title]" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="description">Text</label>
+        <textarea class="form-control" type="text" id="description" name="wsnew[description]" required></textarea>
+        <script>
+          CKEDITOR.replace('description');
+        </script>
+      </div>
+      <div class="mb-3">
+        <button class="btn btn-success btn-mina">Speichern</button>
+      </div>
+    </form>
+    <a href="/workshops">Zurück</a>
+  </div>
+</div>
+<!--  -->

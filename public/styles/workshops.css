@@ -10,14 +10,30 @@
 #ws-subtitle {
   color: #72c5d5;
   font-weight: bold;
-  padding: 3vh 0;
+  padding: 6vh 0 3vh 0;
 }
 
 #ws-intro {
-  font-size: 18px;
+  width: 50%;
   text-align: justify;
-  padding: 20px 0;
+  font-size: 18px;
+  margin-bottom: 5vh;
 }
+
+.btn-aktuelles {
+  border-color: #0dcaf0;
+  color: #0dcaf0;
+  font-weight: bold;
+  margin-bottom: 5vh;
+}
+
+.btn-aktuelles:hover {
+  background-color: #0dcaf0;
+  border-color: #0dcaf0;
+  color: #fff;
+  font-weight: bold;
+}
+
 .tabelle-block {
   display: flex;
   flex-direction: column;
