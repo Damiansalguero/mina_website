@@ -178,5 +178,13 @@ h5,
 .dv-title {
   text-align: center;
 }
+.anmelde-link {
+  color: #db2a6f;
+  font-weight: bold;
+}
+
+.anmelde-link:hover {
+  color: #0dcaf0;
+}
 
 /********** WS DV STYLES ***********/

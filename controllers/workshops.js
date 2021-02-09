@@ -108,6 +108,7 @@ module.exports.updateWorkshopGallery = async (req, res) => {
 module.exports.deleteWorkshop = async (req, res) => {
   const { id } = req.params;
   await Workshop.findByIdAndDelete(id);
+  req.flash("success", "Der Workshop erfolgreich gelöscht!");
   res.redirect("/workshops");
 };
 
