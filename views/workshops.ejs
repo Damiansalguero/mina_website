@@ -2,15 +2,43 @@
 <% layout("layouts/boilerplate") %>
 <!-- NAV + HEADER -->
 <main>
-  <div class="container-fluid">
+<div class="container-fluid">
     <div class="header-bg">
-      <img src="/img/gesamt/Projekt/bg-workshops.jpg" class="img-fluid cover-header" id="img-header-ws" >
+      <img src="/img/gesamt/Projekt/bg-workshops.jpg" class="img-fluid cover-header" id="img-header-ws">
     </div>
     <!-- TABLE BLOCK -->
     <div class="tabelle-block">
       <img class="logo img-fluid" src="/img/gesamt/Logos/icon_netzwerk.png" alt="">
       <h1 class="ws-title"><span class="title-line"><%= wsnew.title %></span></h1>
       <div class="ws-text" id="ws-intro"><%-wsnew.description %></div>
+      <% if(wsnew.accordiontitleone) {%>
+        <div class="accordion-item" id="first-accordion">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            <strong class="strong-ws"><%=wsnew.accordiontitleone %></strong>
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <%-wsnew.accordiontexone %>
+            </div>
+          </div>
+        </div>
+      <% } %>
+      <% if(wsnew.accordiontitletwo) {%>
+        <div class="accordion-item" id="second-accordion">
+          <h2 class="accordion-header" id="flush-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+            <strong class="strong-ws"><%=wsnew.accordiontitletwo %></strong>  
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <%-wsnew.accordiontextwo %>
+            </div>
+          </div>
+        </div>
+      <% } %>
       <% if(currentUser) {%>
       <a href="/ueberworkshops/<%=wsnew._id%>/edit" class="btn btn-aktuelles">Workshop Text Bearbeiten</a>
       <% } %>
@@ -39,11 +67,11 @@
               </ul>
             </td>
             <% if(workshop.capacity === "ausgebucht") { %>
-            <td class= "ausgebucht"><%= workshop.capacity %></td>
+            <td class="ausgebucht"><%= workshop.capacity %></td>
             <%} else { %>
-              <td class="anmelden"><a href="/anmeldung/<%= workshop._id %>/new""><%= workshop.capacity %></a></td>
+            <td class="anmelden"><a href="/anmeldung/<%= workshop._id %>/new""><%= workshop.capacity %></a></td>
             <% } %>
-            <td><a href="/workshop/<%= workshop._id %>"> Mehr ...</a></td>
+            <td><a href=" /workshop/<%= workshop._id %>"> Mehr ...</a></td>
           </tr>
           <% }%>
         </tbody>
