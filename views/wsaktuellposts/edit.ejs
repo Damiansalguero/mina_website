@@ -36,6 +36,18 @@
           CKEDITOR.replace('accordiontextwo');
         </script>
       </div>
+
+      <div class="mb-3">
+        <label class="form-label" for="accordiontitlethree">Akkordion Titel 3</label>
+        <input class="form-control" type="text" id="title1" name="wsnew[accordiontitlethree]" required value="<%=wsnew.accordiontitlethree%>">
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="accordiontexthree">Akkordion Text 3</label>
+        <textarea class="form-control" type="text" id="accordiontexthree" name="wsnew[accordiontexthree]" required><%=wsnew.accordiontexthree%></textarea>
+        <script type="text/javascript">
+          CKEDITOR.replace('accordiontexthree');
+        </script>
+      </div>
       <div class="mb-3">
         <button class="btn btn-info">Aktuallisieren</button>
       </div>

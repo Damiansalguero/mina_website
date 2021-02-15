@@ -104,10 +104,12 @@ module.exports.wsnewSchema = Joi.object({
   wsnew: Joi.object({
     title: Joi.string().required(),
     description: Joi.string().required(),
-    accordiontitleone: Joi.string().required(),
-    accordiontexone: Joi.string().required(),
-    accordiontitletwo: Joi.string().required(),
-    accordiontextwo: Joi.string().required()
+    accordiontitleone: Joi.string(),
+    accordiontexone: Joi.string(),
+    accordiontitletwo: Joi.string(),
+    accordiontextwo: Joi.string(),
+    accordiontitlethree: Joi.string(),
+    accordiontexthree: Joi.string()
   }).required()
 });
 

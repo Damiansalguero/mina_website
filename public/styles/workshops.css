@@ -21,7 +21,8 @@
 }
 
 #first-accordion,
-#second-accordion {
+#second-accordion,
+#third-accordion {
   width: 50%;
 }
 
@@ -29,7 +30,7 @@
   color: #db2a6f;
 }
 
-#second-accordion {
+#third-accordion {
   margin-bottom: 3vh;
 }
 .btn-aktuelles {

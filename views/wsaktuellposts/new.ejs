@@ -37,6 +37,17 @@
         </script>
       </div>
       <div class="mb-3">
+        <label class="form-label" for="accordiontitlethree">Akkordion Titel 2</label>
+        <input class="form-control" type="text" id="accordiontitlethree" name="wsnew[accordiontitlethree]" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="accordiontexthree">Akkordion Text 1</label>
+        <textarea class="form-control" type="text" id="accordiontexthree" name="wsnew[accordiontexthree]" required></textarea>
+        <script>
+          CKEDITOR.replace('accordiontexthree');
+        </script>
+      </div>
+      <div class="mb-3">
         <button class="btn btn-success btn-mina">Speichern</button>
       </div>
     </form>
