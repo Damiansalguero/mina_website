@@ -325,7 +325,7 @@
 }
 
 #ws-gallery {
-  clip-path: polygon(0 1%, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 3%, 100% 0%, 100% 100%, 0% 100%);
   margin-top: -15vh;
   padding-top: 5vh;
   padding-bottom: 15vh;
