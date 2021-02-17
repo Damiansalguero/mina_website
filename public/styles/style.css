@@ -433,7 +433,7 @@ h1 {
   height: auto;
 }
 .contact-box h1 {
-  margin: -5vh 0 10vh 0;
+  margin: -10vh 0 3vh 0;
 }
 #btn-contact {
   margin-bottom: 5vh;
@@ -493,7 +493,7 @@ h1 {
 #prozess-contact,
 .timeline-block,
 .about-block {
-  margin-top: -15vh;
+  margin-top: -10vh;
 }
 .carousel-control-next-icon,
 .carousel-control-prev-icon {
