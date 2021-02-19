@@ -63,13 +63,13 @@ module.exports.renderKontakt = (req, res) => {
 
 module.exports.createKontakt = async (req, res, next) => {
   const output = `
-    <p>You have a new contact request</p>
-    <h3>Contact Details</h3>
+    <p>Sie haben eine neue Kontaktanfrage erhalten</p>
+    <h3>Übersicht</h3>
     <ul>
       <li>Name: ${req.body.name}</li>
-      <li>Company: ${req.body.betreff}</li>
+      <li>Betreff: ${req.body.betreff}</li>
       <li>Email: ${req.body.email}</li>
-      <li>Phone: ${req.body.phone}</li>
+      <li>Telefon: ${req.body.phone}</li>
     </ul>
     <h3>Message</h3>
     <p>${req.body.message}</p>
@@ -92,8 +92,8 @@ module.exports.createKontakt = async (req, res, next) => {
   // setup email data with unicode symbols
   const mailOptions = {
     from: '"Nodemailer Contact" vielfalt@mina-berlin.de', // sender address
-    to: "damian.salguero@posteo.de, vielfalt@mina-berlin.de", // list of receivers
-    subject: "Neue Kontaktanrage", // Subject line
+    to: "vielfalt@mina-berlin.de", // list of receivers
+    subject: "Neue Kontaktanfrage", // Subject line
     text: "Folgende Nachricht wurde Per Kontaktformular gesendet", // plain text body
     html: output // html body
   };
