@@ -12,6 +12,13 @@
             <input class="form-control" type="text" id="title" name="workshop[title]" required value="<%=workshop.title%>">
           </div>
           <div class="mb-3">
+            <label class="form-label" for="type">Seminartyp</label>
+            <select class="form-control" id="type"  name="workshop[type]" value="<%=workshop.type%>">
+              <option value="Online">Online</option>
+              <option value="Präsenzseminar">Präsenzseminar</option>
+            </select>
+          </div>
+          <div class="mb-3">
             <label class="form-label" for="location">Ort</label>
             <input class="form-control" type="text" id="location" name="workshop[location]"required value="<%=workshop.location%>">
           </div>
