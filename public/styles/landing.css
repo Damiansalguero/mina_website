@@ -152,14 +152,24 @@ small {
 
 .text-box {
   background-color: #2c6a85;
-  border: 2px solid #2c6a85;
   height: auto;
   width: 400px;
-  text-align: center;
   padding: 10px;
   color: #fff;
-  margin-top: 5%;
-  margin-left: 5vw;
+  align-self: center;
+}
+
+.text-box h3 {
+  font-weight: bold;
+}
+
+#standort {
+  text-align: center;
+}
+
+#standort p {
+  margin: 0;
+  font-size: 20px;
 }
 
 .sponsor-block {
