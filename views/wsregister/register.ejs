@@ -8,18 +8,16 @@
         <label class="form-label" for="title">Name des Seminars</label>
         <input class="form-control" type="text" id="title" name="wsr[title]" value="<%=workshop.title%>" readonly>
       </div>
+      <!-- Seminartyp -->
+      <div class="mb-3" id="typeregister">
+        <label class="form-label" for="type">Seminartyp</label>
+        <input class="form-control" type="text" id="type" name="wsr[type]" value="<%=workshop.type%>" readonly>
+      </div>
       <!-- Seminarort -->
-      <% if(workshop.type = "Präsenzseminar") { %>
-      <div class="mb-3">
+      <div class="mb-3" id="locationregister">
         <label class="form-label" for="location">Seminarort</label>
         <input class="form-control" type="text" id="location" name="wsr[location]" value="<%=workshop.location%>" readonly>
       </div>
-      <% } else { %>
-        <div class="mb-3">
-          <label class="form-label" for="location">Seminarort</label>
-          <input class="form-control" type="text" id="location" name="wsr[location]" value="Online" readonly>
-        </div>
-      <% } %>
       <!-- Datum -->
       <div class="mb-3">
         <label class="form-label" for="date">Datum</label>
@@ -46,13 +44,13 @@
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="Nein" id="membership" name="wsr[membership]" >
+          <input class="form-check-input" type="checkbox" value="Nein" id="membership" name="wsr[membership]">
           <label class="form-check-label" for="membership">
             Nein
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="Vielleicht" id="membership" name="wsr[membership]" >
+          <input class="form-check-input" type="checkbox" value="Vielleicht" id="membership" name="wsr[membership]">
           <label class="form-check-label" for="membership">
             Vielleicht
           </label>
@@ -63,7 +61,7 @@
         <label class="form-label" for="street">Adresse</label>
         <input class="form-control" type="text" id="street" name="wsr[street]" placeholder="Straße & Hausnummer" required>
       </div>
-        <div class="mb-3">
+      <div class="mb-3">
         <input class="form-control" type="text" id="zip" name="wsr[zip]" placeholder="PLZ & Ort" required>
       </div>
       <!-- Telefon -->
@@ -86,7 +84,7 @@
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="nein" id="assistance" name="wsr[assistance]" >
+          <input class="form-check-input" type="checkbox" value="nein" id="assistance" name="wsr[assistance]">
           <label class="form-check-label" for="assistance">
             Nein
           </label>
@@ -129,7 +127,7 @@
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="nein" id="care" name="wsr[care]" >
+          <input class="form-check-input" type="checkbox" value="nein" id="care" name="wsr[care]">
           <label class="form-check-label" for="care">
             Nein
           </label>
@@ -146,7 +144,7 @@
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="nein" id="caretaker" name="wsr[caretaker]" >
+          <input class="form-check-input" type="checkbox" value="nein" id="caretaker" name="wsr[caretaker]">
           <label class="form-check-label" for="care">
             Nein
           </label>
@@ -163,43 +161,43 @@
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="nein" id="volunteer" name="wsr[volunteer]" >
+          <input class="form-check-input" type="checkbox" value="nein" id="volunteer" name="wsr[volunteer]">
           <label class="form-check-label" for="care">
             Nein
           </label>
         </div>
       </div>
-
-      <% if(workshop.type = "Präsenzseminar") { %>
       <!-- Allergie 1 -->
-      <div class="mb-3">
+      <div class="mb-3" id="registerallergy">
         <label class="form-label" for="allergy">Besteht bei Ihnen eine Lebensmittelallergie?
         </label>
-        <div class="form-check">
+        <div class="form-check" id="allergyyes">
           <input class="form-check-input" type="checkbox" value="ja" id="allergy" name="wsr[allergy]">
           <label class="form-check-label" for="allergy">
             Ja
           </label>
         </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="nein" id="allergy" name="wsr[allergy]" >
+        <div class="form-check" id="allergyno">
+          <input class="form-check-input" type="checkbox" value="nein" id="allergy" name="wsr[allergy]">
           <label class="form-check-label" for="allergy">
             Nein
           </label>
         </div>
       </div>
+
       <!-- Allergie 2 -->
-      <div class="mb-3">
+      <div class="mb-3" id="allerycats">
         <label class="form-label" for="allergies">Wenn ja, welche?</label>
         <input class="form-control" type="text" id="allergies" name="wsr[allergies]" placeholder="z.B. Nüsse, Gluten, Laktose etc.">
       </div>
+
       <!-- Verpflegungswunsch -->
-      <div class="mb-3">
+      <div class="mb-3" id="wsdiet">
         <label class="form-label" for="dietwish">Bitte nennen Sie us Ihren Verpflegungswunsch, wir versuchen diesen dann zu berücksichtigen
         </label>
         <input class="form-control" type="text" id="dietwish" name="wsr[dietwish]" placeholder="z.B. vegan, vegetarisch, halal, glutenfrei">
       </div>
-      <% } %>
+
       <!-- Organisation Feld -->
       <div class="mb-3">
         <label class="form-label" for="orgafield">Meine Organisation gehört zur
@@ -211,19 +209,19 @@
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="Migrantenselbstorganisation" id="orgafield" name="wsr[orgafield]" >
+          <input class="form-check-input" type="checkbox" value="Migrantenselbstorganisation" id="orgafield" name="wsr[orgafield]">
           <label class="form-check-label" for="orgafield">
             Migrantenselbstorganisation
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="Geflüchtetenhilfe" id="orgafield" name="wsr[orgafield]" >
+          <input class="form-check-input" type="checkbox" value="Geflüchtetenhilfe" id="orgafield" name="wsr[orgafield]">
           <label class="form-check-label" for="orgafield">
             Geflüchtetenhilfe
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="Verwaltung und Politik" id="orgafield" name="wsr[orgafield]" >
+          <input class="form-check-input" type="checkbox" value="Verwaltung und Politik" id="orgafield" name="wsr[orgafield]">
           <label class="form-check-label" for="orgafield">
             Verwaltung und Politik
           </label>
@@ -250,13 +248,13 @@
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="ja" id="personal" name="wsr[personal]" >
+          <input class="form-check-input" type="checkbox" value="ja" id="personal" name="wsr[personal]">
           <label class="form-check-label" for="personal">
             Meine Kontaktdaten dürfen an alle Teilnehmer*innen der Veranstaltung weitergegeben werden
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="ja" id="personal" name="wsr[personal]" >
+          <input class="form-check-input" type="checkbox" value="ja" id="personal" name="wsr[personal]">
           <label class="form-check-label" for="personal">
             Ich bin damit einverstanden, dass auf der Veranstaltung aufgenommene Fotos mit mir veröffentlicht werden dürfen
           </label>
@@ -277,3 +275,5 @@
     <a href="/workshops">Zurück</a>
   </div>
 </div>
+
+<script src="/scripts/wsregister.js" charset="utf-8"></script>

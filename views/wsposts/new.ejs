@@ -11,17 +11,17 @@
         <label class="form-label" for="title">Überschrift</label>
         <input class="form-control" type="text" id="title" name="workshop[title]" required>
       </div>
-      <div class="mb-3">
+      <div class="mb-3" id="wstype">
         <label class="form-label" for="type">Seminartyp</label>
         <select class="form-control" id="type" name="workshop[type]">
           <option value="Online">Online</option>
           <option value="Präsenzseminar">Präsenzseminar</option>
         </select>
       </div>
-      <div class="mb-3">
-        <label class="form-label" for="location">Seminarort</label>
-        <input class="form-control" type="text" id="location" name="workshop[location]"required>
-      </div>
+        <div class="mb-3" id="locationDiv">
+          <label class="form-label" for="location">Seminarort</label>
+          <input class="form-control" type="text" id="location" name="workshop[location]">
+        </div>
       <div class="mb-3">
         <label class="form-label" for="capacity">Verfügbarkeit</label>
         <select class="form-control" id="capacity" name="workshop[capacity]">
@@ -43,3 +43,5 @@
     <a href="/workshops">Zurück</a>
   </div>
 </div>
+
+<script src="/scripts/wscreate.js" charset="utf-8"></script>
