@@ -1,5 +1,3 @@
-console.log("Working");
-
 //Optional Fields Workshopregister
 $("#type").change(function() {
   if ($(this).val() == "Online") {
