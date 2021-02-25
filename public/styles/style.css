@@ -334,8 +334,8 @@ a {
     height: auto !important;
   }
   h1 {
-    font-size: 32px !important;
-    margin: 2vh 0 !important;
+    font-size: 32px;
+    margin: 3vh 0;
   }
   .aktuelles {
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%) !important;

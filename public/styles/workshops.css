@@ -218,4 +218,32 @@ h5,
   color: #0dcaf0;
 }
 
-/*********************************/
+@media screen and (min-width: 0) and (max-width: 575.98px) {
+  .tabelle-block {
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+    margin-top: 0;
+  }
+  .ws-title {
+    width: 85%;
+    font-size: 28px;
+  }
+  #ws-intro {
+    min-width: 80%;
+    margin-bottom: 0;
+  }
+  #first-accordion,
+  #second-accordion,
+  #third-accordion{
+    width: 85%;
+  }
+  #table-ws {
+    font-size: 12px;
+  }
+  #ws-gallery {
+    margin-top: -10vh;
+    clip-path: polygon(0 1%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  .gallery-img-2 {
+    height: 160px;
+  }
+}
