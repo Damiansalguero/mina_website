@@ -90,4 +90,7 @@
     background-color: #fff;
     height: auto;
   }
+  .navbar-toggler {
+    margin-right: 5vw;
+  }
 }

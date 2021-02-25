@@ -1,65 +1,97 @@
+footer {
+  padding-bottom: 5px;
+}
+.footer {
+  z-index: 1000000;
+  background-color: #073b4c;
+}
 
+.footer-contact {
+  color: #fff;
+  list-style: none;
+  font-size: 15px;
+  font-weight: bold;
+}
 
-  footer {
-    padding-bottom: 5px;
-  }
-  .footer {
-    z-index: 1000000;
-    background-color: #073b4c;
-  }
+.social-items {
+  flex-grow: 3;
+  display: flex;
+  justify-content: center;
+}
 
-  .footer-contact {
-    color: #fff;
-    list-style: none;
-    font-size: 15px;
-    font-weight: bold;
-  }
+.social-items a {
+  padding: 0 3vw;
+  color: #fff;
+}
 
-  .social-items {
-    flex-grow: 3;
-    display: flex;
-    justify-content: center;
-  }
+.impress-data a,
+.impress-data {
+  color: #fff;
+}
 
-  .social-items a {
-    padding: 0 3vw;
-    color: #fff;
-  }
+.social-items a:hover,
+.social-items i:hover,
+.impress-data a:hover {
+  color: #db2a6f;
+}
+.social-icon-mail:hover {
+  color: #db2a6f;
+  background-color: none;
+  border: none;
+}
 
-  .impress-data a,
-  .impress-data {
-    color: #fff;
-  }
+.social-icon-mail {
+  color: #fff;
+  border: #fff;
+  border-radius: 50%;
+  padding: 1px;
+}
 
-  .social-items a:hover,
-  .social-items i:hover,
-  .impress-data a:hover {
-    color: #db2a6f;
-  }
-  .social-icon-mail:hover {
-    color: #db2a6f;
-    background-color: none;
-    border: none;
-  }
+.social-span {
+  display: block;
+  text-align: center;
+}
+.social-span-small {
+  display: none;
+}
 
-  .social-icon-mail {
-    color: #fff;
-    border: #fff;
-    border-radius: 50%;
-    padding: 1px;
-  }
+.data-impress {
+  margin: 0 20px;
+}
 
-  .social-span {
-    display: block;
-    text-align: center;
-  }
-  .data-impress {
-    margin: 0 20px;
-  }
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
 
+@media screen and (min-width: 0) and (max-width: 575.98px) {
   .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .social-items {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+    justify-content: space-around;
+    flex-grow: 1;
+    margin: 3vh 0;
+  }
+  .social-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .social-item a {
+    padding: 0;
+  }
+  .center-sponsor {
+    margin-right: 5vw;
+  }
+  .social-span-small {
+    display: block;
+  }
+  #contact-footer {
+    display: none;
   }
 }
