@@ -67,31 +67,31 @@ footer {
 
 @media screen and (min-width: 0) and (max-width: 575.98px) {
   .footer-content {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column !important;
+    align-items: center !important;
   }
   .social-items {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    flex-grow: 1;
-    margin: 3vh 0;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: space-around !important;
+    flex-grow: 1 !important;
+    margin: 3vh 0 !important;
   }
   .social-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
   }
   .social-item a {
-    padding: 0;
+    padding: 0 !important;
   }
   .center-sponsor {
-    margin-right: 5vw;
+    margin-right: 5vw !important;
   }
   .social-span-small {
-    display: block;
+    display: block !important;
   }
   #contact-footer {
-    display: none;
+    display: none !important;
   }
 }

@@ -191,3 +191,14 @@ small {
   font-weight: bold;
   float: right;
 }
+
+@media screen and (min-width: 0) and (max-width: 575.98px) {
+  small {
+    font-size: 16px;
+    text-align: center;
+  }
+  .list-group-item h5 {
+    font-size: 16px;
+    text-align: left;
+  }
+}

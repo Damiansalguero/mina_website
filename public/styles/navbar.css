@@ -86,11 +86,11 @@
 
 @media screen and (min-width: 0) and (max-width: 575.98px) {
   .nav-box {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    background-color: #fff;
-    height: auto;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%) !important;
+    background-color: #fff !important;
+    height: auto !important;
   }
   .navbar-toggler {
-    margin-right: 5vw;
+    margin-right: 5vw !important;
   }
 }

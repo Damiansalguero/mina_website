@@ -324,48 +324,48 @@ a {
 
 @media screen and (min-width: 0) and (max-width: 575.98px) {
   .navbar {
-    padding-bottom: 0;
+    padding-bottom: 0 !important;
   }
   .header-bg {
-    padding-top: 0;
-    margin-top: 0;
+    padding-top: 0 !important;
+    margin-top: 0 !important;
   }
   .header-bg img {
-    height: auto;
+    height: auto !important;
   }
   h1 {
-    font-size: 32px;
-    margin: 2vh 0;
+    font-size: 32px !important;
+    margin: 2vh 0 !important;
   }
   .aktuelles {
-    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
-    margin-top: 0;
-    padding-top: 0;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%) !important;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
   }
   .text-box-aktuelles {
-    min-width: 80%;
+    min-width: 80% !important;
   }
   .calendar-block {
     clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%) !important;
     padding-top: 5vh !important;
   }
   h3 {
-    text-align: center;
+    text-align: center !important;
   }
   .list-group {
-    min-width: 85%;
-    margin-top: 2vh;
+    min-width: 85% !important;
+    margin-top: 2vh !important;
   }
   .about-block {
     clip-path: polygon(0 2%, 100% 0%, 100% 100%, 0% 100%) !important;
   }
   .text-block {
-    min-width: 75%;
+    min-width: 75% !important;
     font-size: 14px !important;
   }
   .map-box {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column !important;
+    align-items: center !important;
   }
   #map {
     height: 250px !important;
@@ -378,15 +378,15 @@ a {
   }
   #title-sponsor {
     font-size: 26px !important;
-    width: 50%;
-    border-bottom: 3px solid #db2a6f;
-    margin: 3vh 0;
+    width: 50% !important;
+    border-bottom: 3px solid #db2a6f !important;
+    margin: 3vh 0 !important;
   }
   #span-sponsor {
-    border-bottom: none;
+    border-bottom: none !important;
   }
   #box-sponsor {
-    display: flex;
+    display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
   }
@@ -395,14 +395,14 @@ a {
     margin: 5px 0 !important;
   }
   #scrollBtn {
-    border-radius: 50%;
-    bottom: 150px;
-    right: 10px;
+    border-radius: 50% !important;
+    bottom: 150px !important;
+    right: 10px !important;
   }
   #scrollBtn i {
-    font-size: 30px;
+    font-size: 30px !important;
   }
   #scrollBtn p {
-    display: none;
+    display: none !important;
   }
 }
