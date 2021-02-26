@@ -3,8 +3,10 @@
     font-size: 14px;
   }
   #form-ws-register,
-  #form-ws-new {
+  #form-ws-new,
+  #form-aktuell-edit {
     width: 90%;
     margin-left: 5%;
+    margin-bottom: 5%;
   }
 }
