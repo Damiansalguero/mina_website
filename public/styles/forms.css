@@ -4,7 +4,9 @@
   }
   #form-ws-register,
   #form-ws-new,
-  #form-aktuell-edit {
+  #form-aktuell-edit,
+  #form-calendar-new,
+  #form-calendar-edit {
     width: 90%;
     margin-left: 5%;
     margin-bottom: 5%;
