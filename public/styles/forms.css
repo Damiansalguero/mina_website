@@ -6,7 +6,8 @@
   #form-ws-new,
   #form-aktuell-edit,
   #form-calendar-new,
-  #form-calendar-edit {
+  #form-calendar-edit,
+  #form-about-edit {
     width: 90%;
     margin-left: 5%;
     margin-bottom: 5%;
