@@ -29,12 +29,18 @@
 
 .strong-ws {
   color: #db2a6f;
-  text-align: letter-spacing: ;
+  text-align: letter-spacing;
 }
 
 #third-accordion {
   margin-bottom: 10vh;
 }
+
+.accordion-flyer a {
+  color: #000;
+  font-weight: bold;
+}
+
 .btn-aktuelles {
   border-color: #0dcaf0;
   color: #0dcaf0;
@@ -233,7 +239,7 @@ h5,
   }
   #first-accordion,
   #second-accordion,
-  #third-accordion{
+  #third-accordion {
     width: 85%;
   }
   #table-ws {
