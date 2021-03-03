@@ -63,6 +63,7 @@ h1 {
   font-weight: bold;
   z-index: 2;
   margin: 2vh 0 1vh 0;
+  font-size: 14px;
 }
 .white {
   color: #fff;
