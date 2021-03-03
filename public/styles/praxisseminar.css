@@ -60,3 +60,32 @@
 #container-seminar-ov {
   width: 75%;
 }
+
+@media screen and (min-width: 0) and (max-width: 575.98px) {
+  #img-praxis {
+    width: 95%;
+  }
+  .ws-text {
+    width: 85%;
+    text-align: justify;
+    font-size: 16px;
+  }
+  #row-praxis {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .img-paraxisseminar {
+    height: 350px;
+  }
+  .seminar-ov {
+    width: 100%;
+  }
+  .praxis-list {
+    margin: 0;
+    text-align: left;
+  }
+  .praxis-list li {
+    margin: 5px 0;
+  }
+}

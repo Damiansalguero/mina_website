@@ -34,3 +34,27 @@
 .vortrag-titel {
   font-style: italic;
 }
+
+@media screen and (min-width: 0) and (max-width: 575.98px) {
+  .gallery-block {
+    clip-path: polygon(0 2%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  .gallery {
+    width: 85%;
+  }
+  .gallery h3 {
+    font-size: 18px;
+  }
+  #img-container-fach {
+    justify-content: center;
+  }
+  #img-container-fach img {
+    height: 250px;
+  }
+  .fach-list {
+    width: 100%;
+  }
+  .fach-list li {
+    margin: 5px 0;
+  }
+}
