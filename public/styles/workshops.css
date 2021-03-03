@@ -252,4 +252,11 @@ h5,
   .gallery-img-2 {
     height: 160px;
   }
+  .flyer-btn-group {
+    display: flex;
+    flex-direction: column;
+  }
+  #btn-flyer {
+    margin: 5px 0;
+  }
 }
