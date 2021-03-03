@@ -132,3 +132,18 @@ input {
     text-align: left;
   }
 }
+@media screen and (min-width: 0) and (max-width: 575.98px) {
+  .wrapper {
+    width: 90%;
+  }
+  .contact-box {
+    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
+  }
+  .aktuelles {
+    padding-bottom: 5vh;
+    margin-top: 5vh !important;
+  }
+  .contact-box h1 {
+    margin: -5vh 0 5vh 0;
+  }
+}
