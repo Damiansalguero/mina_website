@@ -406,4 +406,12 @@ a {
   #scrollBtn p {
     display: none !important;
   }
+  .contact-img {
+    height: 80px;
+    width: 80px;
+  }
+  .worker-info ul,
+  .worker-info ul a {
+    font-size: 12px;
+  }
 }
