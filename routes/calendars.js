@@ -11,7 +11,7 @@ const upload = multer({ storage });
 
 const Calendar = require("../models/calendar");
 
-router.get("/übersicht", catchAsync(calendars.index));
+router.get("/alle", catchAsync(calendars.index));
 
 router.get("/neu", isLoggedIn, calendars.renderNewCalendar);
 

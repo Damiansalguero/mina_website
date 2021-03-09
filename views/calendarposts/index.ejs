@@ -4,19 +4,14 @@
 
 <div class="calendar-box">
       <% for(let calendar of calendars) {%>
-        <div class="card mb-3">
-          <div class="row">
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5><%=calendar.title%></h5>
-                <p class= "card-text"><%=calendar.description%></p>
-                <p class= "card-text">
-                  <small class="text-muted"><%=calendar.date%></small>
-                </p>
-                <a href="/posts/<%=calendar._id%>" class="btn btn-primary">Anzeigen</a>
+          <div class="list-group mb-3">
+            <a href="/calendars/<%= calendar._id %>" class="list-group-item list-group-item-action" aria-current="true">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1"><%= calendar.title %></h5>
+                <small><%= calendar.date %></small>
               </div>
-            </div>
-          </div>
+              <p class="mb-1"><%- calendar.description %></p>
+            </a>
         </div>
       <% }%>
     </div>

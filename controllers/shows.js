@@ -15,7 +15,9 @@ module.exports.renderLanding = async (req, res) => {
 
 module.exports.renderhome = async (req, res) => {
   const aktuell = await Aktuell.findOne({});
-  const calendars = await Calendar.find({});
+  const calendars = await Calendar.find()
+    .sort({ _id: -1 })
+    .limit(3);
   const about = await About.findOne({});
   res.render("landing", {
     aktuell,

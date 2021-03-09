@@ -91,6 +91,9 @@ small {
   color: #72c5d5;
 }
 
+#calendar-btn {
+  margin: 10px 0;
+}
 .stadt {
   font-weight: bold;
 }
