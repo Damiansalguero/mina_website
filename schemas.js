@@ -21,8 +21,6 @@ module.exports.calendarSchema = Joi.object({
   calendar: Joi.object({
     title: Joi.string().required(),
     date: Joi.string().required(),
-    email: Joi.string(),
-    phone: Joi.string(),
     description: Joi.string().required()
   }).required()
 });
