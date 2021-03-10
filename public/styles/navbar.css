@@ -94,3 +94,9 @@
     margin-right: 5vw !important;
   }
 }
+
+@media screen and (min-width: 575.98px) and (max-width: 991.98px) {
+  .navbar-toggler {
+    margin-right: 5vw !important;
+  }
+}

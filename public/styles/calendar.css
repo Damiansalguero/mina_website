@@ -98,3 +98,28 @@ small {
   font-weight: bold;
   color: #72c5d5;
 }
+
+@media screen and (min-width: 0) and (max-width: 575.98px) {
+  .card {
+    min-width: 80%;
+    margin: 3vh 0;
+  }
+  .btn-group {
+    align-self: center;
+    margin: 0 0 3vh 0;
+  }
+}
+
+@media screen and (min-width: 575.98px) and (max-width: 991.98px) {
+  #title-calendar-index {
+    margin: 3vh 0;
+  }
+  .card {
+    min-width: 80%;
+    margin: 3vh 0;
+  }
+  .btn-group {
+    align-self: center;
+    margin: 0 0 3vh 0;
+  }
+}

@@ -95,3 +95,32 @@ footer {
     display: none !important;
   }
 }
+
+@media screen and (min-width: 575.98px) and (max-width: 991.98px) {
+  .footer-content {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .social-items {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    flex-grow: 1 !important;
+    margin: 3vh 0 !important;
+  }
+  .social-item {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .social-item i {
+    font-size: 3em;
+  }
+  .social-item span,
+  .impress-data {
+    font-size: 26px;
+  }
+  #item-fb {
+    margin-left: 5vw;
+  }
+}

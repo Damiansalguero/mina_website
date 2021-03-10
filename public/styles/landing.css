@@ -205,3 +205,43 @@ small {
     text-align: left;
   }
 }
+@media screen and (min-width: 575.98px) and (max-width: 991.98px) {
+  .aktuelles {
+    clip-path: polygon(0 0, 100% 4%, 100% 100%, 0 100%);
+  }
+  .text-box-aktuelles {
+    min-width: 80%;
+  }
+
+  .text-box-aktuelles p {
+    font-size: 20px;
+  }
+  .calendar-block {
+    clip-path: polygon(0 0, 100% 4%, 100% 100%, 0 100%);
+  }
+  .list-group {
+    min-width: 80%;
+  }
+  .about-block {
+    clip-path: polygon(0 4%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  .text-block {
+    min-width: 75%;
+    font-size: 20px;
+  }
+  .map-block {
+    clip-path: polygon(0 7%, 100% 0%, 100% 100%, 0% 100%);
+    padding-bottom: 5vh;
+  }
+  .map-box {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  #map {
+    height: 350px;
+    margin-bottom: 3vh;
+  }
+  .sponsor-box {
+    padding-top: 7vh;
+  }
+}

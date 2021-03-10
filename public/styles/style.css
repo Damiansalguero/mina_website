@@ -415,3 +415,25 @@ a {
     font-size: 12px;
   }
 }
+@media screen and (min-width: 575.98px) and (max-width: 991.98px) {
+  h1 {
+    margin: 3vh 0 0 0;
+  }
+  #box-sponsor {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  #box-sponsor a {
+    margin: 20px 0;
+  }
+  #title-sponsor {
+    border-bottom: 3px solid #db2a6f;
+  }
+  #title-sponsor span {
+    border-bottom: none;
+  }
+  #scrollBtn {
+    bottom: 210px;
+  }
+}
