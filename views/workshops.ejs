@@ -88,13 +88,13 @@
             <%} else { %>
             <td class="anmelden"><a href="/anmeldung/<%= workshop._id %>/new""><%= workshop.capacity %></a></td>
             <% } %>
-            <td><a href=" /workshop/<%= workshop._id %>"> Mehr ...</a></td>
+            <td><a href="/workshop/<%= workshop._id %>""> Mehr ...</a></td>
           </tr>
           <% }%>
         </tbody>
       </table>
       <% if(currentUser) {%>
-      <a href="/workshop/new" class="btn btn btn-workshop">Workshop Hinzufügen</a>
+      <a href="/workshop/new" class="btn btn btn-aktuelles">Workshop Hinzufügen</a>
       <% } %>
       <div class="flyer-btn-group">
         <a href="/downloads/WEB_Flyer_Workshops_2021.pdf" target="_blank" class="btn" id="btn-flyer" target="_blank">Unsere aktuellen Präsenzworkshops</a>
