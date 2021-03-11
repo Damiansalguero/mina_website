@@ -4,6 +4,7 @@ const About = require("../models/about");
 const Wsnew = require("../models/wsaktuell");
 const Workshop = require("../models/workshop");
 const Workshopgallery = require("../models/workshopgallery");
+const Partizip = require("../models/partizip");
 const Timeline = require("../models/timeline");
 const Flyer = require("../models/flyer");
 const nodemailer = require("nodemailer");
@@ -33,8 +34,9 @@ module.exports.renderWorkshops = async (req, res) => {
   res.render("workshops", { workshops, workshopgalleries, wsnew });
 };
 
-module.exports.renderPartizip = (req, res) => {
-  res.render("partizip");
+module.exports.renderPartizip = async (req, res) => {
+  const partizip = await Partizip.findOne({});
+  res.render("partizip", { partizip });
 };
 module.exports.renderProzess = async (req, res) => {
   const timelines = await Timeline.find({});

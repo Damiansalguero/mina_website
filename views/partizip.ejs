@@ -8,9 +8,11 @@
   <!-- HEADER BLOCK -->
   <div class="block aktuelles" id="header-part">
     <img class="logo-part" src="/img/gesamt/Logos/icon_partizip.png" alt="">
-    <h1 class=""><span class="title-line">Partizipatives Projekt</span></h1>
-    <p class="ws-text part-text">Viele Themen der Schnittstelle Flucht, Migration und Behinderung sind oft Teil abstrakter Diskussionen, in denen die Menschen nicht im Mittelpunkt stehen. Partizipative Projekte sollen Menschen mit Migrations- und/oder Fluchterfahrung und Behinderung, deren Angehörigen und Ehrenamtliche die Möglichkeit geben, sich selbst zu äußern, ihren Themen und Meinungen auszudrücken und öffentlich Raum zu geben. Die Umsetzung des Projekts erfolgt gemeinsam mit Studierenden, dem Personenkreis von MINA und Ehrenamtlichen. </p>
-    <p class="ws-text part-text">Zwei Projekte werden in diesem Rahmen umgesetzt. Ein Buch-/Biografie-Projekt mit arabischen und türkischen Familien, um die Erfahrungen der Menschen zu sammeln und weiterzugeben sowie die Entwicklung von Erklärvideos zu behindertenspezifischen Fragestellungen.</p>
+    <h1 id="" class="ws-title title-line"><span ><%= partizip.title %></span></h1>
+    <div class="part-text" id="ws-intro"><%-partizip.description %></div>
+    <% if(currentUser) {%>
+    <a href="/partizipatives/<%=partizip._id%>/edit" class="btn btn-aktuelles">Haupttext Bearbeiten</a>
+    <% } %>
     <div class="video-box">
       <h3 class="mina-pink">Eröffnungsfilm</h3>
       <video src="/videos/Eröffnungsfilm.mp4" width=320  height=240 controls  poster="posterimage.jpg">

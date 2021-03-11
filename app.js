@@ -24,7 +24,7 @@ const LocalStrategy = require("passport-local");
 //"mongodb://localhost:27017/mina"
 //process.env.DB_URL ||
 // const dbUrl = "mongodb://localhost:27017/mina";
-const dbUrl = "mongodb://localhost:27017/mina";
+const dbUrl = process.env.DB_URL;
 const MongoStore = require("connect-mongo")(session);
 //////////////// MODEL IMPORT //////////////////
 const User = require("./models/user");
@@ -36,6 +36,7 @@ const aboutRoutes = require("./routes/abouts");
 const wsnewsRoutes = require("./routes/wsaktuelles");
 const workshopRoutes = require("./routes/workshops");
 const wsregisterRoutes = require("./routes/wsregistrations");
+const partizipRoutes = require("./routes/partizips");
 const timelineRoutes = require("./routes/timelines");
 const flyerRoutes = require("./routes/flyers");
 const userRoutes = require("./routes/users");
@@ -125,6 +126,7 @@ app.use("/ueberehrenamt", aboutRoutes);
 app.use("/workshop", workshopRoutes);
 app.use("/anmeldung", wsregisterRoutes);
 app.use("/ueberworkshops", wsnewsRoutes);
+app.use("/partizipatives", partizipRoutes);
 app.use("/zeitstrahl", timelineRoutes);
 app.use("/flyers", flyerRoutes);
 app.use("/posts", postRoutes);

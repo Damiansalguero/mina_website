@@ -4,6 +4,7 @@ const {
   workshopSchema,
   workshopGallerySchema,
   wsnewSchema,
+  partizipSchema,
   timelineSchema,
   flyerSchema,
   aboutSchema,
@@ -124,6 +125,17 @@ module.exports.validateAbouts = (req, res, next) => {
 /////////////// Wsnew /////////////
 module.exports.validateWsnew = (req, res, next) => {
   const { error } = wsnewSchema.validate(req.body);
+  if (error) {
+    const msg = error.details.map(el => el.message).join(",");
+    throw new ExpressError(msg, 400);
+  } else {
+    next();
+  }
+};
+
+/////////////// Partizip /////////////
+module.exports.validatePartizip = (req, res, next) => {
+  const { error } = partizipSchema.validate(req.body);
   if (error) {
     const msg = error.details.map(el => el.message).join(",");
     throw new ExpressError(msg, 400);

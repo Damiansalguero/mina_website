@@ -111,6 +111,13 @@ module.exports.wsnewSchema = Joi.object({
   }).required()
 });
 
+module.exports.partizipSchema = Joi.object({
+  partizip: Joi.object({
+    title: Joi.string().required(),
+    description: Joi.string().required()
+  }).required()
+});
+
 module.exports.testdataSchema = Joi.object({
   test: Joi.object({
     title: Joi.string().required(),
