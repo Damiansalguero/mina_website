@@ -23,14 +23,33 @@
         <label class="form-label" for="date">Datum</label>
         <input class="form-control" type="text" id="date" name="wsr[date]" value="<%=workshop.date%>" readonly>
       </div>
+      <p><span class="pflichtfeld">* Pflichtfelder</p>
       <!-- Name Person -->
       <div class="mb-3">
-        <label class="form-label" for="name">Name</label>
+        <label class="form-label" for="name">Name <span class="pflichtfeld">*</span></label>
         <input class="form-control" type="text" id="name" name="wsr[name]" placeholder="Vorname & Nachname" required>
+      </div>
+      <!-- Adresse -->
+      <div class="mb-3">
+        <label class="form-label" for="street">Adresse <span class="pflichtfeld">*</span></label>
+        <input class="form-control" type="text" id="street" name="wsr[street]" placeholder="Straße & Hausnummer" required>
+      </div>
+      <div class="mb-3">
+        <input class="form-control" type="text" id="zip" name="wsr[zip]" placeholder="PLZ & Ort" required>
+      </div>
+      <!-- Telefon -->
+      <div class="mb-3">
+        <label class="form-label" for="phone">Telefon <span class="pflichtfeld">*</span></label>
+        <input class="form-control" type="text" id="phone" name="wsr[phone]" required>
+      </div>
+      <!-- Email -->
+      <div class="mb-3">
+        <label class="form-label" for="email">Email <span class="pflichtfeld">*</span></label>
+        <input class="form-control" type="text" id="email" name="wsr[email]" required>
       </div>
       <!-- Organisation -->
       <div class="mb-3">
-        <label class="form-label" for="organisation">Wie ist der Name der Organisation, für die Sie arbeiten?</label>
+        <label class="form-label" for="organisation">Wie ist der Name der Organisation, für die Sie arbeiten? <span class="pflichtfeld">*</span></label>
         <input class="form-control" type="text" id="organisation" name="wsr[organisation]" required>
       </div>
       <!-- Mitgliedschaft -->
@@ -56,23 +75,34 @@
           </label>
         </div>
       </div>
-      <!-- Adresse -->
+      <!-- Organisation Feld -->
       <div class="mb-3">
-        <label class="form-label" for="street">Adresse</label>
-        <input class="form-control" type="text" id="street" name="wsr[street]" placeholder="Straße & Hausnummer" required>
-      </div>
-      <div class="mb-3">
-        <input class="form-control" type="text" id="zip" name="wsr[zip]" placeholder="PLZ & Ort" required>
-      </div>
-      <!-- Telefon -->
-      <div class="mb-3">
-        <label class="form-label" for="phone">Telefon</label>
-        <input class="form-control" type="text" id="phone" name="wsr[phone]" required>
-      </div>
-      <!-- Email -->
-      <div class="mb-3">
-        <label class="form-label" for="email">Email</label>
-        <input class="form-control" type="text" id="email" name="wsr[email]" required>
+        <label class="form-label" for="orgafield">Meine Organisation gehört zur
+        </label>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="Behindertenhilfe" id="orgafield" name="wsr[orgafield]">
+          <label class="form-check-label" for="orgafield">
+            Behindertenhilfe
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="Migrantenselbstorganisation" id="orgafield" name="wsr[orgafield]">
+          <label class="form-check-label" for="orgafield">
+            Migrantenselbstorganisation
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="Geflüchtetenhilfe" id="orgafield" name="wsr[orgafield]">
+          <label class="form-check-label" for="orgafield">
+            Geflüchtetenhilfe
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="Verwaltung und Politik" id="orgafield" name="wsr[orgafield]">
+          <label class="form-check-label" for="orgafield">
+            Verwaltung und Politik
+          </label>
+        </div>
       </div>
       <!-- Assistenzbedarf -->
       <div class="mb-3">
@@ -184,48 +214,16 @@
           </label>
         </div>
       </div>
-
       <!-- Allergie 2 -->
       <div class="mb-3" id="allerycats">
         <label class="form-label" for="allergies">Wenn ja, welche?</label>
         <input class="form-control" type="text" id="allergies" name="wsr[allergies]" placeholder="z.B. Nüsse, Gluten, Laktose etc.">
       </div>
-
       <!-- Verpflegungswunsch -->
       <div class="mb-3" id="wsdiet">
         <label class="form-label" for="dietwish">Bitte nennen Sie us Ihren Verpflegungswunsch, wir versuchen diesen dann zu berücksichtigen
         </label>
         <input class="form-control" type="text" id="dietwish" name="wsr[dietwish]" placeholder="z.B. vegan, vegetarisch, glutenfrei">
-      </div>
-
-      <!-- Organisation Feld -->
-      <div class="mb-3">
-        <label class="form-label" for="orgafield">Meine Organisation gehört zur
-        </label>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="Behindertenhilfe" id="orgafield" name="wsr[orgafield]" required>
-          <label class="form-check-label" for="orgafield">
-            Behindertenhilfe
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="Migrantenselbstorganisation" id="orgafield" name="wsr[orgafield]">
-          <label class="form-check-label" for="orgafield">
-            Migrantenselbstorganisation
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="Geflüchtetenhilfe" id="orgafield" name="wsr[orgafield]">
-          <label class="form-check-label" for="orgafield">
-            Geflüchtetenhilfe
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="Verwaltung und Politik" id="orgafield" name="wsr[orgafield]">
-          <label class="form-check-label" for="orgafield">
-            Verwaltung und Politik
-          </label>
-        </div>
       </div>
       <!-- Erfahrungen Schnittstelle -->
       <div class="mb-3">
@@ -242,10 +240,10 @@
         <label class="form-label" for="personal">Persönliche Daten
         </label>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="ja" id="personal" name="wsr[personal]">
+          <input class="form-check-input" type="checkbox" value="ja" id="personal" name="wsr[personal]" required>
           <label class="form-check-label" for="personal">
             Meine Daten dürfen zu Anmeldezwecken verarbeitet werden
-          </label>
+           <span class="pflichtfeld">*</span></label>
         </div>
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="ja" id="personal" name="wsr[personal]">
