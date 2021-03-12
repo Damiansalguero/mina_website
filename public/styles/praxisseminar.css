@@ -89,3 +89,28 @@
     margin: 5px 0;
   }
 }
+
+@media screen and (min-width: 575.98px) and (max-width: 991.98px) {
+  #img-praxis {
+    width: 85%;
+  }
+  .ws-text {
+    width: 75%;
+    text-align: justify;
+    font-size: 18px;
+  }
+  .gallery-block,
+  #block-konzeption {
+    clip-path: polygon(0 2%, 100% 0%, 100% 100%, 0% 100%);
+    padding-top: 5vh;
+  }
+  #block-konzeption h3 {
+    text-align: center;
+  }
+  .img-paraxisseminar {
+    height: 300px;
+  }
+  .praxis-list {
+    font-size: 20px;
+  }
+}
