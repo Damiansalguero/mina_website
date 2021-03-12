@@ -9,11 +9,8 @@
     <!-- TABLE BLOCK -->
     <div class="tabelle-block">
       <img class="logo-ws img-fluid" src="/img/gesamt/Logos/icon_netzwerk.png" alt="">
-      <h1 id="" class="ws-title title-line"><span ><%= wsnew.title %></span></h1>
+      <h1 class="ws-title title-line"><%= wsnew.title %></h1>
       <div class="ws-text" id="ws-intro"><%-wsnew.description %></div>
-      <% if(currentUser) {%>
-      <a href="/ueberworkshops/<%=wsnew._id%>/edit" class="btn btn-aktuelles">Workshop Text Bearbeiten</a>
-      <% } %>
       <% if(wsnew.accordiontitleone) {%>
         <div class="accordion-item" id="first-accordion">
           <h2 class="accordion-header" id="flush-headingOne">
@@ -59,7 +56,9 @@
           </div>
         </div>
       <% } %>
-
+      <% if(currentUser) {%>
+      <a href="/ueberworkshops/<%=wsnew._id%>/edit" class="btn btn-aktuelles">Workshop Text/Akkordion Bearbeiten</a>
+      <% } %>
       <!-- Table 1 -->
       <table class="table table-responsive table-hover" id="table-ws">
         <thead>

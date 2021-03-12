@@ -273,3 +273,58 @@ h5,
     margin-bottom: 2vh;
   }
 }
+@media screen and (min-width: 575.99px) and (max-width: 991.98px) {
+  .tabelle-block {
+    clip-path: polygon(0 0, 100% 1%, 100% 100%, 0 100%);
+  }
+  #img-header-ws {
+    padding-top: 10vh;
+  }
+  .ws-title {
+    width: 80%;
+  }
+  h1 {
+    font-size: 32px;
+  }
+  .ws-text {
+    min-width: 75%;
+    font-size: 20px;
+  }
+  #ws-intro {
+    margin-bottom: 0;
+  }
+  #first-accordion,
+  #second-accordion,
+  #third-accordion {
+    width: 80%;
+  }
+  #table-ws {
+    width: 85%;
+  }
+  .card,
+  .gallery {
+    width: 80%;
+  }
+  .btn-group {
+    margin-left: 0;
+    align-self: center;
+  }
+  #ws-gallery {
+    margin-top: -10vh;
+  }
+  .gallery-block {
+    clip-path: polygon(0 1%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  .gallery-img-2 {
+    height: 150px;
+  }
+  .modal-dialog {
+    max-width: 650px;
+  }
+  .row {
+    margin-left: 0;
+  }
+  #third-accordion {
+    margin-bottom: 3vh;
+  }
+}

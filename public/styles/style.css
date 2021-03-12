@@ -437,4 +437,7 @@ a {
   #scrollBtn {
     bottom: 210px;
   }
+  .header-bg img {
+    height: 500px;
+  }
 }
