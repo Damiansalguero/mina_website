@@ -300,3 +300,33 @@ ul {
     width: 90%;
   }
 }
+
+@media screen and (min-width: 575.98px) and (max-width: 991.98px) {
+  #block-prozess {
+    clip-path: polygon(0 0, 100% 2%, 100% 100%, 0 100%);
+  }
+  .ws-text {
+    width: 75%;
+  }
+  #prozess-contact,
+  .timeline-block {
+    margin-top: -10vh;
+  }
+  .timeline-block,
+  .gallery-block {
+    clip-path: polygon(0 1%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  .gallery {
+    width: 85%;
+  }
+  .gallery-img {
+    width: 300px;
+    margin: 10px;
+  }
+  .contact-box h1 {
+    margin: -5vh 0 5vh 0;
+  }
+  .modal-dialog {
+    max-width: 650px;
+  }
+}
