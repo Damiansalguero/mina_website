@@ -142,3 +142,14 @@ video {
     margin: 5vh 0 5vh 0;
   }
 }
+@media screen and (min-width: 575.98px) and (max-width: 991.98px) {
+  #bg-partizip {
+    height: 500px;
+  }
+  video {
+    height: 350px;
+  }
+  #part-contact h1 {
+    margin: 5vh 0 5vh 0;
+  }
+}
