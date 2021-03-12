@@ -58,3 +58,22 @@
     margin: 5px 0;
   }
 }
+
+@media screen and (min-width: 575.98px) and (max-width: 991.98px) {
+  .block-fach {
+    margin-top: 0;
+  }
+  .gallery-block {
+    clip-path: polygon(0 2%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  .gallery-img {
+    height: 200px;
+    width: 200px;
+  }
+  .gallery {
+    width: 90%;
+  }
+  .fach-list {
+    font-size: 20px;
+  }
+}

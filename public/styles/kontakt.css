@@ -147,3 +147,20 @@ input {
     margin: -5vh 0 5vh 0;
   }
 }
+
+@media screen and (min-width: 575.98px) and (max-width: 991.98px) {
+  .wrapper {
+    width: 90%;
+  }
+  .aktuelles {
+    clip-path: polygon(0 0, 100% 3%, 100% 100%, 0 100%);
+    padding-bottom: 5vh;
+  }
+  #header-img {
+    height: 500px;
+    padding-top: 10vh;
+  }
+  .contact-box {
+    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
+  }
+}
