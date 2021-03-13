@@ -58,11 +58,16 @@ h4 {
 #contact-datenschutz {
   padding: 0;
   margin: 2vh 0;
+  list-style-type: none;
 }
 
 .rechte {
   width: 50%;
   line-height: 1.5;
+}
+.rechte,
+#contact-datenschutz {
+  list-style-type: none !important;
 }
 
 .rechte li::before,
@@ -105,6 +110,9 @@ h4 {
   h4 {
     font-size: 18px;
   }
+  #contact-datenschutz li {
+    list-style-type: none !important;
+  }
 }
 
 @media screen and (min-width: 575.98px) and (max-width: 991.98px) {
@@ -133,5 +141,8 @@ h4 {
   }
   .rechte {
     width: 80%;
+  }
+  #contact-datenschutz li {
+    list-style-type: none !important;
   }
 }
