@@ -3,7 +3,7 @@ const { timelineSchema } = require("../schemas.js");
 const { cloudinary } = require("../cloudinary");
 
 module.exports.renderNewTimeline = (req, res) => {
-  res.render("timelines/new");
+  res.render("timelineposts/new");
 };
 
 module.exports.createTimenline = async (req, res, next) => {
@@ -16,7 +16,7 @@ module.exports.createTimenline = async (req, res, next) => {
 module.exports.renderEditTimeline = async (req, res) => {
   const { id } = req.params;
   const timeline = await Timeline.findById(req.params.id);
-  res.render("timelines/edit", { timeline });
+  res.render("timelineposts/edit", { timeline });
 };
 
 module.exports.showTimeline = async (req, res) => {

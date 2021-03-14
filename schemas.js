@@ -74,10 +74,18 @@ module.exports.workshopregisterSchema = Joi.object({
 
 module.exports.timelineSchema = Joi.object({
   timeline: Joi.object({
-    title: Joi.string().required(),
-    date: Joi.string().required(),
-    phase: Joi.string().required(),
-    description: Joi.string().required()
+    bewerbung: Joi.string().required(),
+    kennenlern: Joi.string().required(),
+    bedarf: Joi.string().required(),
+    standpunkt: Joi.string().required(),
+    vernetzeins: Joi.string().required(),
+    idee: Joi.string().required(),
+    vernetzzwei: Joi.string().required(),
+    konzipierung: Joi.string().required(),
+    massnahme: Joi.string().required(),
+    evaluation: Joi.string().required(),
+    vernetzdrei: Joi.string().required(),
+    ergebnis: Joi.string().required()
   }).required()
 });
 

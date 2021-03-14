@@ -39,8 +39,8 @@ module.exports.renderPartizip = async (req, res) => {
   res.render("partizip", { partizip });
 };
 module.exports.renderProzess = async (req, res) => {
-  const timelines = await Timeline.find({});
-  res.render("prozess", { timelines });
+  const timeline = await Timeline.findOne({});
+  res.render("prozess", { timeline });
 };
 module.exports.renderDoku = (req, res) => {
   res.render("dokumentation");

@@ -23,6 +23,20 @@ html {
 #intro-text {
   text-align: justify;
 }
+
+.btn-aktuelles {
+  background-color: #0dcaf0;
+  border-color: #0dcaf0;
+  color: #fff;
+  font-weight: bold;
+}
+.btn-aktuelles:hover {
+  border-color: #0dcaf0;
+  background-color: #fff;
+  color: #0dcaf0;
+  font-weight: bold;
+}
+
 /************ TIMELINE *************/
 .timeline-block {
   clip-path: polygon(0 4%, 100% 0%, 100% 100%, 0% 100%);
