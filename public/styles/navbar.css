@@ -8,6 +8,9 @@
   background-color: #fff;
   z-index: 2;
 }
+.navbar-nav {
+  border-top: 2px solid #db2a6f;
+}
 
 .navbar-dark .navbar-nav .nav-link {
   color: #000;
@@ -93,6 +96,9 @@
   .navbar-toggler {
     margin-right: 5vw !important;
   }
+  .navbar-nav {
+    border-top: none;
+  }
 }
 
 @media screen and (min-width: 575.99px) and (max-width: 991.98px) {
@@ -104,5 +110,8 @@
   }
   #navbarNavDropdown ul {
     margin-bottom: 5vh !important;
+  }
+  .navbar-nav {
+    border-top: none;
   }
 }

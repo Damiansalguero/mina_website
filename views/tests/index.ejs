@@ -3,17 +3,11 @@
 <h1>Alle Tests</h1>
 
 <% for(let test of tests) {%>
-  <div class="card" style="width: 18rem;">
-    <div class="card-body">
-      <h5 class="card-title"><%=test.title%></h5>
-      <p class="card-text"><%test.description%></p>
-    </div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item"><%=test.location%></li>
-      <li class="list-group-item"><%=test.location2%></li>
-      <li class="list-group-item"><%=test.location3%></li>
-      <li class="list-group-item"><%=test.online%></li>
-      <li class="list-group-item"><%=test.date%></li>
-    </ul>
+  <div class="pdf">
+    <h3><%=test.title%></h3>
+    <% test.images.forEach((img, i) => { %>
+      <a target="_blank" class="btn btn-mina attach" href="<%=img.attach%>" download> Download
+    </a>
+    <% }) %>
   </div>
 <% }%>

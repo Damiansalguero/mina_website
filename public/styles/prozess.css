@@ -340,7 +340,8 @@ ul {
   .contact-box h1 {
     margin: -5vh 0 5vh 0;
   }
-  .modal-dialog {
-    max-width: 650px;
+  .modal-dialog,
+  .modal-dialog-centered {
+    max-width: 650px !important;
   }
 }
