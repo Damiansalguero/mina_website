@@ -6,3 +6,7 @@
   <a href="/bibliothek/<%= bib._id %>" class="list-group-item list-group-item-action"><%= bib.title %></a>
   <%}%>
 </div>
+
+<% if(currentUser) {%>
+<a href="/bibliothek/neu" class="btn btn-aktuelles-blue">Eintrag Hinzufügen</a>
+<% } %>
