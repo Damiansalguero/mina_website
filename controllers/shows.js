@@ -7,6 +7,7 @@ const Workshopgallery = require("../models/workshopgallery");
 const Partizip = require("../models/partizip");
 const Timeline = require("../models/timeline");
 const Flyer = require("../models/flyer");
+const Bib = require("../models/bib");
 const nodemailer = require("nodemailer");
 const { cloudinary } = require("../cloudinary");
 
@@ -59,6 +60,10 @@ module.exports.renderImpressum = (req, res) => {
 
 module.exports.renderDatenschutz = (req, res) => {
   res.render("datenschutz");
+};
+
+module.exports.renderBib = (req, res) => {
+  res.render("bib");
 };
 
 module.exports.renderKontakt = (req, res) => {
