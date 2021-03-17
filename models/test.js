@@ -10,6 +10,10 @@ ImageSchema.virtual("attach").get(function() {
   return this.url.replace("/upload", "/upload/fl_attachment:PDF,f_png");
 });
 
+ImageSchema.virtual("thumbnail").get(function() {
+  return this.url.replace("/upload", "/upload/w_200");
+});
+
 // const TestSchema = new Schema({
 //   title: String,
 //   description: String,

@@ -1,8 +1,9 @@
 <link rel="stylesheet" href="/styles/bib.css">
 <% layout("layouts/boilerplate") %>
 <h1 class=""><span class="title-line line-pink">Online Bibliothek</span></h1>
-<div class="container-bib">
 
+<!-- BIB LINKS -->
+<div class="container-bib">
 <div class="list-group">
   <% for(let bib of bibs) {%>
   <a href="/bibliothek/<%= bib._id %>" class="list-group-item list-group-item-action"><%= bib.title %></a>

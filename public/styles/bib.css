@@ -23,3 +23,32 @@
   width: 50%;
   margin: 0 auto;
 }
+
+.bib-download {
+  font-weight: bold;
+  color: #0dcaf0;
+}
+
+.bib-download:hover {
+  font-weight: bold;
+  color: #db2a6f;
+}
+
+.list-group-item:nth-child(odd) {
+  background-color: #0dcaf0;
+}
+
+.list-group-item:nth-child(odd):hover {
+  background-color: #0dcaf0b3;
+}
+
+.list-group-item {
+  color: #fff;
+  background-color: #db2a6f;
+  border: 1px solid #000;
+}
+
+.list-group-item:hover {
+  color: #fff;
+  background-color: #db2a6fc2;
+}
