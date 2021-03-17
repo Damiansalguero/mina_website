@@ -146,7 +146,7 @@ module.exports.validatePartizip = (req, res, next) => {
 };
 
 /////////////// Bib /////////////
-module.exports.validatePartizip = (req, res, next) => {
+module.exports.validateBib = (req, res, next) => {
   const { error } = bibSchema.validate(req.body);
   if (error) {
     const msg = error.details.map(el => el.message).join(",");

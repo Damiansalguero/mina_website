@@ -41,6 +41,7 @@ const timelineRoutes = require("./routes/timelines");
 const flyerRoutes = require("./routes/flyers");
 const userRoutes = require("./routes/users");
 const showRoutes = require("./routes/shows");
+const bibRoutes = require("./routes/bibs");
 const testRoutes = require("./routes/tests");
 const postRoutes = require("./routes/posts");
 
@@ -129,6 +130,7 @@ app.use("/ueberworkshops", wsnewsRoutes);
 app.use("/partizipatives", partizipRoutes);
 app.use("/zeitstrahl", timelineRoutes);
 app.use("/flyers", flyerRoutes);
+app.use("/bibliothek", bibRoutes);
 app.use("/posts", postRoutes);
 app.use("/test", testRoutes);
 

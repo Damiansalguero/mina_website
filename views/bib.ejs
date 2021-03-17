@@ -2,5 +2,7 @@
 <% layout("layouts/boilerplate") %>
 <h1>Online Bibliothek</h1>
 <div class="list-group">
-  <a href="#" class="list-group-item list-group-item-action">A simple default list group item</a>
+  <% for(let bib of bibs) {%>
+  <a href="/bibliothek/<%= bib._id %>" class="list-group-item list-group-item-action"><%= bib.title %></a>
+  <%}%>
 </div>

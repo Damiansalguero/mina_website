@@ -21,20 +21,6 @@
   text-align: center;
 }
 
-.btn-aktuelles {
-  border-color: #0dcaf0;
-  color: #0dcaf0;
-  font-weight: bold;
-  margin-top: 3vh;
-}
-
-.btn-aktuelles:hover {
-  background-color: #0dcaf0;
-  border-color: #0dcaf0;
-  color: #fff;
-  font-weight: bold;
-}
-
 /********* Block Calendar ***********/
 .calendar-block {
   clip-path: polygon(0 0, 100% 7%, 100% 100%, 0 100%);

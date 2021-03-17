@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="/styles/bib.css">
+<% layout("layouts/boilerplate") %>
+
+
+<h1 class=""><span class="title-line line-pink"><%= bib.title %></span></h1>
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title"><span class="span">Titel:</span> <%= bib.title %></h5>
+    <p class="card-text"><%- bib.description %></p>
+  </div>
+</div>
+
+<% if (currentUser) {%>
+  <div class="btn-group">
+    <div class="btn-edit">
+    <a class="card-link btn btn-info" href="/bibliothek/<%=bib._id%>/edit">Bearbeiten</a>
+  </div>
+    <form class="d-inline" action="/bibliothek/<%=bib._id%>?_method=DELETE" method="post">
+      <button class="btn btn-danger">Löschen</button>
+    </form>
+    <div class="">
+      <a class="btn btn-primary btn-mina" href="/online-bibliothek">Zurück</a>
+    </div>
+  <% } else { %>
+    <a class="btn btn-primary btn-mina" href="/online-bibliothek"">Zurück</a>
+    <% } %>
+</div>

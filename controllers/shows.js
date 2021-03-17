@@ -62,8 +62,9 @@ module.exports.renderDatenschutz = (req, res) => {
   res.render("datenschutz");
 };
 
-module.exports.renderBib = (req, res) => {
-  res.render("bib");
+module.exports.renderBib = async (req, res) => {
+  const bibs = await Bib.find({});
+  res.render("bib", { bibs });
 };
 
 module.exports.renderKontakt = (req, res) => {

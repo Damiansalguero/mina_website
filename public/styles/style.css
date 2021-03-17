@@ -66,6 +66,34 @@ h1 {
   font-size: 12px;
   height: 50px;
 }
+
+.btn-aktuelles {
+  border-color: #0dcaf0;
+  color: #0dcaf0;
+  font-weight: bold;
+  margin-top: 3vh;
+}
+
+.btn-aktuelles:hover {
+  background-color: #0dcaf0;
+  border-color: #0dcaf0;
+  color: #fff;
+  font-weight: bold;
+}
+.btn-aktuelles-blue {
+  background-color: #0dcaf0;
+  border-color: #0dcaf0;
+  color: #fff;
+  font-weight: bold;
+}
+
+.btn-aktuelles-blue:hover {
+  border-color: #0dcaf0;
+  color: #0dcaf0;
+  background-color: #fff0;
+  font-weight: bold;
+}
+
 .white {
   color: #fff;
 }

@@ -6,7 +6,7 @@ module.exports.renderNewBib = (req, res) => {
   res.render("bibposts/new");
 };
 
-module.exports.createAktuelles = async (req, res, next) => {
+module.exports.createBib = async (req, res, next) => {
   const bib = await new Bib(req.body.bib);
   bib.images = req.files.map(file => ({
     url: file.path,
@@ -25,6 +25,15 @@ module.exports.renderEditBib = async (req, res) => {
   const { id } = req.params;
   const bib = await Bib.findById(req.params.id);
   res.render("bibposts/edit", { bib });
+};
+
+module.exports.showBib = async (req, res) => {
+  const bib = await Bib.findById(req.params.id);
+  if (!bib) {
+    req.flash("error", "Dieser Eintrag existiert nicht mehr !");
+    return res.redirect("/online-bibliothek");
+  }
+  res.render("bibposts/show", { bib });
 };
 
 module.exports.updateBib = async (req, res) => {
