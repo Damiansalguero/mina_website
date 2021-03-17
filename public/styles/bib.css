@@ -3,11 +3,23 @@
   margin: 0 auto;
 }
 
-.container {
+.container-bib,
+.btn-group {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.btn-aktuelles-blue {
+.btn-aktuelles-blue,
+.btn-group {
   margin: 2vh 0;
+}
+
+#btn-edit,
+#btn-delete {
+  margin-bottom: 1vh;
+}
+
+.card-bib {
+  width: 50%;
+  margin: 0 auto;
 }

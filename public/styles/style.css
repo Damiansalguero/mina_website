@@ -94,6 +94,12 @@ h1 {
   font-weight: bold;
 }
 
+.btn-danger:hover {
+  color: #dc3545;
+  background-color: #fff;
+  border-color: #dc3545;
+}
+
 .white {
   color: #fff;
 }
