@@ -126,6 +126,14 @@ module.exports.partizipSchema = Joi.object({
   }).required()
 });
 
+module.exports.bibSchema = Joi.object({
+  bib: Joi.object({
+    title: Joi.string().required(),
+    description: Joi.string().required()
+  }).required(),
+  deleteImages: Joi.array()
+});
+
 module.exports.testdataSchema = Joi.object({
   test: Joi.object({
     title: Joi.string().required()

@@ -8,6 +8,7 @@ const {
   timelineSchema,
   flyerSchema,
   aboutSchema,
+  bibSchema,
   testdataSchema,
   dataSchema
 } = require("./schemas.js");
@@ -136,6 +137,17 @@ module.exports.validateWsnew = (req, res, next) => {
 /////////////// Partizip /////////////
 module.exports.validatePartizip = (req, res, next) => {
   const { error } = partizipSchema.validate(req.body);
+  if (error) {
+    const msg = error.details.map(el => el.message).join(",");
+    throw new ExpressError(msg, 400);
+  } else {
+    next();
+  }
+};
+
+/////////////// Bib /////////////
+module.exports.validatePartizip = (req, res, next) => {
+  const { error } = bibSchema.validate(req.body);
   if (error) {
     const msg = error.details.map(el => el.message).join(",");
     throw new ExpressError(msg, 400);
