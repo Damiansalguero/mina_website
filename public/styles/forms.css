@@ -16,7 +16,8 @@
   #form-calendar-new,
   #form-calendar-edit,
   #form-about-edit,
-  #form-bib-new {
+  #form-bib-new,
+  #form-landingflyer-new {
     width: 90% !important;
     margin-left: 5% !important;
     margin-bottom: 5% !important;
@@ -32,7 +33,8 @@
   #form-calendar-edit,
   #form-about-edit,
   #form-partizip-edit,
-  #form-bib-new {
+  #form-bib-new,
+  #form-landingflyer-new {
     width: 80% !important;
     margin-left: 10% !important;
     margin-bottom: 5% !important;

@@ -90,7 +90,7 @@ module.exports.timelineSchema = Joi.object({
 });
 
 module.exports.landingFlyerSchema = Joi.object({
-  flyer: Joi.object({
+  landingflyer: Joi.object({
     title: Joi.string().required(),
     description: Joi.string().required()
   }).required(),
