@@ -1,12 +1,12 @@
-const Flyer = require("../models/flyer");
+const Flyer = require("../models/landingflyer");
 const { flyerSchema } = require("../schemas.js");
 const { cloudinary } = require("../cloudinary");
 
-module.exports.renderFlyerform = (req, res) => {
-  res.render("flyerposts/new");
+module.exports.renderNewLandingFlyer = (req, res) => {
+  res.render("landingflyerposts/new");
 };
 
-module.exports.createFlyer = async (req, res, next) => {
+module.exports.createLandingFlyer = async (req, res, next) => {
   const flyer = await new Flyer(req.body.flyer);
   flyer.images = req.files.map(file => ({
     url: file.path,
@@ -19,22 +19,22 @@ module.exports.createFlyer = async (req, res, next) => {
   // res.redirect("/home");
 };
 
-module.exports.showFlyer = async (req, res) => {
+module.exports.showLandingFlyer = async (req, res) => {
   const flyer = await Flyer.findById(req.params.id);
   if (!flyer) {
     req.flash("error", "Dieser Flyer existiert nicht mehr !");
     return res.redirect("/home");
   }
-  res.render("flyerposts/show", { flyer });
+  res.render("landingflyerposts/show", { flyer });
 };
 
-module.exports.renderEditFlyer = async (req, res) => {
+module.exports.editLandingFlyer = async (req, res) => {
   const { id } = req.params;
   const flyer = await Flyer.findById(req.params.id);
-  res.render("tests/edit", { flyer });
+  res.render("landingflyerposts/edit", { flyer });
 };
 
-module.exports.updateFlyer = async (req, res) => {
+module.exports.updateLandingFlyer = async (req, res) => {
   const { id } = req.params;
   const flyer = await Flyer.findByIdAndUpdate(id, {
     ...req.body.flyer
@@ -66,7 +66,7 @@ module.exports.updateFlyer = async (req, res) => {
   res.redirect("/home");
 };
 
-module.exports.deleteFlyer = async (req, res) => {
+module.exports.deleteLandingFlyer = async (req, res) => {
   const { id } = req.params;
   await Flyer.findByIdAndDelete(id);
   res.redirect("/home");

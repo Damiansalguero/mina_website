@@ -6,7 +6,7 @@ const {
   wsnewSchema,
   partizipSchema,
   timelineSchema,
-  flyerSchema,
+  landingFlyerSchema,
   aboutSchema,
   bibSchema,
   testdataSchema,
@@ -91,7 +91,7 @@ module.exports.validateTimeline = (req, res, next) => {
 };
 
 /////////////// Flyer /////////////
-module.exports.validateFlyer = (req, res, next) => {
+module.exports.validateLandingFlyer = (req, res, next) => {
   const { error } = flyerSchema.validate(req.body);
   if (error) {
     const msg = error.details.map(el => el.message).join(",");
