@@ -92,7 +92,7 @@ module.exports.validateTimeline = (req, res, next) => {
 
 /////////////// Flyer /////////////
 module.exports.validateLandingFlyer = (req, res, next) => {
-  const { error } = flyerSchema.validate(req.body);
+  const { error } = landingFlyerSchema.validate(req.body);
   if (error) {
     const msg = error.details.map(el => el.message).join(",");
     throw new ExpressError(msg, 400);

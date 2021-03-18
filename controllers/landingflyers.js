@@ -1,5 +1,5 @@
 const Flyer = require("../models/landingflyer");
-const { flyerSchema } = require("../schemas.js");
+const { landingFlyerSchema } = require("../schemas.js");
 const { cloudinary } = require("../cloudinary");
 
 module.exports.renderNewLandingFlyer = (req, res) => {
@@ -14,9 +14,8 @@ module.exports.createLandingFlyer = async (req, res, next) => {
   }));
   flyer.author = req.user._id;
   await flyer.save();
-  res.send("Flyer Post Worked!!!");
-  // req.flash("success", "Der Test wurde erfolgreich erstellt !");
-  // res.redirect("/home");
+  req.flash("success", "Der Flyer wurde erfolgreich hinzugefügt!");
+  res.redirect("/home");
 };
 
 module.exports.showLandingFlyer = async (req, res) => {
