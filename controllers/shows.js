@@ -21,10 +21,12 @@ module.exports.renderhome = async (req, res) => {
     .sort({ _id: -1 })
     .limit(3);
   const about = await About.findOne({});
+  const landingflyer = await Flyer.findOne({});
   res.render("landing", {
     aktuell,
     calendars,
-    about
+    about,
+    landingflyer
   });
 };
 
