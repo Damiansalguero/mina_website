@@ -231,3 +231,27 @@ small {
     padding-top: 7vh;
   }
 }
+
+@media screen and (min-width: 1199.98px) and (max-width: 1499.98px) {
+  .aktuelles {
+    clip-path: polygon(0 0, 100% 4%, 100% 100%, 0 100%);
+  }
+  .header-bg img {
+    height: 600px;
+  }
+  .text-box-aktuelles {
+    width: 50%;
+  }
+  .aktuelles {
+    clip-path: polygon(0 0, 100% 4%, 100% 100%, 0 100%);
+  }
+  .header-bg img {
+    height: 600px;
+  }
+  .text-box-aktuelles p {
+    font-size: 18px;
+  }
+  .text-block {
+    font-size: 20px;
+  }
+}
