@@ -1,9 +1,15 @@
-.list-group {
+.bib {
   width: 50%;
   margin: 0 auto;
 }
 
-.container-bib,
+.container-bib {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
 .btn-group {
   display: flex;
   flex-direction: column;
@@ -19,9 +25,8 @@
   margin-bottom: 1vh;
 }
 
-.card-bib {
-  width: 50%;
-  margin: 0 auto;
+.card {
+  width: 20%;
 }
 
 .bib-download {
@@ -34,21 +39,21 @@
   color: #db2a6f;
 }
 
-.list-group-item:nth-child(odd) {
+.list-group-item-action:nth-child(odd) {
   background-color: #0dcaf0;
 }
 
-.list-group-item:nth-child(odd):hover {
+.list-group-item-action:nth-child(odd):hover {
   background-color: #0dcaf0b3;
 }
 
-.list-group-item {
+.list-group-item-action {
   color: #fff;
   background-color: #db2a6f;
   border: 1px solid #000;
 }
 
-.list-group-item:hover {
+.list-group-item-action:hover {
   color: #fff;
   background-color: #db2a6fc2;
 }
@@ -56,4 +61,41 @@
 .bib-file {
   font-weight: bold;
   color: #db2a6f;
+}
+
+.list-group-flush {
+  background-color: none !important;
+}
+
+.card-button {
+  text-align: center;
+}
+
+#btn-new-bib {
+  display: flex;
+  justify-content: center;
+}
+
+.card-kopf {
+  background-color: #db2a6f;
+  color: #fff;
+}
+
+.card-kopf h5,
+.item-card {
+  font-weight: bold;
+}
+
+.item-card {
+  color: #0dcaf0;
+}
+
+.item-card span {
+  color: #000;
+  font-weight: normal;
+}
+
+.card-button form,
+.card-button .btn-mina {
+  margin: 0;
 }

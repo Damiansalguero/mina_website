@@ -17,7 +17,9 @@ ImageSchema.virtual("attach").get(function() {
 const BibSchema = new Schema({
   title: String,
   images: [ImageSchema],
-  description: String
+  description: String,
+  autor: String,
+  year: String
 });
 
 module.exports = mongoose.model("Bib", BibSchema);
