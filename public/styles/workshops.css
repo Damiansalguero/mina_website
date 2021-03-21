@@ -328,3 +328,19 @@ h5,
     margin-bottom: 3vh;
   }
 }
+
+@media screen and (min-width: 1199.98px) and (max-width: 1499.98px) {
+  #img-header-ws {
+    height: 600px;
+  }
+  #ws-intro,
+  #table-ws {
+    font-size: 20px;
+  }
+  #btn-flyer {
+    font-size: 14px;
+  }
+  .gallery-ws {
+    width: 85%;
+  }
+}
