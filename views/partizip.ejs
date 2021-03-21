@@ -8,10 +8,14 @@
   <!-- HEADER BLOCK -->
   <div class="block aktuelles" id="header-part">
     <img class="logo-part" src="/img/gesamt/Logos/icon_partizip.png" alt="">
-    <h1 id="" class="ws-title title-line"><span ><%= partizip.title %></span></h1>
-    <div class="part-text" id="ws-intro"><%-partizip.description %></div>
+    <h1 id="" class="ws-title title-line"><span ><%= partizip.titleone %></span></h1>
+    <div class="part-text" id="ws-intro"><%-partizip.descriptionone %></div>
+    <% if(partizip.descriptiontwo ||partizip.titletwo ) {%>
+    <h1 id="" class="ws-title title-line"><span ><%= partizip.titletwo %></span></h1>
+    <div class="part-text" id="ws-intro"><%-partizip.descriptiontwo %></div>
+    <% } %>
     <% if(currentUser) {%>
-    <a href="/partizipatives/<%=partizip._id%>/edit" class="btn btn-aktuelles">Haupttext Bearbeiten</a>
+    <a href="/partizipatives/<%=partizip._id%>/edit" class="btn btn-aktuelles">Text Bearbeiten</a>
     <% } %>
     <div class="video-box">
       <h3 class="mina-pink">Eröffnungsfilm</h3>

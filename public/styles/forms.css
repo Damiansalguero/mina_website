@@ -5,6 +5,11 @@
 .label-bold {
   font-weight: bold;
 }
+.partizip-file {
+  font-weight: bold;
+  color: #db2a6f;
+}
+
 @media screen and (min-width: 0) and (max-width: 575.98px) {
   .form-control {
     font-size: 14px;

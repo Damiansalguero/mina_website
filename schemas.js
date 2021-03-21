@@ -121,9 +121,16 @@ module.exports.wsnewSchema = Joi.object({
 
 module.exports.partizipSchema = Joi.object({
   partizip: Joi.object({
-    title: Joi.string().required(),
-    description: Joi.string().required()
-  }).required()
+    titleone: Joi.string().required(),
+    descriptionone: Joi.string().required(),
+    titletwo: Joi.string()
+      .optional()
+      .allow(""),
+    descriptiontwo: Joi.string()
+      .optional()
+      .allow("")
+  }).required(),
+  deleteImages: Joi.array()
 });
 
 module.exports.bibSchema = Joi.object({
