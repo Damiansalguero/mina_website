@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="/styles/bib.css">
 <% layout("layouts/boilerplate") %>
-<h1 class=""><span class="title-line line-pink">Online Bibliothek</span></h1>
-
+<div class="bib-block blue">
+<h1 id="h1-bib"><span class="title-line line-pink">Online Bibliothek</span></h1>
 <!-- BIB LINKS -->
 <div class="container-bib">
   <% for(let bib of bibs) {%>
@@ -30,9 +30,9 @@
   </div>
   <%}%>
 </div>
-
   <% if(currentUser) {%>
     <div id="btn-new-bib">
-      <a href="/bibliothek/neu" class="btn btn-aktuelles-blue">Eintrag Hinzufügen</a>
+      <a href="/bibliothek/neu" class="btn btn-mina">Eintrag Hinzufügen</a>
     </div>
   <% } %>
+</div>

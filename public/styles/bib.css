@@ -2,12 +2,21 @@
   width: 50%;
   margin: 0 auto;
 }
+.bib-block {
+  clip-path: polygon(0 4%, 100% 0%, 100% 100%, 0% 100%);
+  margin-top: -10vh;
+  padding-top: 2vh;
+}
 
 .container-bib {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-evenly;
   flex-wrap: wrap;
+}
+
+#h1-bib {
+  color: #fff;
 }
 
 .btn-group {
@@ -27,6 +36,7 @@
 
 .card {
   width: 20%;
+  margin-bottom: 2vh;
 }
 
 .bib-download {
