@@ -3,9 +3,9 @@
   margin: 0 auto;
 }
 .bib-block {
-  clip-path: polygon(0 4%, 100% 0%, 100% 100%, 0% 100%);
-  margin-top: -10vh;
-  padding-top: 2vh;
+  clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
+  margin-top: 0vh;
+  padding-top: 10vh;
 }
 
 .container-bib {
@@ -16,7 +16,7 @@
 }
 
 #h1-bib {
-  color: #fff;
+  color: #000;
 }
 
 .btn-group {
@@ -79,6 +79,10 @@
 
 .card-button {
   text-align: center;
+}
+
+.card-button .btn {
+  margin: 5px 0;
 }
 
 #btn-new-bib {

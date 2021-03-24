@@ -1,33 +1,34 @@
 <link rel="stylesheet" href="/styles/workshops.css">
 <% layout("layouts/boilerplate") %>
-<div class="row">
   <div class="col-6 offset-3">
-
     <!-- Card -->
-    <div class="card mb-3">
+    <div class="card card-ws-gallery mb-3">
       <!-- url comes from the campground model in images -->
       <div class="card-body">
         <h5 class="card-title"><%=wsg.title%></h5>
-        <p class="card-text"><%= wsg.description %></p>
+        <p class="card-text"><%- wsg.description %></p>
       </div>
+      <!-- Test Gallery -->
+          <div class="gallery2">
+          <% wsg.images.forEach((img, i) => { %>
+                <img src="<%= img.url %>" class="d-block gallery-img-card pointer" data-bs-toggle="modal" data-bs-target="#exampleModal" alt="">
+          <% }) %>
+        </div>
       <% if (currentUser ) {%>
       <div class="card-body">
-        <a class="card-link btn btn-info" href="/workshops/gallery/<%=wsg._id%>/edit">Bearbeiten</a>
+        <div class="btn-group-card">
+        <a class="card-link btn btn-info" href="/workshop/gallerien/<%=wsg._id%>/edit">Bearbeiten</a>
         <form class="d-inline" action="/workshops/gallery/<%=wsg._id%>?_method=DELETE" method="post">
           <button class="btn btn-danger">Löschen</button>
         </form>
+      </div>
       </div>
       <% }%>
     </div>
 <!-- Card -->
 
 
-<!-- Test Gallery -->
-    <div class="gallery2">
-    <% wsg.images.forEach((img, i) => { %>
-          <img src="<%= img.url %>" class="d-block gallery-img pointer" data-bs-toggle="modal" data-bs-target="#exampleModal" alt="">
-    <% }) %>
-  </div>
+
 <!-- Test Gallery -->
 
 <!-- Modal -->
@@ -35,7 +36,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel"><%=wsg.title%></h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -71,4 +72,3 @@
 <!-- Test Modal -->
 
   </div>
-</div>

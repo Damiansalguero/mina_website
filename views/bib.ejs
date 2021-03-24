@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="/styles/bib.css">
 <% layout("layouts/boilerplate") %>
-<div class="bib-block blue">
 <h1 id="h1-bib"><span class="title-line line-pink">Online Bibliothek</span></h1>
+<div class="bib-block blue">
 <!-- BIB LINKS -->
 <div class="container-bib">
   <% for(let bib of bibs) {%>
@@ -14,18 +14,17 @@
       <li class="list-group-item item-card">Autor*in: <span><%= bib.autor %></span></li>
       <li class="list-group-item item-card">Jahr:  <span><%= bib.year %></span> </li>
     </ul>
-    <div class="card-body card-button" >
-      <% bib.images.forEach((img, i) => { %>
-        <a target="_blank" class="btn btn-mina" href="<%=img.attach%>" download>Download
-      </a>
-      <% }) %>
-    </div>
     <div class="card-body card-button">
       <% if (currentUser) {%>
+        <a class="card-link btn btn-info" href="/bibliothek/<%=bib._id%>/edit">Bearbeiten</a>
         <form class="d-inline" action="/bibliothek/<%=bib._id%>?_method=DELETE" method="post">
           <button id="btn-delete" class="btn btn-danger">Löschen</button>
         </form>
         <% } %>
+      <% bib.images.forEach((img, i) => { %>
+        <a target="_blank" class="btn btn-mina" href="<%=img.attach%>" download>Download
+      </a>
+      <% }) %>
     </div>
   </div>
   <%}%>
