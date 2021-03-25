@@ -14,7 +14,7 @@ const {
   dataSchema,
   testDataSchema,
   timelineSchema,
-  flyerSchema
+  flyerSchema,
 } = require("./schemas.js");
 const ExpressError = require("./utils/ExpressError");
 const bodyParser = require("body-parser");
@@ -52,7 +52,7 @@ mongoose.connect(dbUrl, {
   useNewUrlParser: true,
   useCreateIndex: true,
   useUnifiedTopology: true,
-  useFindAndModify: false
+  useFindAndModify: false,
 });
 
 const db = mongoose.connection;
@@ -72,15 +72,14 @@ app.use(methodOverride("_method"));
 app.use(express.static(path.join(__dirname, "public")));
 
 //////////////// USE SESSION ///////////////////
-
 const secret = process.env.SECRET || "newSecret";
 const store = new MongoStore({
   url: dbUrl,
   secret,
-  touchAfter: 24 * 60 * 60
+  touchAfter: 24 * 60 * 60,
 });
 
-store.on("error", function(e) {
+store.on("error", function (e) {
   console.log("SESSION STROE ERROR", e);
 });
 
@@ -93,8 +92,8 @@ const sessionConfig = {
   cookie: {
     httpOnly: true,
     expires: Date.now() + 1000 * 60 * 60 * 24 * 7,
-    maxAge: 1000 * 60 * 60 * 24 * 7
-  }
+    maxAge: 1000 * 60 * 60 * 24 * 7,
+  },
 };
 
 app.use(session(sessionConfig));
