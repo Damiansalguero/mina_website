@@ -9,13 +9,12 @@
         <input class="form-control" type="text" id="title" name="aktuell[title]" required>
       </div>
       <div class="mb-3">
-        <div class="form-file custom-file">
-          <input class="form-file-input" id="image" type="file" name="image" multiple>
-          <label for="image" class="form-file-label">
-            <span class="form-file-text custom-file-label">Bild(er) auswählen ...</span>
-            <span class="form-file-button btn-mina">Durchsuchen</span>
-          </label>
-        </div>
+        <label for="formFile" class="form-label">Bilder</label>
+        <input class="form-control" id="image" type="file" name="image" multiple>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="link">Link (Optional)</label>
+        <input class="form-control" type="text" id="link" name="aktuell[link]">
       </div>
       <div class="mb-3">
         <label class="form-label" for="description">Beschreibung</label>

@@ -10,7 +10,8 @@
   padding: 20px;
 }
 
-.text-box-aktuelles h3 {
+.text-box-aktuelles h3,
+.p-link a {
   color: #db2a6f;
   font-weight: bold;
 }
@@ -19,6 +20,9 @@
   width: 75%;
   font-size: 20px;
   text-align: center;
+}
+.p-link a:hover {
+  color: #72c5d5;
 }
 
 /********* Block Calendar ***********/

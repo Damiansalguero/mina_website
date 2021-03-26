@@ -12,6 +12,7 @@ module.exports.dataSchema = Joi.object({
 module.exports.aktuellesSchema = Joi.object({
   aktuell: Joi.object({
     title: Joi.string().required(),
+    link: Joi.string().optional().allow(""),
     description: Joi.string().required(),
   }).required(),
   deleteImages: Joi.array(),

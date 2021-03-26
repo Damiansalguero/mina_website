@@ -11,6 +11,12 @@
     <div class="text-box-aktuelles">
       <h3><%= aktuell.title %></h3>
       <p class="text-aktuelles"><%- aktuell.description %></p>
+      <% if (aktuell.link) {%>
+        <p class="p-link">
+          Weitere Informationen finden Sie
+          <a target="_blank" href="<%= aktuell.link %>" class="card-link">hier</a>
+        </p>
+      <% } %>
     </div>
     <% if(currentUser) {%>
     <a href="/aktuelles/<%= aktuell._id %>/edit" class="btn btn btn-aktuelles">Eintrag Bearbeiten</a>
