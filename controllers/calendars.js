@@ -36,7 +36,7 @@ module.exports.showCalendar = async (req, res) => {
 module.exports.updateCalendar = async (req, res) => {
   const { id } = req.params;
   const calendar = await Calendar.findByIdAndUpdate(id, {
-    ...req.body.calendar
+    ...req.body.calendar,
   });
   await calendar.save();
   req.flash("success", "Der Kalendareintrag wurde erfolgreich aktualisiert !");

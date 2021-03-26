@@ -10,11 +10,14 @@
   </div>
   <ul class="list-group list-group-flush">
     <li class="list-group-item"><span class="span">Datum:</span> <%= calendar.date %></li>
-    <li class="list-group-item"><span class="span">Telefonnummer:</span> <%= calendar.phone %></li>
+    <li class="list-group-item" <%- calendar.description %></li>
   </ul>
+  <% if (calendar.link) {%>
   <div class="card-body">
-    <a href="mailto:<%= calendar.email %>" class="card-link"><span class="span">Email:</span> <%= calendar.email %></a>
+    Weitere Informationen finden Sie
+    <a target="_blank" href="<%= calendar.link %>" class="card-link">hier</a>
   </div>
+  <% } %>
 </div>
 
 <% if (currentUser) {%>

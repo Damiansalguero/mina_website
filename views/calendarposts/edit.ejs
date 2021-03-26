@@ -13,7 +13,11 @@
             <input class="form-control" type="text" id="date" name="calendar[date]" required value="<%=calendar.date%>">
           </div>
           <div class="mb-3">
-            <label class="form-label" for="description">Beshreibung</label>
+            <label class="form-label" for="link">Link (Optional)</label>
+            <input class="form-control" type="text" id="link" name="calendar[link]" value="<%=calendar.link%>">
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="description">Beschreibung</label>
             <textarea class="form-control" type="text" id="description" name="calendar[description]" required><%=calendar.description%></textarea>
             <script type="text/javascript">
                     CKEDITOR.replace( 'description' );
@@ -23,6 +27,6 @@
             <button class="btn btn-info">Aktuallisieren</button>
           </div>
         </form>
-        <a class="btn btn-primary btn-mina" href="/">Zurück</a>
+        <a class="btn btn-primary btn-mina" href="/calendars/<%= calendar._id %>">Zurück</a>
       </div>
     </div>
