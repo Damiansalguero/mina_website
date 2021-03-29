@@ -11,14 +11,14 @@
       <!-- Test Gallery -->
           <div class="gallery2">
           <% wsg.images.forEach((img, i) => { %>
-                <img src="<%= img.url %>" class="d-block gallery-img-card pointer" data-bs-toggle="modal" data-bs-target="#exampleModal" alt="">
+                <img src="<%= img.thumbnail %>" class="d-block gallery-img-card pointer" data-bs-toggle="modal" data-bs-target="#exampleModal" alt="">
           <% }) %>
         </div>
       <% if (currentUser ) {%>
       <div class="card-body">
         <div class="btn-group-card">
         <a class="card-link btn btn-info" href="/workshop/gallerien/<%=wsg._id%>/edit">Bearbeiten</a>
-        <form class="d-inline" action="/workshops/gallery/<%=wsg._id%>?_method=DELETE" method="post">
+        <form class="d-inline" action="/workshop/gallerien/<%=wsg._id%>?_method=DELETE" method="post">
           <button class="btn btn-danger">Löschen</button>
         </form>
       </div>
@@ -33,7 +33,7 @@
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-ws">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel"><%=wsg.title%></h5>

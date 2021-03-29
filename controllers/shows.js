@@ -17,24 +17,23 @@ module.exports.renderLanding = async (req, res) => {
 
 module.exports.renderhome = async (req, res) => {
   const aktuell = await Aktuell.findOne({});
-  const calendars = await Calendar.find()
-    .sort({ _id: -1 })
-    .limit(3);
+  const calendars = await Calendar.find().sort({ _id: -1 }).limit(3);
   const about = await About.findOne({});
   const flyer = await Flyer.findOne({});
   res.render("landing", {
     aktuell,
     calendars,
     about,
-    flyer
+    flyer,
   });
 };
 
 module.exports.renderWorkshops = async (req, res) => {
   const wsnew = await Wsnew.findOne({});
   const workshops = await Workshop.find({});
-  const workshopgalleries = await Workshopgallery.find({});
-  res.render("workshops", { workshops, workshopgalleries, wsnew });
+  const wsgs = await Workshopgallery.find({});
+
+  res.render("workshops", { workshops, wsgs, wsnew });
 };
 
 module.exports.renderPartizip = async (req, res) => {
@@ -94,11 +93,11 @@ module.exports.createKontakt = async (req, res, next) => {
     secure: false, // true for 465, false for other ports
     auth: {
       user: process.env.MINA_MAIL, // generated ethereal user
-      pass: process.env.MINA_PW // generated ethereal password
+      pass: process.env.MINA_PW, // generated ethereal password
     },
     tls: {
-      rejectUnauthorized: false
-    }
+      rejectUnauthorized: false,
+    },
   });
 
   // setup email data with unicode symbols
@@ -107,7 +106,7 @@ module.exports.createKontakt = async (req, res, next) => {
     to: "vielfalt@mina-berlin.de", // list of receivers
     subject: "Neue Kontaktanfrage", // Subject line
     text: "Folgende Nachricht wurde Per Kontaktformular gesendet", // plain text body
-    html: output // html body
+    html: output, // html body
   };
 
   // send mail with defined transport object

@@ -29,15 +29,14 @@ module.exports.createWorkshop = async (req, res, next) => {
 
 module.exports.createWorkshopGallery = async (req, res, next) => {
   const wsg = await new Workshopgallery(req.body.wsg);
-  wsg.images = req.files.map(file => ({
+  wsg.images = req.files.map((file) => ({
     url: file.path,
-    filename: file.filename
+    filename: file.filename,
   }));
   wsg.author = req.user._id;
   await wsg.save();
   req.flash("success", "Die Gallerie wurde erfolgreich erstellt !");
-  // res.redirect("/workshops/gallery");
-  res.send("Gallerie wurde erstellt");
+  res.redirect("/workshops");
 };
 
 module.exports.renderEditWorkshop = async (req, res) => {
@@ -75,7 +74,7 @@ module.exports.showWorkshopGallery = async (req, res) => {
 module.exports.updateWorkshop = async (req, res) => {
   const { id } = req.params;
   const workshop = await Workshop.findByIdAndUpdate(id, {
-    ...req.body.workshop
+    ...req.body.workshop,
   });
   await workshop.save();
   req.flash("success", "Der Workshop wurde erfolgreich aktualisiert !");
@@ -85,11 +84,11 @@ module.exports.updateWorkshop = async (req, res) => {
 module.exports.updateWorkshopGallery = async (req, res) => {
   const { id } = req.params;
   const wsg = await Workshopgallery.findByIdAndUpdate(id, {
-    ...req.body.wsg
+    ...req.body.wsg,
   });
-  const imgs = req.files.map(file => ({
+  const imgs = req.files.map((file) => ({
     url: file.path,
-    filename: file.filename
+    filename: file.filename,
   }));
   wsg.images.push(...imgs);
   if (req.body.deleteImages) {
@@ -97,7 +96,7 @@ module.exports.updateWorkshopGallery = async (req, res) => {
       await cloudinary.uploader.destroy(filename);
     }
     await wsg.updateOne({
-      $pull: { images: { filename: { $in: req.body.deleteImages } } }
+      $pull: { images: { filename: { $in: req.body.deleteImages } } },
     });
   }
   await wsg.save();
@@ -115,5 +114,6 @@ module.exports.deleteWorkshop = async (req, res) => {
 module.exports.deleteWorkshopGallery = async (req, res) => {
   const { id } = req.params;
   await Workshopgallery.findByIdAndDelete(id);
+  req.flash("success", "Die Galerie wurde erfolgreich gelöscht!");
   res.redirect("/workshops");
 };

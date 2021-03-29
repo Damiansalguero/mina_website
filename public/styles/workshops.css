@@ -110,6 +110,48 @@
   text-decoration: underline;
 }
 
+.gallery-box {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin-bottom: 5vh;
+}
+.gallery-ws {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.gallery-ws-link {
+  height: 200px;
+}
+
+.card-ws {
+  width: 20%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  border: 3px solid #db2a6f;
+  border-radius: 0.25rem;
+  align-items: center;
+}
+
+.img-ws-card {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  border: 3px solid #db2a6f;
+  margin-top: 2vh;
+}
+
+.card-title {
+  color: #72c5d5;
+  font-size: 24px;
+  margin: 0;
+}
+
 #ws-gallery {
   margin-top: -18vh;
   padding-bottom: 15vh;
@@ -131,6 +173,10 @@
 }
 .gallery-2 {
   width: 300px;
+}
+
+.modal-ws {
+  max-width: 650px;
 }
 
 #ws-contact {
@@ -169,6 +215,16 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+#thumbnail-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#thumbnail-box img {
+  margin-bottom: 10px;
+}
+
 /********** WS PAGE STYLES ***********/
 
 /********** WS DV STYLES ***********/

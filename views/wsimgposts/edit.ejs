@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="/styles/workshops.css">
 <% layout("layouts/boilerplate") %>
     <div class="row">
       <h1 class="text-center">Gallerie Bearbeiten</h1>
@@ -18,9 +19,9 @@
                     CKEDITOR.replace( 'description' );
                 </script>
           </div>
-          <div class="mb-3">
+          <div class="mb-3" id="thumbnail-box">
             <% wsg.images.forEach(function(img, i) { %>
-              <img src="<%= img.thumbnail %>" class="img-thumbnail" alt="">
+              <img src="<%= img.thumbnails %>" class="thumbnail" alt="">
               <div class="form-check-inline">
                 <!-- id here add index of the images -->
                 <!-- value here add the rght data of the foto -->
