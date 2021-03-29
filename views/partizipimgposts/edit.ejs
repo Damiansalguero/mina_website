@@ -1,12 +1,11 @@
-<link rel="stylesheet" href="/styles/workshops.css">
+<link rel="stylesheet" href="/styles/partizip.css">
 <% layout("layouts/boilerplate") %>
-    <div class="row">
       <h1 class="text-center">Gallerie Bearbeiten</h1>
       <div class="col-6 offset-3">
-        <form action="/workshop/gallerien/<%=wsg._id%>?_method=PUT" method="post" novalidate class="validated-form" enctype="multipart/form-data">
+        <form action="/partizipatives/gallerien/<%=ptg._id%>?_method=PUT" method="post" novalidate class="validated-form" enctype="multipart/form-data">
           <div class="mb-3">
             <label class="form-label" for="title">Überschrift</label>
-            <input class="form-control" type="text" id="title" name="wsg[title]" required value="<%=wsg.title%>">
+            <input class="form-control" type="text" id="title" name="ptg[title]" required value="<%=ptg.title%>">
           </div>
           <div class="mb-3">
             <label for="formFile" class="form-label">Bilder</label>
@@ -14,13 +13,13 @@
           </div>
           <div class="mb-3">
             <label class="form-label" for="description">Beschreibung</label>
-            <textarea class="form-control" type="text" id="description" name="wsg[description]" required><%=wsg.description%></textarea>
+            <textarea class="form-control" type="text" id="description" name="ptg[description]" required><%=ptg.description%></textarea>
             <script>
                     CKEDITOR.replace( 'description' );
                 </script>
           </div>
           <div class="mb-3" id="thumbnail-box">
-            <% wsg.images.forEach(function(img, i) { %>
+            <% ptg.images.forEach(function(img, i) { %>
               <img src="<%= img.thumbnails %>" class="thumbnail" alt="">
               <div class="form-check-inline">
                 <!-- id here add index of the images -->
@@ -34,6 +33,5 @@
             <button class="btn btn-aktuelles-blue">Speichern</button>
           </div>
         </form>
-        <a class="btn btn-primary btn-mina" href="/workshops">Zurück</a>
+        <a class="btn btn-primary btn-mina" href="/partizipatives/gallerien/<%=ptg._id%>">Zurück</a>
       </div>
-    </div>

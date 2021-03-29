@@ -5,12 +5,13 @@ const {
   workshopGallerySchema,
   wsnewSchema,
   partizipSchema,
+  partizipGallerySchema,
   timelineSchema,
   landingFlyerSchema,
   aboutSchema,
   bibSchema,
   testdataSchema,
-  dataSchema
+  dataSchema,
 } = require("./schemas.js");
 const ExpressError = require("./utils/ExpressError");
 
@@ -28,7 +29,7 @@ module.exports.isLoggedIn = (req, res, next) => {
 module.exports.validateData = (req, res, next) => {
   const { error } = dataSchema.validate(req.body);
   if (error) {
-    const msg = error.details.map(el => el.message).join(",");
+    const msg = error.details.map((el) => el.message).join(",");
     throw new ExpressError(msg, 400);
   } else {
     next();
@@ -38,7 +39,7 @@ module.exports.validateData = (req, res, next) => {
 module.exports.validateAktuelles = (req, res, next) => {
   const { error } = aktuellesSchema.validate(req.body);
   if (error) {
-    const msg = error.details.map(el => el.message).join(",");
+    const msg = error.details.map((el) => el.message).join(",");
     throw new ExpressError(msg, 400);
   } else {
     next();
@@ -50,7 +51,7 @@ module.exports.validateCalendar = (req, res, next) => {
   console.log(req.body);
   const { error } = calendarSchema.validate(req.body);
   if (error) {
-    const msg = error.details.map(el => el.message).join(",");
+    const msg = error.details.map((el) => el.message).join(",");
     throw new ExpressError(msg, 400);
   } else {
     next();
@@ -61,7 +62,7 @@ module.exports.validateCalendar = (req, res, next) => {
 module.exports.validateWorkshops = (req, res, next) => {
   const { error } = workshopSchema.validate(req.body);
   if (error) {
-    const msg = error.details.map(el => el.message).join(",");
+    const msg = error.details.map((el) => el.message).join(",");
     throw new ExpressError(msg, 400);
   } else {
     next();
@@ -72,7 +73,7 @@ module.exports.validateWorkshops = (req, res, next) => {
 module.exports.validateWorkshopGallery = (req, res, next) => {
   const { error } = workshopGallerySchema.validate(req.body);
   if (error) {
-    const msg = error.details.map(el => el.message).join(",");
+    const msg = error.details.map((el) => el.message).join(",");
     throw new ExpressError(msg, 400);
   } else {
     next();
@@ -83,7 +84,7 @@ module.exports.validateWorkshopGallery = (req, res, next) => {
 module.exports.validateTimeline = (req, res, next) => {
   const { error } = timelineSchema.validate(req.body);
   if (error) {
-    const msg = error.details.map(el => el.message).join(",");
+    const msg = error.details.map((el) => el.message).join(",");
     throw new ExpressError(msg, 400);
   } else {
     next();
@@ -94,7 +95,7 @@ module.exports.validateTimeline = (req, res, next) => {
 module.exports.validateLandingFlyer = (req, res, next) => {
   const { error } = landingFlyerSchema.validate(req.body);
   if (error) {
-    const msg = error.details.map(el => el.message).join(",");
+    const msg = error.details.map((el) => el.message).join(",");
     throw new ExpressError(msg, 400);
   } else {
     next();
@@ -105,7 +106,7 @@ module.exports.validateLandingFlyer = (req, res, next) => {
 module.exports.validateWsRegister = (req, res, next) => {
   const { error } = workshopregisterSchema.validate(req.body);
   if (error) {
-    const msg = error.details.map(el => el.message).join(",");
+    const msg = error.details.map((el) => el.message).join(",");
     throw new ExpressError(msg, 400);
   } else {
     next();
@@ -116,7 +117,7 @@ module.exports.validateWsRegister = (req, res, next) => {
 module.exports.validateAbouts = (req, res, next) => {
   const { error } = aboutSchema.validate(req.body);
   if (error) {
-    const msg = error.details.map(el => el.message).join(",");
+    const msg = error.details.map((el) => el.message).join(",");
     throw new ExpressError(msg, 400);
   } else {
     next();
@@ -127,7 +128,7 @@ module.exports.validateAbouts = (req, res, next) => {
 module.exports.validateWsnew = (req, res, next) => {
   const { error } = wsnewSchema.validate(req.body);
   if (error) {
-    const msg = error.details.map(el => el.message).join(",");
+    const msg = error.details.map((el) => el.message).join(",");
     throw new ExpressError(msg, 400);
   } else {
     next();
@@ -138,7 +139,18 @@ module.exports.validateWsnew = (req, res, next) => {
 module.exports.validatePartizip = (req, res, next) => {
   const { error } = partizipSchema.validate(req.body);
   if (error) {
-    const msg = error.details.map(el => el.message).join(",");
+    const msg = error.details.map((el) => el.message).join(",");
+    throw new ExpressError(msg, 400);
+  } else {
+    next();
+  }
+};
+
+/////////////// Partizip /////////////
+module.exports.validatePartizipGallery = (req, res, next) => {
+  const { error } = partizipGallerySchema.validate(req.body);
+  if (error) {
+    const msg = error.details.map((el) => el.message).join(",");
     throw new ExpressError(msg, 400);
   } else {
     next();
@@ -149,7 +161,7 @@ module.exports.validatePartizip = (req, res, next) => {
 module.exports.validateBib = (req, res, next) => {
   const { error } = bibSchema.validate(req.body);
   if (error) {
-    const msg = error.details.map(el => el.message).join(",");
+    const msg = error.details.map((el) => el.message).join(",");
     throw new ExpressError(msg, 400);
   } else {
     next();
@@ -160,7 +172,7 @@ module.exports.validateBib = (req, res, next) => {
 module.exports.validatetestData = (req, res, next) => {
   const { error } = testdataSchema.validate(req.body);
   if (error) {
-    const msg = error.details.map(el => el.message).join(",");
+    const msg = error.details.map((el) => el.message).join(",");
     throw new ExpressError(msg, 400);
   } else {
     next();

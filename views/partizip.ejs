@@ -30,6 +30,27 @@
   </div>
 
   <!-- IMAGE BLOCK -->
+  <div class="block blue gallery-block" id="part-gallery">
+    <h1 class="white"><span class="title-line line-blue">Bildergalerie</span></h1>
+    <div class="gallery-box">
+    <% for(let ptg of ptgs) {%>
+      <div class="card-part">
+        <img class="img-part-card" src="<%= ptg.images[0].url %>" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><%= ptg.title %></h5>
+        </div>
+        <div class="card-body">
+          <a href="/partizipatives/gallerien/<%= ptg._id %>" class="btn btn-aktuelles-blue">Zur Gallerie</a>
+        </div>
+      </div>
+    <% }%>
+  </div>
+  <% if(currentUser) {%>
+  <a href="/partizipatives/gallerien/neu" class="btn btn-ws-gallery">Gallerie Hinzufügen</a>
+  <% } %>
+  </div>
+
+  <!-- IMAGE BLOCK -->
   <!-- <div class="block blue gallery-block">
     <h1 class="white"><span class="title-line line-blue">Aktuelles</span></h1>
     <div class="gallery gallery-partizip">
