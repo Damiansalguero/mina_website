@@ -7,7 +7,7 @@ const ExpressError = require("../utils/ExpressError");
 const {
   isLoggedIn,
   validateWorkshops,
-  validateWorkshopGallery
+  validateWorkshopGallery,
 } = require("../middleware");
 const multer = require("multer");
 const { storage } = require("../cloudinary");

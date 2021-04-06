@@ -1,0 +1,154 @@
+<link rel="stylesheet" href="/styles/workshops.css">
+<% layout("layouts/boilerplate") %>
+<!-- NAV + HEADER -->
+<main>
+  <div class="container-fluid">
+    <div class="header-bg">
+      <img src="/img/gesamt/Projekt/bg-workshops3.jpg" class="img-fluid cover-header" id="img-header-ws">
+    </div>
+    <!-- TABLE BLOCK -->
+    <div class="tabelle-block">
+      <img class="logo-ws img-fluid" src="/img/gesamt/Logos/icon_netzwerk.png" alt="">
+      <h1 class="ws-title title-line"><%= wsnew.title %></h1>
+      <div class="ws-text" id="ws-intro"><%-wsnew.description %></div>
+      <% if(wsnew.accordiontitleone) {%>
+      <div class="accordion-item" id="first-accordion">
+        <h2 class="accordion-header" id="flush-headingOne">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            <strong class="strong-ws"><%=wsnew.accordiontitleone %></strong>
+          </button>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            <%-wsnew.accordiontexone %>
+            <p class="accordion-flyer">Weitere Informationen zu den Inhalten finden Sie in unserem <a href="/downloads/WEB_Flyer_Workshops_2021.pdf" target="_blank"> Flyer.</a></p>
+          </div>
+        </div>
+      </div>
+      <% } %>
+      <% if(wsnew.accordiontitletwo) {%>
+      <div class="accordion-item" id="second-accordion">
+        <h2 class="accordion-header" id="flush-headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+            <strong class="strong-ws"><%=wsnew.accordiontitletwo %></strong>
+          </button>
+        </h2>
+        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            <%-wsnew.accordiontextwo %>
+            <p class="accordion-flyer">Weitere Informationen zu den Inhalten finden Sie im Infoblatt <a href="/downloads/2021_Infoblatt_Online_WorkshopReihe.pdf" target="_blank">Online Workshopreihe.</a></p>
+          </div>
+        </div>
+      </div>
+      <% } %>
+      <% if(wsnew.accordiontitlethree) {%>
+      <div class="accordion-item" id="third-accordion">
+        <h2 class="accordion-header" id="flush-headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+            <strong class="strong-ws"><%=wsnew.accordiontitlethree %></strong>
+          </button>
+        </h2>
+        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            <%-wsnew.accordiontexthree %>
+            <p class="accordion-flyer">Weitere Informationen zu den Inhalten finden Sie im Infoblatt <a href="/downloads/2021_Ehrenamtliche_Infoblatt_Online_Workshop.pdf" target="_blank"> Online Workshops für Ehrenamtliche.</a></p>
+          </div>
+        </div>
+      </div>
+      <% } %>
+      <% if(currentUser) {%>
+      <a href="/ueberworkshops/<%=wsnew._id%>/edit" class="btn btn-aktuelles">Workshop Text/Akkordion Bearbeiten</a>
+      <% } %>
+      <!-- Table 1 -->
+      <table class="table table-responsive table-hover" id="table-ws">
+        <thead>
+
+          <tr>
+            <th scope="col">Datum</th>
+            <th scope="col">Workshop</th>
+            <th scope="col">Ort</th>
+            <th scope="col">Verfügbarkeit</th>
+            <th scope="col">Info</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for(let workshop of workshops) {%>
+          <tr>
+            <td><%= workshop.date %></td>
+            <td><%= workshop.title %></td>
+            <td>
+              <ul>
+                <li><%= workshop.location %></li>
+                <li> <%= workshop.location2%></li>
+                <li> <%= workshop.location3%></li>
+              </ul>
+            </td>
+            <% if(workshop.capacity === "ausgebucht") { %>
+            <td class="ausgebucht"><%= workshop.capacity %></td>
+            <%} else { %>
+            <td class="anmelden"><a href="/anmeldung/<%= workshop._id %>/new""><%= workshop.capacity %></a></td>
+            <% } %>
+            <td><a href=" /workshop/<%= workshop._id %>""> Mehr ...</a></td>
+          </tr>
+          <% }%>
+        </tbody>
+      </table>
+      <% if(currentUser) {%>
+      <a href="/workshop/new" class="btn btn btn-aktuelles">Workshop Hinzufügen</a>
+      <% } %>
+      <div class="flyer-btn-group">
+        <a href="/downloads/WEB_Flyer_Workshops_2021.pdf" target="_blank" class="btn" id="btn-flyer" target="_blank">Unsere aktuellen Präsenzworkshops</a>
+        <a href="/downloads/2021_Infoblatt_Online_WorkshopReihe.pdf" class="btn" id="btn-flyer" target="_blank">Unsere aktuelle Online Workshopreihe</a>
+        <a href="/downloads/2021_Ehrenamtliche_Infoblatt_Online_Workshop.pdf" class="btn" id="btn-flyer" target="_blank">Unsere aktuellen Online Workshops für Ehrenamtliche</a>
+      </div>
+    </div>
+    <!-- IMAGE BLOCK -->
+    <div class="block blue gallery-block" id="ws-gallery">
+      <h1 class="white"><span class="title-line line-blue">Bildergalerie</span></h1>
+      <div class="gallery-box">
+      <% for(let wsg of wsgs) {%>
+        <div class="card-ws">
+          <img class="img-ws-card" src="<%= wsg.images[0].url %>" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><%= wsg.title %></h5>
+          </div>
+          <div class="card-body">
+            <a href="/workshop/gallerien/<%= wsg._id %>" class="btn btn-aktuelles-blue">Zur Gallerie</a>
+          </div>
+        </div>
+      <% }%>
+    </div>
+    <% if(currentUser) {%>
+    <a href="/workshop/gallerien/neu" class="btn btn-ws-gallery">Gallerie Hinzufügen</a>
+    <% } %>
+    </div>
+    <!-- MITARBEITER BLOCK -->
+    <div class="container-fluid contact-box" id="ws-contact">
+      <h1 class="white"><span class="title-line">Ansprechpartnerinnen</span></h1>
+      <div class="row">
+        <div class="worker col">
+          <img class="contact-img" src="/img/gesamt/Mitarbeiter/05_Jana.jpg" alt="">
+          <div class="worker-info">
+            <ul>
+              <li class="worker-title">Inhalte und Konzept</li>
+              <li>Jana Lubinova</li>
+              <li>030 – 62 93 40 31</li>
+              <li>0157 – 85 07 83 07</li>
+              <li><a href="mailto:j.lubinova@mina-berlin.de">j.lubinova@mina-berlin.de</a> </li>
+            </ul>
+          </div>
+        </div>
+        <div class="worker col">
+          <img class="contact-img" src="/img/gesamt/Mitarbeiter/01_Britta.jpg" alt="">
+          <div class="worker-info">
+            <ul>
+              <li class="worker-title">Organisation</li>
+              <li>Britta Möller</li>
+              <li>030 – 62 93 40 31</li>
+              <li><a href="mailto:b.moeller@mina-berlin.de">b.moeller@mina-berlin.de</a> </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+</main>

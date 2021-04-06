@@ -27,9 +27,13 @@
       <video src="/videos/Interview.mp4" width=320  height=240 controls  poster="posterimage.jpg">
       </video>
     </div>
+    <% if(currentUser) {%>
+    <a href="/partizipatives/gallerien/neu" class="btn btn-mina">Gallerie Hinzufügen</a>
+    <% } %>
   </div>
 
   <!-- IMAGE BLOCK -->
+  <% if(ptgs.images) {%>
   <div class="block blue gallery-block" id="part-gallery">
     <h1 class="white"><span class="title-line line-blue">Bildergalerie</span></h1>
     <div class="gallery-box">
@@ -49,6 +53,7 @@
   <a href="/partizipatives/gallerien/neu" class="btn btn-ws-gallery">Gallerie Hinzufügen</a>
   <% } %>
   </div>
+  <% } %>
 
   <!-- IMAGE BLOCK -->
   <!-- <div class="block blue gallery-block">

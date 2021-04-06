@@ -154,7 +154,7 @@
 
 #ws-gallery {
   margin-top: -18vh;
-  padding-bottom: 15vh;
+  padding: 10vh 0 0 0;
 }
 .img-container {
   display: flex;
