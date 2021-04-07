@@ -142,7 +142,7 @@ module.exports.partizipGallerySchema = Joi.object({
 module.exports.bibSchema = Joi.object({
   bib: Joi.object({
     title: Joi.string().required(),
-    description: Joi.string().required(),
+    description: Joi.string().optional().allow(""),
     autor: Joi.string().optional().allow(""),
     year: Joi.string().optional().allow(""),
   }).required(),
