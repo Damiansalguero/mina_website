@@ -11,8 +11,15 @@
       <p class="card-text"><%- bib.description %></p>
     </div>
     <ul class="list-group list-group-flush">
+      <% if (bib.autor) {%>
       <li class="list-group-item item-card">Autor*in: <span><%= bib.autor %></span></li>
-      <li class="list-group-item item-card">Jahr:  <span><%= bib.year %></span> </li>
+      <% } %>
+      <% if (bib.pub) {%>
+      <li class="list-group-item item-card">Herausgeber*in: <span><%= bib.pub %></span></li>
+      <% } %>
+      <% if (bib.year) {%>
+      <li class="list-group-item item-card">Jahr:  <span><%= bib.year %></span></li>
+      <% } %>
     </ul>
     <div class="card-body card-button">
       <% if (currentUser) {%>

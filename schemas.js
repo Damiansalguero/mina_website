@@ -144,6 +144,7 @@ module.exports.bibSchema = Joi.object({
     title: Joi.string().required(),
     description: Joi.string().optional().allow(""),
     autor: Joi.string().optional().allow(""),
+    pub: Joi.string().optional().allow(""),
     year: Joi.string().optional().allow(""),
   }).required(),
   deleteImages: Joi.array(),

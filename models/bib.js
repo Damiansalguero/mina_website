@@ -3,14 +3,14 @@ const Schema = mongoose.Schema;
 
 const ImageSchema = new Schema({
   url: String,
-  filename: String
+  filename: String,
 });
 
-ImageSchema.virtual("thumbnail").get(function() {
+ImageSchema.virtual("thumbnail").get(function () {
   return this.url.replace("/upload", "/upload/w_200");
 });
 
-ImageSchema.virtual("attach").get(function() {
+ImageSchema.virtual("attach").get(function () {
   return this.url.replace("/upload", "/upload/fl_attachment:PDF,f_pdf");
 });
 
@@ -19,7 +19,8 @@ const BibSchema = new Schema({
   images: [ImageSchema],
   description: String,
   autor: String,
-  year: String
+  pub: String,
+  year: String,
 });
 
 module.exports = mongoose.model("Bib", BibSchema);
