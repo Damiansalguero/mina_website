@@ -20,15 +20,15 @@
     </div>
     <% if(currentUser) {%>
     <a href="/aktuelles/<%= aktuell._id %>/edit" class="btn btn btn-aktuelles">Eintrag Bearbeiten</a>
+    <% } %>
     <% if(flyer) {%>
       <a href="/landing-flyers/<%=flyer._id %>/edit" class="btn btn btn-aktuelles">Flyer Bearbeiten</a>
       <% flyer.images.forEach((img, i) => { %>
         <a href="<%=img.attach%>" download class="btn" id="btn-flyer" target="_blank"><%=flyer.title%></a>
         <% }) %>
-    <% } %>
     <% } else { %>
       <a href="/downloads/flyer-landing.pdf" class="btn" id="btn-flyer" target="_blank">Unser aktueller Flyer</a>
-    <% } %>
+    <% } %>  
   </div>
   <!-- Block Kalender -->
   <div class="calendar-block">
