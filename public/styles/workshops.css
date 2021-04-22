@@ -184,8 +184,10 @@
   margin-left: 2vw;
 } */
 
-.gallery-img {
+.gallery-img,
+.gallery-img-2 {
   height: 200px;
+  margin: 10px;
 }
 .gallery-2 {
   width: 300px;
@@ -343,7 +345,7 @@ h5,
     clip-path: polygon(0 1%, 100% 0%, 100% 100%, 0% 100%);
   }
   .gallery-img-2 {
-    height: 160px;
+    height: 180px;
   }
   .flyer-btn-group {
     display: flex;
