@@ -44,6 +44,7 @@ const showRoutes = require("./routes/shows");
 const bibRoutes = require("./routes/bibs");
 const testRoutes = require("./routes/tests");
 const postRoutes = require("./routes/posts");
+const partflyerRoutes = require("./routes/partizipflyers");
 
 //////////////// MONGO DB SETUP ///////////////////
 //Online DB dbUrl
@@ -129,6 +130,7 @@ app.use("/ueberworkshops", wsnewsRoutes);
 app.use("/partizipatives", partizipRoutes);
 app.use("/zeitstrahl", timelineRoutes);
 app.use("/landing-flyers", landingflyerRoutes);
+app.use("/partizip-flyers", partflyerRoutes);
 app.use("/bibliothek", bibRoutes);
 app.use("/posts", postRoutes);
 app.use("/test", testRoutes);

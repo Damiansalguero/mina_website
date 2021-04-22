@@ -10,6 +10,10 @@
   color: #db2a6f;
 }
 
+.btn-form {
+  display: block;
+}
+
 @media screen and (min-width: 0) and (max-width: 575.98px) {
   .form-control {
     font-size: 14px;

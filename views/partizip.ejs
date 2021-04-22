@@ -15,7 +15,17 @@
     <div class="part-text" id="ws-intro"><%-partizip.descriptiontwo %></div>
     <% } %>
     <% if(currentUser) {%>
-    <a href="/partizipatives/<%=partizip._id%>/edit" class="btn btn-aktuelles">Text Bearbeiten</a>
+    <a href="/partizip-flyers/neu" class="btn btn-mina">Flyer Hinzufügen</a>
+    <% } %>
+    <% if(currentUser && partflyer) {%>
+    <a href="/partizip-flyers/<%=partflyer._id %>/edit" class="btn btn btn-aktuelles">Flyer Bearbeiten</a>
+    <% } %>
+    <% if(partflyer) {%>
+      <% partflyer.images.forEach((img, i) => { %>
+        <a href="<%=img.attach%>" download class="btn" id="btn-flyer" target="_blank"><%=partflyer.title%></a>
+        <% }) %>
+    <% } else { %>
+        <a href="/downloads/flyer-landing.pdf" class="btn" id="btn-flyer" target="_blank">Unser aktueller Flyer</a>
     <% } %>
     <div class="video-box">
       <h3 class="mina-pink">Eröffnungsfilm</h3>

@@ -191,6 +191,19 @@ video {
 .form-check-inline {
   display: block;
 }
+
+/* Flyer Styles */
+.card-flyer {
+  width: 20%;
+  margin: 0 auto;
+  text-align: center;
+  border: 2px solid #db2a6f;
+}
+#partflyer-how-title {
+  color: #db2a6f;
+  font-weight: bold;
+}
+/* Flyer Styles */
 @media screen and (min-width: 0) and (max-width: 575.98px) {
   .part-text {
     width: 85%;

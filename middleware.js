@@ -6,6 +6,7 @@ const {
   wsnewSchema,
   partizipSchema,
   partizipGallerySchema,
+  partFlyerSchema,
   timelineSchema,
   landingFlyerSchema,
   aboutSchema,
@@ -149,6 +150,17 @@ module.exports.validatePartizip = (req, res, next) => {
 /////////////// Partizip /////////////
 module.exports.validatePartizipGallery = (req, res, next) => {
   const { error } = partizipGallerySchema.validate(req.body);
+  if (error) {
+    const msg = error.details.map((el) => el.message).join(",");
+    throw new ExpressError(msg, 400);
+  } else {
+    next();
+  }
+};
+
+/////////////// Partizip Flyer /////////////
+module.exports.validatePartFlyer = (req, res, next) => {
+  const { error } = partFlyerSchema.validate(req.body);
   if (error) {
     const msg = error.details.map((el) => el.message).join(",");
     throw new ExpressError(msg, 400);

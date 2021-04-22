@@ -131,6 +131,14 @@ module.exports.partizipSchema = Joi.object({
   deleteImages: Joi.array(),
 });
 
+module.exports.partFlyerSchema = Joi.object({
+  partflyer: Joi.object({
+    title: Joi.string().required(),
+    description: Joi.string().required(),
+  }).required(),
+  deleteImages: Joi.array(),
+});
+
 module.exports.partizipGallerySchema = Joi.object({
   ptg: Joi.object({
     title: Joi.string().required(),
