@@ -22,7 +22,7 @@ module.exports.renderEditWsnews = async (req, res) => {
 module.exports.updateWsnews = async (req, res) => {
   const { id } = req.params;
   const wsnew = await Wsnew.findByIdAndUpdate(id, {
-    ...req.body.wsnew
+    ...req.body.wsnew,
   });
   await wsnew.save();
   req.flash("success", "Der Text wurde erfolgreich aktualisiert !");

@@ -9,7 +9,7 @@ const WsnewSchema = new Schema({
   accordiontitletwo: String,
   accordiontextwo: String,
   accordiontitlethree: String,
-  accordiontexthree: String
+  accordiontexthree: String,
 });
 
 module.exports = mongoose.model("Wsnew", WsnewSchema);
