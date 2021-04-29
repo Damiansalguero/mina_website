@@ -82,6 +82,10 @@ h5 {
   color: #db2a6f;
 }
 
+.list-group {
+  width: 50%;
+}
+
 .list-group-item.active {
   background-color: #72c5d5;
   border-color: #72c5d5;
