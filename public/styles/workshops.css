@@ -170,13 +170,17 @@
 
 #ws-gallery {
   margin-top: -18vh;
-  padding: 10vh 0 0 0;
+  padding: 10vh 0 20vh 0;
 }
 .img-container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   margin-bottom: 15vh;
+}
+
+.img-card {
+  height: 150px;
 }
 
 /* .gallery h3,
@@ -249,19 +253,17 @@
 .card {
   width: 50%;
 }
+.card-ov {
+  height: 150px;
+}
+
+.img-card {
+  height: 150px;
+}
 .card-ws-gallery {
   width: 100%;
 }
 
-.gallery-img-card {
-  height: 120px;
-  margin: 5px;
-}
-.gallery2 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
 .btn-group {
   align-self: flex-start;
   margin-left: 25%;

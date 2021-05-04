@@ -85,6 +85,9 @@ h5 {
 .list-group {
   width: 50%;
 }
+#list-show {
+  width: 100%;
+}
 
 .list-group-item.active {
   background-color: #72c5d5;

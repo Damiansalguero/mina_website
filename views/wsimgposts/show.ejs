@@ -1,14 +1,11 @@
 <link rel="stylesheet" href="/styles/workshops.css">
 <% layout("layouts/boilerplate") %>
   <div class="col-6 offset-3">
-    <!-- Card -->
     <div class="card card-ws-gallery mb-3">
-      <!-- url comes from the campground model in images -->
       <div class="card-body">
         <h5 class="card-title"><%=wsg.title%></h5>
         <p class="card-text"><%- wsg.description %></p>
       </div>
-      <!-- Test Gallery -->
           <div class="gallery2">
           <% wsg.images.forEach((img, i) => { %>
                 <img src="<%= img.thumbnail %>" class="d-block gallery-img-card pointer" data-bs-toggle="modal" data-bs-target="#exampleModal" alt="">
@@ -24,6 +21,7 @@
       </div>
       </div>
       <% }%>
+      <a class="card-link btn btn-mina m-auto" href="/workshops">Zurück</a>
     </div>
 <!-- Card -->
 

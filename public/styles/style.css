@@ -266,6 +266,50 @@ h1 {
   color: #db2a6f;
 }
 
+.gallerie {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: flex-start;
+  margin: 2vh 0;
+}
+
+.gallerie h5 {
+  color: #fff;
+}
+
+.gallerie-link {
+  align-self: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  float: left;
+}
+
+.gallerie-link:hover {
+  color: #db2a6f;
+  font-weight: bold;
+}
+
+.gallerie-titel {
+  color: #fff;
+  font-weight: bold;
+}
+
+.gallery-img-card {
+  height: 120px;
+  margin: 5px;
+}
+.gallery2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.gallery-container {
+  width: 50%;
+  margin: 2vh 0;
+}
 /********** GENERAL STYLES ***********/
 
 /********** ALERT STYLES ***********/
