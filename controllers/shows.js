@@ -34,7 +34,6 @@ module.exports.renderWorkshops = async (req, res) => {
   const wsnew = await Wsnew.findOne({});
   const workshops = await Workshop.find({});
   const wsgs = await Workshopgallery.find({});
-
   res.render("workshops", { workshops, wsgs, wsnew });
 };
 
