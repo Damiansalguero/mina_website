@@ -243,6 +243,10 @@ ul {
   margin-bottom: 0;
 }
 
+#prz-gallery {
+  padding: 10vh 0 20vh 0;
+}
+
 @media screen and (max-width: 768px) {
   #timeline {
     margin: 30px;

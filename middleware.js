@@ -8,6 +8,7 @@ const {
   partizipGallerySchema,
   partFlyerSchema,
   timelineSchema,
+  processGallerySchema,
   landingFlyerSchema,
   aboutSchema,
   bibSchema,
@@ -172,6 +173,17 @@ module.exports.validatePartFlyer = (req, res, next) => {
 /////////////// Bib /////////////
 module.exports.validateBib = (req, res, next) => {
   const { error } = bibSchema.validate(req.body);
+  if (error) {
+    const msg = error.details.map((el) => el.message).join(",");
+    throw new ExpressError(msg, 400);
+  } else {
+    next();
+  }
+};
+
+/////////////// Prozess Gallerie /////////////
+module.exports.validateProcessGallery = (req, res, next) => {
+  const { error } = processGallerySchema.validate(req.body);
   if (error) {
     const msg = error.details.map((el) => el.message).join(",");
     throw new ExpressError(msg, 400);

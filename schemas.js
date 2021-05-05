@@ -41,7 +41,7 @@ module.exports.workshopSchema = Joi.object({
 module.exports.workshopGallerySchema = Joi.object({
   wsg: Joi.object({
     title: Joi.string().required(),
-    description: Joi.string().required(),
+    description: Joi.string().optional().allow(""),
   }).required(),
   deleteImages: Joi.array(),
 });
@@ -89,6 +89,14 @@ module.exports.timelineSchema = Joi.object({
     vernetzdrei: Joi.string().required(),
     ergebnis: Joi.string().required(),
   }).required(),
+});
+
+module.exports.processGallerySchema = Joi.object({
+  przg: Joi.object({
+    title: Joi.string().required(),
+    description: Joi.string().optional().allow(""),
+  }).required(),
+  deleteImages: Joi.array(),
 });
 
 module.exports.landingFlyerSchema = Joi.object({

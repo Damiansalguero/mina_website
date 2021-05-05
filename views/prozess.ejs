@@ -163,21 +163,41 @@
       </div>
     </div>
 
-
     <!-- IMAGE BLOCK -->
-    <div class="block blue gallery-block" id="ws-gallery">
-      <h1 class="white"><span class="title-line line-blue">Bildergalerie</span></h1>
+    <% if(przgs) {%>
+    <div class="block blue gallery-block" id="prz-gallery">
+      <h1 class="white"><span class="title-line line-blue">Bildergalerien</span></h1>
+      <% for(let przg of przgs) {%>
+          <!-- Test Gallery -->
+          <div class="gallery-container">
+            <h3 class="gallerie-titel"><%= przg.title %></h3>
+          <div class="gallery2">
+          <% przg.images.forEach((img, i) => { %>
+                <img src="<%= img.thumbnail %>" class="d-block gallery-img-card"  alt="">
+          <% }) %>
+          </div>
+          <a class="gallerie-link" href="/prozesse/gallerien/<%= przg._id %>">Gallerie ansehen</a>
+        </div>
+      <% }%>
+      <% if(currentUser) {%>
+        <a class="card-link btn btn-mina m-auto" href="/prozesse/gallerien/neu">Gallerie Hinzufügen</a>
+      <% }%>
+      </div>
+    <% }%>
+    <!-- IMAGE BLOCK -->
+    <!-- <div class="block blue gallery-block" id="ws-gallery">
+      <h1 class="white"><span class="title-line line-blue">Bildergalerie</span></h1> -->
       <!-- Gallerie 1 -->
-      <div class="gallery">
+      <!-- <div class="gallery">
         <h3>Prozessbegleitung FED Leipzig e.V.</h3>
         <div class="img-container-prozess">
           <a data-bs-toggle="modal" data-bs-target="#exampleModal"><img class="gallery-img" src="/img/gesamt/Projekt/PRZ/01_PRZ_LZ.jpg" alt=""></a>
           <a data-bs-toggle="modal" data-bs-target="#exampleModal"><img class="gallery-img" src="/img/gesamt/Projekt/PRZ/03_PRZ_LZ.jpg" alt=""></a>
           <a data-bs-toggle="modal" data-bs-target="#exampleModal"><img class="gallery-img" src="/img/gesamt/Projekt/PRZ/02_PRZ_LZ.jpg" alt=""></a>
         </div>
-      </div>
+      </div> -->
       <!-- Gallerie 2 -->
-      <div class="gallery">
+      <!-- <div class="gallery">
         <h3>Prozessbegleitung GfI Hannover</h3>
         <div class="img-container-prozess">
           <a data-bs-toggle="modal" data-bs-target="#exampleModal2"><img class="gallery-img" src="/img/gesamt/Projekt/PRZ/01_PRZ_HAN.jpg" alt=""></a>
@@ -186,9 +206,9 @@
           <a data-bs-toggle="modal" data-bs-target="#exampleModal2"><img class="gallery-img" src="/img/gesamt/Projekt/PRZ/04_PRZ_HAN.jpg" alt=""></a>
           <a data-bs-toggle="modal" data-bs-target="#exampleModal2"><img class="gallery-img" src="/img/gesamt/Projekt/PRZ/05_PRZ_HAN.jpg" alt=""></a>
         </div>
-      </div>
+      </div> -->
       <!-- Gallerie 3 -->
-      <div class="gallery">
+      <!-- <div class="gallery">
         <h3>Prozessbegleitung Vkm Hamm e.V.</h3>
         <div class="img-container-prozess">
           <a data-bs-toggle="modal" data-bs-target="#exampleModal3"><img class="gallery-img" src="/img/gesamt/Projekt/PRZ/01_PRZ_HM.jpg" alt=""></a>
@@ -197,7 +217,7 @@
           <a data-bs-toggle="modal" data-bs-target="#exampleModal3"><img class="gallery-img" src="/img/gesamt/Projekt/PRZ/04_PRZ_HM.jpg" alt=""></a>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- Kontakt -->
     <div class="container-fluid contact-box" id="prozess-contact">
       <h1 class="white"><span class="title-line">Ansprechpartner</span></h1>

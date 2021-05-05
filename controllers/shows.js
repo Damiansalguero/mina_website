@@ -6,6 +6,7 @@ const Workshop = require("../models/workshop");
 const Workshopgallery = require("../models/workshopgallery");
 const Partizip = require("../models/partizip");
 const Partizipgallery = require("../models/partizipgallery");
+const Processgallery = require("../models/process");
 const Partflyer = require("../models/partizipflyer");
 const Timeline = require("../models/timeline");
 const Flyer = require("../models/landingflyer");
@@ -45,7 +46,9 @@ module.exports.renderPartizip = async (req, res) => {
 };
 module.exports.renderProzess = async (req, res) => {
   const timeline = await Timeline.findOne({});
-  res.render("prozess", { timeline });
+  const przgs = await Processgallery.find({});
+
+  res.render("prozess", { timeline, przgs });
 };
 module.exports.renderDoku = (req, res) => {
   res.render("dokumentation");

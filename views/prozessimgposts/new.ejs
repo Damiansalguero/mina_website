@@ -1,13 +1,11 @@
-<link rel="stylesheet" href="/styles/workshops.css">
 <% layout("layouts/boilerplate") %>
 
-<div class="row">
   <h1 class=""><span class="title-line line-pink">Gallerie Hinzufügen</span></h1>
   <div class="col-6 offset-3">
-    <form action="/workshop/gallerien" method="post" novalidate class="validated-form" enctype="multipart/form-data">
+    <form action="/prozesse/gallerien" method="post" novalidate class="validated-form" enctype="multipart/form-data">
       <div class="mb-3">
         <label class="form-label" for="title">Überschrift</label>
-        <input class="form-control" type="text" id="title" name="wsg[title]" required>
+        <input class="form-control" type="text" id="title" name="przg[title]" required>
       </div>
       <div class="mb-3">
         <label for="formFile" class="form-label">Bilder</label>
@@ -15,7 +13,7 @@
       </div>
       <div class="mb-3">
         <label class="form-label" for="description">Beschreibung</label>
-        <textarea class="form-control" type="text" id="description" name="wsg[description]"></textarea>
+        <textarea class="form-control" type="text" id="description" name="przg[description]"></textarea>
         <script>
                 CKEDITOR.replace( 'description' );
             </script>
@@ -24,6 +22,5 @@
         <button class="btn btn-aktuelles-blue">Speichern</button>
       </div>
     </form>
-  <a class="btn btn-primary btn-mina" href="/workshops">Zurück</a>
+  <a class="btn btn-primary btn-mina" href="/prozess-begleitung">Zurück</a>
   </div>
-</div>
