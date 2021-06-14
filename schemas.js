@@ -22,6 +22,7 @@ module.exports.calendarSchema = Joi.object({
   calendar: Joi.object({
     title: Joi.string().required(),
     date: Joi.string().required(),
+    datetwo: Joi.string().optional().allow(""),
     link: Joi.string().optional().allow(""),
     description: Joi.string().required(),
   }).required(),

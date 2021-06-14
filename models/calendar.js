@@ -3,6 +3,7 @@ const Schema = mongoose.Schema;
 const CalendarSchema = new Schema({
   title: String,
   date: String,
+  datetwo: String,
   link: String,
   description: String,
 });

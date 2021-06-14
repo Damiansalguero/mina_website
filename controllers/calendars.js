@@ -4,7 +4,7 @@ const { calendarSchema } = require("../schemas.js");
 const { cloudinary } = require("../cloudinary");
 
 module.exports.index = async (req, res) => {
-  const calendars = await Calendar.find().sort({ date: -1 }).limit(3);
+  const calendars = await Calendar.find().sort({ date: -1 });
   const formatedDate = calendars.map((calendar) => {
     calendar.formatedDate = fns.format(new Date(calendar.date), "dd.MM.yyyy");
     return calendar;
@@ -26,7 +26,7 @@ module.exports.createCalendar = async (req, res, next) => {
   const calendar = await new Calendar(req.body.calendar);
   await calendar.save();
   req.flash("success", "Der Kalendareintrag wurde erfolgreich erstellt !");
-  res.redirect("/home");
+  res.redirect("/calendars/alle");
 };
 
 module.exports.renderEditCalendar = async (req, res) => {
@@ -52,7 +52,7 @@ module.exports.updateCalendar = async (req, res) => {
   });
   await calendar.save();
   req.flash("success", "Der Kalendareintrag wurde erfolgreich aktualisiert !");
-  res.redirect("/kontakt");
+  res.redirect("/calendars/alle");
 };
 
 module.exports.deleteCalendar = async (req, res) => {

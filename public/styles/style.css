@@ -52,6 +52,12 @@ h1 {
   padding-bottom: 15vh;
   margin-top: -10vh;
 }
+.date-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
 
 .btn {
   width: 200px;
