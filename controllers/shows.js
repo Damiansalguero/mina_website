@@ -13,6 +13,7 @@ const Flyer = require("../models/landingflyer");
 const Bib = require("../models/bib");
 const nodemailer = require("nodemailer");
 const { cloudinary } = require("../cloudinary");
+const fns = require("date-fns");
 
 module.exports.renderLanding = async (req, res) => {
   res.redirect("/home");
@@ -20,12 +21,22 @@ module.exports.renderLanding = async (req, res) => {
 
 module.exports.renderhome = async (req, res) => {
   const aktuell = await Aktuell.findOne({});
-  const calendars = await Calendar.find().sort({ _id: -1 }).limit(3);
+  const calendars = await Calendar.find().sort({ date: -1 }).limit(3);
+  const formatedDate = calendars.map((calendar) => {
+    calendar.formatedDate = fns.format(new Date(calendar.date), "dd.MM.yyyy");
+    return calendar;
+    // return {
+    //   title: calendar.title,
+    //   link: calendar.link,
+    //   description: calendar.description,
+    //   formatedDate: fns.format(new Date(calendar.date), "dd.MM.yyyy"),
+    // };
+  });
   const about = await About.findOne({});
   const flyer = await Flyer.findOne({});
   res.render("landing", {
     aktuell,
-    calendars,
+    calendars: formatedDate,
     about,
     flyer,
   });
