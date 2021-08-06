@@ -1,0 +1,124 @@
+.nav-box {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+  background-color: #fff;
+  height: auto;
+  padding-bottom: 4vh;
+}
+
+.navbar {
+  background-color: #fff;
+  z-index: 2;
+}
+.navbar-nav {
+  border-top: 2px solid #db2a6f;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #000;
+  padding: 1.5rem;
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #db2a6f;
+  font-weight: bold;
+  background-color: none;
+}
+
+.logo {
+  margin: 5vh 0;
+}
+#logo-subtitle {
+  color: #000;
+  margin-left: 10%;
+  font-size: 16px;
+}
+
+.nav-item:hover,
+.dropdown-item:hover {
+  background-color: #72c5d5;
+  color: #fff;
+}
+.dropdown-item.active {
+  background-color: transparent;
+  color: #db2a6f;
+  font-weight: bold;
+}
+
+.dropdown-menu {
+  margin-top: -55px;
+  border-color: #db2a6f;
+  min-width: 100%;
+}
+
+.symbol {
+  margin: 0 10px;
+}
+
+.symbol-box {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 5vw;
+  padding-top: 6vh;
+}
+.navbar > .container-fluid {
+  align-items: baseline;
+}
+
+.navbar-collapse {
+  flex-direction: column;
+}
+.navbar-toggler {
+  background-color: #db2a6f;
+}
+
+.br-link {
+  text-align: center;
+}
+
+#path-nav {
+  z-index: 1;
+  margin-top: -20vh;
+}
+.mina-logo {
+  margin-left: 3vw;
+}
+
+.mina-logo img {
+  padding-top: 2vh;
+  height: 120px;
+}
+
+@media screen and (min-width: 0) and (max-width: 575.98px) {
+  .nav-box {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%) !important;
+    background-color: #fff !important;
+    height: auto !important;
+  }
+  .navbar-toggler {
+    margin-right: 5vw !important;
+  }
+  .navbar-nav {
+    border-top: none;
+  }
+}
+
+@media screen and (min-width: 575.99px) and (max-width: 991.98px) {
+  .navbar-toggler {
+    margin-right: 5vw !important;
+  }
+  .nav-box {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%) !important;
+  }
+  #navbarNavDropdown ul {
+    margin-bottom: 5vh !important;
+  }
+  .navbar-nav {
+    border-top: none;
+  }
+}
+
+@media screen and (min-width: 1199.98px) and (max-width: 1499.98px) {
+  .navbar-nav {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,116 @@
+#block-praxis {
+  margin-top: -5vh;
+}
+.konzeption,
+.seminar-ov {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.konzeption h3 {
+  margin-bottom: 10vh;
+}
+#img-praxis {
+  width: 75%;
+  margin: 5vh 0 10vh 0;
+}
+
+.img-paraxisseminar {
+  height: 400px;
+}
+
+.text-praxis,
+.praxis-list a {
+  color: #fff;
+}
+
+#block-konzeption {
+  clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+#block-konzeption {
+  padding-bottom: 5vh;
+}
+.konzeption {
+  padding-bottom: 10vh;
+}
+
+#block-konzeption h3 {
+  padding: 2vh 0;
+}
+
+.praxis-list {
+  list-style: none;
+  margin: 1vh 0 1vh 15%;
+  width: 40%;
+}
+
+.praxis-list li {
+  margin: 5px 0;
+}
+
+.praxis-list a:hover {
+  color: #db2a6f;
+}
+
+.seminar-ov {
+  padding: 4vh 0px;
+}
+
+#container-seminar-ov {
+  width: 75%;
+}
+
+@media screen and (min-width: 0) and (max-width: 575.98px) {
+  #img-praxis {
+    width: 95%;
+  }
+  .ws-text {
+    width: 85%;
+    text-align: justify;
+    font-size: 16px;
+  }
+  #row-praxis {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .img-paraxisseminar {
+    height: 350px;
+  }
+  .seminar-ov {
+    width: 100%;
+  }
+  .praxis-list {
+    margin: 0;
+    text-align: left;
+  }
+  .praxis-list li {
+    margin: 5px 0;
+  }
+}
+
+@media screen and (min-width: 575.98px) and (max-width: 991.98px) {
+  #img-praxis {
+    width: 85%;
+  }
+  .ws-text {
+    width: 75%;
+    text-align: justify;
+    font-size: 18px;
+  }
+  .gallery-block,
+  #block-konzeption {
+    clip-path: polygon(0 2%, 100% 0%, 100% 100%, 0% 100%);
+    padding-top: 5vh;
+  }
+  #block-konzeption h3 {
+    text-align: center;
+  }
+  .img-paraxisseminar {
+    height: 300px;
+  }
+  .praxis-list {
+    font-size: 20px;
+  }
+}

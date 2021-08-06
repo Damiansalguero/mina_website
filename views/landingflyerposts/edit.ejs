@@ -1,0 +1,47 @@
+<link rel="stylesheet" href="/styles/forms.css">
+<link rel="stylesheet" href="/styles/flyer.css">
+<% layout("layouts/boilerplate") %>
+<div class="row">
+  <h1 class=""><span class="title-line line-pink">Flyer Bearbeiten</span></h1>
+  <div id="form-flyer-new" class="col-6 offset-3">
+    <form action="/landing-flyers/<%=flyer._id%>?_method=PUT" method="post" novalidate class="validated-form" enctype="multipart/form-data">
+      <div class="mb-3">
+        <label class="form-label" for="title">Überschrift</label>
+        <input class="form-control" type="text" id="title" name="flyer[title]" required value="<%=flyer.title%>">
+      </div>
+      <div class="mb-3 image-input">
+        <div class="form-file custom-file">
+          <input class="form-file-input" id="image" type="file" name="image" multiple>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="description">Beschreibung</label>
+        <textarea class="form-control" type="text" id="description" name="flyer[description]" required><%=flyer.description%></textarea>
+        <script>
+                CKEDITOR.replace( 'description' );
+            </script>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" >Hochgeladene Dokumente:</label>
+        <% flyer.images.forEach(function(img, i) { %>
+          <!-- thumbnail matches the key from the campground model -->
+          <p class="flyer-file"><i class="far fa-file"></i> <%=flyer.title%></p>
+          <div class="form-check-inline">
+            <!-- id here add index of the images -->
+            <!-- value here add the rght data of the foto -->
+            <input type="checkbox" id="image-<%=i%>" name="deleteImages[]" value="<%= img.filename %>">
+            <label for="image-<%=i%>">Datei Löschen?</label>
+          </div>
+        <% }) %>
+      </div>
+      <div>
+        <button class="btn btn-aktuelles-blue">Speichern</button>
+      </div>
+      <form class="d-inline" action="/landing-flyers/<%=flyer._id%>?_method=DELETE" method="post">
+        <button id="btn-delete" class="btn btn-danger">Löschen</button>
+      </form>
+    </form>
+    <a class="btn btn-primary btn-mina" href="/bibliothek/<%=flyer._id%>">Zurück</a>
+  </div>
+</div>
+<!--  -->

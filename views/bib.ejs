@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="/styles/bib.css">
+<% layout("layouts/boilerplate") %>
+<h1 id="h1-bib"><span class="title-line line-pink">Online Bibliothek</span></h1>
+<div class="bib-block blue">
+<!-- BIB LINKS -->
+<div class="container-bib">
+  <% for(let bib of bibs) {%>
+  <div class="card">
+    <div class="card-body card-kopf">
+      <h5 class="card-title"><%= bib.title %></h5>
+      <p class="card-text"><%- bib.description %></p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <% if (bib.autor) {%>
+      <li class="list-group-item item-card">Autor*in: <span><%= bib.autor %></span></li>
+      <% } %>
+      <% if (bib.pub) {%>
+      <li class="list-group-item item-card">Herausgeber*in: <span><%= bib.pub %></span></li>
+      <% } %>
+      <% if (bib.year) {%>
+      <li class="list-group-item item-card">Jahr:  <span><%= bib.year %></span></li>
+      <% } %>
+    </ul>
+    <div class="card-body card-button">
+      <% if (currentUser) {%>
+        <a class="card-link btn btn-info" href="/bibliothek/<%=bib._id%>/edit">Bearbeiten</a>
+        <form class="d-inline" action="/bibliothek/<%=bib._id%>?_method=DELETE" method="post">
+          <button id="btn-delete" class="btn btn-danger">Löschen</button>
+        </form>
+        <% } %>
+      <% bib.images.forEach((img, i) => { %>
+        <a target="_blank" class="btn btn-mina" href="<%=img.attach%>" download>Download
+      </a>
+      <% }) %>
+    </div>
+  </div>
+  <%}%>
+</div>
+  <% if(currentUser) {%>
+    <div id="btn-new-bib">
+      <a href="/bibliothek/neu" class="btn btn-mina">Eintrag Hinzufügen</a>
+    </div>
+  <% } %>
+</div>

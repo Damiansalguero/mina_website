@@ -1,0 +1,98 @@
+<link rel="stylesheet" href="/styles/forms.css">
+<% layout("layouts/boilerplate") %>
+<div class="row">
+  <h1 class=""><span class="title-line line-pink">Zeitstrahl Text Hinzufügen</span></h1>
+  <div id="timeline-form-new" class="col-6 offset-3">
+    <form action="/zeitstrahl" method="post" novalidate class="validated-form">
+      <div class="mb-3">
+        <label class="form-label" for="bewerbung">Bewerbungsphase</label>
+        <textarea class="form-control" type="text" id="bewerbung" name="timeline[bewerbung]"></textarea>
+        <script>
+                CKEDITOR.replace( 'bewerbung' );
+            </script>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="kennenlern">Kennenlernphase</label>
+        <textarea class="form-control" type="text" id="kennenlern" name="timeline[kennenlern]"></textarea>
+        <script>
+                CKEDITOR.replace( 'kennenlern' );
+            </script>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="bedarf">Bedarfsanalyse</label>
+        <textarea class="form-control" type="text" id="bedarf" name="timeline[bedarf]"></textarea>
+        <script>
+                CKEDITOR.replace( 'bedarf' );
+            </script>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="standpunkt">Standpunkte Definieren</label>
+        <textarea class="form-control" type="text" id="standpunkt" name="timeline[standpunkt]"></textarea>
+        <script>
+                CKEDITOR.replace( 'standpunkt' );
+            </script>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="vernetzeins">Vernetzungstreffen März</label>
+        <textarea class="form-control" type="text" id="vernetzeins" name="timeline[vernetzeins]"></textarea>
+        <script>
+                CKEDITOR.replace( 'vernetzeins' );
+            </script>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="idee">Ideen- & Lösungsentwicklung</label>
+        <textarea class="form-control" type="text" id="idee" name="timeline[idee]"></textarea>
+        <script>
+                CKEDITOR.replace( 'idee' );
+            </script>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="vernetzzwei">Vernetzungstreffen Mai</label>
+        <textarea class="form-control" type="text" id="vernetzzwei" name="timeline[vernetzzwei]"></textarea>
+        <script>
+                CKEDITOR.replace( 'vernetzzwei' );
+            </script>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="konzipierung">Konzipierung, Planung & Testen</label>
+        <textarea class="form-control" type="text" id="konzipierung" name="timeline[konzipierung]"></textarea>
+        <script>
+                CKEDITOR.replace( 'konzipierung' );
+            </script>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="massnahme">Durchführung der Maßnahmen</label>
+        <textarea class="form-control" type="text" id="massnahme" name="timeline[massnahme]"></textarea>
+        <script>
+                CKEDITOR.replace( 'massnahme' );
+            </script>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="evaluation">Evaluation & Reflektion</label>
+        <textarea class="form-control" type="text" id="evaluation" name="timeline[evaluation]"></textarea>
+        <script>
+                CKEDITOR.replace( 'evaluation' );
+            </script>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="vernetzdrei">Großes Vernetzungstreffen</label>
+        <textarea class="form-control" type="text" id="vernetzdrei" name="timeline[vernetzdrei]"></textarea>
+        <script>
+                CKEDITOR.replace( 'vernetzdrei' );
+            </script>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="ergebnis">Ergebnissicherung & Dokumentation</label>
+        <textarea class="form-control" type="text" id="ergebnis" name="timeline[ergebnis]"></textarea>
+        <script>
+                CKEDITOR.replace( 'ergebnis' );
+            </script>
+      </div>
+      <div class="mb-3">
+        <button class="btn btn-success btn-mina">Speichern</button>
+      </div>
+    </form>
+    <a href="/">Zurück</a>
+  </div>
+</div>
+<!--  -->

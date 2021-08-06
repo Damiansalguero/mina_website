@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="/styles/partizip.css">
+<% layout("layouts/boilerplate") %>
+      <h1 class="text-center">Gallerie Bearbeiten</h1>
+      <div class="col-6 offset-3">
+        <form action="/partizipatives/gallerien/<%=ptg._id%>?_method=PUT" method="post" novalidate class="validated-form" enctype="multipart/form-data">
+          <div class="mb-3">
+            <label class="form-label" for="title">Überschrift</label>
+            <input class="form-control" type="text" id="title" name="ptg[title]" required value="<%=ptg.title%>">
+          </div>
+          <div class="mb-3">
+            <label for="formFile" class="form-label">Bilder</label>
+            <input class="form-control" id="image" type="file" name="image" multiple>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="description">Beschreibung</label>
+            <textarea class="form-control" type="text" id="description" name="ptg[description]" required><%=ptg.description%></textarea>
+            <script>
+                    CKEDITOR.replace( 'description' );
+                </script>
+          </div>
+          <div class="mb-3" id="thumbnail-box">
+            <% ptg.images.forEach(function(img, i) { %>
+              <img src="<%= img.thumbnails %>" class="thumbnail" alt="">
+              <div class="form-check-inline">
+                <!-- id here add index of the images -->
+                <!-- value here add the rght data of the foto -->
+                <input type="checkbox" id="image-<%=i%>" name="deleteImages[]" value="<%= img.filename %>">
+                <label for="image-<%=i%>">Löschen?</label>
+              </div>
+            <% }) %>
+          </div>
+          <div class="mb-3">
+            <button class="btn btn-aktuelles-blue">Speichern</button>
+          </div>
+        </form>
+        <a class="btn btn-primary btn-mina" href="/partizipatives/gallerien/<%=ptg._id%>">Zurück</a>
+      </div>

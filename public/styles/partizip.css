@@ -1,4 +1,5 @@
 /********** PARTIZIP STYLES ***********/
+
 .img-container-partizip {
   display: flex;
   justify-content: space-between;
@@ -29,13 +30,202 @@ video {
 }
 
 #header-part {
-  clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 1%, 100% 100%, 0 100%);
   height: auto;
   padding-top: 10vh;
   padding-bottom: 15vh;
-  margin-top: -10vh;
+  margin-top: -5vh;
 }
 #bg-partizip {
-  padding-top: 10vh;
+  padding-top: 11vh;
+  height: auto;
 }
+
+.video-box {
+  margin: 5vh 0;
+}
+
 /********** PARTIZIP STYLES ***********/
+.logo-part {
+  margin: 2vh 0;
+}
+.part-text {
+  color: #000;
+  width: 50%;
+  text-align: justify;
+  font-size: 18px;
+}
+.btn-aktuelles {
+  border-color: #0dcaf0;
+  color: #0dcaf0;
+  font-weight: bold;
+  margin-bottom: 5vh;
+}
+
+.btn-aktuelles:hover {
+  background-color: #0dcaf0;
+  border-color: #0dcaf0;
+  color: #fff;
+  font-weight: bold;
+}
+
+.btn-mina {
+  margin-bottom: 5vh;
+}
+
+#part-contact {
+  clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+  background-color: #db2a6f;
+  padding: 6vh 0 5vh 0;
+  height: auto;
+}
+
+#part-contact h1 {
+  margin: 5vh 0 10vh 0;
+}
+
+.img-container-partizip {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.gallery-partizip {
+  width: 70%;
+}
+
+.gallery-partizip h3,
+h4,
+p {
+  margin-left: 0;
+}
+
+.gallery-partizip h4,
+p {
+  font-weight: normal;
+}
+iframe {
+  margin: 5vh 0;
+  border: 5px solid #db2a6f;
+}
+video {
+  height: 400px;
+  width: auto;
+  margin-bottom: 7vh;
+}
+
+#header-part {
+  height: auto;
+  padding-top: 10vh;
+  padding-bottom: 15vh;
+  margin-top: -5vh;
+}
+#bg-partizip {
+  padding-top: 11vh;
+  height: auto;
+}
+
+.video-box {
+  margin: 5vh 0;
+}
+
+.gallery-box {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin-bottom: 5vh;
+}
+.gallery-ws {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.gallery-ws-link {
+  height: 200px;
+}
+
+.card-part {
+  width: 20%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  border: 3px solid #db2a6f;
+  border-radius: 0.25rem;
+  align-items: center;
+}
+.card-part-gallery {
+  width: 100%;
+}
+
+.gallery2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.gallery-img-card {
+  height: 120px;
+  margin: 5px;
+}
+
+.img-part-card {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  border: 3px solid #db2a6f;
+  margin-top: 2vh;
+}
+
+.card-title {
+  color: #72c5d5;
+  font-size: 24px;
+  margin: 0;
+}
+
+#part-gallery {
+  margin-top: -18vh;
+  padding-bottom: 15vh;
+}
+.form-check-inline {
+  display: block;
+}
+
+/* Flyer Styles */
+.card-flyer {
+  width: 20%;
+  margin: 0 auto;
+  text-align: center;
+  border: 2px solid #db2a6f;
+}
+#partflyer-how-title {
+  color: #db2a6f;
+  font-weight: bold;
+}
+/* Flyer Styles */
+@media screen and (min-width: 0) and (max-width: 575.98px) {
+  .part-text {
+    width: 85%;
+    text-align: justify;
+    font-size: 14px;
+  }
+  video {
+    height: auto;
+    width: 90%;
+  }
+  #part-contact h1 {
+    margin: 5vh 0 5vh 0;
+  }
+}
+@media screen and (min-width: 575.98px) and (max-width: 991.98px) {
+  #bg-partizip {
+    height: 500px;
+  }
+  video {
+    height: 350px;
+  }
+  #part-contact h1 {
+    margin: 5vh 0 5vh 0;
+  }
+}

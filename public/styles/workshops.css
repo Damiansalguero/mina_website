@@ -1,18 +1,76 @@
-/********** WS STYLES ***********/
+/********** WS PAGE STYLES ***********/
+
+#img-header-ws {
+  height: 550px;
+  padding-top: 5vh;
+}
 .ws-title {
   width: 50%;
+  line-height: 1.5;
 }
 #ws-subtitle {
   color: #72c5d5;
   font-weight: bold;
-  padding: 3vh 0;
+  padding: 6vh 0 3vh 0;
 }
 
 #ws-intro {
-  font-size: 18px;
+  width: 50%;
   text-align: justify;
-  padding: 20px 0;
+  font-size: 18px;
+  margin-bottom: 5vh;
 }
+
+#first-accordion,
+#second-accordion,
+#third-accordion {
+  width: 50%;
+}
+
+.strong-ws {
+  color: #db2a6f;
+  text-align: letter-spacing;
+}
+
+.accordion-button.collapsed {
+  text-align: left;
+}
+
+#third-accordion {
+  margin-bottom: 10vh;
+}
+
+.accordion-flyer a {
+  color: #db2a6f;
+  font-weight: bold;
+}
+
+.btn-aktuelles {
+  border-color: #0dcaf0;
+  color: #0dcaf0;
+  font-weight: bold;
+  margin-bottom: 5vh;
+}
+
+.btn-aktuelles:hover {
+  background-color: #0dcaf0;
+  border-color: #0dcaf0;
+  color: #fff;
+  font-weight: bold;
+}
+
+.btn-ws-flyer {
+  background-color: #db2a6f;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  z-index: 2;
+  margin: 2vh 0 1vh 0;
+  text-align: center;
+  width: 250px;
+  height: 60px;
+}
+
 .tabelle-block {
   display: flex;
   flex-direction: column;
@@ -21,8 +79,12 @@
   height: auto;
   padding-top: 10vh;
   padding-bottom: 17vh;
-  margin-top: -15vh;
+  margin-top: -10vh;
   background-color: #fff;
+}
+
+.extra-info {
+  font-weight: bold;
 }
 
 #table-ws {
@@ -30,17 +92,85 @@
   margin-bottom: 5vh;
   font-size: 18px;
 }
+
+#table-ws ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
 .table a {
-  color: #db2a6f;
+  color: #72c5d5;
   font-weight: bold;
   text-decoration: none;
+}
+
+.table a:hover {
+  text-decoration: underline;
 }
 
 .ws-active a {
   color: #9fb039;
 }
+
+.ausgebucht {
+  color: #db2a6f;
+  font-weight: bold;
+}
+
+.anmelden a {
+  color: #9fb039;
+  font-weight: bold;
+}
+
+.anmelden a:hover {
+  text-decoration: underline;
+}
+
+.gallery-box {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin-bottom: 5vh;
+}
+.gallery-ws {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.gallery-ws-link {
+  height: 200px;
+}
+
+.card-ws {
+  width: 20%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  border: 3px solid #db2a6f;
+  border-radius: 0.25rem;
+  align-items: center;
+}
+
+.img-ws-card {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  border: 3px solid #db2a6f;
+  margin-top: 2vh;
+}
+
+.card-title {
+  color: #72c5d5;
+  font-size: 24px;
+  margin: 0;
+}
+
 #ws-gallery {
   margin-top: -18vh;
+  padding: 10vh 0 20vh 0;
 }
 .img-container {
   display: flex;
@@ -49,19 +179,265 @@
   margin-bottom: 15vh;
 }
 
+.img-card {
+  height: 150px;
+}
+
 /* .gallery h3,
 .galery p {
   margin-left: 2vw;
 } */
 
-.gallery-img {
+.gallery-img,
+.gallery-img-2 {
   height: 200px;
+  margin: 10px;
 }
 .gallery-2 {
   width: 300px;
 }
 
+.modal-ws {
+  max-width: 650px;
+}
+
 #ws-contact {
   margin-top: -15vh;
 }
-/********** WS STYLES ***********/
+
+.btn-gallery {
+  border-color: #fff;
+  color: #fff;
+  font-weight: bold;
+  margin-top: 3vh;
+}
+
+.btn-gallery:hover {
+  background-color: #fff;
+  border-color: #fff;
+  color: #0dcaf0;
+  font-weight: bold;
+}
+
+.btn-workshop:hover {
+  border-color: #0dcaf0;
+  background-color: #fff;
+  color: #0dcaf0;
+  font-weight: bold;
+}
+
+.btn-workshop {
+  background-color: #0dcaf0;
+  border-color: #0dcaf0;
+  color: #fff;
+  font-weight: bold;
+}
+
+.img-container-ws {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#thumbnail-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#thumbnail-box img {
+  margin-bottom: 10px;
+}
+
+/********** WS PAGE STYLES ***********/
+
+/********** WS DV STYLES ***********/
+.card {
+  width: 50%;
+}
+.card-ov {
+  height: 150px;
+}
+
+.img-card {
+  height: 150px;
+}
+.card-ws-gallery {
+  width: 100%;
+}
+
+.btn-group {
+  align-self: flex-start;
+  margin-left: 25%;
+}
+.btn-group-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.btn-group-card form,
+a {
+  margin: 5px 0;
+}
+
+.btn-ws-dv {
+  margin: 5px 0;
+}
+
+.ws-dv-box,
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.btn-danger:hover {
+  border-color: #dc3545;
+  background-color: #fff;
+  color: #dc3545;
+  font-weight: bold;
+}
+
+.btn-danger {
+  border-color: #dc3545;
+  background-color: #dc3545;
+  color: #fff;
+  font-weight: bold;
+}
+
+ul li span,
+h5,
+.card-title,
+.description {
+  font-weight: bold;
+}
+
+.dv-title {
+  text-align: center;
+}
+.anmelde-link {
+  color: #db2a6f;
+  font-weight: bold;
+}
+
+.anmelde-link:hover {
+  color: #0dcaf0;
+}
+
+@media screen and (min-width: 0) and (max-width: 575.98px) {
+  .tabelle-block {
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+    margin-top: 0;
+  }
+  .ws-title {
+    width: 85%;
+    font-size: 28px;
+  }
+  #ws-intro {
+    min-width: 80%;
+    margin-bottom: 0;
+  }
+  #first-accordion,
+  #second-accordion,
+  #third-accordion {
+    width: 85%;
+  }
+  #table-ws {
+    font-size: 12px;
+  }
+  #ws-gallery {
+    margin-top: -10vh;
+    clip-path: polygon(0 1%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  .gallery-img-2 {
+    height: 180px;
+  }
+  .flyer-btn-group {
+    display: flex;
+    flex-direction: column;
+  }
+  #btn-flyer {
+    margin: 5px 0;
+  }
+  .card {
+    min-width: 85%;
+  }
+  h1 {
+    font-size: 24px;
+    margin: 5vh 0;
+    line-height: 1.75;
+  }
+  .btn-group,
+  .btn-mina {
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+  }
+}
+@media screen and (min-width: 575.99px) and (max-width: 991.98px) {
+  .tabelle-block {
+    clip-path: polygon(0 0, 100% 1%, 100% 100%, 0 100%);
+  }
+  #img-header-ws {
+    padding-top: 10vh;
+  }
+  .ws-title {
+    width: 80%;
+  }
+  h1 {
+    font-size: 32px;
+  }
+  .ws-text {
+    font-size: 20px;
+  }
+  #ws-intro {
+    min-width: 75%;
+    margin-bottom: 0;
+  }
+  #first-accordion,
+  #second-accordion,
+  #third-accordion {
+    width: 80%;
+  }
+  #table-ws {
+    width: 85%;
+  }
+  .card,
+  .gallery {
+    width: 80%;
+  }
+  .btn-group {
+    margin-left: 0;
+    align-self: center;
+  }
+  #ws-gallery {
+    margin-top: -10vh;
+  }
+  .gallery-block {
+    clip-path: polygon(0 1%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  .gallery-img-2 {
+    height: 150px;
+  }
+  .modal-dialog {
+    max-width: 650px;
+  }
+  .row {
+    margin-left: 0;
+  }
+  #third-accordion {
+    margin-bottom: 3vh;
+  }
+}
+
+@media screen and (min-width: 1199.98px) and (max-width: 1499.98px) {
+  #img-header-ws {
+    height: 600px;
+  }
+  #ws-intro,
+  #table-ws {
+    font-size: 20px;
+  }
+  #btn-flyer {
+    font-size: 14px;
+  }
+  .gallery-ws {
+    width: 85%;
+  }
+}

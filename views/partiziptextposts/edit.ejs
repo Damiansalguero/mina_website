@@ -1,0 +1,49 @@
+<link rel="stylesheet" href="/styles/forms.css">
+
+<% layout("layouts/boilerplate") %>
+<div class="row">
+  <h1 class="text-center"><span class="title-line line-pink">Haupttext Bearbeiten</span></h1>
+   <div id="form-partizip-edit" class="col-6 offset-3">
+    <form action="/partizipatives/<%=partizip._id%>?_method=PUT" method="post" novalidate class="validated-form" enctype="multipart/form-data">
+      <div class="mb-3">
+        <label class="form-label" for="titleone">Überschrift Block 1</label>
+        <input class="form-control" type="text" id="titleone" name="partizip[titleone]" required value="<%=partizip.titleone%>">
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="descriptionone">Text Block 1</label>
+        <textarea class="form-control" type="text" id="descriptionone" name="partizip[descriptionone]" required><%=partizip.descriptionone%></textarea>
+        <script type="text/javascript">
+          CKEDITOR.replace('descriptionone');
+        </script>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="titletwo">Überschrift Block 2</label>
+        <input class="form-control" type="text" id="titletwo" name="partizip[titletwo]"  value="<%=partizip.titletwo%>">
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="descriptiontwo">Text Block 2</label>
+        <textarea class="form-control" type="text" id="descriptiontwo" name="partizip[descriptiontwo]" ><%=partizip.descriptiontwo%></textarea>
+        <script type="text/javascript">
+          CKEDITOR.replace('descriptiontwo');
+        </script>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" >Hochgeladene Dokumente:</label>
+        <% partizip.images.forEach(function(img, i) { %>
+          <!-- thumbnail matches the key from the campground model -->
+          <p class="partizip-file"><i class="far fa-file"></i> <%=partizip.title%></p>
+          <div class="form-check-inline">
+            <!-- id here add index of the images -->
+            <!-- value here add the rght data of the foto -->
+            <input type="checkbox" id="image-<%=i%>" name="deleteImages[]" value="<%= img.filename %>">
+            <label for="image-<%=i%>">Datei Löschen?</label>
+          </div>
+        <% }) %>
+      </div>
+      <div class="mb-3">
+        <button class="btn btn-info">Aktuallisieren</button>
+      </div>
+    </form>
+    <a class="btn btn-primary btn-mina" href="/partizipatives-projekt">Zurück</a>
+  </div>
+</div>

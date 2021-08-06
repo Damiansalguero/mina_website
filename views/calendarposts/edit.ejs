@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="/styles/forms.css">
+<% layout("layouts/boilerplate") %>
+    <div class="row">
+      <h1 class="text-center">Kalendereintrag Bearbeiten</h1>
+      <div id="form-calendar-edit" class="col-6 offset-3">
+        <form action="/calendars/<%=calendar._id%>?_method=PUT" method="post" novalidate class="validated-form">
+          <div class="mb-3">
+            <label class="form-label" for="title">Überschrift</label>
+            <input class="form-control" type="text" id="title" name="calendar[title]" required value="<%=calendar.title%>">
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="date">Startdatum</label>
+            <input class="form-control datepicker" type="date" id="date" name="calendar[date]" required  value="<%=calendar.date%>">
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="datetwo">Enddatum (Optional)</label>
+            <input class="form-control datepicker" type="text" id="datetwo" name="calendar[datetwo]"   value="<%=calendar.datetwo%>">
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="link">Link (Optional)</label>
+            <input class="form-control" type="text" id="link" name="calendar[link]" value="<%=calendar.link%>">
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="description">Beschreibung</label>
+            <textarea class="form-control" type="text" id="description" name="calendar[description]" required><%=calendar.description%></textarea>
+            <script type="text/javascript">
+                    CKEDITOR.replace( 'description' );
+                </script>
+          </div>
+          <div class="mb-3">
+            <button class="btn btn-info">Aktuallisieren</button>
+          </div>
+        </form>
+        <a class="btn btn-primary btn-mina" href="/calendars/<%= calendar._id %>">Zurück</a>
+      </div>
+    </div>

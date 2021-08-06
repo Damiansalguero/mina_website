@@ -1,0 +1,27 @@
+.posts-box {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  height: 300px;
+  overflow-y: scroll;
+  margin-bottom: 5vh;
+}
+
+.posts-box::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  background-color: #db2a6f;
+  width: 50%;
+}
+
+.card .btn-primary {
+  background-color: #9fb039;
+  border-color: #fff;
+  font-weight: bold;
+}
+
+.card:nth-child(odd) {
+  background-color: #72c5d5;
+}

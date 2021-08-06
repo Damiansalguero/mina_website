@@ -10,28 +10,51 @@ const mongoose = require("mongoose");
 const ejsMate = require("ejs-mate");
 const session = require("express-session");
 const flash = require("connect-flash");
-const { dataSchema } = require("./schemas.js");
+const {
+  dataSchema,
+  testDataSchema,
+  timelineSchema,
+  flyerSchema,
+} = require("./schemas.js");
 const ExpressError = require("./utils/ExpressError");
 const bodyParser = require("body-parser");
 const methodOverride = require("method-override");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
-
+//"mongodb://localhost:27017/mina"
+//process.env.DB_URL ||
+// const dbUrl = process.env.DB_URL;
+const dbUrl = "mongodb://localhost:27017/mina";
+const MongoStore = require("connect-mongo")(session);
 //////////////// MODEL IMPORT //////////////////
 const User = require("./models/user");
-const Post = require("./models/post");
 
 //////////////// ROUTES IMPORT ///////////////////
-const postRoutes = require("./routes/posts");
+const aktuellesRoutes = require("./routes/aktuelles");
+const calendarRoutes = require("./routes/calendars");
+const aboutRoutes = require("./routes/abouts");
+const wsnewsRoutes = require("./routes/wsaktuelles");
+const workshopRoutes = require("./routes/workshops");
+const wsregisterRoutes = require("./routes/wsregistrations");
+const partizipRoutes = require("./routes/partizips");
+const prozessRoutes = require("./routes/processes");
+const timelineRoutes = require("./routes/timelines");
+const landingflyerRoutes = require("./routes/landingflyers");
 const userRoutes = require("./routes/users");
 const showRoutes = require("./routes/shows");
+const bibRoutes = require("./routes/bibs");
+const testRoutes = require("./routes/tests");
+const postRoutes = require("./routes/posts");
+const partflyerRoutes = require("./routes/partizipflyers");
 
 //////////////// MONGO DB SETUP ///////////////////
-mongoose.connect("mongodb://localhost:27017/mina", {
+//Online DB dbUrl
+//
+mongoose.connect(dbUrl, {
   useNewUrlParser: true,
   useCreateIndex: true,
   useUnifiedTopology: true,
-  useFindAndModify: false
+  useFindAndModify: false,
 });
 
 const db = mongoose.connection;
@@ -51,15 +74,28 @@ app.use(methodOverride("_method"));
 app.use(express.static(path.join(__dirname, "public")));
 
 //////////////// USE SESSION ///////////////////
+const secret = process.env.SECRET || "newSecret";
+const store = new MongoStore({
+  url: dbUrl,
+  secret,
+  touchAfter: 24 * 60 * 60,
+});
+
+store.on("error", function (e) {
+  console.log("SESSION STROE ERROR", e);
+});
+
 const sessionConfig = {
-  secret: "newSecret",
+  store,
+  name: "session",
+  secret,
   resave: false,
   saveUninitialized: true,
   cookie: {
     httpOnly: true,
     expires: Date.now() + 1000 * 60 * 60 * 24 * 7,
-    maxAge: 1000 * 60 * 60 * 24 * 7
-  }
+    maxAge: 1000 * 60 * 60 * 24 * 7,
+  },
 };
 
 app.use(session(sessionConfig));
@@ -84,36 +120,30 @@ app.use((req, res, next) => {
 });
 
 //////////////// USE  ROUTEHANDLERS ///////////////////
-app.use("/", userRoutes);
+app.use("/", showRoutes);
+app.use("/admin", userRoutes);
+app.use("/aktuelles", aktuellesRoutes);
+app.use("/calendars", calendarRoutes);
+app.use("/ueberehrenamt", aboutRoutes);
+app.use("/workshop", workshopRoutes);
+app.use("/anmeldung", wsregisterRoutes);
+app.use("/ueberworkshops", wsnewsRoutes);
+app.use("/partizipatives", partizipRoutes);
+app.use("/prozesse", prozessRoutes);
+app.use("/zeitstrahl", timelineRoutes);
+app.use("/landing-flyers", landingflyerRoutes);
+app.use("/partizip-flyers", partflyerRoutes);
+app.use("/bibliothek", bibRoutes);
 app.use("/posts", postRoutes);
-app.use("/mina", showRoutes);
+app.use("/test", testRoutes);
 
 ///////////////////////////////////////////////////////////////////////////////
 /////////////////////////////// ROUTES ////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
 
-app.get("/test", (req, res) => {
-  res.render("test");
-});
-// app.get("/landing", function(req, res) {
-//   res.render("landing");
+// app.all("*", (req, res, next) => {
+//   next(new ExpressError("Seite nicht gefunden", 404));
 // });
-// app.get("/workshops", function(req, res) {
-//   res.render("workshops");
-// });
-//
-// app.get("/prozess", function(req, res) {
-//   res.render("prozess");
-// });
-// app.get("/partizip", function(req, res) {
-//   res.render("partizip");
-// });
-// app.get("/kontakt", function(req, res) {
-//   res.render("kontakt");
-// });
-app.all("*", (req, res, next) => {
-  next(new ExpressError("Seite nicht gefunden", 404));
-});
 
 ////////////////// ERROR HANDLER /////////////////////////
 app.use((err, req, res, next) => {
@@ -123,9 +153,11 @@ app.use((err, req, res, next) => {
   }
 
   res.status(statusCode).render("error", { err });
+  console.log("ERROR-MESSAGE !!!!!!", err);
 });
 
 //////////////// SERVER ROUTE ///////////////////
-app.listen(8080, () => {
-  console.log("LISTENING ON PORT 8080");
+const port = process.env.PORT || 1024;
+app.listen(port, () => {
+  console.log("LISTENING ON PORT 1024");
 });

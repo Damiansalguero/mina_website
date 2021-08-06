@@ -1,0 +1,148 @@
+#datenschutz-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.daten-box {
+  margin-top: -5vh;
+}
+
+.datenschutz-text .ws-text {
+  font-size: 18px;
+  text-align: justify;
+}
+
+.datenschutz-text a {
+  color: #72c5d5;
+}
+
+.datenschutz-text h3 {
+  font-weight: bold;
+}
+.datenschutz-text a:hover {
+  color: #db2a6f;
+}
+
+#h1-datenschutz {
+  padding-bottom: 0;
+}
+
+.first-datenschutz {
+  margin-top: 10vh;
+  margin-bottom: 5vh;
+}
+
+.next-datenschutz {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+#last {
+  margin-bottom: 10vh;
+}
+
+h3,
+h4 {
+  align-self: flex-start;
+  margin-left: 25%;
+  width: 50%;
+}
+
+h4 {
+  font-weight: bold;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+}
+
+#contact-datenschutz {
+  padding: 0;
+  margin: 2vh 0;
+  list-style-type: none;
+}
+
+.rechte {
+  width: 50%;
+  line-height: 1.5;
+}
+.rechte,
+#contact-datenschutz {
+  list-style-type: none !important;
+}
+
+.rechte li::before,
+#contact-datenschutz li::before {
+  content: "\2022";
+  color: #db2a6f;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.rechte {
+  font-weight: bold;
+}
+
+@media screen and (min-width: 0) and (max-width: 575.98px) {
+  .daten-box {
+    margin-top: 0;
+  }
+  .ws-text {
+    width: 80% !important;
+    font-size: 14px !important;
+  }
+  .rechte {
+    width: 80%;
+  }
+  h3,
+  h4 {
+    align-self: flex-start;
+    margin-left: 10%;
+    width: 80%;
+  }
+  h3 {
+    font-size: 22px;
+  }
+  .datenschutz-text h3 {
+    text-align: left !important;
+  }
+  h4 {
+    font-size: 18px;
+  }
+  #contact-datenschutz li {
+    list-style-type: none !important;
+  }
+}
+
+@media screen and (min-width: 575.98px) and (max-width: 991.98px) {
+  .daten-box {
+    margin-top: 0;
+  }
+  .ws-text {
+    width: 85% !important;
+  }
+
+  h3,
+  h4 {
+    width: 80%;
+  }
+  h3 {
+    margin-left: 0;
+    align-self: center;
+  }
+  h4,
+  h3 {
+    align-self: flex-start;
+    margin-left: 8%;
+  }
+  .datenschutz-text h3 {
+    text-align: left !important;
+  }
+  .rechte {
+    width: 80%;
+  }
+  #contact-datenschutz li {
+    list-style-type: none !important;
+  }
+}

@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="/styles/aktuelles.css">
+<% layout("layouts/boilerplate") %>
+
+<div class="card">
+  <div class="card-body">
+    <h3 class="card-title"><%= aktuell.title %></h3>
+    <p class="card-text"><%- aktuell.description %></p>
+  </div>
+</div>
+<% if (currentUser) {%>
+  <div class="btn-edit">
+    <a class="card-link btn btn-info" href="/aktuelles/<%=aktuell._id%>/edit">Bearbeiten</a>
+    <a class="btn btn-primary btn-mina" href="/">Zurück</a>
+  </div>
+  <% } else { %>
+    <a class="btn btn-primary btn-mina" href="/">Zurück</a>
+    <% } %>

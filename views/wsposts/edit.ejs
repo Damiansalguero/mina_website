@@ -1,0 +1,45 @@
+<% layout("layouts/boilerplate") %>
+    <div class="row">
+    <h1 class=""><span class="title-line line-pink">Workshop Bearbeiten</span></h1>
+      <div class="col-6 offset-3">
+        <form action="/workshop/<%=workshop._id%>?_method=PUT" method="post" novalidate class="validated-form">
+          <div class="mb-3">
+            <label class="form-label" for="date">Datum</label>
+            <input class="form-control" type="text" id="date" name="workshop[date]" required value="<%=workshop.date%>">
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="title">Überschrift</label>
+            <input class="form-control" type="text" id="title" name="workshop[title]" required value="<%=workshop.title%>">
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="type">Seminartyp</label>
+            <select class="form-control" id="type"  name="workshop[type]" value="<%=workshop.type%>">
+              <option value="Online">Online</option>
+              <option value="Präsenzseminar">Präsenzseminar</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="location">Ort</label>
+            <input class="form-control" type="text" id="location" name="workshop[location]"required value="<%=workshop.location%>">
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="capacity">Verfügbarkeit</label>
+            <select class="form-control" id="capacity" name="workshop[capacity]" value="<%=workshop.capacity%>">>
+              <option value="anmelden">anmelden</option>
+              <option value="ausgebucht">ausgebucht</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="description">Beshreibung</label>
+            <textarea class="form-control" type="text" id="description" name="workshop[description]" required><%=workshop.description%></textarea>
+            <script type="text/javascript">
+                    CKEDITOR.replace( 'description' );
+                </script>
+          </div>
+          <div class="mb-3">
+            <button class="btn btn-info">Aktuallisieren</button>
+          </div>
+        </form>
+        <a class="btn btn-primary btn-mina" href="/">Zurück</a>
+      </div>
+    </div>

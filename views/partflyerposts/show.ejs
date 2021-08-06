@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="/styles/flyer.css">
+<link rel="stylesheet" href="/styles/partizip.css">
+<% layout("layouts/boilerplate") %>
+<h1 class="">Flyer wirklich Löschen ?</h1>
+<div class="card card-flyer">
+  <div class="card-body">
+    <h5 class="card-title" id="partflyer-how-title"><%= partflyer.title %></h5>
+    <p class="card-text"><%- partflyer.description %></p>
+  </div>
+</div>
+  <div class="btn-group">
+    <form class="d-inline" action="/partizip-flyers/<%=partflyer._id%>?_method=DELETE" method="post">
+      <button id="btn-delete" class="btn btn-danger">Löschen</button>
+    </form>
+    <div class="">
+      <a id="btn-back" class="btn btn-primary btn-mina" href="/partizip-flyers/<%=partflyer._id%>/edit">Zurück</a>
+    </div>
+</div>

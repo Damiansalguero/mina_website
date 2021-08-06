@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="/styles/test.css">
+<% layout("layouts/boilerplate") %>
+<h1>Alle Tests</h1>
+
+<% for(let test of tests) {%>
+  <div class="pdf">
+    <h3><%=test.title%></h3>
+    <% test.images.forEach((img, i) => { %>
+      <a target="_blank" class="btn btn-mina attach" href="<%=img.attach%>" download> Download
+    </a>
+    <% }) %>
+  </div>
+<% }%>

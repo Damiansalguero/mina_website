@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="/styles/forms.css">
+<% layout("layouts/boilerplate") %>
+<div class="row">
+  <h1 class="text-center"><span class="title-line line-pink">Über Sektion Bearbeiten</span></h1>
+   <div id="form-about-edit" class="col-6 offset-3">
+    <form action="/ueberehrenamt/<%=about._id%>?_method=PUT" method="post" novalidate class="validated-form">
+      <div class="mb-3">
+        <label class="form-label" for="title">Überschrift 1</label>
+        <input class="form-control" type="text" id="title1" name="about[title]" required value="<%=about.title%>">
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="description">Beshreibung 2</label>
+        <textarea class="form-control" type="text" id="description" name="about[description]" required><%=about.description%></textarea>
+        <script type="text/javascript">
+          CKEDITOR.replace('description');
+        </script>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="secondtitle">Überschrift 2</label>
+        <input class="form-control" type="text" id="secondtitle" name="about[secondtitle]" required value="<%=about.secondtitle%>">
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="seconddescription">Beshreibung 2</label>
+        <textarea class="form-control" type="text" id="seconddescription" name="about[seconddescription]" required><%=about.seconddescription%></textarea>
+        <script type="text/javascript">
+          CKEDITOR.replace('seconddescription');
+        </script>
+      </div>
+      <div class="mb-3">
+        <button class="btn btn-info">Aktuallisieren</button>
+      </div>
+    </form>
+    <a class="btn btn-primary btn-mina" href="/">Zurück</a>
+  </div>
+</div>

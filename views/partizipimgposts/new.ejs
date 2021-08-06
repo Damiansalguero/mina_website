@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="/styles/partizip.css">
+<% layout("layouts/boilerplate") %>
+
+  <h1 class=""><span class="title-line line-pink">Gallerie Hinzufügen</span></h1>
+  <div class="col-6 offset-3">
+    <form action="/partizipatives/gallerien" method="post" novalidate class="validated-form" enctype="multipart/form-data">
+      <div class="mb-3">
+        <label class="form-label" for="title">Überschrift</label>
+        <input class="form-control" type="text" id="title" name="ptg[title]" required>
+      </div>
+      <div class="mb-3">
+        <label for="formFile" class="form-label">Bilder</label>
+        <input class="form-control" id="image" type="file" name="image" multiple>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="description">Beschreibung</label>
+        <textarea class="form-control" type="text" id="description" name="ptg[description]" required></textarea>
+        <script>
+                CKEDITOR.replace( 'description' );
+            </script>
+      </div>
+      <div class="mb-3">
+        <button class="btn btn-aktuelles-blue">Speichern</button>
+      </div>
+    </form>
+  <a class="btn btn-primary btn-mina" href="/workshops">Zurück</a>
+  </div>

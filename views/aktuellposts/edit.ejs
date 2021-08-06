@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="/styles/forms.css">
+<% layout("layouts/boilerplate") %>
+    <div class="row">
+      <h1 class=""><span class="title-line line-pink">Aktuelles Bearbeiten</span></h1>
+      <div id="form-aktuell-edit" class="col-6 offset-3">
+        <form action="/aktuelles/<%=aktuell._id%>?_method=PUT" method="post" novalidate class="validated-form" enctype="multipart/form-data">
+          <div class="mb-3">
+            <label class="form-label" for="title">Überschrift</label>
+            <input class="form-control" type="text" id="title" name="aktuell[title]" required value="<%=aktuell.title%>">
+          </div>
+          <div class="mb-3">
+            <label for="formFile" class="form-label">Bilder</label>
+            <input class="form-control" id="image" type="file" name="image" multiple>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="link">Link (Optional)</label>
+            <input class="form-control" type="text" id="link" name="aktuell[link]" value="<%=aktuell.link%>">
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="description">Beshreibung</label>
+            <textarea class="form-control" type="text" id="description" name="aktuell[description]" required><%=aktuell.description%></textarea>
+            <script type="text/javascript">
+                    CKEDITOR.replace( 'description' );
+                </script>
+          </div>
+          <div class="mb-3">
+            <% aktuell.images.forEach(function(img, i) { %>
+              <!-- thumbnail matches the key from the campground model -->
+              <img src="<%= img.thumbnail %>" class="img-thumbnail" alt="">
+              <div class="form-check-inline">
+                <!-- id here add index of the images -->
+                <!-- value here add the rght data of the foto -->
+                <input type="checkbox" id="image-<%=i%>" name="deleteImages[]" value="<%= img.filename %>">
+                <label for="image-<%=i%>">Löschen ?</label>
+              </div>
+            <% }) %>
+          </div>
+          <div class="mb-3">
+            <button class="btn btn-info">Aktuallisieren</button>
+          </div>
+        </form>
+        <a class="btn btn-primary btn-mina" href="/">Zurück</a>
+      </div>
+    </div>

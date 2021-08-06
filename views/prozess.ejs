@@ -1,82 +1,235 @@
 <link rel="stylesheet" href="/styles/prozess.css">
 <% layout("layouts/boilerplate") %>
 <!-- NAV + HEADER -->
-<main>
+ <main>
   <div class="container-fluid">
-  <div class="header-bg">
-    <img src="/img/gesamt/Projekt/bg-prozess.png" class="img-fluid cover-header">
-  </div>
-  <!-- TABLE BLOCK -->
-  <div class="block aktuelles" id="block-prozess">
-    <img class="logo" src="/img/gesamt/Logos/icon_prozess.png" alt="">
-    <h1 class=""><span class="title-line">Workshops Flucht Migration Behinderung</span></h1>
-    <p class="ws-text">Als Mitgliedsorganisation des Bundesverbandes für köper- und mehrfachbehinderte Menschen (bvkm) bietet MINA anderen Mitgliedsorganisationen eine Prozessbegleitung an. Gemeinsam erarbeiten wir konkrete Lösungswege, um Menschen mit Migrations- und/ oder Fluchterfahrung und einer Behinderung wirksam zu erreichen und zu begleiten.
-    </p>
+    <div class="header-bg">
+      <img id="header-img" src="/img/gesamt/Projekt/Prozess2.jpg" class="img-fluid cover-header">
+    </div>
+    <!-- TABLE BLOCK -->
+    <div class="block aktuelles" id="block-prozess">
+      <img class="logo" src="/img/gesamt/Logos/icon_prozess.png" alt="">
+      <h1 class=""><span class="title-line">Prozessbegleitung</span></h1>
+      <p class="ws-text" id="intro-text">Als Mitgliedsorganisation des Bundesverbandes für köper- und mehrfachbehinderte Menschen (bvkm) bietet MINA anderen Mitgliedsorganisationen eine Prozessbegleitung an. Gemeinsam erarbeiten wir konkrete
+        Lösungswege, um Menschen
+        mit Migrations- und/ oder Fluchterfahrung und einer Behinderung wirksam zu erreichen und zu begleiten.
+      </p>
 
-    <p class="ws-text">FFolgende Organisationen wurden für eine Kooperation und enge Zusammenarbeit im Rahmen der Prozessbegleitung ausgewählt:</p>
-    <ul class="ws-text prozess-list">
-      <li><a href="https://fed-leipzig.de/de/" target="_blank">Elterninitiative FED Leipzig e. V.</a> </li>
-      <li><a href="https://gfi-hannover-stolzenau.de/kontakt/" target="_blank">GfI – Gesellschaft für Integration mbH Vkm Hamm e. V.</a></li>
-      <li><a href="https://www.vkm-hamm.de/" target="_blank">Vkm Hamm e.V.</a></li>
-    </ul>
-    <p class="ws-text">Wir freuen uns auf eine spannende Zeit!</p>
-    <a href="/downloads/flyer-prozess.pdf" class="btn" id="btn-flyer" target="_blank">Flyer Prozessbegleitung</a>
-  </div>
+      <p class="ws-text">Folgende Organisationen wurden für eine Kooperation und enge Zusammenarbeit im Rahmen der Prozessbegleitung ausgewählt:</p>
+      <ul class="ws-text prozess-list" id="orgas-list">
+        <li><a class="orgas" href="https://fed-leipzig.de/de/" target="_blank">Elterninitiative FED Leipzig e. V.</a> </li>
+        <li><a class="orgas" href="https://gfi-hannover-stolzenau.de/kontakt/" target="_blank">GfI – Gesellschaft für Integration mbH</a></li>
+        <li><a class="orgas" href="https://www.vkm-hamm.de/" target="_blank">Vkm Hamm e.V.</a></li>
+      </ul>
+      <p class="ws-text">Wir freuen uns auf eine spannende Zeit!</p>
+      <a href="/downloads/flyer-prozess.pdf" class="btn" id="btn-flyer" target="_blank">Flyer Prozessbegleitung</a>
+    </div>
 
-<!------------------- ZEITSTRAHL ----------------->
-  <div class="time-box">
-    <h1 class="white"><span class="title-line line-green">Über Ehrenamt in Vielfalt</span></h1>
+    <!------------------- ZEITSTRAHL ----------------->
+    <div class="timeline-block">
+      <h1 class="white"><span class="title-line line-green">Über die Prozessbegleitung</span></h1>
+      <div class="container">
+        <div id="timeline">
+          <div class="timeline-item">
+            <div class="timeline-icon">
+            </div>
+            <div class="timeline-content">
+              <h2>März - Juni 2020</h2>
 
-    <img src="/img/gesamt/Zeitstrahl/Zeitstrahl.png" alt="">
-  </div>
-
-
-  <!-- IMAGE BLOCK -->
-  <div class="block blue gallery-block" id="ws-gallery">
-    <h1 class="white"><span class="title-line line-blue">Bildgalerie</span></h1>
-    <!-- Gallerie 1 -->
-    <div class="gallery">
-      <h3>Prozessbegleitung FED Leipzig e.V.</h3>
-      <div class="img-container-prozess">
-        <a data-bs-toggle="modal" data-bs-target="#exampleModal"><img class="gallery-img" src="/img/gesamt/Projekt/PRZ/01_PRZ_LZ.jpg" alt=""></a>
-        <a data-bs-toggle="modal" data-bs-target="#exampleModal"><img class="gallery-img" src="/img/gesamt/Projekt/PRZ/03_PRZ_LZ.jpg" alt=""></a>
-        <a data-bs-toggle="modal" data-bs-target="#exampleModal"><img class="gallery-img" src="/img/gesamt/Projekt/PRZ/02_PRZ_LZ.jpg" alt=""></a>
+              <a href="#" data-bs-toggle="modal" data-bs-target="#timeline-modal-1">Bewerbungsphase</a>
+              <ul class="prozess-list">
+                <li> Anmelde- & Auswahlverfahren</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-icon">
+            </div>
+            <div class="timeline-content right">
+              <h2>Juli</h2>
+              <a href="#" data-bs-toggle="modal" data-bs-target="#timeline-modal-2">Kennenlernphase</a>
+              <ul class="prozess-list">
+                <li>Kennenlernen & Austausch; Bildung einer Arbeitsgruppe</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-icon">
+            </div>
+            <div class="timeline-content">
+              <h2>ab September</h2>
+              <a href="#" data-bs-toggle="modal" data-bs-target="#timeline-modal-3">Bedarfsanalyse</a>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-icon">
+            </div>
+            <div class="timeline-content right">
+              <h2>Januar - Februar 2021</h2>
+              <a href="#" data-bs-toggle="modal" data-bs-target="#timeline-modal-4">Standpunkt definieren</a>
+              <ul class="prozess-list">
+                <li>Konkretisierung der Bedarfe zur Ideenentwicklung
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-icon">
+            </div>
+            <div class="timeline-content">
+              <h2>März</h2>
+              <a class="vernetzung" href="#" data-bs-toggle="modal" data-bs-target="#timeline-modal-5">Vernetzungstreffen</a>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-icon">
+            </div>
+            <div class="timeline-content right">
+              <h2>April</h2>
+              <p class="phase-p">
+                Partizipations- & Gestaltungsphase
+              </p>
+              <ul class="prozess-list">
+                <li><a href="#" data-bs-toggle="modal" data-bs-target="#timeline-modal-6">Ideen- & Lösungsentwicklung</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-icon">
+            </div>
+            <div class="timeline-content">
+              <h2>Mai</h2>
+              <a class="vernetzung" href="#" data-bs-toggle="modal" data-bs-target="#timeline-modal-7">Vernetzungstreffen</a>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-icon">
+            </div>
+            <div class="timeline-content right">
+              <h2>Mai - Juni</h2>
+              <p class="phase-p">
+                Partizipations- & Gestaltungsphase
+              </p>
+              <ul class="prozess-list">
+                <li>
+                  <a href="#" data-bs-toggle="modal" data-bs-target="#timeline-modal-8">Konzipierung, Planung & Testen</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-icon">
+            </div>
+            <div class="timeline-content">
+              <h2>Juni – September</h2>
+              <p class="phase-p">
+                Transferphase
+              </p>
+              <ul class="prozess-list">
+                <li>
+                  <a href="#" data-bs-toggle="modal" data-bs-target="#timeline-modal-9">Durchführung der Maßnahmen</a>
+                </li>
+                <li>
+                  <a href="#" data-bs-toggle="modal" data-bs-target="#timeline-modal-10">Evaluation & Reflektion</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-icon">
+            </div>
+            <div class="timeline-content right">
+              <h2>Oktober</h2>
+              <a class="vernetzung" href="#" data-bs-toggle="modal" data-bs-target="#timeline-modal-11">Großes Vernetzungstreffen</a>
+              <ul>
+                <li>in Berlin</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-icon">
+            </div>
+            <div class="timeline-content">
+              <h2>November - Dezember</h2>
+              <p class="phase-p">
+                Transferphase
+              </p>
+              <ul class="prozess-list">
+                <li><a href="#" data-bs-toggle="modal" data-bs-target="#timeline-modal-12">Ergebnissicherung & Dokumentation</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <!-- Gallerie 2 -->
-    <div class="gallery">
-      <h3>Prozessbegleitung GfI</h3>
-      <div class="img-container-prozess">
-        <a data-bs-toggle="modal" data-bs-target="#exampleModal2"><img class="gallery-img" src="/img/gesamt/Projekt/PRZ/01_PRZ_HAN.jpg" alt=""></a>
-        <a data-bs-toggle="modal" data-bs-target="#exampleModal"><img class="gallery-img" src="/img/gesamt/Projekt/PRZ/02_PRZ_HAN.jpg" alt=""></a>
-        <a data-bs-toggle="modal" data-bs-target="#exampleModal"><img class="gallery-img" src="/img/gesamt/Projekt/PRZ/03_PRZ_HAN.jpg" alt=""></a>
-        <a data-bs-toggle="modal" data-bs-target="#exampleModal"><img class="gallery-img" src="/img/gesamt/Projekt/PRZ/04_PRZ_HAN.jpg" alt=""></a>
-        <a data-bs-toggle="modal" data-bs-target="#exampleModal"><img class="gallery-img" src="/img/gesamt/Projekt/PRZ/05_PRZ_HAN.jpg" alt=""></a>
+
+    <!-- IMAGE BLOCK -->
+    <% if(przgs) {%>
+    <div class="block blue gallery-block" id="prz-gallery">
+      <h1 class="white"><span class="title-line line-blue">Bildergalerien</span></h1>
+      <% for(let przg of przgs) {%>
+          <!-- Test Gallery -->
+          <div class="gallery-container">
+            <h3 class="gallerie-titel"><%= przg.title %></h3>
+          <div class="gallery2">
+          <% przg.images.forEach((img, i) => { %>
+                <img src="<%= img.thumbnail %>" class="d-block gallery-img-card"  alt="">
+          <% }) %>
+          </div>
+          <a class="gallerie-link" href="/prozesse/gallerien/<%= przg._id %>">Gallerie ansehen</a>
+        </div>
+      <% }%>
+      <% if(currentUser) {%>
+        <a class="card-link btn btn-mina m-auto" href="/prozesse/gallerien/neu">Gallerie Hinzufügen</a>
+      <% }%>
       </div>
-    </div>
-    <!-- Gallerie 3 -->
-    <div class="gallery">
-      <h3>Prozessbegleitung Vkm Hamm e.V.</h3>
-      <div class="img-container-prozess">
-        <a data-bs-toggle="modal" data-bs-target="#exampleModal3"><img class="gallery-img" src="/img/gesamt/Projekt/PRZ/01_PRZ_HM.jpg" alt=""></a>
-        <a data-bs-toggle="modal" data-bs-target="#exampleModal"><img class="gallery-img" src="/img/gesamt/Projekt/PRZ/02_PRZ_HM.jpg" alt=""></a>
-        <a data-bs-toggle="modal" data-bs-target="#exampleModal"><img class="gallery-img" src="/img/gesamt/Projekt/PRZ/03_PRZ_HM.jpg" alt=""></a>
-        <a data-bs-toggle="modal" data-bs-target="#exampleModal"><img class="gallery-img" src="/img/gesamt/Projekt/PRZ/04_PRZ_HM.jpg" alt=""></a>
+    <% }%>
+    <!-- IMAGE BLOCK -->
+    <!-- <div class="block blue gallery-block" id="ws-gallery">
+      <h1 class="white"><span class="title-line line-blue">Bildergalerie</span></h1> -->
+      <!-- Gallerie 1 -->
+      <!-- <div class="gallery">
+        <h3>Prozessbegleitung FED Leipzig e.V.</h3>
+        <div class="img-container-prozess">
+          <a data-bs-toggle="modal" data-bs-target="#exampleModal"><img class="gallery-img" src="/img/gesamt/Projekt/PRZ/01_PRZ_LZ.jpg" alt=""></a>
+          <a data-bs-toggle="modal" data-bs-target="#exampleModal"><img class="gallery-img" src="/img/gesamt/Projekt/PRZ/03_PRZ_LZ.jpg" alt=""></a>
+          <a data-bs-toggle="modal" data-bs-target="#exampleModal"><img class="gallery-img" src="/img/gesamt/Projekt/PRZ/02_PRZ_LZ.jpg" alt=""></a>
+        </div>
+      </div> -->
+      <!-- Gallerie 2 -->
+      <!-- <div class="gallery">
+        <h3>Prozessbegleitung GfI Hannover</h3>
+        <div class="img-container-prozess">
+          <a data-bs-toggle="modal" data-bs-target="#exampleModal2"><img class="gallery-img" src="/img/gesamt/Projekt/PRZ/01_PRZ_HAN.jpg" alt=""></a>
+          <a data-bs-toggle="modal" data-bs-target="#exampleModal2"><img class="gallery-img" src="/img/gesamt/Projekt/PRZ/02_PRZ_HAN.jpg" alt=""></a>
+          <a data-bs-toggle="modal" data-bs-target="#exampleModal2"><img class="gallery-img" src="/img/gesamt/Projekt/PRZ/03_PRZ_HAN.jpg" alt=""></a>
+          <a data-bs-toggle="modal" data-bs-target="#exampleModal2"><img class="gallery-img" src="/img/gesamt/Projekt/PRZ/04_PRZ_HAN.jpg" alt=""></a>
+          <a data-bs-toggle="modal" data-bs-target="#exampleModal2"><img class="gallery-img" src="/img/gesamt/Projekt/PRZ/05_PRZ_HAN.jpg" alt=""></a>
+        </div>
+      </div> -->
+      <!-- Gallerie 3 -->
+      <!-- <div class="gallery">
+        <h3>Prozessbegleitung Vkm Hamm e.V.</h3>
+        <div class="img-container-prozess">
+          <a data-bs-toggle="modal" data-bs-target="#exampleModal3"><img class="gallery-img" src="/img/gesamt/Projekt/PRZ/01_PRZ_HM.jpg" alt=""></a>
+          <a data-bs-toggle="modal" data-bs-target="#exampleModal3"><img class="gallery-img" src="/img/gesamt/Projekt/PRZ/02_PRZ_HM.jpg" alt=""></a>
+          <a data-bs-toggle="modal" data-bs-target="#exampleModal3"><img class="gallery-img" src="/img/gesamt/Projekt/PRZ/03_PRZ_HM.jpg" alt=""></a>
+          <a data-bs-toggle="modal" data-bs-target="#exampleModal3"><img class="gallery-img" src="/img/gesamt/Projekt/PRZ/04_PRZ_HM.jpg" alt=""></a>
+        </div>
       </div>
-    </div>
-  </div>
-  <!-- Kontakt -->
-  <div class="container-fluid contact-box" id="prozess-contact">
-    <h1 class="white"><span class="title-line">Ansprechpartner</span></h1>
-    <div class="row">
-        <div class="worker col">
+    </div> -->
+    <!-- Kontakt -->
+    <div class="container-fluid contact-box" id="prozess-contact">
+      <h1 class="white"><span class="title-line">Ansprechpartner</span></h1>
+      <div class="row">
+        <div class="worker col" id="ivan">
           <img class="contact-img" src="/img/gesamt/Mitarbeiter/03_Ivan.jpg" alt="">
           <div class="worker-info">
             <ul>
-              <li class="worker-title">Projektbetreuung</li>
+              <li class="worker-title">Prozessbegleitung</li>
               <li>Ivan Martinez</li>
-              <li>0176 47 68 38 16</li>
-              <li>030 62 93 40 31</li>
+              <li>030 – 62 93 40 31</li>
+              <li>0176 – 47 68 38 16</li>
               <li><a href="mailto:i.martinez@mina-berlin.de">i.martinez@mina-berlin.de</a> </li>
             </ul>
           </div>
@@ -130,7 +283,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+          <div id="carouselExampleControls2" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <img src="/img/gesamt/Projekt/PRZ/01_PRZ_HAN.jpg" class="d-block w-100" alt="...">
@@ -148,11 +301,11 @@
                 <img src="/img/gesamt/Projekt/PRZ/05_PRZ_HAN.jpg" class="d-block w-100" alt="...">
               </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+            <a class="carousel-control-prev" href="#carouselExampleControls2" role="button" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
             </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+            <a class="carousel-control-next" href="#carouselExampleControls2" role="button" data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </a>
@@ -173,7 +326,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+          <div id="carouselExampleControls3" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <img src="/img/gesamt/Projekt/PRZ/01_PRZ_HM.jpg" class="d-block w-100" alt="...">
@@ -191,17 +344,257 @@
                 <img src="/img/gesamt/Projekt/PRZ/05_PRZ_HAN.jpg" class="d-block w-100" alt="...">
               </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+            <a class="carousel-control-prev" href="#carouselExampleControls3" role="button" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
             </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+            <a class="carousel-control-next" href="#carouselExampleControls3" role="button" data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </a>
           </div>
         </div>
         <div class="modal-footer">
+          <button type="button" class="btn btn-secondary btn-mina" data-bs-dismiss="modal">Schließen</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- MODAL 1 Timeline -->
+  <div class="modal fade" id="timeline-modal-1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable ">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Bewerbungsphase</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <%- timeline.bewerbung %>
+        </div>
+        <div class="modal-footer">
+            <% if(currentUser) {%>
+            <a href="/zeitstrahl/<%=timeline._id%>/edit" class="btn btn-mina">Texte Bearbeiten</a>
+            <% } %>
+          <button type="button" class="btn btn-secondary btn-mina" data-bs-dismiss="modal">Schließen</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- MODAL 2 Timeline -->
+  <div class="modal fade" id="timeline-modal-2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Kennenlernphase</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <%- timeline.kennenlern %>
+        </div>
+        <div class="modal-footer">
+          <% if(currentUser) {%>
+          <a href="/zeitstrahl/<%=timeline._id%>/edit" class="btn btn-mina"> Text Bearbeiten</a>
+          <% } %>
+          <button type="button" class="btn btn-secondary btn-mina" data-bs-dismiss="modal">Schließen</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- MODAL 3 Timeline -->
+  <div class="modal fade" id="timeline-modal-3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Bedarfsanalyse</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <%- timeline.bedarf %>
+        </div>
+        <div class="modal-footer">
+          <% if(currentUser) {%>
+          <a href="/zeitstrahl/<%=timeline._id%>/edit" class="btn btn-mina"> Text Bearbeiten</a>
+          <% } %>
+          <button type="button" class="btn btn-secondary btn-mina" data-bs-dismiss="modal">Schließen</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- MODAL 4 Timeline -->
+  <div class="modal fade" id="timeline-modal-4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Standpunkt definieren</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <%- timeline.standpunkt %>
+        </div>
+        <div class="modal-footer">
+          <% if(currentUser) {%>
+          <a href="/zeitstrahl/<%=timeline._id%>/edit" class="btn btn-mina"> Text Bearbeiten</a>
+          <% } %>
+          <button type="button" class="btn btn-secondary btn-mina" data-bs-dismiss="modal">Schließen</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- MODAL 5 Timeline -->
+  <div class="modal fade" id="timeline-modal-5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Vernetzungstreffen</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <%- timeline.vernetzeins %>
+        </div>
+        <div class="modal-footer">
+          <% if(currentUser) {%>
+          <a href="/zeitstrahl/<%=timeline._id%>/edit" class="btn btn-mina"> Text Bearbeiten</a>
+          <% } %>
+          <button type="button" class="btn btn-secondary btn-mina" data-bs-dismiss="modal">Schließen</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- MODAL 6 Timeline -->
+  <div class="modal fade" id="timeline-modal-6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ideen- & Lösungsentwicklung</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <%- timeline.idee %>
+        </div>
+        <div class="modal-footer">
+          <% if(currentUser) {%>
+          <a href="/zeitstrahl/<%=timeline._id%>/edit" class="btn btn-mina"> Text Bearbeiten</a>
+          <% } %>
+          <button type="button" class="btn btn-secondary btn-mina" data-bs-dismiss="modal">Schließen</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- MODAL 7 Timeline -->
+  <div class="modal fade" id="timeline-modal-7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Vernetzungstreffen</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <%- timeline.vernetzzwei %>
+        </div>
+        <div class="modal-footer">
+          <% if(currentUser) {%>
+          <a href="/zeitstrahl/<%=timeline._id%>/edit" class="btn btn-mina"> Text Bearbeiten</a>
+          <% } %>
+          <button type="button" class="btn btn-secondary btn-mina" data-bs-dismiss="modal">Schließen</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- MODAL 8 Timeline -->
+  <div class="modal fade" id="timeline-modal-8" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Konzipierung, Planung & Testen</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <%- timeline.konzipierung %>
+        </div>
+        <div class="modal-footer">
+          <% if(currentUser) {%>
+          <a href="/zeitstrahl/<%=timeline._id%>/edit" class="btn btn-mina"> Text Bearbeiten</a>
+          <% } %>
+          <button type="button" class="btn btn-secondary btn-mina" data-bs-dismiss="modal">Schließen</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- MODAL 9 Timeline -->
+  <div class="modal fade" id="timeline-modal-9" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Durchführung der Maßnahmen</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <%- timeline.massnahme %>
+        </div>
+        <div class="modal-footer">
+          <% if(currentUser) {%>
+          <a href="/zeitstrahl/<%=timeline._id%>/edit" class="btn btn-mina"> Text Bearbeiten</a>
+          <% } %>
+          <button type="button" class="btn btn-secondary btn-mina" data-bs-dismiss="modal">Schließen</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- MODAL 10 Timeline -->
+  <div class="modal fade" id="timeline-modal-10" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Evaluation & Reflektion</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <%- timeline.evaluation %>
+        </div>
+        <div class="modal-footer">
+          <% if(currentUser) {%>
+          <a href="/zeitstrahl/<%=timeline._id%>/edit" class="btn btn-mina">Text Bearbeiten </a>
+          <% } %>
+          <button type="button" class="btn btn-secondary btn-mina" data-bs-dismiss="modal">Schließen</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- MODAL 11 Timeline -->
+  <div class="modal fade" id="timeline-modal-11" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Großes Vernetzungstreffen</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <%- timeline.vernetzdrei %>
+        </div>
+        <div class="modal-footer">
+          <% if(currentUser) {%>
+          <a href="/zeitstrahl/<%=timeline._id%>/edit" class="btn btn-mina"> Text Bearbeiten</a>
+          <% } %>
+          <button type="button" class="btn btn-secondary btn-mina" data-bs-dismiss="modal">Schließen</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- MODAL 12 Timeline -->
+  <div class="modal fade" id="timeline-modal-12" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ergebnissicherung & Dokumentation</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <%- timeline.ergebnis %>
+        </div>
+        <div class="modal-footer">
+          <% if(currentUser) {%>
+          <a href="/zeitstrahl/<%=timeline._id%>/edit" class="btn btn-mina"> Text Bearbeiten</a>
+          <% } %>
           <button type="button" class="btn btn-secondary btn-mina" data-bs-dismiss="modal">Schließen</button>
         </div>
       </div>

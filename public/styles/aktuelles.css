@@ -1,0 +1,20 @@
+.card {
+  width: 50%;
+  margin: 0 auto;
+  border: 2px solid #db2a6f;
+  border-radius: 10px;
+}
+
+h3 {
+  color: #db2a6f;
+  font-weight: bold;
+  text-align: center;
+}
+
+.btn-edit {
+  margin: 0 25%;
+}
+
+.btn-edit a {
+  margin-top: 10px;
+}

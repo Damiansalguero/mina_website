@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="/styles/bib.css">
+<% layout("layouts/boilerplate") %>
+
+
+<h1 class=""><span class="title-line line-pink"><%= bib.title %></span></h1>
+
+<div class="card card-big">
+  <div class="card-body">
+    <h5 class="card-title"><%= bib.title %></h5>
+    <p class="card-text"><%- bib.description %></p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item item-show">Autor*in: <%= bib.author %></li>
+    <li class="list-group-item item-show">Herausgeber*in: <%= bib.pub %></li>
+    <li class="list-group-item item-show">Jahr: <%= bib.year %></li>
+    <li class="list-group-item item-show"><%= bib.title %></li>
+  </ul>
+  <div class="card-body" id="card-button">
+    <% bib.images.forEach((img, i) => { %>
+      <a target="_blank" class="btn btn-mina" href="<%=img.attach%>" download>Download
+    </a>
+    <% }) %>
+  </div>
+</div>
+
+<% if (currentUser) {%>
+  <div class="btn-group">
+    <div class="btn-edit">
+    <a id="btn-edit" class="card-link btn btn-info" href="/bibliothek/<%=bib._id%>/edit">Bearbeiten</a>
+  </div>
+    <form class="d-inline" action="/bibliothek/<%=bib._id%>?_method=DELETE" method="post">
+      <button id="btn-delete" class="btn btn-danger">Löschen</button>
+    </form>
+    <div class="">
+      <a id="btn-back" class="btn btn-primary btn-mina" href="/online-bibliothek">Zurück</a>
+    </div>
+  <% } else { %>
+    <a class="btn btn-primary btn-mina" href="/online-bibliothek"">Zurück</a>
+    <% } %>
+</div>

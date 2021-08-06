@@ -1,0 +1,126 @@
+footer {
+  padding-bottom: 5px;
+}
+.footer {
+  z-index: 1000000;
+  background-color: #073b4c;
+}
+
+.footer-contact {
+  color: #fff;
+  list-style: none;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.social-items {
+  flex-grow: 3;
+  display: flex;
+  justify-content: center;
+}
+
+.social-items a {
+  padding: 0 3vw;
+  color: #fff;
+}
+
+.impress-data a,
+.impress-data {
+  color: #fff;
+}
+
+.social-items a:hover,
+.social-items i:hover,
+.impress-data a:hover {
+  color: #db2a6f;
+}
+.social-icon-mail:hover {
+  color: #db2a6f;
+  background-color: none;
+  border: none;
+}
+
+.social-icon-mail {
+  color: #fff;
+  border: #fff;
+  border-radius: 50%;
+  padding: 1px;
+}
+
+.social-span {
+  display: block;
+  text-align: center;
+}
+.social-span-small {
+  display: none;
+}
+
+.data-impress {
+  margin: 0 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+@media screen and (min-width: 0) and (max-width: 575.98px) {
+  .footer-content {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .social-items {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: space-around !important;
+    flex-grow: 1 !important;
+    margin: 3vh 0 !important;
+  }
+  .social-item {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .social-item a {
+    padding: 0 !important;
+  }
+  .center-sponsor {
+    margin-right: 5vw !important;
+  }
+  .social-span-small {
+    display: block !important;
+  }
+  #contact-footer {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 575.98px) and (max-width: 991.98px) {
+  .footer-content {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .social-items {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    flex-grow: 1 !important;
+    margin: 3vh 0 !important;
+  }
+  .social-item {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .social-item i {
+    font-size: 3em;
+  }
+  .social-item span,
+  .impress-data {
+    font-size: 26px;
+  }
+  #item-fb {
+    margin-left: 5vw;
+  }
+}

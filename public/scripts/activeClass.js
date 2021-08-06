@@ -1,12 +1,20 @@
-function setActive() {
-  aObj = document
-    .getElementById("navbarNavAltMarkup")
-    .getElementsByClassName("nav-link");
-  for (i = 0; i < aObj.length; i++) {
-    if (document.location.href.indexOf(aObj[i].href) >= 0) {
-      aObj[i].className = "nav-link active";
+$(function() {
+  var current = location.pathname;
+  $(".navbar-nav .nav-item a").each(function() {
+    var $this = $(this);
+    if ($this.attr("href").indexOf(current) !== -1) {
+      $this.addClass("active");
+    } else if ($this.attr("href").indexOf(current) === "/") {
+      $this.addClass("active");
     }
-  }
-}
+  });
+});
 
-window.onload = setActive;
+// $(".navbar-nav .nav-item").on("click", function() {
+//   $(".navbar-nav .nav-item a")
+//     .find("a.active")
+//     .removeClass("active");
+//   $(this)
+//     .parent("a")
+//     .addClass("active");
+// });

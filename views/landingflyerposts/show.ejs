@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="/styles/flyer.css">
+<% layout("layouts/boilerplate") %>
+<h1 class=""><span class="title-line line-pink"><%= flyer.title %></span></h1>
+<div class="card card-bib">
+  <div class="card-body">
+    <h5 class="card-title"><%= flyer.title %></h5>
+    <p class="card-text"><%- flyer.description %></p>
+    <% flyer.images.forEach((img, i) => { %>
+      <a target="_blank" class="bib-download" href="<%=img.attach%>" download> <%= flyer.title %> downloaden
+    </a>
+    <% }) %>
+  </div>
+</div>
+
+<% if (currentUser) {%>
+  <div class="btn-group">
+    <div class="btn-edit">
+    <a id="btn-edit" class="card-link btn btn-info" href="/landing-flyers/<%=flyer._id%>/edit">Bearbeiten</a>
+  </div>
+    <form class="d-inline" action="/landing-flyers/<%=flyer._id%>?_method=DELETE" method="post">
+      <button id="btn-delete" class="btn btn-danger">Löschen</button>
+    </form>
+    <div class="">
+      <a id="btn-back" class="btn btn-primary btn-mina" href="/online-bibliothek">Zurück</a>
+    </div>
+  <% } else { %>
+    <a class="btn btn-primary btn-mina" href="/online-bibliothek"">Zurück</a>
+    <% } %>
+</div>

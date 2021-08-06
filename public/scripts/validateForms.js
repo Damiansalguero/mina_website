@@ -1,12 +1,12 @@
-(function() {
+(function () {
   "use strict";
   bsCustomFileInput.init();
   var forms = document.querySelectorAll(".validated-form");
 
-  Array.from(forms).forEach(function(form) {
+  Array.from(forms).forEach(function (form) {
     form.addEventListener(
       "submit",
-      function(event) {
+      function (event) {
         if (!form.checkValidity()) {
           event.preventDefault();
           event.stopPropagation();
@@ -18,3 +18,5 @@
     );
   });
 })();
+
+$(".datepicker").datepicker();

@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="/styles/calendar.css">
+<% layout("layouts/boilerplate") %>
+
+<div class="calendar-card">
+<h1 class=""><span class="title-line line-pink">Übersicht Kalendereitrag</span></h1>
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title"><span class="span">Titel:</span> <%= calendar.title %></h5>
+  </div>
+  <ul class="list-group list-group-flush" id="list-show">
+    <li class="list-group-item"><span class="span">Datum:</span> <%= formatedDate %></li>
+    <li class="list-group-item" <%- calendar.description %></li>
+  </ul>
+  <% if (calendar.link) {%>
+  <div class="card-body">
+    Weitere Informationen finden Sie
+    <a target="_blank" href="<%= calendar.link %>" class="card-link">hier</a>
+  </div>
+  <% } %>
+</div>
+
+<% if (currentUser) {%>
+  <div class="btn-group">
+    <div class="btn-edit">
+    <a class="card-link btn btn-info" href="/calendars/<%=calendar._id%>/edit">Bearbeiten</a>
+  </div>
+    <form class="d-inline" action="/calendars/<%=calendar._id%>?_method=DELETE" method="post">
+      <button class="btn btn-danger">Löschen</button>
+    </form>
+    <div class="">
+      <a class="btn btn-primary btn-mina" href="/calendars/alle">Zurück</a>
+    </div>
+  <% } else { %>
+    <a class="btn btn-primary btn-mina" href="/calendars/alle"">Zurück</a>
+    <% } %>
+</div>
+</div>

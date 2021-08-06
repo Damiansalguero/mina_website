@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="/styles/calendar.css">
+<% layout("layouts/boilerplate") %>
+<h1 id="title-calendar-index" class=""><span class="line-pink">Alle Kalendereinträge</span></h1>
+<div class="calendar-box">
+      <% for(let calendar of calendars) {%>
+          <div class="list-group mb-3">
+            <a href="/calendars/<%= calendar._id %>" class="list-group-item list-group-item-action" aria-current="true">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1"><%= calendar.title %></h5>
+                <div class="date-box">
+                <small><%= calendar.formatedDate %></small>
+                <% if (calendar.datetwo) {%>
+                <small>bis</small>
+                <small><%= calendar.datetwo %></small>
+                <% } %>
+              </div>
+              </div>
+              <p class="mb-1"><%- calendar.description %></p>
+            </a>
+        </div>
+      <% }%>
+    </div>

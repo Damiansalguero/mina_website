@@ -1,21 +1,212 @@
-#timeline-block {
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+.orgas {
+  color: #000;
+}
+
+#orgas-list,
+#orgas-list li {
+  margin: 5px 0;
+}
+
+#intro-text {
+  text-align: justify;
+}
+
+.btn-aktuelles {
+  background-color: #0dcaf0;
+  border-color: #0dcaf0;
+  color: #fff;
+  font-weight: bold;
+}
+.btn-aktuelles:hover {
+  border-color: #0dcaf0;
+  background-color: #fff;
+  color: #0dcaf0;
+  font-weight: bold;
+}
+
+/************ TIMELINE *************/
+.timeline-block {
+  clip-path: polygon(0 4%, 100% 0%, 100% 100%, 0% 100%);
+  background-color: #9fb039;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10vh;
   padding-bottom: 15vh;
 }
 
 #block-prozess {
   margin-top: -15vh;
-  clip-path: polygon(0 0, 100% 7%, 100% 90%, 0 100%);
+  clip-path: polygon(0 0, 100% 4%, 100% 100%, 0 100%);
   height: auto;
   padding-top: 10vh;
-  margin-top: -15vh;
-}
-.prozess-list {
-  list-style: none;
+  margin-top: -7vh;
 }
 
-.prozess-list a {
-  color: #000;
+#timeline .timeline-item:after,
+#timeline .timeline-item:before {
+  content: "";
+  display: block;
+  width: 100%;
+  clear: both;
 }
+
+img {
+  max-width: 100%;
+}
+
+#header-img {
+  padding-top: 10vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+.project-name {
+  text-align: center;
+  padding: 10px 0;
+}
+
+#timeline {
+  width: 100%;
+  margin: 30px auto;
+  position: relative;
+  padding: 0 10px;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+#timeline:before {
+  content: "";
+  width: 3px;
+  height: 100%;
+  background: #fff;
+  left: 50%;
+  top: 0;
+  position: absolute;
+}
+#timeline:after {
+  content: "";
+  clear: both;
+  display: table;
+  width: 100%;
+}
+#timeline .timeline-item {
+  margin-bottom: 50px;
+  position: relative;
+}
+#timeline .timeline-item .timeline-icon {
+  background: #72c5d5;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  overflow: hidden;
+  margin-left: -23px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}
+
+#timeline .timeline-item .timeline-content {
+  width: 45%;
+  background: #fff;
+  padding: 20px;
+  -webkit-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+#timeline .timeline-item .timeline-content h2 {
+  padding: 15px;
+  background: #db2a6f;
+  color: #fff;
+  margin: -20px -20px 15px -20px;
+  font-weight: 300;
+  -webkit-border-radius: 3px 3px 0 0;
+  -moz-border-radius: 3px 3px 0 0;
+  -ms-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
+}
+#timeline .timeline-item .timeline-content:before {
+  content: "";
+  position: absolute;
+  left: 45%;
+  top: 20px;
+  width: 0;
+  height: 0;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 7px solid #db2a6f;
+}
+#timeline .timeline-item .timeline-content.right {
+  float: right;
+}
+#timeline .timeline-item .timeline-content.right:before {
+  content: "";
+  right: 45%;
+  left: inherit;
+  border-left: 0;
+  border-right: 7px solid #db2a6f;
+}
+
+.timeline-content a.vernetzung {
+  color: #db2a6f;
+}
+
+.timeline-content a.vernetzung:hover {
+  color: #72c5d5;
+}
+
+.timeline-content a {
+  text-decoration: none;
+  color: #72c5d5;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.timeline-content a:hover {
+  text-decoration: underline;
+  color: #72c5d5;
+  font-weight: bold;
+}
+
+.prozess-list {
+  list-style: none;
+  padding-left: 16px;
+  margin-top: 5px;
+}
+
 .prozess-list a:hover {
   color: #db2a6f;
 }
@@ -29,12 +220,131 @@
   margin-left: -1em;
 }
 
-.time-box {
-  clip-path: polygon(0 8%, 100% 0%, 100% 94%, 0% 100%);
-  background-color: #9fb039;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 10vh;
-  padding-bottom: 15vh;
+.timeline-content li::before {
+  content: "\2022";
+  color: #db2a6f;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.phase-p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+ul {
+  margin-bottom: 0;
+}
+
+#prz-gallery {
+  padding: 10vh 0 20vh 0;
+}
+
+@media screen and (max-width: 768px) {
+  #timeline {
+    margin: 30px;
+    padding: 0px;
+    width: 90%;
+  }
+  #timeline:before {
+    left: 0;
+  }
+  #timeline .timeline-item .timeline-content {
+    width: 90%;
+    float: right;
+  }
+  #timeline .timeline-item .timeline-content:before,
+  #timeline .timeline-item .timeline-content.right:before {
+    left: 10%;
+    margin-left: -6px;
+    border-left: 0;
+    border-right: 7px solid #db2a6f;
+  }
+  #timeline .timeline-item .timeline-icon {
+    left: 0;
+  }
+}
+
+@media screen and (min-width: 0) and (max-width: 575.98px) {
+  #intro-text,
+  .ws-text {
+    width: 85%;
+    font-size: 14px;
+  }
+  #orgas-list,
+  #orgas-list li {
+    width: 80%;
+    font-size: 14px;
+  }
+  .timeline-block {
+    clip-path: polygon(0 2%, 100% 0%, 100% 100%, 0% 100%);
+    margin-top: -10vh;
+  }
+  .container {
+    width: auto;
+  }
+  .timeline-content a,
+  .phase-p {
+    font-size: 16px;
+  }
+  #timeline .timeline-item .timeline-content h2,
+  .gallery h3 {
+    font-size: 18px;
+  }
+  .gallery-block {
+    clip-path: polygon(0 2%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  #prozess-contact {
+    margin-top: -10vh;
+  }
+  .contact-box h1 {
+    margin: -5vh 0 5vh 0;
+  }
+  #ivan {
+    margin-left: 25%;
+  }
+  #scrollBtn {
+    right: 40px !important;
+  }
+  .modal-dialog {
+    width: 90%;
+  }
+}
+
+@media screen and (min-width: 575.98px) and (max-width: 991.98px) {
+  #block-prozess {
+    clip-path: polygon(0 0, 100% 2%, 100% 100%, 0 100%);
+  }
+  .ws-text {
+    width: 75%;
+  }
+  #prozess-contact,
+  .timeline-block {
+    margin-top: -10vh;
+  }
+  .timeline-block,
+  .gallery-block {
+    clip-path: polygon(0 1%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  .gallery {
+    width: 85%;
+  }
+  .gallery-img {
+    width: 300px;
+    margin: 10px;
+  }
+  .contact-box h1 {
+    margin: -5vh 0 5vh 0;
+  }
+  .modal-dialog,
+  .modal-dialog-centered {
+    max-width: 650px !important;
+  }
 }

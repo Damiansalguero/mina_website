@@ -1,0 +1,79 @@
+.img-fach {
+  height: 200px;
+}
+
+.block-fach {
+  margin-top: 0;
+}
+
+#img-container-fach {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: flex-start;
+}
+
+.fach-list {
+  list-style: none;
+  margin: 1vh 0;
+  width: 75%;
+  font-size: 18px;
+}
+
+.fach-list li {
+  margin: 5px 0;
+}
+
+.fach-list a:hover {
+  color: #000;
+}
+
+#link-box-fach {
+  width: 75%;
+}
+
+.vortrag-titel {
+  font-style: italic;
+}
+
+@media screen and (min-width: 0) and (max-width: 575.98px) {
+  .gallery-block {
+    clip-path: polygon(0 2%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  .gallery {
+    width: 85%;
+  }
+  .gallery h3 {
+    font-size: 18px;
+  }
+  #img-container-fach {
+    justify-content: center;
+  }
+  #img-container-fach img {
+    height: 250px;
+  }
+  .fach-list {
+    width: 100%;
+  }
+  .fach-list li {
+    margin: 5px 0;
+  }
+}
+
+@media screen and (min-width: 575.98px) and (max-width: 991.98px) {
+  .block-fach {
+    margin-top: 0;
+  }
+  .gallery-block {
+    clip-path: polygon(0 2%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  .gallery-img {
+    height: 200px;
+    width: 200px;
+  }
+  .gallery {
+    width: 90%;
+  }
+  .fach-list {
+    font-size: 20px;
+  }
+}

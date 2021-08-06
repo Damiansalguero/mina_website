@@ -1,0 +1,58 @@
+<link rel="stylesheet" href="/styles/forms.css">
+<% layout("layouts/boilerplate") %>
+<div class="row">
+  <h1 class="text-center"><span class="title-line line-pink">Workshop Haupttext Bearbeiten</span></h1>
+   <div id="form-ws-aktuell-edit" class="col-6 offset-3">
+    <form  action="/ueberworkshops/<%=wsnew._id%>?_method=PUT" method="post" novalidate class="validated-form">
+      <div class="mb-3">
+        <label class="form-label" for="title">Überschrift</label>
+        <input class="form-control" type="text" id="title1" name="wsnew[title]" required value="<%=wsnew.title%>">
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="description">Text</label>
+        <textarea class="form-control" type="text" id="description" name="wsnew[description]" required><%=wsnew.description%></textarea>
+        <script type="text/javascript">
+          CKEDITOR.replace('description');
+        </script>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="accordiontitleone">Akkordion Titel 1</label>
+        <input class="form-control" type="text" id="title1" name="wsnew[accordiontitleone]" required value="<%=wsnew.accordiontitleone%>">
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="accordiontexone">Akkordion Text 1</label>
+        <textarea class="form-control" type="text" id="accordiontexone" name="wsnew[accordiontexone]" required><%=wsnew.accordiontexone%></textarea>
+        <script type="text/javascript">
+          CKEDITOR.replace('accordiontexone');
+        </script>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="accordiontitletwo">Akkordion Titel 2</label>
+        <input class="form-control" type="text" id="title1" name="wsnew[accordiontitletwo]" required value="<%=wsnew.accordiontitletwo%>">
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="accordiontextwo">Akkordion Text 2</label>
+        <textarea class="form-control" type="text" id="accordiontextwo" name="wsnew[accordiontextwo]" required><%=wsnew.accordiontextwo%></textarea>
+        <script type="text/javascript">
+          CKEDITOR.replace('accordiontextwo');
+        </script>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label" for="accordiontitlethree">Akkordion Titel 3</label>
+        <input class="form-control" type="text" id="title1" name="wsnew[accordiontitlethree]" required value="<%=wsnew.accordiontitlethree%>">
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="accordiontexthree">Akkordion Text 3</label>
+        <textarea class="form-control" type="text" id="accordiontexthree" name="wsnew[accordiontexthree]" required><%=wsnew.accordiontexthree%></textarea>
+        <script type="text/javascript">
+          CKEDITOR.replace('accordiontexthree');
+        </script>
+      </div>
+      <div class="mb-3">
+        <button class="btn btn-info">Aktuallisieren</button>
+      </div>
+    </form>
+    <a class="btn btn-primary btn-mina" href="/workshops">Zurück</a>
+  </div>
+</div>

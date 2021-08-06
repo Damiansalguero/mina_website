@@ -1,0 +1,40 @@
+<% layout("layouts/boilerplate") %>
+<div class="row">
+  <h1 class=""><span class="title-line line-pink"> Haupttext Hinzufügen</span></h1>
+  <div id="form-partizip-new" class="col-6 offset-3">
+    <form action="/partizipatives" method="post" novalidate class="validated-form" enctype="multipart/form-data">
+      <div class="mb-3">
+        <label class="form-label" for="titleone">Überschrift Block 1</label>
+        <input class="form-control" type="text" id="titleone" name="partizip[titleone]" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="descriptionone">Text Block 1</label>
+        <textarea class="form-control" type="text" id="descriptionone" name="partizip[descriptionone]" required></textarea>
+        <script>
+          CKEDITOR.replace('descriptionone');
+        </script>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="titletwo">Überschrift Block 2</label>
+        <input class="form-control" type="text" id="titletwo" name="partizip[titletwo]">
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="descriptiontwo">Text Block 2</label>
+        <textarea class="form-control" type="text" id="descriptiontwo" name="partizip[descriptiontwo]"></textarea>
+        <script>
+          CKEDITOR.replace('descriptiontwo');
+        </script>
+      </div>
+      <div class="mb-3 image-input">
+        <div class="form-file custom-file">
+          <input class="form-file-input" id="image" type="file" name="image" multiple>
+        </div>
+      </div>
+      <div class="mb-3">
+        <button class="btn btn-success btn-mina">Speichern</button>
+      </div>
+    </form>
+    <a href="/partizipatives-projekt">Zurück</a>
+  </div>
+</div>
+<!--  -->

@@ -4,7 +4,8 @@
   "description": "Mina Website",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -17,20 +18,27 @@
   },
   "homepage": "https://github.com/Damiansalguero/mina_website#readme",
   "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^24.0.0",
     "body-parser": "^1.19.0",
+    "ckeditor4": "^4.15.1",
     "cloudinary": "^1.23.0",
     "connect-flash": "^0.1.1",
+    "connect-mongo": "^3.2.0",
+    "date-fns": "^2.22.1",
     "dotenv": "^8.2.0",
     "ejs": "^3.1.5",
     "ejs-mate": "^3.0.0",
     "express": "^4.17.1",
     "express-session": "^1.17.1",
+    "fs": "0.0.1-security",
+    "https": "^1.0.0",
     "joi": "^17.3.0",
     "method-override": "^3.0.0",
-    "mongoose": "^5.10.13",
+    "mongoose": "^5.12.13",
     "morgan": "^1.10.0",
     "multer": "^1.4.2",
     "multer-storage-cloudinary": "^4.0.0",
+    "nodemailer": "^6.4.17",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^6.0.1"

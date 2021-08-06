@@ -1,80 +1,127 @@
-/********* LANDING STYLES ***********/
-/* .block-box {
-  margin-top: -15vh;
-} */
-.text-box-aktuelles{
+/********* Block Aktuelles ***********/
+
+.text-box-aktuelles {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 40%;
   border: 2px solid #db2a6f;
   border-radius: 10px;
-  padding-top: 20px;
+  padding: 20px;
 }
 
-.text-box-aktuelles h3 {
+.text-box-aktuelles h3,
+.p-link a {
   color: #db2a6f;
-  font-weight: bold
+  font-weight: bold;
 }
+
 .text-aktuelles {
   width: 75%;
   font-size: 20px;
   text-align: center;
 }
+.p-link a:hover {
+  color: #72c5d5;
+}
 
-
+/********* Block Calendar ***********/
 .calendar-block {
-  clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%);
-    background-color: #db2a6f;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 10vh;
-    margin-top: -17vh;
-    padding-bottom: 20vh;
+  clip-path: polygon(0 0, 100% 7%, 100% 100%, 0 100%);
+  background-color: #db2a6f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10vh;
+  margin-top: -10vh;
+  padding-bottom: 20vh;
 }
+
 .list-group {
-  width: 75%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
 }
+
 #calendar,
 .block-margin,
 .contact {
   margin-top: -10vh;
 }
+
 #calendar-content {
   padding-top: 15vh;
 }
+
 .list-group-item.active {
   background-color: #72c5d5;
   border-color: #72c5d5;
 }
+
+.list-group-item:hover,
+.list-group-item:hover small {
+  background-color: #72c5d5;
+  border-color: #72c5d5;
+  color: #fff;
+}
+
 .list-group-item,
 .list-group-item.active {
   color: #000;
 }
-.stadt
- {
+
+.list-group-item h5 {
+  color: #db2a6f;
+  font-weight: bold;
+  padding-right: 20px;
+  font-size: 18px;
+}
+
+small {
+  font-size: 16px;
+  font-weight: bold;
+  color: #72c5d5;
+  text-align: right;
+}
+.mehr {
+  float: right;
+}
+
+#calendar-btn {
+  margin: 10px 0;
+}
+.stadt {
   font-weight: bold;
 }
 
-.about-block {
-  clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
-    background-color: #9fb039;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 10vh;
+.btn-mina-calendar,
+.btn-mina-about {
+  border-color: #fff;
+  color: #fff;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.btn-mina-calendar:hover {
+  background-color: #fff;
+  color: #db2a6f;
+  font-weight: bold;
+}
+
+.btn-mina-about:hover {
+  background-color: #fff;
+  color: #9fb039;
+  font-weight: bold;
 }
 
 .text-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 50%;
   color: #fff;
   text-align: justify;
-  font-size: 22px;
-}
-
-#last-text {
-  padding-bottom: 20vh;
+  font-size: 18px;
 }
 
 .map-block {
@@ -91,10 +138,12 @@
   height: 410px;
   margin-right: 5vw;
 }
+
 .box {
   display: flex;
   z-index: 2;
 }
+
 .map-box {
   justify-content: center;
   width: 100%;
@@ -102,14 +151,24 @@
 
 .text-box {
   background-color: #2c6a85;
-  border: 2px solid #2c6a85;
-  height: 300px;
+  height: auto;
   width: 400px;
-  text-align: center;
   padding: 10px;
   color: #fff;
-  margin-top: 5%;
-  margin-left: 5vw;
+  align-self: center;
+}
+
+.text-box h3 {
+  font-weight: bold;
+}
+
+#standort {
+  text-align: center;
+}
+
+#standort p {
+  margin: 0;
+  font-size: 20px;
 }
 
 .sponsor-block {
@@ -131,4 +190,78 @@
   font-weight: bold;
   float: right;
 }
-/********** LANDING STYLES **********
+
+@media screen and (min-width: 0) and (max-width: 575.98px) {
+  small {
+    font-size: 16px;
+    text-align: center;
+  }
+  .list-group-item h5 {
+    font-size: 16px;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 575.98px) and (max-width: 991.98px) {
+  .aktuelles {
+    clip-path: polygon(0 0, 100% 3%, 100% 100%, 0 100%);
+  }
+  .text-box-aktuelles {
+    min-width: 80%;
+  }
+
+  .text-box-aktuelles p {
+    font-size: 20px;
+  }
+  .calendar-block {
+    clip-path: polygon(0 0, 100% 4%, 100% 100%, 0 100%);
+  }
+  .list-group {
+    min-width: 80%;
+  }
+  .about-block {
+    clip-path: polygon(0 4%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  .text-block {
+    min-width: 75%;
+    font-size: 20px;
+  }
+  .map-block {
+    clip-path: polygon(0 7%, 100% 0%, 100% 100%, 0% 100%);
+    padding-bottom: 5vh;
+  }
+  .map-box {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  #map {
+    height: 350px;
+    margin-bottom: 3vh;
+  }
+  .sponsor-box {
+    padding-top: 7vh;
+  }
+}
+
+@media screen and (min-width: 1199.98px) and (max-width: 1499.98px) {
+  .aktuelles {
+    clip-path: polygon(0 0, 100% 4%, 100% 100%, 0 100%);
+  }
+  .header-bg img {
+    height: 600px;
+  }
+  .text-box-aktuelles {
+    width: 50%;
+  }
+  .aktuelles {
+    clip-path: polygon(0 0, 100% 4%, 100% 100%, 0 100%);
+  }
+  .header-bg img {
+    height: 600px;
+  }
+  .text-box-aktuelles p {
+    font-size: 18px;
+  }
+  .text-block {
+    font-size: 20px;
+  }
+}
