@@ -24,7 +24,7 @@ const LocalStrategy = require("passport-local");
 //"mongodb://localhost:27017/mina"
 //process.env.DB_URL ||
 // const dbUrl = process.env.DB_URL;
-const dbUrl = "mongodb://localhost:27017/mina";
+const dbUrl = process.env.DB_URL;
 const MongoStore = require("connect-mongo")(session);
 //////////////// MODEL IMPORT //////////////////
 const User = require("./models/user");
@@ -82,7 +82,7 @@ const store = new MongoStore({
 });
 
 store.on("error", function (e) {
-  console.log("SESSION STROE ERROR", e);
+  console.log("SESSION STORE ERROR", e);
 });
 
 const sessionConfig = {
