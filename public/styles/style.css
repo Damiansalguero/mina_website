@@ -486,21 +486,21 @@ a {
   .text-box {
     width: 70% !important;
   }
-  #title-sponsor {
+  #title-helper {
     font-size: 26px !important;
     width: 50% !important;
     border-bottom: 3px solid #db2a6f !important;
     margin: 3vh 0 !important;
   }
-  #span-sponsor {
+  #span-helper {
     border-bottom: none !important;
   }
-  #box-sponsor {
+  #box-helper {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
   }
-  .img-sponsor {
+  .img-helper {
     height: 100px !important;
     margin: 5px 0 !important;
   }
@@ -533,18 +533,18 @@ a {
   h1 {
     margin: 3vh 0;
   }
-  #box-sponsor {
+  #box-helper {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
   }
-  #box-sponsor a {
+  #box-helper a {
     margin: 20px 0;
   }
-  #title-sponsor {
+  #title-helper {
     border-bottom: 3px solid #db2a6f;
   }
-  #title-sponsor span {
+  #title-helper span {
     border-bottom: none;
   }
   #scrollBtn {
