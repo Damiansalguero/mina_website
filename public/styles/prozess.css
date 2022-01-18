@@ -252,6 +252,10 @@ ul {
   justify-content: space-between;
 }
 
+#prozess-ap {
+  padding-top: 5px;
+}
+
 @media screen and (max-width: 768px) {
   #timeline {
     margin: 30px;
