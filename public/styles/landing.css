@@ -191,6 +191,10 @@ small {
   float: right;
 }
 
+#img-helper {
+  height: 200px;
+}
+
 @media screen and (min-width: 0) and (max-width: 575.98px) {
   small {
     font-size: 16px;
