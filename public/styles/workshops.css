@@ -91,6 +91,7 @@
   width: 50%;
   margin-bottom: 5vh;
   font-size: 18px;
+  margin-left: 25%
 }
 
 #table-ws ul {
@@ -169,7 +170,7 @@
 }
 
 #ws-gallery {
-  margin-top: -18vh;
+  margin-top: 0vh;
   padding: 10vh 0 20vh 0;
 }
 .img-container {
