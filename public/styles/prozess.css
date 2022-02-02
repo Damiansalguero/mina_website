@@ -170,7 +170,7 @@ a {
   border-left: 7px solid #db2a6f;
 }
 #timeline .timeline-item .timeline-content.right {
-  float: right;
+  float: right !important;
 }
 #timeline .timeline-item .timeline-content.right:before {
   content: "";
