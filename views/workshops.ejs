@@ -56,9 +56,11 @@
       </div>
       <% } %>
     </div>
-      
+
       <% if(currentUser) {%>
-      <a href="/ueberworkshops/<%=wsnew._id%>/edit" class="btn btn-aktuelles">Workshop Text/Akkordion Bearbeiten</a>
+        <div class="ws-btn-box">
+          <a href="/ueberworkshops/<%=wsnew._id%>/edit" class="btn btn-aktuelles">Workshop Text/Akkordion Bearbeiten</a>
+        </div>
       <% } %>
       <!-- Table 1 -->
       <table class="table table-responsive table-hover" id="table-ws">
@@ -95,7 +97,9 @@
         </tbody>
       </table>
       <% if(currentUser) {%>
-      <a href="/workshop/new" class="btn btn btn-aktuelles">Workshop Hinzufügen</a>
+        <div class="ws-btn-box">
+          <a href="/workshop/new" class="btn btn btn-aktuelles">Workshop Hinzufügen</a>
+        </div>
       <% } %>
       <!-- <div class="flyer-btn-group">
         <a  href="/downloads/WEB_Flyer_Workshops_2021.pdf" target="_blank" class="btn btn-ws-flyer"  target="_blank">Unsere aktuellen Präsenzworkshops</a>

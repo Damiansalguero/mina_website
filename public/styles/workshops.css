@@ -45,6 +45,11 @@
   font-weight: bold;
 }
 
+.ws-btn-box {
+  display: flex;
+  justify-content: center;
+}
+
 .btn-aktuelles {
   border-color: #0dcaf0;
   color: #0dcaf0;
