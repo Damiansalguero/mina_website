@@ -14,7 +14,10 @@ const {
   bibSchema,
   testdataSchema,
   dataSchema,
+  // prozessTextSchema,
+  prozessFlyerSchema
 } = require("./schemas.js");
+
 const ExpressError = require("./utils/ExpressError");
 
 //isAuthenticated() is a passport method
@@ -184,6 +187,28 @@ module.exports.validateBib = (req, res, next) => {
 /////////////// Prozess Gallerie /////////////
 module.exports.validateProcessGallery = (req, res, next) => {
   const { error } = processGallerySchema.validate(req.body);
+  if (error) {
+    const msg = error.details.map((el) => el.message).join(",");
+    throw new ExpressError(msg, 400);
+  } else {
+    next();
+  }
+};
+
+/////////////// Prozess Text /////////////
+// module.exports.validateProzessText = (req, res, next) => {
+//   const { error } = prozessTextSchema.validate(req.body);
+//   if (error) {
+//     const msg = error.details.map((el) => el.message).join(",");
+//     throw new ExpressError(msg, 400);
+//   } else {
+//     next();
+//   }
+// };
+
+/////////////// Prozess Flyer /////////////
+module.exports.validateProzessFlyer = (req, res, next) => {
+  const { error } = prozessFlyerSchema.validate(req.body);
   if (error) {
     const msg = error.details.map((el) => el.message).join(",");
     throw new ExpressError(msg, 400);

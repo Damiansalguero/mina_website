@@ -36,6 +36,8 @@ router.put(
   catchAsync(processes.updateProcessGallery)
 );
 
+router.put("/")
+
 router.delete("/gallerien/:id", catchAsync(processes.deleteWorkshopGallery));
 
 module.exports = router;
