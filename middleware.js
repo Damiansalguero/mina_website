@@ -14,6 +14,7 @@ const {
   bibSchema,
   testdataSchema,
   dataSchema,
+  workshopregisterSchema,
   // prozessTextSchema,
   prozessFlyerSchema
 } = require("./schemas.js");
