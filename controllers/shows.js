@@ -61,6 +61,10 @@ module.exports.renderProzess = async (req, res) => {
 
   res.render("prozess", { timeline, przgs });
 };
+
+module.exports.renderProzessTwo = async (req, res) => {
+  res.render("prozesstwo");
+};
 module.exports.renderDoku = (req, res) => {
   res.render("dokumentation");
 };
