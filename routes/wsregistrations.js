@@ -11,4 +11,5 @@ router.get("/:id/new", wsregisters.renderAnmeldung);
 
 router.post("/:id/new", catchAsync(wsregisters.createAnmeldung));
 
+
 module.exports = router;
