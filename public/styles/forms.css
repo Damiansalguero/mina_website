@@ -14,6 +14,23 @@
   display: block;
 }
 
+.disclaimer-box {
+  margin-top: 5vh;
+}
+
+#disclaimer {
+  font-weight: bold;
+}
+
+.disclaimer-links {
+  color: #0dcaf0;
+  font-weight: bold;
+}
+.disclaimer-links:hover {
+  color: #db2a6f;
+
+}
+
 @media screen and (min-width: 0) and (max-width: 575.98px) {
   .form-control {
     font-size: 14px;
