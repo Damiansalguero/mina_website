@@ -49,6 +49,13 @@ module.exports.renderWorkshops = async (req, res) => {
   res.render("workshops", { workshops, wsgs, wsnew });
 };
 
+module.exports.renderWorkshopsTwo = async (req, res) => {
+  const wsnew = await Wsnew.findOne({});
+  const workshops = await Workshop.find({});
+  const wsgs = await Workshopgallery.find({});
+  res.render("workshopstwo", { workshops, wsgs, wsnew });
+};
+
 module.exports.renderPartizip = async (req, res) => {
   const partizip = await Partizip.findOne({});
   const ptgs = await Partizipgallery.find({});

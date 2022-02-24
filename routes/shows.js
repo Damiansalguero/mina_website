@@ -7,6 +7,7 @@ const catchAsync = require("../utils/catchAsync");
 router.get("/", shows.renderLanding);
 router.get("/home", shows.renderhome);
 router.get("/workshops", shows.renderWorkshops);
+router.get("/2020-2021-workshops", shows.renderWorkshopsTwo);
 router.get("/partizipatives-projekt", shows.renderPartizip);
 router.get("/2020-2021-prozess-begleitung", shows.renderProzess);
 router.get("/prozess-begleitung", shows.renderProzessTwo);

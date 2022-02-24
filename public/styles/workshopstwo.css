@@ -1,0 +1,38 @@
+.img-box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25vh;
+}
+
+#diagramm {
+  width: 90%;
+  height: auto;
+}
+
+.text-white {
+  color: white;
+}
+
+#block-blue {
+  clip-path: polygon(0 2%, 100% 0%, 100% 100%, 0% 100%);
+  margin-top: -30vh;
+  padding: 10vh 0 0 0;
+}
+
+.ws-dok-text {
+  width: 50%;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}
+
+.ws-dok-links {
+  color: #0dcaf0;
+  font-weight: bold;
+}
+
+.ws-dok-text-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
