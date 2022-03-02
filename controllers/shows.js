@@ -21,7 +21,7 @@ module.exports.renderLanding = async (req, res) => {
 
 module.exports.renderhome = async (req, res) => {
   const aktuell = await Aktuell.findOne({});
-  const calendars = await Calendar.find().sort({ date: -1 }).limit(3);
+  const calendars = await Calendar.find().sort({ date: 1 }).limit(3);
   const formatedDate = calendars.map((calendar) => {
     calendar.formatedDate = fns.format(new Date(calendar.date), "dd.MM.yyyy");
     return calendar;

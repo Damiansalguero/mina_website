@@ -4,7 +4,7 @@ const { calendarSchema } = require("../schemas.js");
 const { cloudinary } = require("../cloudinary");
 
 module.exports.index = async (req, res) => {
-  const calendars = await Calendar.find().sort({ date: -1 });
+  const calendars = await Calendar.find().sort({ date: 1 });
   const formatedDate = calendars.map((calendar) => {
     calendar.formatedDate = fns.format(new Date(calendar.date), "dd.MM.yyyy");
     return calendar;
