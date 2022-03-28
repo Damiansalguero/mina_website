@@ -211,6 +211,11 @@ a {
   color: #db2a6f;
 }
 
+.prozess-list li {
+  font-weight: bold;
+
+}
+
 .prozess-list li::before {
   content: "\2022";
   color: #db2a6f;
@@ -218,6 +223,10 @@ a {
   display: inline-block;
   width: 1em;
   margin-left: -1em;
+}
+
+.member-orga {
+  color: #db2a6f
 }
 
 .timeline-content li::before {
@@ -282,6 +291,10 @@ ul {
 }
 
 @media screen and (min-width: 0) and (max-width: 575.98px) {
+
+  #header-img {
+    padding-top: 0
+  }
   #intro-text,
   .ws-text {
     width: 85%;
@@ -324,6 +337,9 @@ ul {
   }
   .modal-dialog {
     width: 90%;
+  }
+  #prz-gallery {
+    clip-path: polygon(0 1%, 100% 0%, 100% 100%, 0% 100%);
   }
 }
 
