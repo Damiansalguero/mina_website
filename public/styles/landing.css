@@ -25,6 +25,13 @@
   color: #72c5d5;
 }
 
+.book-img {
+  margin: 0 2vw;
+  height: 250px;
+  border: 1px solid #000;
+}
+
+
 /********* Block Calendar ***********/
 .calendar-block {
   clip-path: polygon(0 0, 100% 7%, 100% 100%, 0 100%);

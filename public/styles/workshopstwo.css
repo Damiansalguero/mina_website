@@ -1,3 +1,14 @@
+#diagram-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  clip-path: polygon(0 0, 100% 2%, 100% 100%, 0 100%);
+  height: auto;
+  padding-bottom: 17vh;
+  margin-top: -10vh;
+  background-color: #fff;
+}
+
 .img-box {
   display: flex;
   justify-content: center;
