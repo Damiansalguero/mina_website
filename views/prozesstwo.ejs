@@ -10,16 +10,17 @@
     <!-- TABLE BLOCK -->
     <div class="block" id="block-prozess">
       <img class="logo" src="/img/gesamt/Logos/icon_prozess.png" alt="">
-      <h1 class=""><span class="title-line">Prozessbegleitung</span></h1>
-      <p class="prz-two-text" id="prz-two-intro-text">Trotz vieler guter Angebote in den Bereichen Migration und Flucht, nehmen nur wenige Menschen mit Behinderung diese wahr. Wie können Menschen mit Behinderung und Migrations- und/oder Fluchterfahrung wirksam erreicht werden? Wie können Organisationen und Initiativen in den Bereichen Flucht und Migration Zugänge und Angebote für den Personenkreis gestalten?
-      </p>
-      <p class="prz-two-text">Im Rahmen des Projekts Vielfalt inklusiv bieten wir lokalen oder bundesweiten Organisationen und Initiativen aus den Bereichen Flucht und Migration eine Prozessbegleitung an. Diese wird von April bis Dezember 2022 stattfinden. Während des mehrmonatigen Prozesses profitieren Sie von MINAs langjähriger Expertise an der Schnittstelle 'Flucht, Migration und Behinderung' sowie von der Vernetzung mit anderen Organisationen an der Schnittstelle. Wir unterstützen Sie in dieser Zeit sowohl durch kreative und agile Methoden als auch durch eine kontinuierliche Evaluation des Prozesses.</p>
-      <p class="prz-two-text">Wenn Sie Interesse an einem spannenden und praxisorientierten Lern- und Entwicklungsprozess an der Schnittstelle Migration, Flucht und Behinderung haben, freuen wir uns auf eine kurze telefonische oder schriftliche Bewerbung bis zum <strong>14. April 2022</strong>.</p>
+      <h1 id="" class="ws-title title-line"><span ><%= prozess.title %></span></h1>
+      <div class="prozess-text" id="ws-intro"><%-prozess.description %></div>
     </div>
-    <div class="prz-btn-box">
-      <a  href="/downloads/2022_Infoblatt_Verlängerung.pdf" target="_blank" class="btn btn-prz-flyer"  target="_blank">Flyer <br> Prozessbegleitung</a>
-      <a  href="/2020-2021-prozess-begleitung" class="btn btn-prz-flyer">Rückblick Prozessbegleitung <br> 2020-2021</a>
-    </div>
+    <% if(currentUser) {%>
+      <div class="prz-btn-box">
+        <a href="/prozesse/<%= prozess._id %>/edit" class="btn btn-mina" id="btn-prz-text">Text bearbeiten</a>
+        <% } %>
+        <a  href="/downloads/2022_Infoblatt_Verlängerung.pdf" target="_blank" class="btn btn-prz-flyer"  target="_blank">Flyer <br> Prozessbegleitung</a>
+        <a  href="/2020-2021-prozess-begleitung" class="btn btn-prz-flyer">Rückblick Prozessbegleitung <br> 2020-2021</a>
+      </div>
+
     <!-- Kontakt -->
     <div class="container-fluid contact-box" id="prozess-contact">
       <h1 class="white"><span class="title-line">Ansprechperson</span></h1>

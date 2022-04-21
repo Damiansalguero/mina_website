@@ -1,9 +1,23 @@
 const Processgallery = require("../models/process");
-const { processGallerySchema } = require("../schemas.js");
+const Prozess = require("../models/prozess");
+const { processGallerySchema, prozessSchema } = require("../schemas.js");
 const { cloudinary } = require("../cloudinary");
+
+module.exports.renderProcessNew = (req, res) => {
+  res.render("prozesstextposts/new");
+};
 
 module.exports.renderNewProcessGallery = (req, res) => {
   res.render("prozessimgposts/new");
+};
+
+module.exports.createProzess = async (req, res, next) => {
+  const prozess = await new Prozess (req.body.prozess);
+  prozess.author = req.user._id;
+  await prozess.save();
+  res.send("IT WORKED")
+  // req.flash("success", "Der Eintrag wurde erfolgreich erstellt !");
+  // res.redirect("prozess-begleitung");
 };
 
 module.exports.createProzessGallery = async (req, res, next) => {
@@ -16,6 +30,12 @@ module.exports.createProzessGallery = async (req, res, next) => {
   await przg.save();
   req.flash("success", "Die Gallerie wurde erfolgreich erstellt !");
   res.redirect("/prozess-begleitung");
+};
+
+module.exports.renderEditProzess = async (req, res) => {
+  const { id } = req.params;
+  const prozess = await Prozess.findById(req.params.id);
+  res.render("prozesstextposts/edit", { prozess });
 };
 
 module.exports.renderEditProcessGallery = async (req, res) => {
@@ -32,6 +52,16 @@ module.exports.showProcessGallery = async (req, res) => {
   }
 
   res.render("prozessimgposts/show", { przg });
+};
+
+module.exports.updateProzess = async (req, res) => {
+  const { id } = req.params;
+  const prozess = await Prozess.findByIdAndUpdate(id, {
+    ...req.body.prozess,
+  });
+  await prozess.save();
+  req.flash("success", "Der Text wurde erfolgreich aktualisiert !");
+  res.redirect("/prozess-begleitung");
 };
 
 module.exports.updateProcessGallery = async (req, res) => {

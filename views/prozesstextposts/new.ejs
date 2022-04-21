@@ -1,1 +1,25 @@
-<h1>Helooooooooooooooooooo</h1>
+<link rel="stylesheet" href="/styles/forms.css">
+<% layout("layouts/boilerplate") %>
+<div class="row">
+  <h1 class=""><span class="title-line line-pink"> Prozessbegleitung Text Hinzufügen</span></h1>
+  <div id="form-prozess-new" class="col-6 offset-3">
+    <form action="/prozesse" method="post" novalidate class="validated-form">
+      <div class="mb-3">
+        <label class="form-label" for="titleone">Überschrift</label>
+        <input class="form-control" type="text" id="title" name="prozess[title]" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="description">Text</label>
+        <textarea class="form-control" type="text" id="description" name="prozess[description]" required></textarea>
+        <script>
+          CKEDITOR.replace('descriptionone');
+        </script>
+      </div>
+      <div class="mb-3">
+        <button class="btn btn-success btn-mina">Speichern</button>
+      </div>
+    </form>
+    <a href="/prozess-begleitung">Zurück</a>
+  </div>
+</div>
+<!--  -->

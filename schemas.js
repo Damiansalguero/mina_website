@@ -92,6 +92,14 @@ module.exports.timelineSchema = Joi.object({
   }).required(),
 });
 
+module.exports.prozessSchema = Joi.object({
+  prozess: Joi.object({
+    title: Joi.string().required(),
+    description: Joi.string().required(),
+  }).required(),
+  deleteImages: Joi.array(),
+});
+
 module.exports.processGallerySchema = Joi.object({
   przg: Joi.object({
     title: Joi.string().required(),
@@ -174,12 +182,12 @@ module.exports.testdataSchema = Joi.object({
   deleteImages: Joi.array(),
 });
 
-// module.exports.prozessTextSchema = Joi.object({
-//   prozesstext: Joi.object({
-//     title: Joi.string().required(),
-//     description: Joi.string().required(),
-//   }).required(),
-// });
+module.exports.prozessTextSchema = Joi.object({
+  prozess: Joi.object({
+    title: Joi.string().required(),
+    description: Joi.string().required(),
+  }).required(),
+});
 
 module.exports.prozessFlyerSchema = Joi.object({
   prozessflyer: Joi.object({

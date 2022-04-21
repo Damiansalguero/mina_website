@@ -22,6 +22,8 @@
   z-index: 2;
   margin: 2vh 0 1vh 0;
   text-align: center;
+}
+#btn-prz-text, .btn-prz-flyer {
   width: 250px;
   height: 60px;
 }
