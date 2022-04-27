@@ -13,14 +13,22 @@
       <h1 id="" class="ws-title title-line"><span ><%= prozess.title %></span></h1>
       <div class="prozess-text" id="ws-intro"><%-prozess.description %></div>
     </div>
-    <% if(currentUser) {%>
       <div class="prz-btn-box">
-        <a href="/prozesse/<%= prozess._id %>/edit" class="btn btn-mina" id="btn-prz-text">Text bearbeiten</a>
+        <% if(currentUser) {%>
+        <a href="/prozesse/<%= prozess._id %>/edit" class="btn btn-mina btn-prz-text">Text bearbeiten</a>
+        <a href="/prozess-flyers/neu" class="btn btn-mina btn-prz-text">Flyer Hinzufügen</a>
+        <a href="/prozess-flyers/<%=prozessflyer._id %>/edit" class="btn btn-info btn-prz-text">Flyer Bearbeiten</a>
         <% } %>
+        <% if(prozessflyer) {%>
+          <% prozessflyer.images.forEach((img, i) => { %>
+            <a href="<%=img.attach%>" download class="btn btn-mina btn-prz-text" id="btn-flyer" target="_blank"><%=prozessflyer.title%></a>
+            <% }) %>
+            <a  href="/2020-2021-prozess-begleitung" class="btn btn-prz-flyer">Rückblick Prozessbegleitung <br> 2020-2021</a>
+        <% } else { %>
         <a  href="/downloads/2022_Infoblatt_Verlängerung.pdf" target="_blank" class="btn btn-prz-flyer"  target="_blank">Flyer <br> Prozessbegleitung</a>
         <a  href="/2020-2021-prozess-begleitung" class="btn btn-prz-flyer">Rückblick Prozessbegleitung <br> 2020-2021</a>
+        <% } %>
       </div>
-
     <!-- Kontakt -->
     <div class="container-fluid contact-box" id="prozess-contact">
       <h1 class="white"><span class="title-line">Ansprechperson</span></h1>

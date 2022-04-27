@@ -16,7 +16,6 @@ const {
   testdataSchema,
   dataSchema,
   workshopregisterSchema,
-  // prozessTextSchema,
   prozessFlyerSchema
 } = require("./schemas.js");
 

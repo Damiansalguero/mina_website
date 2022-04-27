@@ -18,12 +18,12 @@
   background-color: #db2a6f;
   color: #fff;
   font-size: 16px;
-  font-weight: bold;
   z-index: 2;
   margin: 2vh 0 1vh 0;
   text-align: center;
+  font-weight: bold;
 }
-#btn-prz-text, .btn-prz-flyer {
+.btn-prz-text, .btn-prz-flyer {
   width: 250px;
-  height: 60px;
+  padding: 10px;
 }
