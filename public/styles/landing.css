@@ -211,6 +211,15 @@ small {
     font-size: 16px;
     text-align: left;
   }
+  .helper-block {
+    padding-top: 5vh !important;
+  }
+  #cover-header-landing{
+    height: 195px !important;
+  }
+  .book-img {
+    height: 200px !important;
+  }
 }
 @media screen and (min-width: 575.98px) and (max-width: 991.98px) {
   .aktuelles {
