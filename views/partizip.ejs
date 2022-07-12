@@ -1,73 +1,57 @@
 <link rel="stylesheet" href="/styles/partizip.css">
 <% layout("layouts/boilerplate") %>
 <!-- NAV + HEADER -->
-<div class="container-fluid">
-  <div class="header-bg">
-    <img src="/img/gesamt/Projekt/bg-partizipativ.png" class="img-fluid cover-header" id="bg-partizip">
-  </div>
-  <!-- HEADER BLOCK -->
-  <div class="block aktuelles" id="header-part">
-    <img class="logo-part" src="/img/gesamt/Logos/icon_partizip.png" alt="">
-    <h1 id="" class="ws-title title-line"><span ><%= partizip.titleone %></span></h1>
-    <div class="part-text" id="ws-intro"><%-partizip.descriptionone %></div>
-    <% if(partizip.descriptiontwo ||partizip.titletwo ) {%>
-    <h1 id="" class="ws-title title-line"><span ><%= partizip.titletwo %></span></h1>
-    <div class="part-text" id="ws-intro"><%-partizip.descriptiontwo %></div>
-    <% } %>
-    <% if(currentUser) {%>
-    <a href="/partizipatives/<%= partizip._id %>/edit" class="btn btn-mina">Text bearbeiten</a>
-    <a href="/partizip-flyers/neu" class="btn btn-mina">Flyer Hinzufügen</a>
-    <% } %>
-    <% if(currentUser && partflyer) {%>
-    <a href="/partizip-flyers/<%=partflyer._id %>/edit" class="btn btn btn-aktuelles">Flyer Bearbeiten</a>
-    <% } %>
-    <% if(partflyer) {%>
-      <% partflyer.images.forEach((img, i) => { %>
-        <a href="<%=img.attach%>" download class="btn" id="btn-flyer" target="_blank"><%=partflyer.title%></a>
-        <% }) %>
-    <% } else { %>
-        <a href="/downloads/flyer-landing.pdf" class="btn" id="btn-flyer" target="_blank">Unser aktueller Flyer</a>
-    <% } %>
-    <div class="video-box">
-      <h3 class="mina-pink">Eröffnungsfilm</h3>
-      <video src="/videos/Eröffnungsfilm.mp4" width=320  height=240 controls  poster="posterimage.jpg">
-      </video>
-    </div>
-    <div class="video-box">
-      <h3 class="mina-pink">Interview</h3>
-      <video src="/videos/Interview.mp4" width=320  height=240 controls  poster="posterimage.jpg">
-      </video>
-    </div>
-    <% if(currentUser) {%>
-    <a href="/partizipatives/gallerien/neu" class="btn btn-mina">Gallerie Hinzufügen</a>
-    <% } %>
-  </div>
-
-  <!-- IMAGE BLOCK -->
-  <% if(ptgs.images) {%>
-  <div class="block blue gallery-block" id="part-gallery">
-    <h1 class="white"><span class="title-line line-blue">Bildergalerie</span></h1>
-    <div class="gallery-box">
+<div class="header-bg">
+  <img src="/img/gesamt/Projekt/bg-partizipativ.png" class="img-fluid cover-header" id="bg-partizip">
+</div>
+<!-- HEADER BLOCK -->
+<div class="block aktuelles" id="header-part">
+  <img class="logo-part" src="/img/gesamt/Logos/icon_partizip.png" alt="">
+  <h1 id="" class="ws-title title-line"><span><%= partizip.titleone %></span></h1>
+  <div class="part-text" id="ws-intro"><%-partizip.descriptionone %></div>
+  <% if(currentUser) {%>
+  <a href="/partizipatives/<%= partizip._id %>/edit" class="btn btn-mina">Texte bearbeiten</a>
+  <a href="/partizip-flyers/neu" class="btn btn-mina">Flyer Hinzufügen</a>
+  <% } %>
+  <% if(currentUser && partflyer) {%>
+  <a href="/partizip-flyers/<%=partflyer._id %>/edit" class="btn btn btn-aktuelles">Flyer Bearbeiten</a>
+  <% } %>
+  <% if(partflyer) {%>
+  <% partflyer.images.forEach((img, i) => { %>
+  <a href="<%=img.attach%>" download class="btn" id="btn-flyer" target="_blank"><%=partflyer.title%></a>
+  <% }) %>
+  <% } else { %>
+  <a href="/downloads/flyer-landing.pdf" class="btn" id="btn-flyer" target="_blank">Unser aktueller Flyer</a>
+  <% } %>
+  <% if(currentUser) {%>
+  <a href="/partizipatives/gallerien/neu" class="btn btn-mina">Gallerie Hinzufügen</a>
+  <% } %>
+</div>
+<!-- IMAGE BLOCK -->
+<% if(ptgs.images) {%>
+<div class="block blue gallery-block" id="part-gallery">
+  <h1 class="white"><span class="title-line line-blue">Bildergalerie</span></h1>
+  <div class="gallery-box">
     <% for(let ptg of ptgs) {%>
-      <div class="card-part">
-        <img class="img-part-card" src="<%= ptg.images[0].url %>" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title"><%= ptg.title %></h5>
-        </div>
-        <div class="card-body">
-          <a href="/partizipatives/gallerien/<%= ptg._id %>" class="btn btn-aktuelles-blue">Zur Gallerie</a>
-        </div>
+    <div class="card-part">
+      <img class="img-part-card" src="<%= ptg.images[0].url %>" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><%= ptg.title %></h5>
       </div>
+      <div class="card-body">
+        <a hdisplay: flex; flex-direction: column; align-items: center; width: 50%; color: #fff; text-align: justify; font-size: 18px;ref="/partizipatives/gallerien/<%= ptg._id %>" class="btn btn-aktuelles-blue">Zur Gallerie</a>
+      </div>
+    </div>
     <% }%>
   </div>
   <% if(currentUser) {%>
   <a href="/partizipatives/gallerien/neu" class="btn btn-ws-gallery">Gallerie Hinzufügen</a>
   <% } %>
-  </div>
-  <% } %>
+</div>
+<% } %>
 
-  <!-- IMAGE BLOCK -->
-  <!-- <div class="block blue gallery-block">
+<!-- IMAGE BLOCK -->
+<!-- <div class="block blue gallery-block">
     <h1 class="white"><span class="title-line line-blue">Aktuelles</span></h1>
     <div class="gallery gallery-partizip">
       <h3>Vortstellung des Projekts bei der KHSB</h3>
@@ -103,8 +87,8 @@
       <p class="more">Weitere Beiträge ....</p>
     </div>
   </div> -->
-  <!-- MITARBEITER BLOCK -->
-  <!-- <div class="block-worker">
+<!-- MITARBEITER BLOCK -->
+<!-- <div class="block-worker">
     <img src="/img/gesamt/Elemente/Path 3-pink.png" alt="" class="img-fluid">
     <div class="block rosa contact">
       <h1 class="white"><span class="title-line">Ansprechpartnerinnen</span></h1>
@@ -126,32 +110,57 @@
       </div>
     </div>
   </div> -->
-  <div class="container-fluid contact-box" id="part-contact">
-    <h1 class="white"><span class="title-line">Ansprechpersonen</span></h1>
-    <div class="row">
-        <div class="worker col">
-          <img class="contact-img" src="/img/gesamt/Mitarbeiter/04_Wendy.jpg" alt="">
-          <div class="worker-info">
-            <ul>
-              <li class="worker-title">Partizipative Projekte</li>
-              <li>Wendy Taranowski</li>
-              <li>030 – 62 93 40 31</li>
-              <li>0159 – 06 70 38 98</li>
-              <li><a href="mailto:w.taranowksi@mina-berlin.de">w.taranowksi@mina-berlin.de</a> </li>
-            </ul>
-          </div>
-        </div>
-        <div class="worker col">
-          <img class="contact-img" src="/img/gesamt/Mitarbeiter/11_Abdurrahman.png" alt="">
-          <div class="worker-info">
-            <ul>
-              <li class="worker-title">Teamassistenz Workshops & Öffentlichkeitsarbeit</li>
-              <li>Abdurrahman Gügercin</li>
-              <li>030 – 62 93 40 31</li>
-              <li><a href="mailto:a.guegercin@mina-berlin.de">a.guegercin@mina-berlin.de</a> </li>
-            </ul>
-          </div>
-        </div>
+<div class="publications-block">
+  <h1 class="white"><span class="title-line">Veröffentlichungen</span> </h1>
+  <% if(partizip.descriptiontwo) {%>
+  <div class="part-text" id="part-text-two"><%-partizip.descriptiontwo %></div>
+  <% } %>
+  <div class="book">
+    <a href="/downloads/2022_Erfahrungsberichte.pdf" target="_blank"><img class="book-img" src="/img/gesamt/Projekt/Buch.png" alt=""></a>
+    <a href="/downloads/2022_Handreichung.pdf" target="_blank"><img class="book-img" src="/img/gesamt/Projekt/Buch2.png" alt=""></a>
+  </div>
+</div>
+
+<div class="exposition-block">
+  <h1 class="white"><span class="title-line line-green">Wanderausstellung</span></h1>
+  <div class="exposition-text-block">
+    <% if(partizip.descriptionthree) {%>
+    <div class="part-text" id="part-text-two"><%-partizip.descriptionthree %></div>
+    <% } else { %>
+    <p id="exposition-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <% } %>
+    <div class="">
+      <a href="/wanderausstellung" class="btn btn-wander">Zur Wanderausstellung</a>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid contact-box" id="part-contact">
+  <h1 class="white"><span class="title-line">Ansprechpersonen</span></h1>
+  <div class="row">
+    <div class="worker col">
+      <img class="contact-img" src="/img/gesamt/Mitarbeiter/04_Wendy.jpg" alt="">
+      <div class="worker-info">
+        <ul>
+          <li class="worker-title">Partizipative Projekte</li>
+          <li>Wendy Taranowski</li>
+          <li>030 – 62 93 40 31</li>
+          <li>0159 – 06 70 38 98</li>
+          <li><a href="mailto:w.taranowksi@mina-berlin.de">w.taranowksi@mina-berlin.de</a> </li>
+        </ul>
+      </div>
+    </div>
+    <div class="worker col">
+      <img class="contact-img" src="/img/gesamt/Mitarbeiter/11_Abdurrahman.png" alt="">
+      <div class="worker-info">
+        <ul>
+          <li class="worker-title">Teamassistenz Workshops & Öffentlichkeitsarbeit</li>
+          <li>Abdurrahman Gügercin</li>
+          <li>030 – 62 93 40 31</li>
+          <li><a href="mailto:a.guegercin@mina-berlin.de">a.guegercin@mina-berlin.de</a> </li>
+        </ul>
       </div>
     </div>
   </div>
+</div>

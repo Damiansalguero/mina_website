@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="/styles/forms.css">
+<link rel="stylesheet" href="/styles/flyer.css">
+<% layout("layouts/boilerplate") %>
+<div class="row">
+  <h1 class=""><span class="title-line line-pink">Wanderausstellung Flyer Bearbeiten</span></h1>
+  <div id="form-flyer-new" class="col-6 offset-3">
+    <form action="/wander-ausstellung-flyers/<%=expoflyer._id%>?_method=PUT" method="post" novalidate class="validated-form" enctype="multipart/form-data">
+      <div class="mb-3">
+        <label class="form-label" for="title">Überschrift</label>
+        <input class="form-control" type="text" id="title" name="expoflyer[title]" required value="<%=expoflyer.title%>">
+      </div>
+      <div class="mb-3 image-input">
+        <div class="form-file custom-file">
+          <input class="form-file-input" id="image" type="file" name="image" multiple>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="description">Beschreibung</label>
+        <textarea class="form-control" type="text" id="description" name="expoflyer[description]" required><%=expoflyer.description%></textarea>
+        <script>
+                CKEDITOR.replace( 'description' );
+            </script>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" >Hochgeladene Dokumente:</label>
+        <% expoflyer.images.forEach(function(img, i) { %>
+          <!-- thumbnail matches the key from the campground model -->
+          <p class="prozessflyer-file"><i class="far fa-file"></i> <%=expoflyer.title%></p>
+          <div class="form-check-inline">
+            <!-- id here add index of the images -->
+            <!-- value here add the rght data of the foto -->
+            <input type="checkbox" id="image-<%=i%>" name="deleteImages[]" value="<%= img.filename %>">
+            <label for="image-<%=i%>">Datei Löschen?</label>
+          </div>
+        <% }) %>
+      </div>
+      <div>
+        <button class="btn btn-aktuelles-blue">Speichern</button>
+      </div>
+    </form>
+    <a class="btn btn-primary btn-mina" href="/partizipatives-projekt">Zurück</a>
+  </div>
+</div>
+<!--  -->

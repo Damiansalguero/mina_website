@@ -12,10 +12,10 @@ ImageSchema.virtual("attach").get(function () {
 });
 
 
-const PartFlyerSchema = new Schema({
+const ExpoFlyerSchema = new Schema({
   title: String,
   images: [ImageSchema],
   description: String,
 });
 
-module.exports = mongoose.model("Partflyer", PartFlyerSchema);
+module.exports = mongoose.model("Expoflyer", ExpoFlyerSchema);

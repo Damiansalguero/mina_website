@@ -1,0 +1,13 @@
+.expo-text {
+  width: 50%;
+  font-size: 18px;
+  text-align: justify;
+}
+
+.video-box {
+  margin: 5vh 0;
+}
+
+#video-box-last {
+  margin-bottom: 20vh;
+}

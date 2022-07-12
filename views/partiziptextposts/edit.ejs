@@ -6,25 +6,39 @@
    <div id="form-partizip-edit" class="col-6 offset-3">
     <form action="/partizipatives/<%=partizip._id%>?_method=PUT" method="post" novalidate class="validated-form" enctype="multipart/form-data">
       <div class="mb-3">
-        <label class="form-label" for="titleone">Überschrift Block 1</label>
+        <label class="form-label" for="titleone">Überschrift Weißer Block</label>
         <input class="form-control" type="text" id="titleone" name="partizip[titleone]" required value="<%=partizip.titleone%>">
       </div>
       <div class="mb-3">
-        <label class="form-label" for="descriptionone">Text Block 1</label>
+        <label class="form-label" for="descriptionone">Text Weißer Block</label>
         <textarea class="form-control" type="text" id="descriptionone" name="partizip[descriptionone]" required><%=partizip.descriptionone%></textarea>
         <script type="text/javascript">
           CKEDITOR.replace('descriptionone');
         </script>
       </div>
       <div class="mb-3">
-        <label class="form-label" for="titletwo">Überschrift Block 2</label>
+        <label class="form-label" for="titletwo">Überschrift Pinker Block (Veröffentlichungen) </label>
         <input class="form-control" type="text" id="titletwo" name="partizip[titletwo]"  value="<%=partizip.titletwo%>">
       </div>
       <div class="mb-3">
-        <label class="form-label" for="descriptiontwo">Text Block 2</label>
+        <label class="form-label" for="descriptiontwo">Text Pinker Block (Veröffentlichungen)</label>
         <textarea class="form-control" type="text" id="descriptiontwo" name="partizip[descriptiontwo]" ><%=partizip.descriptiontwo%></textarea>
         <script type="text/javascript">
           CKEDITOR.replace('descriptiontwo');
+        </script>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="descriptionthree">Text Wanderausstellung</label>
+        <textarea class="form-control" type="text" id="descriptionthree" name="partizip[descriptionthree]" ><%=partizip.descriptionthree%></textarea>
+        <script type="text/javascript">
+          CKEDITOR.replace('descriptionthree');
+        </script>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="descriptionfour">Text Podcast</label>
+        <textarea class="form-control" type="text" id="descriptionfour" name="partizip[descriptionfour]" ><%=partizip.descriptionfour%></textarea>
+        <script type="text/javascript">
+          CKEDITOR.replace('descriptionfour');
         </script>
       </div>
       <div class="mb-3">

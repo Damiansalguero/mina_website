@@ -144,6 +144,24 @@ module.exports.partizipSchema = Joi.object({
     descriptionone: Joi.string().required(),
     titletwo: Joi.string().optional().allow(""),
     descriptiontwo: Joi.string().optional().allow(""),
+    descriptionthree: Joi.string().optional().allow(""),
+    descriptionfour: Joi.string().optional().allow(""),
+  }).required(),
+  deleteImages: Joi.array(),
+});
+
+module.exports.partFlyerSchema = Joi.object({
+  partflyer: Joi.object({
+    title: Joi.string().required(),
+    description: Joi.string().required(),
+  }).required(),
+  deleteImages: Joi.array(),
+});
+
+module.exports.expoFlyerSchema = Joi.object({
+  expoflyer: Joi.object({
+    title: Joi.string().required(),
+    description: Joi.string().required(),
   }).required(),
   deleteImages: Joi.array(),
 });

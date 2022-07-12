@@ -30,7 +30,7 @@ video {
 }
 
 #header-part {
-  clip-path: polygon(0 0, 100% 1%, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 3%, 100% 100%, 0 100%) !important;
   height: auto;
   padding-top: 10vh;
   padding-bottom: 15vh;
@@ -43,9 +43,7 @@ video {
   margin-top: -4vh;
   }
 
-.video-box {
-  margin: 5vh 0;
-}
+
 
 /********** PARTIZIP STYLES ***********/
 .logo-part {
@@ -200,6 +198,68 @@ video {
 #partflyer-how-title {
   color: #db2a6f;
   font-weight: bold;
+}
+
+.publications-block {
+  clip-path: polygon(0 0, 100% 7%, 100% 100%, 0 100%);
+  background-color: #db2a6f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10vh;
+  margin-top: -10vh;
+  padding-bottom: 20vh;
+}
+
+.book-img {
+  margin: 0 2vw;
+  height: 250px;
+  border: 1px solid #000;
+}
+#part-text-two {
+  color: #fff;
+}
+.exposition-block {
+  margin-top: -10vh;
+  clip-path: polygon(0 7%, 100% 0%, 100% 100%, 0% 100%);
+  background-color: #9fb039;
+  padding-top: 10vh;
+  padding-bottom: 20vh;
+}
+
+.exposition-text-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#exposition-text{
+  width: 50%;
+  font-size: 18px;
+  color: white;
+  text-align: justify;
+}
+.btn-wander {
+    background-color: #ffffff;
+    border-color: #4caf50;
+    color: #9fb039;
+    font-weight: bold;
+}
+
+.btn-wander:hover {
+    background-color: #9fb039;
+    border-color: #fff;
+    color: #fff;
+    font-weight: bold;
+}
+#podcast-block {
+  clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
+    background-color: #72c5d5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10vh;
+    margin-top: -15vh;
 }
 /* Flyer Styles */
 @media screen and (min-width: 0) and (max-width: 575.98px) {
