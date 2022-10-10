@@ -1,0 +1,56 @@
+<link rel="stylesheet" href="/styles/forms.css">
+<% layout("layouts/boilerplate") %>
+<div class="row">
+  <h1 class=""><span class="title-line line-pink">Zeitstrahl Text Hinzufügen</span></h1>
+  <div id="timeline-form-new" class="col-6 offset-3">
+    <form action="/zeitstrahl2022" method="post" novalidate class="validated-form">
+      <div class="mb-3">
+        <label class="form-label label-bold" for="auswahl">Frühjahr 2022 – Auswahl</label>
+        <textarea class="form-control" type="text" id="auswahl" name="timelinetwo[auswahl]"></textarea>
+        <script>
+                CKEDITOR.replace( 'auswahl' );
+            </script>
+      </div>
+      <div class="mb-3">
+        <label class="form-label label-bold" for="kennenlern">Kennenlernphase</label>
+        <textarea class="form-control" type="text" id="kennenlern" name="timelinetwo[kennenlern]"></textarea>
+        <script>
+                CKEDITOR.replace( 'kennenlern' );
+            </script>
+      </div>
+      <div class="mb-3">
+        <label class="form-label label-bold" for="bedarf">Bedarfsanalyse</label>
+        <textarea class="form-control" type="text" id="bedarf" name="timelinetwo[bedarf]"></textarea>
+        <script>
+                CKEDITOR.replace( 'bedarf' );
+            </script>
+      </div>
+      <div class="mb-3">
+        <label class="form-label label-bold" for="auswertung">Auswertung</label>
+        <textarea class="form-control" type="text" id="auswertung" name="timelinetwo[auswertung]"></textarea>
+        <script>
+                CKEDITOR.replace( 'auswertung' );
+            </script>
+      </div>
+      <div class="mb-3">
+        <label class="form-label label-bold" for="idee">Ideenfindung</label>
+        <textarea class="form-control" type="text" id="idee" name="timelinetwo[idee]"></textarea>
+        <script>
+                CKEDITOR.replace( 'idee' );
+            </script>
+      </div>
+      <div class="mb-3">
+        <label class="form-label label-bold" for="evaluation">Winter 2022 – Evaluation</label>
+        <textarea class="form-control" type="text" id="evaluation" name="timelinetwo[evaluation]"></textarea>
+        <script>
+                CKEDITOR.replace( 'evaluation' );
+            </script>
+      </div>
+      <div class="mb-3">
+        <button class="btn btn-success btn-mina">Speichern</button>
+      </div>
+    </form>
+    <a href="/">Zurück</a>
+  </div>
+</div>
+<!--  -->

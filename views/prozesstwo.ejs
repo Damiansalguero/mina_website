@@ -29,6 +29,68 @@
         <a  href="/2020-2021-prozess-begleitung" class="btn btn-prz-flyer">Rückblick Prozessbegleitung <br> 2020-2021</a>
         <% } %>
       </div>
+
+      <!------------------- ZEITSTRAHL ----------------->
+      <% if(currentUser) {%>
+      <div class="timeline-block">
+        <h1 class="white"><span class="title-line line-green">Über die Prozessbegleitung</span></h1>
+        <div class="container">
+          <div id="timeline">
+            <div class="timeline-item">
+              <div class="timeline-icon">
+              </div>
+              <div class="timeline-content">
+                <h2>Frühjahr 2022</h2>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#timeline-modal-1">Auswahlphase</a>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-icon">
+              </div>
+              <div class="timeline-content right">
+                <h2 class="hiddenh2">Frühjahr 2022</h2>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#timeline-modal-2">Kennenlernphase</a>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-icon">
+              </div>
+              <div class="timeline-content">
+                <h2 class="hiddenh2">Januar - Februar 2021</h2>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#timeline-modal-3">Bedarfsanalyse</a>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-icon">
+              </div>
+              <div class="timeline-content right">
+                <h2 class="hiddenh2">Oktober</h2>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#timeline-modal-4">Auswertung</a>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-icon">
+              </div>
+              <div class="timeline-content">
+                <h2 class="hiddenh2">April</h2>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#timeline-modal-5">Ideenfindung</a>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-icon">
+              </div>
+              <div class="timeline-content right">
+                <h2>Winter 2022</h2>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#timeline-modal-6">Evaluation</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% } %>
+      
+
     <!-- Kontakt -->
     <div class="container-fluid contact-box" id="prozess-contact">
       <h1 class="white"><span class="title-line">Ansprechperson</span></h1>
@@ -43,6 +105,133 @@
               <li><a href="mailto:v.makowka@mina-berlin.de">v.makowka@mina-berlin.de</a> </li>
             </ul>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- MODAL 1 Timeline -->
+  <div class="modal fade" id="timeline-modal-1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable ">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Bewerbungsphase</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <%- timelinetwo.auswahl %>
+        </div>
+        <div class="modal-footer">
+            <% if(currentUser) {%>
+            <a href="/zeitstrahl2022/<%=timelinetwo._id%>/edit" class="btn btn-mina">Texte Bearbeiten</a>
+            <% } %>
+          <button type="button" class="btn btn-secondary btn-mina" data-bs-dismiss="modal">Schließen</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 2 Timeline -->
+  <div class="modal fade" id="timeline-modal-2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable ">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Kennenlernphase</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <%- timelinetwo.kennenlern %>
+        </div>
+        <div class="modal-footer">
+            <% if(currentUser) {%>
+            <a href="/zeitstrahl2022/<%=timelinetwo._id%>/edit" class="btn btn-mina">Texte Bearbeiten</a>
+            <% } %>
+          <button type="button" class="btn btn-secondary btn-mina" data-bs-dismiss="modal">Schließen</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 3 Timeline -->
+  <div class="modal fade" id="timeline-modal-3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable ">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Bedarfsanalyse</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <%- timelinetwo.bedarf %>
+        </div>
+        <div class="modal-footer">
+            <% if(currentUser) {%>
+            <a href="/zeitstrahl2022/<%=timelinetwo._id%>/edit" class="btn btn-mina">Texte Bearbeiten</a>
+            <% } %>
+          <button type="button" class="btn btn-secondary btn-mina" data-bs-dismiss="modal">Schließen</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 4 Timeline -->
+  <div class="modal fade" id="timeline-modal-4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable ">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Auswertung</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <%- timelinetwo.auswertung %>
+        </div>
+        <div class="modal-footer">
+            <% if(currentUser) {%>
+            <a href="/zeitstrahl2022/<%=timelinetwo._id%>/edit" class="btn btn-mina">Texte Bearbeiten</a>
+            <% } %>
+          <button type="button" class="btn btn-secondary btn-mina" data-bs-dismiss="modal">Schließen</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 5 Timeline -->
+  <div class="modal fade" id="timeline-modal-5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable ">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ideenfindung</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <%- timelinetwo.idee %>
+        </div>
+        <div class="modal-footer">
+            <% if(currentUser) {%>
+            <a href="/zeitstrahl2022/<%=timelinetwo._id%>/edit" class="btn btn-mina">Texte Bearbeiten</a>
+            <% } %>
+          <button type="button" class="btn btn-secondary btn-mina" data-bs-dismiss="modal">Schließen</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 6 Timeline -->
+  <div class="modal fade" id="timeline-modal-6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable ">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Evaluation</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <%- timelinetwo.evaluation %>
+        </div>
+        <div class="modal-footer">
+            <% if(currentUser) {%>
+            <a href="/zeitstrahl2022/<%=timelinetwo._id%>/edit" class="btn btn-mina">Texte Bearbeiten</a>
+            <% } %>
+          <button type="button" class="btn btn-secondary btn-mina" data-bs-dismiss="modal">Schließen</button>
         </div>
       </div>
     </div>

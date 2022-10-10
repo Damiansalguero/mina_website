@@ -92,6 +92,17 @@ module.exports.timelineSchema = Joi.object({
   }).required(),
 });
 
+module.exports.timelinetwoSchema = Joi.object({
+  timelinetwo: Joi.object({
+    auswahl: Joi.string().required(),
+    kennenlern: Joi.string().required(),
+    bedarf: Joi.string().required(),
+    auswertung: Joi.string().required(),
+    idee: Joi.string().required(),
+    evaluation: Joi.string().required()
+  }).required(),
+});
+
 module.exports.prozessSchema = Joi.object({
   prozess: Joi.object({
     title: Joi.string().required(),

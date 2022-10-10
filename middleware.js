@@ -9,6 +9,7 @@ const {
   partFlyerSchema,
   expoFlyerSchema,
   timelineSchema,
+  timelinetwoSchema,
   prozessTextSchema,
   processGallerySchema,
   landingFlyerSchema,
@@ -90,6 +91,17 @@ module.exports.validateWorkshopGallery = (req, res, next) => {
 /////////////// TIMELINE /////////////
 module.exports.validateTimeline = (req, res, next) => {
   const { error } = timelineSchema.validate(req.body);
+  if (error) {
+    const msg = error.details.map((el) => el.message).join(",");
+    throw new ExpressError(msg, 400);
+  } else {
+    next();
+  }
+};
+
+/////////////// TIMELINE /////////////
+module.exports.validateTimelinetwo = (req, res, next) => {
+  const { error } = timelinetwoSchema.validate(req.body);
   if (error) {
     const msg = error.details.map((el) => el.message).join(",");
     throw new ExpressError(msg, 400);

@@ -27,3 +27,13 @@
   width: 250px;
   padding: 10px;
 }
+
+.hiddenh2 {
+  color: #db2a6f !important;
+}
+
+#header-img {
+  height: 450px;
+  padding-top: 12vh;
+  margin-top: -4vh;
+}

@@ -12,6 +12,7 @@ const Partflyer = require("../models/partizipflyer");
 const Prozessflyer = require("../models/prozessflyer");
 const Expoflyer = require("../models/expoflyer");
 const Timeline = require("../models/timeline");
+const Timelinetwo = require("../models/timelinetwo");
 const Flyer = require("../models/landingflyer");
 const Bib = require("../models/bib");
 const nodemailer = require("nodemailer");
@@ -81,7 +82,8 @@ module.exports.renderProzess = async (req, res) => {
 module.exports.renderProzessTwo = async (req, res) => {
   const prozess = await Prozess.findOne({});
   const prozessflyer = await Prozessflyer.findOne({});
-  res.render("prozesstwo", {prozess, prozessflyer});
+  const timelinetwo = await Timelinetwo.findOne({});
+  res.render("prozesstwo", {prozess, prozessflyer, timelinetwo});
 };
 module.exports.renderDoku = (req, res) => {
   res.render("dokumentation");
