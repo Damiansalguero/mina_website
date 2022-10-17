@@ -48,6 +48,7 @@ const testRoutes = require("./routes/tests");
 const postRoutes = require("./routes/posts");
 const partflyerRoutes = require("./routes/partizipflyers");
 const prozessflyerRoutes = require("./routes/prozessflyers");
+const expotextRoutes = require("./routes/expotexts");
 const expoflyerRoutes = require("./routes/expoflyers");
 
 //////////////// MONGO DB SETUP ///////////////////
@@ -137,6 +138,7 @@ app.use("/zeitstrahl", timelineRoutes);
 app.use("/zeitstrahl2022", timelinetwoRoutes);
 app.use("/landing-flyers", landingflyerRoutes);
 app.use("/partizip-flyers", partflyerRoutes);
+app.use("/wander-ausstellung", expotextRoutes);
 app.use("/wander-ausstellung-flyers", expoflyerRoutes);
 app.use("/prozess-flyers", prozessflyerRoutes);
 app.use("/bibliothek", bibRoutes);

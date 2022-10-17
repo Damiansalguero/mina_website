@@ -33,3 +33,14 @@
   font-weight: bold;
   color: #db2a6f;
 }
+
+.card-show {
+  margin: 0 auto !important;
+  align-items: center !important;
+  background-color: #db2a6f !important;
+}
+
+.flyer-name {
+  color: #fff;
+  font-weight: bold;
+}

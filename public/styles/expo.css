@@ -5,7 +5,17 @@
 }
 
 .video-box {
-  margin: 5vh 0;
+  margin: 10vh 0;
+}
+
+.video-box video,
+.video-box iframe {
+  border: 3px solid #0dcaf0;
+  border-radius: 10px
+}
+
+#box-last {
+  margin-bottom: 20vh;
 }
 
 #video-box-last {
@@ -18,4 +28,23 @@
   padding-top: 10vh;
   padding-bottom: 15vh;
   margin-top: -5vh;
+}
+
+.logo {
+  max-width: 100%;
+  height: 200px;
+}
+
+.btn-aktuelles-blue {
+  background-color: #0dcaf0;
+  border-color: #0dcaf0;
+  color: #fff;
+  font-weight: bold;
+}
+
+.btn-aktuelles-blue:hover {
+  border-color: #0dcaf0;
+  color: #0dcaf0;
+  background-color: #fff;
+  font-weight: bold;
 }

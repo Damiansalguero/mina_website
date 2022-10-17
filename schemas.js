@@ -169,10 +169,18 @@ module.exports.partFlyerSchema = Joi.object({
   deleteImages: Joi.array(),
 });
 
+module.exports.expoTextSchema = Joi.object({
+  expotext: Joi.object({
+    title: Joi.string().optional().allow(""),
+    description: Joi.string().required(),
+  }).required(),
+  deleteImages: Joi.array(),
+});
+
 module.exports.expoFlyerSchema = Joi.object({
   expoflyer: Joi.object({
     title: Joi.string().required(),
-    description: Joi.string().required(),
+    description: Joi.string().optional().allow(""),
   }).required(),
   deleteImages: Joi.array(),
 });

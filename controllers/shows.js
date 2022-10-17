@@ -10,6 +10,7 @@ const Prozess = require("../models/prozess");
 const Processgallery = require("../models/process");
 const Partflyer = require("../models/partizipflyer");
 const Prozessflyer = require("../models/prozessflyer");
+const Expotext = require("../models/expotext");
 const Expoflyer = require("../models/expoflyer");
 const Timeline = require("../models/timeline");
 const Timelinetwo = require("../models/timelinetwo");
@@ -68,9 +69,10 @@ module.exports.renderPartizip = async (req, res) => {
 };
 
 module.exports.renderExpo = async (req, res) => {
-  const partizip = await Partizip.findOne({});
   const expoflyer = await Expoflyer.findOne({});
-  res.render("expo", { partizip, expoflyer });
+  const expotext = await Expotext.findOne({});
+  const partizip = await Partizip.findOne({});
+  res.render("expo", { partizip, expoflyer, expotext });
 };
 module.exports.renderProzess = async (req, res) => {
   const timeline = await Timeline.findOne({});

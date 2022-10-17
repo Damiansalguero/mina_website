@@ -5,40 +5,47 @@
 <main>
   <div class="container-fluid">
     <div class="header-bg">
-      <img id="header-img" src="/img/gesamt/Projekt/bg-partizipativ.png" class="img-fluid cover-header">
+      <img id="header-img" src="/img/gesamt/Projekt/bg-expo-2.png" class="img-fluid cover-header">
     </div>
     <!-- TABLE BLOCK -->
     <div class="block" id="header-expo">
-      <!-- <img class="logo" src="/img/gesamt/Logos/icon_prozess.png" alt=""> -->
-      <h1 id="" class="ws-title title-line"><span >Wanderausstellung</span></h1>
+      <img class="logo" src="/img/gesamt/Logos/WBM_Flucht-Migration-Behin.gif" alt="">
+      <h1 id="" class="ws-title title-line"><span>Wanderausstellung</span></h1>
       <div class="expo-text" id="ws-intro"><%-partizip.descriptionthree %></div>
     </div>
-      <div class="prz-btn-box">
-        <% if(currentUser && expoflyer ) {%>
-        <a href="/wander-ausstellung-flyers/<%=expoflyer._id %>" class="btn btn-info btn-prz-text">Flyer Ansehen</a>
-        <% } %>
-        <% if (currentUser) { %>
-          <a href="/wander-ausstellung-flyers/neu" class="btn btn-mina btn-prz-text">Flyer Hinzufügen</a>
-        <%  } %>
-        <% if(expoflyer) {%>
-          <% expoflyer.images.forEach((img, i) => { %>
-            <a href="<%=img.attach%>" download class="btn btn-mina btn-prz-text" id="btn-flyer" target="_blank"><%=expoflyer.title%></a>
-            <% }) %>
-        <% } else { %>
+    <div class="prz-btn-box">
+      <% if(currentUser && expoflyer ) {%>
+      <a href="/wander-ausstellung-flyers/<%=expoflyer._id %>" class="btn btn-info btn-prz-text">Flyer Ansehen</a>
+      <% } %>
+      <% if (currentUser) { %>
+      <a href="/wander-ausstellung-flyers/neu" class="btn btn-mina btn-prz-text">Flyer Hinzufügen</a>
+      <a href="/wander-ausstellung/<%=expotext._id %>/edit" class="btn btn-aktuelles-blue btn-prz-text">Text bearbeiten</a>
+      <%  } %>
+      <% if(expoflyer) {%>
+      <% expoflyer.images.forEach((img, i) => { %>
+      <a href="<%=img.attach%>" download class="btn btn-mina btn-prz-text" id="btn-flyer" target="_blank"><%=expoflyer.title%></a>
+      <% }) %>
+      <% } else { %>
       <div class="no-flyer-space-holder">
       </div>
-        <% } %>
-      </div>
-      <div class="video-box">
-        <h3 class="mina-pink">Eröffnungsfilm</h3>
-        <video src="/videos/Eröffnungsfilm.mp4" width=320 height=240 controls poster="posterimage.jpg">
-        </video>
-      </div>
-      <div class="video-box" id="video-box-last">
-        <h3 class="mina-pink">Interview</h3>
-        <video src="/videos/Interview.mp4" width=320 height=240 controls poster="posterimage.jpg">
-        </video>
-      </div>
+      <% }%>
+      <a href= "/downloads/MINA_flyer-WA_web.pdf" download class="btn btn-mina btn-prz-text" id="btn-flyer" target="_blank">Flyer</a>
+    </div>
+    <div class="video-box">
+      <h3 class="mina-pink">Einblicke bei MINA</h3>
+      <video src="/videos/Eröffnungsfilm.mp4" width=560 height=315 controls poster="posterimage.jpg">
+      </video>
+    </div>
+    <div class="video-box" id="video-box-last">
+      <h3 class="mina-pink">Interview mit Sawsan Mahmood und Anas Alisameel</h3>
+      <video src="/videos/Interview.mp4" width=560 height=315 controls poster="posterimage.jpg">
+      </video>
+    </div>
+    <div class="video-box" id="box-last">
+      <h3 class="mina-pink">Audioguide</h3>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/6Fyd25ZlElg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
     <!-- Kontakt -->
     <div class="container-fluid contact-box" id="prozess-contact">
       <h1 class="white"><span class="title-line">Ansprechperson</span></h1>

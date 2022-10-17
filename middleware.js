@@ -7,6 +7,7 @@ const {
   partizipSchema,
   partizipGallerySchema,
   partFlyerSchema,
+  expoTextSchema,
   expoFlyerSchema,
   timelineSchema,
   timelinetwoSchema,
@@ -206,7 +207,7 @@ module.exports.validateBib = (req, res, next) => {
     throw new ExpressError(msg, 400);
   } else {
     next();
-  }
+  }expoTextSchema
 };
 
 /////////////// Prozess Gallerie /////////////
@@ -234,6 +235,17 @@ module.exports.validateProzess = (req, res, next) => {
 /////////////// Prozess Flyer /////////////
 module.exports.validateProzessFlyer = (req, res, next) => {
   const { error } = prozessFlyerSchema.validate(req.body);
+  if (error) {
+    const msg = error.details.map((el) => el.message).join(",");
+    throw new ExpressError(msg, 400);
+  } else {
+    next();
+  }
+};
+
+///////////// Expo Text /////////////
+module.exports.validateExpotext = (req, res, next) => {
+  const { error } = expoTextSchema.validate(req.body);
   if (error) {
     const msg = error.details.map((el) => el.message).join(",");
     throw new ExpressError(msg, 400);

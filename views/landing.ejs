@@ -19,8 +19,8 @@
       <% } %>
     </div>
     <% if(currentUser) {%>
-    <a href="/aktuelles/<%= aktuell._id %>/edit" class="btn btn btn-aktuelles">Eintrag Bearbeiten</a>
-    <a href="/landing-flyers/<%=flyer._id %>/edit" class="btn btn btn-aktuelles">Flyer Bearbeiten</a>
+    <a href="/aktuelles/<%= aktuell._id %>/edit" class="btn btn btn-aktuelles-blue">Eintrag Bearbeiten</a>
+    <a href="/landing-flyers/<%=flyer._id %>/edit" class="btn btn btn-aktuelles-blue">Flyer Bearbeiten</a>
     <% } %>
     <% if(flyer) {%>
       <% flyer.images.forEach((img, i) => { %>

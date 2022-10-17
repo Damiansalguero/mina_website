@@ -1,12 +1,13 @@
 <link rel="stylesheet" href="/styles/flyer.css">
 <% layout("layouts/boilerplate") %>
 <h1 class=""><span class="title-line line-pink"><%= expoflyer.title %></span></h1>
-<div class="card card-bib">
+<div class="card card-show" style="width: 18rem;">
+  <img src="/img/gesamt/Logos/Mina_Logo.png" class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="card-title"><%= expoflyer.title %></h5>
+    <h5 class="card-title flyer-name"><%= expoflyer.title %></h5>
     <p class="card-text"><%- expoflyer.description %></p>
     <% expoflyer.images.forEach((img, i) => { %>
-      <a target="_blank" class="bib-download" href="<%=img.attach%>" download> <%= expoflyer.title %> downloaden
+      <a target="_blank" class="btn btn-aktuelles-blue" href="<%=img.attach%>" download> <%= expoflyer.title %> downloaden
     </a>
     <% }) %>
   </div>
@@ -21,9 +22,9 @@
       <button id="btn-delete" class="btn btn-danger">Löschen</button>
     </form>
     <div class="">
-      <a id="btn-back" class="btn btn-primary btn-mina" href="/online-bibliothek">Zurück</a>
+      <a id="btn-back" class="btn btn-primary btn-mina" href="/wanderausstellung">Zurück</a>
     </div>
   <% } else { %>
-    <a class="btn btn-primary btn-mina" href="/online-bibliothek"">Zurück</a>
+    <a class="btn btn-primary btn-mina" href="/wanderausstellung"">Zurück</a>
     <% } %>
 </div>

@@ -69,6 +69,20 @@ video {
   font-weight: bold;
 }
 
+.btn-aktuelles-blue {
+  background-color: #0dcaf0;
+  border-color: #0dcaf0;
+  color: #fff;
+  font-weight: bold;
+}
+
+.btn-aktuelles-blue:hover {
+  border-color: #0dcaf0;
+  color: #0dcaf0;
+  background-color: #fff;
+  font-weight: bold;
+}
+
 .btn-mina {
   margin-bottom: 5vh;
 }
