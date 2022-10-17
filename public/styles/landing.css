@@ -31,6 +31,11 @@
   align-items: center;
 }
 
+#book-box {
+  display: flex;
+  justify-content: center;
+}
+
 .book-img {
   margin: 0 2vw;
   height: 250px;
