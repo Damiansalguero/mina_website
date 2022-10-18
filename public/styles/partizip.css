@@ -300,4 +300,7 @@ video {
   #part-contact h1 {
     margin: 5vh 0 5vh 0;
   }
+  .part-text {
+    min-width: 75%;
+  }
 }
