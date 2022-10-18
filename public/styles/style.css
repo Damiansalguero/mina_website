@@ -488,7 +488,7 @@ a {
     font-size: 26px !important;
     width: 50% !important;
     border-bottom: 3px solid #db2a6f !important;
-    margin: 3vh 0 !important;
+    margin-top: 10vh 0 !important;
   }
   #span-helper {
     border-bottom: none !important;

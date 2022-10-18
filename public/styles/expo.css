@@ -48,3 +48,31 @@
   background-color: #fff;
   font-weight: bold;
 }
+
+@media screen and (min-width: 0) and (max-width: 575.98px) {
+  .expo-text {
+    width: 80%;
+  }
+
+  video, iframe {
+    height: auto;
+    width: 90%;
+  }
+  #header-expo {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%) !important;
+  }
+  #header-img {
+    padding-top: 10vh !important;
+    margin-bottom: 5vh !important;
+  }
+}
+
+@media screen and (min-width: 575.98px) and (max-width: 991.98px) {
+  #header-expo {
+    margin-top: -6vh
+  }
+
+  .expo-text {
+    min-width: 75%;
+  }
+}
