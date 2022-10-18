@@ -531,6 +531,9 @@ a {
   h1 {
     margin: 3vh 0;
   }
+  .part-text {
+    min-width: 75%;
+  }
   #box-helper {
     display: flex !important;
     flex-direction: column !important;
