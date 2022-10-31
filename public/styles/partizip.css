@@ -43,7 +43,18 @@ video {
   margin-top: -4vh;
   }
 
+  #book {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20vh;
+  }
 
+  #book-box {
+    display: flex;
+    justify-content: center;
+    margin: 10px
+  }
 
 /********** PARTIZIP STYLES ***********/
 .logo-part {
