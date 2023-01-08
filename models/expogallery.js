@@ -14,10 +14,10 @@ ImageSchema.virtual("thumbnails").get(function () {
   return this.url.replace("/upload", "/upload/h_150");
 });
 
-const BegleitungsgalleryShema = new Schema({
+const ExpoGalleryShema = new Schema({
   title: String,
   description: String,
   images: [ImageSchema],
 });
 
-module.exports = mongoose.model("Begleitungsgallery", BegleitungsgalleryShema);
+module.exports = mongoose.model("Expogallery", ExpoGalleryShema);

@@ -8,6 +8,7 @@ const Partizip = require("../models/partizip");
 const Partizipgallery = require("../models/partizipgallery");
 const Prozess = require("../models/prozess");
 const Processgallery = require("../models/process");
+const Begleitungsgallery = require("../models/begleitung");
 const Partflyer = require("../models/partizipflyer");
 const Prozessflyer = require("../models/prozessflyer");
 const Expotext = require("../models/expotext");
@@ -85,7 +86,9 @@ module.exports.renderProzessTwo = async (req, res) => {
   const prozess = await Prozess.findOne({});
   const prozessflyer = await Prozessflyer.findOne({});
   const timelinetwo = await Timelinetwo.findOne({});
-  res.render("prozesstwo", {prozess, prozessflyer, timelinetwo});
+  const bglgs = await Begleitungsgallery.find({});
+
+  res.render("prozesstwo", {prozess, prozessflyer, timelinetwo, bglgs});
 };
 module.exports.renderDoku = (req, res) => {
   res.render("dokumentation");

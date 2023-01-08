@@ -119,6 +119,14 @@ module.exports.processGallerySchema = Joi.object({
   deleteImages: Joi.array(),
 });
 
+module.exports.begleitungsGallerySchema = Joi.object({
+  bglg: Joi.object({
+    title: Joi.string().required(),
+    description: Joi.string().optional().allow(""),
+  }).required(),
+  deleteImages: Joi.array(),
+});
+
 module.exports.landingFlyerSchema = Joi.object({
   flyer: Joi.object({
     title: Joi.string().required(),
@@ -181,6 +189,14 @@ module.exports.expoFlyerSchema = Joi.object({
   expoflyer: Joi.object({
     title: Joi.string().required(),
     description: Joi.string().optional().allow(""),
+  }).required(),
+  deleteImages: Joi.array(),
+});
+
+module.exports.expoGallerySchema = Joi.object({
+  ptg: Joi.object({
+    title: Joi.string().required(),
+    description: Joi.string().required(),
   }).required(),
   deleteImages: Joi.array(),
 });

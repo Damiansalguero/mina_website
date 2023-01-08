@@ -50,6 +50,7 @@ const partflyerRoutes = require("./routes/partizipflyers");
 const prozessflyerRoutes = require("./routes/prozessflyers");
 const expotextRoutes = require("./routes/expotexts");
 const expoflyerRoutes = require("./routes/expoflyers");
+const begleitungsRoutes = require("./routes/begleitungs");
 
 //////////////// MONGO DB SETUP ///////////////////
 //Online DB dbUrl
@@ -144,6 +145,7 @@ app.use("/prozess-flyers", prozessflyerRoutes);
 app.use("/bibliothek", bibRoutes);
 app.use("/posts", postRoutes);
 app.use("/test", testRoutes);
+app.use("/prozessbegleitung2023", begleitungsRoutes);
 
 ///////////////////////////////////////////////////////////////////////////////
 /////////////////////////////// ROUTES ////////////////////////////////////////

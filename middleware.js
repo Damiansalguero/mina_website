@@ -9,10 +9,12 @@ const {
   partFlyerSchema,
   expoTextSchema,
   expoFlyerSchema,
+  expoGallerySchema,
   timelineSchema,
   timelinetwoSchema,
   prozessTextSchema,
   processGallerySchema,
+  begleitungsGallerySchema,
   landingFlyerSchema,
   aboutSchema,
   bibSchema,
@@ -211,6 +213,17 @@ module.exports.validateBib = (req, res, next) => {
 };
 
 /////////////// Prozess Gallerie /////////////
+module.exports.validateBegleitungsGallery = (req, res, next) => {
+  const { error } = begleitungsGallerySchema.validate(req.body);
+  if (error) {
+    const msg = error.details.map((el) => el.message).join(",");
+    throw new ExpressError(msg, 400);
+  } else {
+    next();
+  }
+};
+
+/////////////// Prozess Gallerie /////////////
 module.exports.validateProcessGallery = (req, res, next) => {
   const { error } = processGallerySchema.validate(req.body);
   if (error) {
@@ -257,6 +270,17 @@ module.exports.validateExpotext = (req, res, next) => {
 /////////////// Expo Flyer /////////////
 module.exports.validateExpoFlyer = (req, res, next) => {
   const { error } = expoFlyerSchema.validate(req.body);
+  if (error) {
+    const msg = error.details.map((el) => el.message).join(",");
+    throw new ExpressError(msg, 400);
+  } else {
+    next();
+  }
+};
+
+/////////////// Expo Gallerie /////////////
+module.exports.validateProcessGallery = (req, res, next) => {
+  const { error } = expoGallerySchema.validate(req.body);
   if (error) {
     const msg = error.details.map((el) => el.message).join(",");
     throw new ExpressError(msg, 400);

@@ -18,6 +18,7 @@
         <a href="/prozesse/<%= prozess._id %>/edit" class="btn btn-aktuelles-blue btn-prz-text">Text bearbeiten</a>
         <a href="/prozess-flyers/neu" class="btn btn-mina btn-prz-text">Flyer Hinzufügen</a>
         <a href="/prozess-flyers/<%=prozessflyer._id %>/edit" class="btn btn-info btn-prz-text">Flyer Bearbeiten</a>
+        <a href="/prozessbegleitung2023/gallerien/neu" class="btn btn-mina btn-prz-text">Gallerie Hinzufügen</a>
         <% } %>
         <% if(prozessflyer) {%>
           <% prozessflyer.images.forEach((img, i) => { %>
@@ -88,6 +89,31 @@
         </div>
       </div>
 
+    <!-- IMAGE BLOCK -->
+    <% if(currentUser) {%>
+    <% if(bglgs) {%>
+    <div class="block blue gallery-block" id="prz-gallery">
+      <h1 class="white"><span class="title-line line-blue">Bildergalerien</span></h1>
+      <% for(let bglg of bglgs) {%>
+          <!-- Test Gallery -->
+          <div class="gallery-container">
+            <h3 class="gallerie-titel"><%= bglg.title %></h3>
+          <div class="gallery2" id="gallery2">
+          <% bglg.images.forEach((img, i) => { %>
+                <img src="<%= img.thumbnail %>" class="d-block gallery-img-card"  alt="">
+          <% }) %>
+          </div>
+          <a class="gallerie-link" href="/prozesse/gallerien/<%= bglg._id %>">Gallerie ansehen</a>
+        </div>
+      <% }%>
+      <% if(currentUser) {%>
+        <a class="card-link btn btn-mina m-auto" href="/prozessbegleitung2023/gallerien/neu">Gallerie Hinzufügen</a>
+      <% }%>
+      </div>
+    <% }%>
+    <% } %>
+
+    <!-- IMAGE BLOCK -->
 
     <!-- Kontakt -->
     <div class="container-fluid contact-box" id="prozess-contact">
@@ -107,6 +133,7 @@
       </div>
     </div>
   </div>
+  <!-- Kontakt -->
 
 
   <!-- MODAL 1 Timeline -->
