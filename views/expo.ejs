@@ -20,6 +20,7 @@
       <% if (currentUser) { %>
       <a href="/wander-ausstellung-flyers/neu" class="btn btn-mina btn-prz-text">Flyer Hinzufügen</a>
       <a href="/wander-ausstellung/<%=expotext._id %>/edit" class="btn btn-aktuelles-blue btn-prz-text">Text bearbeiten</a>
+      <a href="/wander-ausstellung-gallerien/neu" class="btn btn-mina btn-prz-text">Galerie Hinzufügen</a>
       <%  } %>
       <% if(expoflyer) {%>
       <% expoflyer.images.forEach((img, i) => { %>
@@ -31,21 +32,52 @@
       <% }%>
       <a href= "/downloads/MINA_flyer-WA_web-neu.pdf" download class="btn btn-mina btn-prz-text" id="btn-flyer" target="_blank">Flyer</a>
     </div>
+
+    <!-- Video Block -->
+  <div class="about-block" id="video-block">
+    <h1 class="white"><span class="title-line line-green">Material zur Ausstellung</span></h1>
     <div class="video-box">
-      <h3 class="mina-pink">Einblicke bei MINA</h3>
-      <video src="/videos/Eröffnungsfilm.mp4" width=560 height=315 controls poster="posterimage.jpg">
+      <h3 class="white">Einblicke bei MINA</h3>
+      <video src="/videos/Eröffnungsfilm.mp4" poster="/img/gesamt/Thumbnails/Thumbnail_Mina.png" width=560 height=315 controls poster="posterimage.jpg">
       </video>
     </div>
     <div class="video-box" id="video-box-last">
-      <h3 class="mina-pink">Interview mit Sawsan Mahmood und Anas Alisameel</h3>
-      <video src="/videos/Interview.mp4" width=560 height=315 controls poster="posterimage.jpg">
+      <h3 class="white">Interview mit Sawsan Mahmood und Anas Alisameel</h3>
+      <video src="/videos/Interview.mp4" poster="/img/gesamt/Thumbnails/Thumbnail_Mina_2.png" width=560 height=315 controls poster="posterimage.jpg">
       </video>
     </div>
     <div class="video-box" id="box-last">
-      <h3 class="mina-pink">Audioguide</h3>
+      <h3 class="white">Audioguide</h3>
       <iframe width="560" height="315" src="https://www.youtube.com/embed/6Fyd25ZlElg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
     </div>
+  </div>
+
+    <!-- IMAGE BLOCK -->
+    <% if(currentUser) {%>
+    <% if(egls) {%>
+    <div class="block blue gallery-block" id="expo-gallery">
+      <h1 class="white"><span class="title-line line-blue">Bildergalerien</span></h1>
+      <% for(let egl of egls) {%>
+          <!-- Test Gallery -->
+          <div class="gallery-container">
+            <h3 class="gallerie-titel"><%= egl.title %></h3>
+          <div class="gallery2" id="gallery2">
+          <% egl.images.forEach((img, i) => { %>
+                <img src="<%= img.thumbnail %>" class="d-block gallery-img-card"  alt="">
+          <% }) %>
+          </div>
+          <a class="gallerie-link" href="/wander-ausstellung-gallerien/<%= egl._id %>">Galerie ansehen</a>
+        </div>
+      <% }%>
+      <% if(currentUser) {%>
+        <a class="card-link btn btn-mina m-auto" href="/wander-ausstellung-gallerien/neu">Galerie Hinzufügen</a>
+      <% }%>
+      </div>
+    <% }%>
+    <% } %>
+    <!-- IMAGE BLOCK -->
+
     <!-- Kontakt -->
     <div class="container-fluid contact-box" id="prozess-contact">
       <h1 class="white"><span class="title-line">Ansprechperson</span></h1>

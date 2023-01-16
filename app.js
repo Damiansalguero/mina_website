@@ -50,6 +50,7 @@ const partflyerRoutes = require("./routes/partizipflyers");
 const prozessflyerRoutes = require("./routes/prozessflyers");
 const expotextRoutes = require("./routes/expotexts");
 const expoflyerRoutes = require("./routes/expoflyers");
+const expogalleryRoutes = require("./routes/expogalleries");
 const begleitungsRoutes = require("./routes/begleitungs");
 
 //////////////// MONGO DB SETUP ///////////////////
@@ -141,6 +142,7 @@ app.use("/landing-flyers", landingflyerRoutes);
 app.use("/partizip-flyers", partflyerRoutes);
 app.use("/wander-ausstellung", expotextRoutes);
 app.use("/wander-ausstellung-flyers", expoflyerRoutes);
+app.use("/wander-ausstellung-gallerien", expogalleryRoutes);
 app.use("/prozess-flyers", prozessflyerRoutes);
 app.use("/bibliothek", bibRoutes);
 app.use("/posts", postRoutes);

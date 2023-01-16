@@ -279,7 +279,7 @@ module.exports.validateExpoFlyer = (req, res, next) => {
 };
 
 /////////////// Expo Gallerie /////////////
-module.exports.validateProcessGallery = (req, res, next) => {
+module.exports.validateExpoGallery = (req, res, next) => {
   const { error } = expoGallerySchema.validate(req.body);
   if (error) {
     const msg = error.details.map((el) => el.message).join(",");

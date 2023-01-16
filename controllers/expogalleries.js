@@ -1,4 +1,4 @@
-const Expogallery = require("../models/begleitung");
+const Expogallery = require("../models/expogallery");
 const { expoGallerySchema } = require("../schemas.js");
 const { cloudinary } = require("../cloudinary");
 
@@ -43,7 +43,7 @@ module.exports.createExpoGallery = async (req, res, next) => {
       url: file.path,
       filename: file.filename,
     }));
-    przg.images.push(...imgs);
+    egl.images.push(...imgs);
     if (req.body.deleteImages) {
       for (let filename of req.body.deleteImages) {
         await cloudinary.uploader.destroy(filename);

@@ -194,7 +194,7 @@ module.exports.expoFlyerSchema = Joi.object({
 });
 
 module.exports.expoGallerySchema = Joi.object({
-  ptg: Joi.object({
+  egl: Joi.object({
     title: Joi.string().required(),
     description: Joi.string().required(),
   }).required(),
