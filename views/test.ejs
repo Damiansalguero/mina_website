@@ -7,3 +7,12 @@
     <a href="/downloads/2022_Erfahrungsberichte.pdf" target="_blank"><img class="book-img" src="/img/gesamt/Projekt/Buch.png" alt=""></a>
   </div>
 </div>
+
+
+<% if(partflyer) {%>
+  <% partflyer.images.forEach((img, i) => { %>
+  <a href="<%=img.attach%>" download class="btn" id="btn-flyer" target="_blank"><%=partflyer.title%></a>
+  <% }) %>
+  <% } else { %>
+
+    <% } %>
