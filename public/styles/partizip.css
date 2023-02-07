@@ -258,11 +258,11 @@ video {
   align-items: center;
 }
 
-#exposition-text{
+#exposition-text, #puplications-text{
   width: 50%;
   font-size: 18px;
   color: white;
-  text-align: justify;
+  text-align: center;
 }
 .btn-wander {
     background-color: #ffffff;

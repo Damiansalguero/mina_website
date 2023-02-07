@@ -42,6 +42,13 @@
         </script>
       </div>
       <div class="mb-3">
+        <label class="form-label" for="descriptionfive">Text Veröffentlichungen</label>
+        <textarea class="form-control" type="text" id="descriptionfive" name="partizip[descriptionfive]" ><%=partizip.descriptionfour%></textarea>
+        <script type="text/javascript">
+          CKEDITOR.replace('descriptionfive');
+        </script>
+      </div>
+      <div class="mb-3">
         <label class="form-label" >Hochgeladene Dokumente:</label>
         <% partizip.images.forEach(function(img, i) { %>
           <!-- thumbnail matches the key from the campground model -->

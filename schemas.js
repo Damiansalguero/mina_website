@@ -165,6 +165,7 @@ module.exports.partizipSchema = Joi.object({
     descriptiontwo: Joi.string().optional().allow(""),
     descriptionthree: Joi.string().optional().allow(""),
     descriptionfour: Joi.string().optional().allow(""),
+    descriptionfive: Joi.string().optional().allow(""),
   }).required(),
   deleteImages: Joi.array(),
 });

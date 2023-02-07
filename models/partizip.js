@@ -17,6 +17,7 @@ const PartizipSchema = new Schema({
   descriptiontwo: String,
   descriptionthree: String,
   descriptionfour: String,
+  descriptionfive: String,
   images: [ImageSchema]
 });
 

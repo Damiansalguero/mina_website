@@ -104,11 +104,19 @@
       </div>
     </div>
   </div> -->
-<div id="book">
-  <div id="book-box">
-    <a href="/downloads/2022_Erfahrungsberichte-aktualisiert.pdf" target="_blank"><img class="book-img"src="/img/gesamt/Projekt/Buch.png" alt=""></a>
-    <a href="/downloads/MINA_Familienbroschüre_arabisch.pdf" target="_blank"><img class="book-img"src="/img/gesamt/Projekt/Buch3.png" alt=""></a>
-    <a href="/downloads/MINA_Familienbroschüre_tuerkisch.pdf" target="_blank"><img class="book-img"src="/img/gesamt/Projekt/Buch4.png" alt=""></a>
+<div class="block blue gallery-block">
+  <h1 class="white"><span class="title-line line-blue">Veröffentlichungen</span></h1>
+  <% if(partizip.descriptionfive) {%>
+    <div class="part-text" id="part-text-two"><%-partizip.descriptionfive %></div>
+    <% } else { %>
+      <p id="puplications-text">Detaillierte Informationen zu unseren Veröffentlichungen folgen in Kürze.</p>
+      <% } %>
+  <div id="book">
+    <div id="book-box">
+      <a href="/downloads/2022_Erfahrungsberichte-aktualisiert.pdf" target="_blank"><img class="book-img"src="/img/gesamt/Projekt/Buch.png" alt=""></a>
+      <a href="/downloads/MINA_Familienbroschüre_arabisch.pdf" target="_blank"><img class="book-img"src="/img/gesamt/Projekt/Buch3.png" alt=""></a>
+      <a href="/downloads/MINA_Familienbroschüre_tuerkisch.pdf" target="_blank"><img class="book-img"src="/img/gesamt/Projekt/Buch4.png" alt=""></a>
+    </div>
   </div>
 </div>
 <div class="exposition-block">
@@ -133,7 +141,7 @@
       <img class="contact-img" src="/img/gesamt/Mitarbeiter/04_Wendy.jpg" alt="">
       <div class="worker-info">
         <ul>
-          <li class="worker-title">Partizipative Projekte</li>
+          <li class="worker-title">Öffentlichkeitsarbeit</li>
           <li>Wendy Taranowski</li>
           <li>030 – 62 93 40 31</li>
           <li>0159 – 06 70 38 98</li>
