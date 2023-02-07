@@ -269,6 +269,16 @@ video {
     border-color: #4caf50;
     color: #9fb039;
     font-weight: bold;
+
+    /* outline: none;
+    border: none;
+    cursor: pointer;
+    background: #db2a6f;
+    font-size: 16px;
+    font-weight: bold;
+    color:#fff;
+    box-shadow: 0 2px #b4225a;
+    position: relative; */
 }
 
 .btn-wander:hover {
@@ -276,7 +286,14 @@ video {
     border-color: #fff;
     color: #fff;
     font-weight: bold;
+    /* box-shadow: 0 1px #b4225a;
+	  top: 1px; */
 }
+
+/* .btn-wander:active {
+	box-shadow: 0 0 #b4225a;
+	top: 2px;
+} */
 #podcast-block {
   clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
     background-color: #72c5d5;
