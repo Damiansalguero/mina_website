@@ -80,7 +80,7 @@ module.exports.createAnmeldung = async (req, res, next) => {
     console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
     req.flash(
       "info",
-      "Sie haben sich erfolgreich angemeldet und erhalten bald eine Email von uns!"
+      "Vielen Dank für Ihre Anmeldung. Wir überprüfen, ob es noch freie Plätze gibt. Sie erhalten in den kommenden Tagen eine E-Mail von uns."
     );
     res.redirect("/workshops");
   });
