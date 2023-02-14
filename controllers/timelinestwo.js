@@ -35,7 +35,7 @@ module.exports.updateTimelinetwo = async (req, res) => {
     ...req.body.timelinetwo
   });
   await timelinetwo.save();
-  req.flash("success", "Der Workshop wurde erfolgreich aktualisiert !");
+  req.flash("success", "Der Zeitstrahl-Eintrag wurde erfolgreich aktualisiert !");
   res.redirect("/prozess-begleitung");
 };
 

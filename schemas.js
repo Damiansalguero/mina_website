@@ -103,6 +103,17 @@ module.exports.timelinetwoSchema = Joi.object({
   }).required(),
 });
 
+module.exports.timelinethreeSchema = Joi.object({
+  timelinethree: Joi.object({
+    auswahl: Joi.string().required(),
+    kennenlern: Joi.string().required(),
+    bedarf: Joi.string().required(),
+    auswertung: Joi.string().required(),
+    idee: Joi.string().required(),
+    evaluation: Joi.string().required()
+  }).required(),
+});
+
 module.exports.prozessSchema = Joi.object({
   prozess: Joi.object({
     title: Joi.string().required(),
@@ -113,6 +124,37 @@ module.exports.prozessSchema = Joi.object({
 
 module.exports.processGallerySchema = Joi.object({
   przg: Joi.object({
+    title: Joi.string().required(),
+    description: Joi.string().optional().allow(""),
+  }).required(),
+  deleteImages: Joi.array(),
+});
+
+module.exports.prozessFlyerSchema = Joi.object({
+  prozessflyer: Joi.object({
+    title: Joi.string().required(),
+    description: Joi.string().required(),
+  }).required(),
+  deleteImages: Joi.array(),
+});
+
+module.exports.processThreeSchema = Joi.object({
+  przthree: Joi.object({
+    title: Joi.string().required(),
+    description: Joi.string().optional().allow(""),
+  }).required(),
+  deleteImages: Joi.array(),
+});
+module.exports.processThreeGallerySchema = Joi.object({
+  przgthree: Joi.object({
+    title: Joi.string().required(),
+    description: Joi.string().optional().allow(""),
+  }).required(),
+  deleteImages: Joi.array(),
+});
+
+module.exports.processThreeFlyerSchema = Joi.object({
+  processthreeflyer: Joi.object({
     title: Joi.string().required(),
     description: Joi.string().optional().allow(""),
   }).required(),
@@ -243,10 +285,4 @@ module.exports.prozessTextSchema = Joi.object({
   }).required(),
 });
 
-module.exports.prozessFlyerSchema = Joi.object({
-  prozessflyer: Joi.object({
-    title: Joi.string().required(),
-    description: Joi.string().required(),
-  }).required(),
-  deleteImages: Joi.array(),
-});
+

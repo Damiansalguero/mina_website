@@ -8,14 +8,18 @@ const Partizip = require("../models/partizip");
 const Partizipgallery = require("../models/partizipgallery");
 const Prozess = require("../models/prozess");
 const Processgallery = require("../models/process");
-const Begleitungsgallery = require("../models/begleitung");
-const Partflyer = require("../models/partizipflyer");
 const Prozessflyer = require("../models/prozessflyer");
+const Begleitungsgallery = require("../models/begleitung");
+const Prozessthree = require("../models/processthree");
+const Processthreegallery = require("../models/processthreegallery");
+const Prozessthreeflyer = require("../models/processthreeflyer");
+const Partflyer = require("../models/partizipflyer");
 const Expotext = require("../models/expotext");
 const Expoflyer = require("../models/expoflyer");
 const Expogallery = require("../models/expogallery");
 const Timeline = require("../models/timeline");
 const Timelinetwo = require("../models/timelinetwo");
+const Timelinethree = require("../models/timelinethree.js");
 const Flyer = require("../models/landingflyer");
 const Bib = require("../models/bib");
 const nodemailer = require("nodemailer");
@@ -93,6 +97,17 @@ module.exports.renderProzessTwo = async (req, res) => {
 
   res.render("prozesstwo", {prozess, prozessflyer, timelinetwo, bglgs});
 };
+
+module.exports.renderProzessThree = async (req, res) => {
+  const przthree = await Prozessthree.findOne({});
+  const processthreeflyer = await Prozessthreeflyer.findOne({});
+  const przgthrees = await Processthreegallery.find({});
+  const timelinethree = await Timelinethree.findOne({});
+  // const bglgs = await Begleitungsgallery.find({});
+
+  res.render("prozessthree", {przthree,  processthreeflyer, przgthrees, timelinethree});
+};
+
 module.exports.renderDoku = (req, res) => {
   res.render("dokumentation");
 };

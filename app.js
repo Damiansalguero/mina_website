@@ -40,6 +40,7 @@ const partizipRoutes = require("./routes/partizips");
 const prozessRoutes = require("./routes/processes");
 const timelineRoutes = require("./routes/timelines");
 const timelinetwoRoutes = require("./routes/timelinestwo");
+const timelinethreeRoutes = require("./routes/timelinesthree");
 const landingflyerRoutes = require("./routes/landingflyers");
 const userRoutes = require("./routes/users");
 const showRoutes = require("./routes/shows");
@@ -51,7 +52,7 @@ const prozessflyerRoutes = require("./routes/prozessflyers");
 const expotextRoutes = require("./routes/expotexts");
 const expoflyerRoutes = require("./routes/expoflyers");
 const expogalleryRoutes = require("./routes/expogalleries");
-const begleitungsRoutes = require("./routes/begleitungs");
+const processThreeRoutes = require("./routes/processesthree");
 
 //////////////// MONGO DB SETUP ///////////////////
 //Online DB dbUrl
@@ -136,18 +137,19 @@ app.use("/anmeldung", wsregisterRoutes);
 app.use("/ueberworkshops", wsnewsRoutes);
 app.use("/partizipatives", partizipRoutes);
 app.use("/prozesse", prozessRoutes);
+app.use("/prozess-flyers", prozessflyerRoutes);
 app.use("/zeitstrahl", timelineRoutes);
 app.use("/zeitstrahl2022", timelinetwoRoutes);
+app.use("/zeitstrahl2023", timelinethreeRoutes);
 app.use("/landing-flyers", landingflyerRoutes);
 app.use("/partizip-flyers", partflyerRoutes);
 app.use("/wander-ausstellung", expotextRoutes);
 app.use("/wander-ausstellung-flyers", expoflyerRoutes);
 app.use("/wander-ausstellung-gallerien", expogalleryRoutes);
-app.use("/prozess-flyers", prozessflyerRoutes);
 app.use("/bibliothek", bibRoutes);
 app.use("/posts", postRoutes);
 app.use("/test", testRoutes);
-app.use("/prozessbegleitung2023", begleitungsRoutes);
+app.use("/prozessbegleitung2023", processThreeRoutes);
 
 ///////////////////////////////////////////////////////////////////////////////
 /////////////////////////////// ROUTES ////////////////////////////////////////

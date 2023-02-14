@@ -12,8 +12,12 @@ const {
   expoGallerySchema,
   timelineSchema,
   timelinetwoSchema,
+  timelinethreeSchema,
   prozessTextSchema,
   processGallerySchema,
+  processThreeSchema,
+  processThreeGallerySchema,
+  processThreeFlyerSchema,
   begleitungsGallerySchema,
   landingFlyerSchema,
   aboutSchema,
@@ -105,6 +109,17 @@ module.exports.validateTimeline = (req, res, next) => {
 /////////////// TIMELINE /////////////
 module.exports.validateTimelinetwo = (req, res, next) => {
   const { error } = timelinetwoSchema.validate(req.body);
+  if (error) {
+    const msg = error.details.map((el) => el.message).join(",");
+    throw new ExpressError(msg, 400);
+  } else {
+    next();
+  }
+};
+
+//* TIMELINETHREE //
+module.exports.validateTimelinethree = (req, res, next) => {
+  const { error } = timelinethreeSchema.validate(req.body);
   if (error) {
     const msg = error.details.map((el) => el.message).join(",");
     throw new ExpressError(msg, 400);
@@ -248,6 +263,39 @@ module.exports.validateProzess = (req, res, next) => {
 /////////////// Prozess Flyer /////////////
 module.exports.validateProzessFlyer = (req, res, next) => {
   const { error } = prozessFlyerSchema.validate(req.body);
+  if (error) {
+    const msg = error.details.map((el) => el.message).join(",");
+    throw new ExpressError(msg, 400);
+  } else {
+    next();
+  }
+};
+
+//* ProcessThreeText // 
+module.exports.validateProzessThree = (req, res, next) => {
+  const { error } = processThreeSchema.validate(req.body);
+  if (error) {
+    const msg = error.details.map((el) => el.message).join(",");
+    throw new ExpressError(msg, 400);
+  } else {
+    next();
+  }
+};
+
+//* ProcessThreeGallery // 
+module.exports.validateProcessThreeGallery = (req, res, next) => {
+  const { error } = processThreeGallerySchema.validate(req.body);
+  if (error) {
+    const msg = error.details.map((el) => el.message).join(",");
+    throw new ExpressError(msg, 400);
+  } else {
+    next();
+  }
+};
+
+//* ProcessThreeFlyer // 
+module.exports.validateProzessThreeFlyer = (req, res, next) => {
+  const { error } = processThreeFlyerSchema.validate(req.body);
   if (error) {
     const msg = error.details.map((el) => el.message).join(",");
     throw new ExpressError(msg, 400);

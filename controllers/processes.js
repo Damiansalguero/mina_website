@@ -60,7 +60,7 @@ module.exports.updateProzess = async (req, res) => {
     ...req.body.prozess,
   });
   await prozess.save();
-  req.flash("success", "Der Text wurde erfolgreich aktualisiert !");
+  req.flash("success", "Der Eintrag wurde erfolgreich aktualisiert !");
   res.redirect("/prozess-begleitung");
 };
 

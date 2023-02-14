@@ -1,12 +1,12 @@
 <% layout("layouts/boilerplate") %>
 <link rel="stylesheet" href="/styles/forms.css">
     <div class="row">
-      <h1 class="text-center">Wanderausstellung Gallerie Bearbeiten</h1>
+      <h1 class="text-center">Prozessbegleitung Gallerie Bearbeiten</h1>
       <div class="col-6 offset-3">
-        <form action="/wander-ausstellung-gallerien/<%=egl._id%>?_method=PUT" method="post" novalidate class="validated-form" enctype="multipart/form-data">
+        <form action="/prozessbegleitung2023/galerien/<%=egl._id%>?_method=PUT" method="post" novalidate class="validated-form" enctype="multipart/form-data">
           <div class="mb-3">
             <label class="form-label" for="title">Überschrift</label>
-            <input class="form-control" type="text" id="title" name="egl[title]" required value="<%=egl.title%>">
+            <input class="form-control" type="text" id="title" name="przgthree[title]" required value="<%=przgthree.title%>">
           </div>
           <div class="mb-3">
             <label for="formFile" class="form-label">Bilder</label>
@@ -14,13 +14,13 @@
           </div>
           <div class="mb-3">
             <label class="form-label" for="description">Beschreibung</label>
-            <textarea class="form-control" type="text" id="description" name="egl[description]"><%=egl.description%></textarea>
+            <textarea class="form-control" type="text" id="description" name="przgthree[description]"><%=przgthree.description%></textarea>
             <script>
                     CKEDITOR.replace( 'description' );
                 </script>
           </div>
           <div class="mb-3" id="thumbnail-box">
-            <% egl.images.forEach(function(img, i) { %>
+            <% przgthree.images.forEach(function(img, i) { %>
               <img src="<%= img.thumbnails %>" class="thumbnail" alt="">
               <div class="form-check-inline">
                 <!-- id here add index of the images -->
@@ -34,6 +34,6 @@
             <button class="btn btn-aktuelles-blue">Speichern</button>
           </div>
         </form>
-        <a class="btn btn-primary btn-mina" href="/wanderausstellung">Zurück</a>
+        <a class="btn btn-primary btn-mina" href="/prozess-begleitung">Zurück</a>
       </div>
     </div>
