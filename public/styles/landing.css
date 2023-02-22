@@ -281,7 +281,7 @@ small {
     clip-path: polygon(0 0, 100% 4%, 100% 100%, 0 100%);
   }
   .header-bg img {
-    height: 600px;
+    height: 450px !important;
   }
   .text-box-aktuelles {
     width: 50%;
