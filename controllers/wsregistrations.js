@@ -40,7 +40,9 @@ module.exports.createAnmeldung = async (req, res, next) => {
       <p>${req.body.wsr.wishes}</p>
       <h3>Persönliche Daten</h3>
       <ul>
-      <li>Datenverwendung Anmeldung:</strong> ${req.body.wsr.personal}</li>
+      <li>Datenverwendung:</strong> ${req.body.wsr.personal1}</li>
+      <li>Kontaktweitergabe:</strong> ${req.body.wsr.personal2}</li>
+      <li>Kontaktdatennutzung Mina:</strong> ${req.body.wsr.personal3}</li>
       </ul>
       <h3>Newsletter</h3>
       <ul>

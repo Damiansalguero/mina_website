@@ -70,7 +70,9 @@ module.exports.workshopregisterSchema = Joi.object({
     orgafield: Joi.array().required(),
     description: Joi.string(),
     wishes: Joi.string(),
-    personal: Joi.array().required(),
+    personal1: Joi.array().required(),
+    personal2: Joi.array().optional(),
+    personal3: Joi.array().optional(),
     newsletter: Joi.string().optional(),
   }).required(),
 });

@@ -53,10 +53,10 @@ const expotextRoutes = require("./routes/expotexts");
 const expoflyerRoutes = require("./routes/expoflyers");
 const expogalleryRoutes = require("./routes/expogalleries");
 const processThreeRoutes = require("./routes/processesthree");
+const begleitungsRoutes = require("./routes/begleitungs");
 
-//////////////// MONGO DB SETUP ///////////////////
-//Online DB dbUrl
-//
+//* MONGO DB SETUP //
+// Online DB dbUrl //
 mongoose.connect(dbUrl, {
   useNewUrlParser: true,
   useCreateIndex: true,
@@ -70,17 +70,17 @@ db.once("open", () => {
   console.log("MONGO DATABASE CONNECTED");
 });
 
-//////////////// VIEW ENGINE SETUP ///////////////////
+//* VIEW ENGINE SETUP //
 app.engine("ejs", ejsMate);
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
-//////////////// USE ///////////////////
+//*/ USE //
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 app.use(express.static(path.join(__dirname, "public")));
 
-//////////////// USE SESSION ///////////////////
+//* USE SESSION //
 const secret = process.env.SECRET || "newSecret";
 const store = new MongoStore({
   url: dbUrl,
@@ -107,17 +107,18 @@ const sessionConfig = {
 
 app.use(session(sessionConfig));
 
-//////////////// USE  FLASH ///////////////////
+//* USE  FLASH //
 app.use(flash());
 
-//////////////// USE  PASSPORT ///////////////////
+//* USE  PASSPORT //
 app.use(passport.initialize());
 app.use(passport.session());
-//.authenticate(), .serializeUser(), deserializeUser() are built in methods from passport
+//? .authenticate(), .serializeUser(), deserializeUser() are built in methods from passport //
 passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
-//////////////// USE MIDDLEWARE EVERYWHERE ///////////////////
+
+//* USE MIDDLEWARE EVERYWHERE //
 app.use((req, res, next) => {
   res.locals.currentUser = req.user;
   res.locals.success = req.flash("success");
@@ -126,7 +127,7 @@ app.use((req, res, next) => {
   next();
 });
 
-//////////////// USE  ROUTEHANDLERS ///////////////////
+//* USE  ROUTEHANDLERS //
 app.use("/", showRoutes);
 app.use("/admin", userRoutes);
 app.use("/aktuelles", aktuellesRoutes);
@@ -150,16 +151,13 @@ app.use("/bibliothek", bibRoutes);
 app.use("/posts", postRoutes);
 app.use("/test", testRoutes);
 app.use("/prozessbegleitung2023", processThreeRoutes);
-
-///////////////////////////////////////////////////////////////////////////////
-/////////////////////////////// ROUTES ////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////////////
+app.use("/prozessbegleitung2022", begleitungsRoutes);
 
 // app.all("*", (req, res, next) => {
 //   next(new ExpressError("Seite nicht gefunden", 404));
 // });
 
-////////////////// ERROR HANDLER /////////////////////////
+//!ERROR HANDLER //
 app.use((err, req, res, next) => {
   const { statusCode = 500 } = err;
   if (!err.message) {
@@ -170,7 +168,7 @@ app.use((err, req, res, next) => {
   console.log("ERROR-MESSAGE !!!!!!", err);
 });
 
-//////////////// SERVER ROUTE ///////////////////
+//* SERVER ROUTE //
 const port = process.env.PORT || 1024;
 app.listen(port, () => {
   console.log("LISTENING ON PORT 1024");

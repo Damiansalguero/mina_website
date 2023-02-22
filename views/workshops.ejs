@@ -63,39 +63,42 @@
         </div>
       <% } %>
       <!-- Table 1 -->
-      <table class="table table-responsive table-hover" id="table-ws">
-        <thead>
-
-          <tr>
-            <th scope="col">Datum</th>
-            <th scope="col">Workshop</th>
-            <th scope="col">Ort</th>
-            <th scope="col">Verfügbarkeit</th>
-            <th scope="col">Info</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% for(let workshop of workshops) {%>
-          <tr>
-            <td><%= workshop.date %></td>
-            <td><%= workshop.title %></td>
-            <td>
-              <ul>
-                <li><%= workshop.location %></li>
-                <li> <%= workshop.location2%></li>
-                <li> <%= workshop.location3%></li>
-              </ul>
-            </td>
-            <% if(workshop.capacity === "ausgebucht") { %>
-            <td class="ausgebucht"><%= workshop.capacity %></td>
-            <%} else { %>
-            <td class="anmelden"><a href="/anmeldung/<%= workshop._id %>/new""><%= workshop.capacity %></a></td>
-            <% } %>
-            <td><a href=" /workshop/<%= workshop._id %>""> Mehr ...</a></td>
-          </tr>
-          <% }%>
-        </tbody>
-      </table>
+      <% if(!workshops) {%>
+        <div></div>
+      <% } else { %>
+        <table class="table table-responsive table-hover" id="table-ws">
+          <thead>
+            <tr>
+              <th scope="col">Datum</th>
+              <th scope="col">Workshop</th>
+              <th scope="col">Ort</th>
+              <th scope="col">Verfügbarkeit</th>
+              <th scope="col">Info</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% for(let workshop of workshops) {%>
+            <tr>
+              <td><%= workshop.date %></td>
+              <td><%= workshop.title %></td>
+              <td>
+                <ul>
+                  <li><%= workshop.location %></li>
+                  <li> <%= workshop.location2%></li>
+                  <li> <%= workshop.location3%></li>
+                </ul>
+              </td>
+              <% if(workshop.capacity === "ausgebucht") { %>
+              <td class="ausgebucht"><%= workshop.capacity %></td>
+              <%} else { %>
+              <td class="anmelden"><a href="/anmeldung/<%= workshop._id %>/new""><%= workshop.capacity %></a></td>
+              <% } %>
+              <td><a href=" /workshop/<%= workshop._id %>""> Mehr ...</a></td>
+            </tr>
+            <% }%>
+          </tbody>
+        </table>
+      <% } %>
       <% if(currentUser) {%>
         <div class="ws-btn-box">
           <a href="/workshop/new" class="btn btn btn-aktuelles">Workshop Hinzufügen</a>

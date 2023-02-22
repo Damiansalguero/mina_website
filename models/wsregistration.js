@@ -24,7 +24,9 @@ const AnmeldungSchema = new Schema({
   orgafield: Array,
   description: String,
   wishes: String,
-  personal: Array,
+  personal1: Array,
+  personal2: Array,
+  personal3: Array,
   newsletter: String
 });
 

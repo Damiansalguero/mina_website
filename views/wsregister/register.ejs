@@ -77,48 +77,53 @@
       </div> -->
       <!-- Organisation Feld -->
       <div class="mb-3">
-        <label class="form-label" for="orgafield">Meine Organisation gehört zur
+        <label class="form-label" for="orgafield">Meine Organisation gehört
         </label>
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="Behindertenhilfe" id="orgafield" name="wsr[orgafield]">
           <label class="form-check-label" for="orgafield">
-            Bereich Behinderung (selbstorganisiert und/ oder Unterstützungssystem)
+            zum Bereich Behinderung (selbstorganisiert und/ oder Unterstützungssystem)
           </label>
         </div>
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="Migrantenselbstorganisation" id="orgafield" name="wsr[orgafield]">
           <label class="form-check-label" for="orgafield">
-            Selbstorganisation von und für Migrant*innen
+            zur Selbstorganisation von und für Migrant*innen
           </label>
         </div>
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="Geflüchtetenhilfe" id="orgafield" name="wsr[orgafield]">
           <label class="form-check-label" for="orgafield">
-            Angeboten für Geflüchtete und/ oder Migrant*innen
+            zu Angeboten für Geflüchtete und/ oder Migrant*innen
           </label>
         </div>
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="Verwaltung und Politik" id="orgafield" name="wsr[orgafield]">
           <label class="form-check-label" for="orgafield">
-            Verwaltung und Politik
+            zur Verwaltung und Politik
           </label>
         </div>
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="Verwaltung und Politik" id="orgafield" name="wsr[orgafield]">
           <label class="form-check-label" for="orgafield">
-            Sonstige
+            zu Sonstige
           </label>
         </div>
       </div>
       <!-- Assistenzbedarf -->
       <div class="mb-3">
-        <label class="form-label" for="assistance">Benötigen Sie für die Veranstaltung Hilfsmittel vom Veranstalter? </label>
-        <div class="form-check">
+        <label class="form-label" for="assistance">Benötigen Sie für die Veranstaltung Hilfsmittel vom Veranstalter? <br> Wir versuchen, diese innerhalb unseres organisatorischen Rahmens möglich zu machen.</label>
+        <!-- <div class="form-check">
           <input class="form-check-input" type="checkbox" value="ja" id="assistance" name="wsr[assistance]">
           <label class="form-check-label" for="assistance">
             Ja
           </label>
-        </div>
+        </div> -->
+        <!-- Assistenzbedarf Konkret -->
+       <div class="mb-3">
+        <label class="form-label" for="assistanceneed">Ja, ich benötige</label>
+        <input class="form-control" type="text" id="assistanceneed" name="wsr[assistanceneed]">
+       </div>
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="nein" id="assistance" name="wsr[assistance]">
           <label class="form-check-label" for="assistance">
@@ -126,11 +131,7 @@
           </label>
         </div>
       </div>
-      <!-- Assistenzbedarf Konkret -->
-      <div class="mb-3">
-        <label class="form-label" for="assistanceneed">Ja, ich benötige</label>
-        <input class="form-control" type="text" id="assistanceneed" name="wsr[assistanceneed]">
-      </div>
+      
       <!-- Hilfsmittel -->
       <!-- <div class="mb-3">
         <label class="form-label" for="aid">Bringen Sie Hilfsmittel mit?</label>
@@ -246,21 +247,21 @@
         <label class="form-label" for="personal">Persönliche Daten
         </label>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="Daten: ja" id="personal" name="wsr[personal]" required>
+          <input class="form-check-input" type="checkbox" value="Daten: ja" id="personal" name="wsr[personal1]" required>
           <label class="form-check-label" for="personal">
-            Meine Daten dürfen zu Anmeldezwecken verarbeitet werden
+            Meine Daten dürfen zu Anmeldezwecken und zur Aussendung der Veranstaltungsdokumentation verarbeitet werden.
            <span class="pflichtfeld">*</span></label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="Kontaktdaten: ja" id="personal" name="wsr[personal]">
+          <input class="form-check-input" type="checkbox" value="Kontaktdaten: ja" id="personal" name="wsr[personal2]">
           <label class="form-check-label" for="personal">
-            Meine Kontaktdaten dürfen an alle Teilnehmer*innen der Veranstaltung weitergegeben werden
+            Meine Kontaktdaten dürfen an alle Teilnehmer*innen der Veranstaltung weitergegeben werden.
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="Fotos: ja" id="personal" name="wsr[personal]">
+          <input class="form-check-input" type="checkbox" value="Fotos: ja" id="personal" name="wsr[personal3]">
           <label class="form-check-label" for="personal">
-            Ich bin damit einverstanden, dass auf der Veranstaltung aufgenommene Fotos mit mir veröffentlicht werden dürfen
+            Meine Kontaktdaten dürfen bis auf Widerruf für weitere Veranstaltungen von MINA – Leben in Vielfalt e.V. genutzt werden.
           </label>
         </div>
         <div class="disclaimer-box">
