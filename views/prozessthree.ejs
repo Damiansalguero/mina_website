@@ -5,12 +5,12 @@
 <!-- NAV + HEADER -->
 <main>
   <div class="container-fluid">
-    <% if(currentUser) {%>
+    
     <div class="header-bg">
       <img id="header-img" src="/img/gesamt/Projekt/Prozess6.png" class="img-fluid cover-header">
     </div>
     <!-- TABLE BLOCK -->
-    <div class="block" id="block-prozess">
+    <div class="block" id="block-prozess-three">
       <img class="logo" src="/img/gesamt/Logos/icon_prozess.png" alt="">
       <h1 id="" class="ws-title title-line"><span ><%= przthree.title %></span></h1>
       <div class="prozess-text" id="ws-intro"><%-przthree.description %></div>
@@ -21,6 +21,7 @@
         <a href="/prozessbegleitung2023/flyer/neu" class="btn btn-mina btn-prz-text">Flyer Hinzufügen</a>
         <a href="/prozessbegleitung2023/flyer/<%= processthreeflyer._id %>/edit" class="btn btn-info btn-prz-text">Flyer Bearbeiten</a>
         <% } %>
+      <% if(currentUser) {%>
         <% if(processthreeflyer) {%>
           <% processthreeflyer.images.forEach((img, i) => { %>
             <a href="<%=img.attach%>" download class="btn btn-mina btn-prz-text" id="btn-flyer" target="_blank"><%=processthreeflyer.title%></a>
@@ -113,10 +114,9 @@
         </div>
       <% }%>
     <% }%>
-
     <!-- IMAGE BLOCK -->
     <% } %>
-
+    
     <!-- Kontakt -->
     <div class="container-fluid contact-box" id="prozess-contact">
       <h1 class="white"><span class="title-line">Ansprechperson</span></h1>
