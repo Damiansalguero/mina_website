@@ -5,7 +5,7 @@ const WsnewSchema = new Schema({
   title: String,
   description: String,
   accordiontitleone: String,
-  accordiontextone: String,
+  accordiontexone: String,
   accordiontitletwo: String,
   accordiontextwo: String,
   accordiontitlethree: String,

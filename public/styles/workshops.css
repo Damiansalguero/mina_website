@@ -24,7 +24,8 @@
 
 #first-accordion,
 #second-accordion,
-#third-accordion {
+#third-accordion,
+#fourth-accordion {
   width: 50%;
 }
 
@@ -37,7 +38,7 @@
   text-align: left;
 }
 
-#third-accordion {
+#fourth-accordion {
   margin-bottom: 10vh;
 }
 

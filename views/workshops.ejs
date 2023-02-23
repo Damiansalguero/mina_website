@@ -19,7 +19,7 @@
         </h2>
         <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
           <div class="accordion-body">
-            <%-wsnew.accordiontextone %>
+            <%-wsnew.accordiontexone %>
             <!-- <p class="accordion-flyer">Weitere Informationen zu den Inhalten finden Sie in unserem <a href="/downloads/WEB_Flyer_Workshops_2021.pdf" target="_blank"> Flyer.</a></p> -->
           </div>
         </div>
@@ -55,6 +55,21 @@
         </div>
       </div>
       <% } %>
+      <% if(wsnew.accordiontitlefour) {%>
+        <div class="accordion-item" id="fourth-accordion">
+          <h2 class="accordion-header" id="flush-headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+              <strong class="strong-ws"><%=wsnew.accordiontitlefour %></strong>
+            </button>
+          </h2>
+          <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <%-wsnew.accordiontextfour %>
+              <!-- <p class="accordion-flyer">Weitere Informationen zu den Inhalten finden Sie im Infoblatt <a href="/downloads/2021_Ehrenamtliche_Infoblatt_Online_Workshop.pdf" target="_blank"> Online Workshops für Ehrenamtliche.</a></p> -->
+            </div>
+          </div>
+        </div>
+        <% } %>
     </div>
 
       <% if(currentUser) {%>

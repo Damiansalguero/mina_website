@@ -193,7 +193,7 @@ module.exports.wsnewSchema = Joi.object({
     title: Joi.string().required(),
     description: Joi.string().required(),
     accordiontitleone: Joi.string().optional().allow(""),
-    accordiontextone: Joi.string().optional().allow(""),
+    accordiontexone: Joi.string().optional().allow(""),
     accordiontitletwo: Joi.string().optional().allow(""),
     accordiontextwo: Joi.string().optional().allow(""),
     accordiontitlethree: Joi.string().optional().allow(""),
