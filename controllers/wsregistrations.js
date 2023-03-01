@@ -17,27 +17,23 @@ module.exports.createAnmeldung = async (req, res, next) => {
       <li><strong>Seminarort:</strong> ${req.body.wsr.location}</li>
       <li><strong>Datum:</strong> ${req.body.wsr.date}</li>
       <li><strong>Name:</strong> ${req.body.wsr.name}</li>
-      <li><strong>Organisation:</strong> ${req.body.wsr.organisation}</li>
       <li><strong>Adresse:</strong> ${req.body.wsr.street}, ${req.body.wsr.zip}</li>
       <li><strong>Telefon:</strong> ${req.body.wsr.phone}</li>
       <li><strong>Email:</strong> ${req.body.wsr.email}</li>
+      <li><strong>Organisation:</strong> ${req.body.wsr.organisation}</li>
+      <li><strong>Die Organisation gehört zur:</strong> ${req.body.wsr.orgafield}</li>
       <li><strong>Assistenzbedarf:</strong> ${req.body.wsr.assistance}</li>
       <li><strong>Welcher Assistenzbedarf:</strong> ${req.body.wsr.assistanceneed}</li>
-      <li><strong>Die Organisation gehört zur:</strong> ${req.body.wsr.orgafield}</li>
       </ul>
       <h3>Erfahrungen an der Schnittstelle:</h3>
       <p>${req.body.wsr.description}</p>
       <h3>Wünsche an die Workshops:</h3>
       <p>${req.body.wsr.wishes}</p>
-      <h3>Persönliche Daten</h3>
+      <h3>Verwendung Persönliche Daten</h3>
       <ul>
       <li>Datenverwendung:</strong> ${req.body.wsr.personal1}</li>
       <li>Kontaktweitergabe:</strong> ${req.body.wsr.personal2}</li>
       <li>Kontaktdatennutzung Mina:</strong> ${req.body.wsr.personal3}</li>
-      </ul>
-      <h3>Newsletter</h3>
-      <ul>
-      <li>Anmeldung für Newsletter:</strong> ${req.body.wsr.newsletter}</li>
       </ul>
   `;
 
