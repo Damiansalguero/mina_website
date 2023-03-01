@@ -18,20 +18,11 @@ module.exports.createAnmeldung = async (req, res, next) => {
       <li><strong>Datum:</strong> ${req.body.wsr.date}</li>
       <li><strong>Name:</strong> ${req.body.wsr.name}</li>
       <li><strong>Organisation:</strong> ${req.body.wsr.organisation}</li>
-      <li><strong>Mitgliedschaft bvkm:</strong> ${req.body.wsr.membership}</li>
       <li><strong>Adresse:</strong> ${req.body.wsr.street}, ${req.body.wsr.zip}</li>
       <li><strong>Telefon:</strong> ${req.body.wsr.phone}</li>
       <li><strong>Email:</strong> ${req.body.wsr.email}</li>
       <li><strong>Assistenzbedarf:</strong> ${req.body.wsr.assistance}</li>
       <li><strong>Welcher Assistenzbedarf:</strong> ${req.body.wsr.assistanceneed}</li>
-      <li><strong>Hilfsmittel:</strong> ${req.body.wsr.aid}</li>
-      <li><strong>Welche Hilfsmittel:</strong> ${req.body.wsr.aids}</li>
-      <li><strong>Betreuung:</strong> ${req.body.wsr.care}</li>
-      <li><strong>Assistenzperson:</strong> ${req.body.wsr.caretaker}</li>
-      <li><strong>Ehrenamtliche*r Teilnehmer*in:</strong> ${req.body.wsr.volunteer}</li>
-      <li><strong>Lebensmittelallergie:</strong> ${req.body.wsr.allergy}</li>
-      <li><strong>Allergie gegen:</strong> ${req.body.wsr.allergies}</li>
-      <li><strong>Verpflegungswunsch:</strong> ${req.body.wsr.dietwish}</li>
       <li><strong>Die Organisation gehört zur:</strong> ${req.body.wsr.orgafield}</li>
       </ul>
       <h3>Erfahrungen an der Schnittstelle:</h3>
