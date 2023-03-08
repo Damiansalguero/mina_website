@@ -20,5 +20,9 @@
     height: auto;
     padding-top: 9vh;
     margin-top: -9vh;
-    margin-bottom: 20vh;
+    margin-bottom: 10vh;
+  }
+
+  #timeline-block-three{
+    margin-top: 0;
   }
