@@ -99,7 +99,7 @@ video {
 }
 
 #part-contact {
-  clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0 0%, 100% 2%, 100% 100%, 0% 100%);
   background-color: #db2a6f;
   padding: 6vh 0 5vh 0;
   height: auto;
@@ -246,7 +246,7 @@ video {
 }
 .exposition-block {
   margin-top: -10vh;
-  clip-path: polygon(0 7%, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 0%, 100% 2%, 100% 100%, 0% 100%);
   background-color: #9fb039;
   padding-top: 10vh;
   padding-bottom: 20vh;
@@ -295,13 +295,11 @@ video {
 	top: 2px;
 } */
 #podcast-block {
-  clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
-    background-color: #72c5d5;
+  clip-path: polygon(0 0%, 100% 2%, 100% 100%, 0% 100%);
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 10vh;
-    margin-top: -15vh;
 }
 /* Flyer Styles */
 @media screen and (min-width: 0) and (max-width: 575.98px) {
