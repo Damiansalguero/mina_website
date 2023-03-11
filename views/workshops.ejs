@@ -1,177 +1,177 @@
 <link rel="stylesheet" href="/styles/workshops.css">
 <% layout("layouts/boilerplate") %>
 <!-- NAV + HEADER -->
-  <div class="container-fluid">
-    <div class="header-bg">
-      <img src="/img/gesamt/Projekt/bg-workshops3.jpg" class="img-fluid cover-header" id="img-header-ws">
+<div class="container-fluid">
+  <div class="header-bg">
+    <img src="/img/gesamt/Projekt/bg-workshops3.jpg" class="img-fluid cover-header" id="img-header-ws">
+  </div>
+  <!-- TABLE BLOCK -->
+  <div class="tabelle-block">
+    <img class="logo-ws img-fluid" src="/img/gesamt/Logos/icon_netzwerk.png" alt="">
+    <h1 class="ws-title title-line"><%= wsnew.title %></h1>
+    <div class="ws-text" id="ws-intro"><%-wsnew.description %></div>
+    <% if(wsnew.accordiontitleone) {%>
+    <div class="accordion-item" id="first-accordion">
+      <h2 class="accordion-header" id="flush-headingOne">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+          <strong class="strong-ws"><%=wsnew.accordiontitleone %></strong>
+        </button>
+      </h2>
+      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+          <%-wsnew.accordiontexone %>
+          <!-- <p class="accordion-flyer">Weitere Informationen zu den Inhalten finden Sie in unserem <a href="/downloads/WEB_Flyer_Workshops_2021.pdf" target="_blank"> Flyer.</a></p> -->
+        </div>
+      </div>
     </div>
-    <!-- TABLE BLOCK -->
-    <div class="tabelle-block">
-      <img class="logo-ws img-fluid" src="/img/gesamt/Logos/icon_netzwerk.png" alt="">
-      <h1 class="ws-title title-line"><%= wsnew.title %></h1>
-      <div class="ws-text" id="ws-intro"><%-wsnew.description %></div>
-      <% if(wsnew.accordiontitleone) {%>
-      <div class="accordion-item" id="first-accordion">
-        <h2 class="accordion-header" id="flush-headingOne">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-            <strong class="strong-ws"><%=wsnew.accordiontitleone %></strong>
-          </button>
-        </h2>
-        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">
-            <%-wsnew.accordiontexone %>
-            <!-- <p class="accordion-flyer">Weitere Informationen zu den Inhalten finden Sie in unserem <a href="/downloads/WEB_Flyer_Workshops_2021.pdf" target="_blank"> Flyer.</a></p> -->
-          </div>
+    <% } %>
+    <% if(wsnew.accordiontitletwo) {%>
+    <div class="accordion-item" id="second-accordion">
+      <h2 class="accordion-header" id="flush-headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+          <strong class="strong-ws"><%=wsnew.accordiontitletwo %></strong>
+        </button>
+      </h2>
+      <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+          <%-wsnew.accordiontextwo %>
+          <!-- <p class="accordion-flyer">Weitere Informationen zu den Inhalten finden Sie im Infoblatt <a href="/downloads/2021_Infoblatt_Online_WorkshopReihe.pdf" target="_blank">Online Workshopreihe.</a></p> -->
         </div>
       </div>
-      <% } %>
-      <% if(wsnew.accordiontitletwo) {%>
-      <div class="accordion-item" id="second-accordion">
-        <h2 class="accordion-header" id="flush-headingTwo">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-            <strong class="strong-ws"><%=wsnew.accordiontitletwo %></strong>
-          </button>
-        </h2>
-        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">
-            <%-wsnew.accordiontextwo %>
-            <!-- <p class="accordion-flyer">Weitere Informationen zu den Inhalten finden Sie im Infoblatt <a href="/downloads/2021_Infoblatt_Online_WorkshopReihe.pdf" target="_blank">Online Workshopreihe.</a></p> -->
-          </div>
-        </div>
-      </div>
-      <% } %>
-      <% if(wsnew.accordiontitlethree) {%>
-      <div class="accordion-item" id="third-accordion">
-        <h2 class="accordion-header" id="flush-headingThree">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-            <strong class="strong-ws"><%=wsnew.accordiontitlethree %></strong>
-          </button>
-        </h2>
-        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">
-            <%-wsnew.accordiontexthree %>
-            <!-- <p class="accordion-flyer">Weitere Informationen zu den Inhalten finden Sie im Infoblatt <a href="/downloads/2021_Ehrenamtliche_Infoblatt_Online_Workshop.pdf" target="_blank"> Online Workshops für Ehrenamtliche.</a></p> -->
-          </div>
-        </div>
-      </div>
-      <% } %>
-      <% if(wsnew.accordiontitlefour) {%>
-        <div class="accordion-item" id="fourth-accordion">
-          <h2 class="accordion-header" id="flush-headingFour">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-              <strong class="strong-ws"><%=wsnew.accordiontitlefour %></strong>
-            </button>
-          </h2>
-          <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">
-              <%-wsnew.accordiontextfour %>
-              <!-- <p class="accordion-flyer">Weitere Informationen zu den Inhalten finden Sie im Infoblatt <a href="/downloads/2021_Ehrenamtliche_Infoblatt_Online_Workshop.pdf" target="_blank"> Online Workshops für Ehrenamtliche.</a></p> -->
-            </div>
-          </div>
-        </div>
-        <% } %>
     </div>
+    <% } %>
+    <% if(wsnew.accordiontitlethree) {%>
+    <div class="accordion-item" id="third-accordion">
+      <h2 class="accordion-header" id="flush-headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+          <strong class="strong-ws"><%=wsnew.accordiontitlethree %></strong>
+        </button>
+      </h2>
+      <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+          <%-wsnew.accordiontexthree %>
+          <!-- <p class="accordion-flyer">Weitere Informationen zu den Inhalten finden Sie im Infoblatt <a href="/downloads/2021_Ehrenamtliche_Infoblatt_Online_Workshop.pdf" target="_blank"> Online Workshops für Ehrenamtliche.</a></p> -->
+        </div>
+      </div>
+    </div>
+    <% } %>
+    <% if(wsnew.accordiontitlefour) {%>
+    <div class="accordion-item" id="fourth-accordion">
+      <h2 class="accordion-header" id="flush-headingFour">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+          <strong class="strong-ws"><%=wsnew.accordiontitlefour %></strong>
+        </button>
+      </h2>
+      <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+          <%-wsnew.accordiontextfour %>
+          <!-- <p class="accordion-flyer">Weitere Informationen zu den Inhalten finden Sie im Infoblatt <a href="/downloads/2021_Ehrenamtliche_Infoblatt_Online_Workshop.pdf" target="_blank"> Online Workshops für Ehrenamtliche.</a></p> -->
+        </div>
+      </div>
+    </div>
+    <% } %>
+  </div>
 
-      <% if(currentUser) {%>
-        <div class="ws-btn-box">
-          <a href="/ueberworkshops/<%=wsnew._id%>/edit" class="btn btn-aktuelles-blue">Workshop Text/Akkordion Bearbeiten</a>
-        </div>
-      <% } %>
-      <!-- Table 1 -->
-      <% if(!workshops) {%>
-        <div></div>
-      <% } else { %>
-        <table class="table table-responsive table-hover" id="table-ws">
-          <thead>
-            <tr>
-              <th scope="col">Datum</th>
-              <th scope="col">Workshop</th>
-              <th scope="col">Ort</th>
-              <th scope="col">Verfügbarkeit</th>
-              <th scope="col">Info</th>
-            </tr>
-          </thead>
-          <tbody>
-            <% for(let workshop of workshops) {%>
-            <tr>
-              <td><%= workshop.date %></td>
-              <td><%= workshop.title %></td>
-              <td>
-                <ul>
-                  <li><%= workshop.location %></li>
-                  <li> <%= workshop.location2%></li>
-                  <li> <%= workshop.location3%></li>
-                </ul>
-              </td>
-              <% if(workshop.capacity === "ausgebucht") { %>
-              <td class="ausgebucht"><%= workshop.capacity %></td>
-              <%} else { %>
-              <td class="anmelden"><a href="/anmeldung/<%= workshop._id %>/new""><%= workshop.capacity %></a></td>
+  <% if(currentUser) {%>
+  <div class="ws-btn-box">
+    <a href="/ueberworkshops/<%=wsnew._id%>/edit" class="btn btn-aktuelles-blue">Workshop Text/Akkordion Bearbeiten</a>
+  </div>
+  <% } %>
+  <!-- Table 1 -->
+  <% if(!workshops) {%>
+  <div></div>
+  <% } else { %>
+  <table class="table table-responsive table-hover" id="table-ws">
+    <thead>
+      <tr>
+        <th scope="col">Datum</th>
+        <th scope="col">Workshop</th>
+        <th scope="col">Ort</th>
+        <th scope="col">Verfügbarkeit</th>
+        <th scope="col">Info</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for(let workshop of workshops) {%>
+      <tr>
+        <td><%= workshop.date %></td>
+        <td><%= workshop.title %></td>
+        <td>
+          <ul>
+            <li><%= workshop.location %></li>
+            <li> <%= workshop.location2%></li>
+            <li> <%= workshop.location3%></li>
+          </ul>
+        </td>
+        <% if(workshop.capacity === "ausgebucht") { %>
+        <td class="ausgebucht"><%= workshop.capacity %></td>
+        <%} else { %>
+        <td class="anmelden"><a href="/anmeldung/<%= workshop._id %>/new""><%= workshop.capacity %></a></td>
               <% } %>
               <td><a href=" /workshop/<%= workshop._id %>""> Mehr ...</a></td>
-            </tr>
-            <% }%>
-          </tbody>
-        </table>
-      <% } %>
-      <% if(currentUser) {%>
-        <div class="ws-btn-box">
-          <a href="/workshop/new" class="btn btn btn-aktuelles">Workshop Hinzufügen</a>
-        </div>
-      <% } %>
-      <!-- <div class="ws-btn-box-2">
+      </tr>
+      <% }%>
+    </tbody>
+  </table>
+  <% } %>
+  <% if(currentUser) {%>
+  <div class="ws-btn-box">
+    <a href="/workshop/new" class="btn btn btn-aktuelles">Workshop Hinzufügen</a>
+  </div>
+  <% } %>
+  <!-- <div class="ws-btn-box-2">
         <a  href="/downloads/2022_Infoblatt_Grundlage_MSO.pdf" target="_blank" class="btn btn-ws-flyer"  target="_blank">Grundlagen Workshops für die Bereiche Flucht und Migration</a>
         <a  href="/downloads/2022_Infoblatt_Grundlage_BH.pdf" class="btn btn-ws-flyer"  target="_blank">Grundlagen Workshops für den Bereich Behindertenhilfe</a>
         <a href="/downloads/2022_Infoblatt_Vertiefung.pdf" class="btn btn-ws-flyer"  target="_blank">Vertiefungsworkshops Flucht, Migration und Behinderung</a>
       </div> -->
+</div>
+<!-- IMAGE BLOCK -->
+<% if(wsgs) {%>
+<div class="block blue gallery-block" id="ws-gallery">
+  <h1 class="white"><span class="title-line line-blue">Eindrücke</span></h1>
+  <% for(let wsg of wsgs) {%>
+  <!-- Test Gallery -->
+  <div class="gallery-container">
+    <h3 class="gallerie-titel"><%= wsg.title %></h3>
+    <div class="gallery2">
+      <% wsg.images.forEach((img, i) => { %>
+      <img src="<%= img.thumbnail %>" class="d-block gallery-img-card" alt="">
+      <% }) %>
     </div>
-    <!-- IMAGE BLOCK -->
-    <% if(wsgs) {%>
-    <div class="block blue gallery-block" id="ws-gallery">
-      <h1 class="white"><span class="title-line line-blue">Eindrücke</span></h1>
-      <% for(let wsg of wsgs) {%>
-          <!-- Test Gallery -->
-          <div class="gallery-container">
-            <h3 class="gallerie-titel"><%= wsg.title %></h3>
-          <div class="gallery2">
-          <% wsg.images.forEach((img, i) => { %>
-                <img src="<%= img.thumbnail %>" class="d-block gallery-img-card"  alt="">
-          <% }) %>
-          </div>
-          <a class="gallerie-link" href="/workshop/gallerien/<%= wsg._id %>">Gallerie ansehen</a>
-        </div>
-      <% }%>
-      <% if(currentUser) {%>
-        <a class="card-link btn btn-mina m-auto" href="/workshop/gallerien/neu">Gallerie Hinzufügen</a>
-      <% }%>
-      </div>
-    <% }%>
+    <a class="gallerie-link" href="/workshop/gallerien/<%= wsg._id %>">Gallerie ansehen</a>
+  </div>
+  <% }%>
+  <% if(currentUser) {%>
+  <a class="card-link btn btn-mina m-auto" href="/workshop/gallerien/neu">Gallerie Hinzufügen</a>
+  <% }%>
+</div>
+<% }%>
 
-    <!-- MITARBEITER BLOCK -->
-    <div class="container-fluid contact-box" id="ws-contact">
-      <h1 class="white"><span class="title-line">Ansprechpersonen</span></h1>
-      <div class="row">
-        <div class="worker col">
-          <img class="contact-img" src="/img/gesamt/Mitarbeiter/07_Laura.jpg" alt="">
-          <div class="worker-info">
-            <ul>
-              <li class="worker-title">Inhalte und Konzept</li>
-              <li>Laura Schödermaier</li>
-              <li>030 – 62 93 40 31</li>
-              <li><a href="mailto:l.schoedermaier@mina-berlin.de">l.schoedermaier@mina-berlin.de</a> </li>
-            </ul>
-          </div>
-        </div>
-        <div class="worker col">
-          <img class="contact-img" src="/img/gesamt/Mitarbeiter/11_Abdurrahman.png" alt="">
-          <div class="worker-info">
-            <ul>
-              <li class="worker-title">Teamassistenz Workshops & Öffentlichkeitsarbeit</li>
-              <li>Abdurrahman Gügercin</li>
-              <li>030 – 62 93 40 31</li>
-              <li><a href="mailto:a.guegercin@mina-berlin.de">a.guegercin@mina-berlin.de</a> </li>
-            </ul>
-          </div>
-        </div>
+<!-- MITARBEITER BLOCK -->
+<div class="container-fluid contact-box" id="ws-contact">
+  <h1 class="white"><span class="title-line">Ansprechpersonen</span></h1>
+  <div class="row">
+    <div class="worker col">
+      <img class="contact-img" src="/img/gesamt/Mitarbeiter/07_Laura.jpg" alt="">
+      <div class="worker-info">
+        <ul>
+          <li class="worker-title">Inhalte und Konzept</li>
+          <li>Laura Schödermaier</li>
+          <li>030 – 62 93 40 31</li>
+          <li><a href="mailto:l.schoedermaier@mina-berlin.de">l.schoedermaier@mina-berlin.de</a> </li>
+        </ul>
       </div>
     </div>
+    <div class="worker col">
+      <img class="contact-img" src="/img/gesamt/Mitarbeiter/11_Abdurrahman.png" alt="">
+      <div class="worker-info">
+        <ul>
+          <li class="worker-title">Teamassistenz Workshops & Öffentlichkeitsarbeit</li>
+          <li>Abdurrahman Gügercin</li>
+          <li>030 – 62 93 40 31</li>
+          <li><a href="mailto:a.guegercin@mina-berlin.de">a.guegercin@mina-berlin.de</a> </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

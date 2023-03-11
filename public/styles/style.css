@@ -43,14 +43,15 @@ h1 {
   height: auto;
   width: 100%;
   background-color: #fff;
+  margin: 2% 0;
 }
 
 .aktuelles {
-  clip-path: polygon(0 0, 100% 3%, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 2%, 100% 100%, 0 100%);
   height: auto;
-  padding-top: 10vh;
-  padding-bottom: 15vh;
-  margin-top: -15vh;
+  padding-top: 10%;
+  margin-top: -10%;
+  margin-bottom: 10%;
 }
 .date-box {
   display: flex;
@@ -253,12 +254,7 @@ a {
   font-size: 30px;
 }
 
-.about-block {
-  clip-path: polygon(0 7%, 100% 0%, 100% 100%, 0% 100%);
-  background-color: #9fb039;
-  padding-top: 10vh;
-  padding-bottom: 20vh;
-}
+
 
 #scrollBtn {
   display: none;

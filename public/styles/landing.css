@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 40%;
+  width: 75%;
   border: 2px solid #db2a6f;
   border-radius: 10px;
   padding: 20px;
@@ -29,6 +29,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 5% 0;
 }
 
 #book-box {
@@ -48,13 +49,21 @@
 
 /********* Block Calendar ***********/
 .calendar-block {
-  clip-path: polygon(0 0, 100% 7%, 100% 100%, 0 100%);
+  clip-path: polygon(0 0%, 100% 8%, 100% 100%, 0% 100%);
   background-color: #db2a6f;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 10vh;
   margin-top: -10vh;
+  padding-bottom: 20vh;
+}
+
+/********* Block About ***********/
+.about-block {
+  clip-path: polygon(0 0%, 100% 2%, 100% 100%, 0% 100%);
+  background-color: #9fb039;
+  padding-top: 10vh;
   padding-bottom: 20vh;
 }
 
@@ -144,9 +153,9 @@ small {
   text-align: justify;
   font-size: 18px;
 }
-
+/********* Block Map ***********/
 .map-block {
-  clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 0%, 100% 2%, 100% 100%, 0% 100%);
   background-color: #72c5d5;
   display: flex;
   flex-direction: column;
@@ -237,10 +246,10 @@ small {
 }
 @media screen and (min-width: 575.98px) and (max-width: 991.98px) {
   .aktuelles {
-    clip-path: polygon(0 0, 100% 3%, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 2%, 100% 100%, 0 100%);
   }
   .text-box-aktuelles {
-    min-width: 80%;
+    min-width: 75%;
   }
 
   .text-box-aktuelles p {
@@ -284,10 +293,7 @@ small {
     height: 450px !important;
   }
   .text-box-aktuelles {
-    width: 50%;
-  }
-  .aktuelles {
-    clip-path: polygon(0 0, 100% 4%, 100% 100%, 0 100%);
+    width: 75%;
   }
   .header-bg img {
     height: 600px;
