@@ -77,6 +77,14 @@ module.exports.workshopregisterSchema = Joi.object({
   }).required(),
 });
 
+module.exports.workshopFlyerSchema = Joi.object({
+  wsflyer: Joi.object({
+    title: Joi.string().required(),
+    description: Joi.string().optional().allow(""),
+  }).required(),
+  deleteImages: Joi.array(),
+});
+
 module.exports.timelineSchema = Joi.object({
   timeline: Joi.object({
     bewerbung: Joi.string().required(),

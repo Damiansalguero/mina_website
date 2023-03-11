@@ -4,6 +4,7 @@ const {
   workshopSchema,
   workshopGallerySchema,
   wsnewSchema,
+  workshopFlyerSchema,
   partizipSchema,
   partizipGallerySchema,
   partFlyerSchema,
@@ -84,7 +85,7 @@ module.exports.validateWorkshops = (req, res, next) => {
   }
 };
 
-/////////////// WORKSHOP GALLERY /////////////
+//* WORKSHOP GALLERY //
 module.exports.validateWorkshopGallery = (req, res, next) => {
   const { error } = workshopGallerySchema.validate(req.body);
   if (error) {
@@ -95,7 +96,18 @@ module.exports.validateWorkshopGallery = (req, res, next) => {
   }
 };
 
-/////////////// TIMELINE /////////////
+//* WORKSHOP FLYER //
+module.exports.validateWorkshopFlyer = (req, res, next) => {
+  const { error } = workshopFlyerSchema.validate(req.body);
+  if (error) {
+    const msg = error.details.map((el) => el.message).join(",");
+    throw new ExpressError(msg, 400);
+  } else {
+    next();
+  }
+};
+
+//* TIMELINE //
 module.exports.validateTimeline = (req, res, next) => {
   const { error } = timelineSchema.validate(req.body);
   if (error) {

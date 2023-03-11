@@ -4,6 +4,7 @@ const About = require("../models/about");
 const Wsnew = require("../models/wsaktuell");
 const Workshop = require("../models/workshop");
 const Workshopgallery = require("../models/workshopgallery");
+const Workshopflyer = require("../models/wsflyer");
 const Partizip = require("../models/partizip");
 const Partizipgallery = require("../models/partizipgallery");
 const Prozess = require("../models/prozess");
@@ -57,7 +58,8 @@ module.exports.renderWorkshops = async (req, res) => {
   const wsnew = await Wsnew.findOne({});
   const workshops = await Workshop.find({});
   const wsgs = await Workshopgallery.find({});
-  res.render("workshops", { workshops, wsgs, wsnew });
+  const wsflyer = await Workshopflyer.findOne({});
+  res.render("workshops", { workshops, wsgs, wsnew, wsflyer });
 };
 
 module.exports.renderWorkshopsTwo = async (req, res) => {

@@ -50,6 +50,12 @@
 .ws-btn-box {
   display: flex;
   justify-content: center;
+  margin: 0 0 5vh 0;
+}
+
+#current-static-flyers {
+  justify-content: space-around;
+  width: 75%;
 }
 
 .ws-btn-box-2 {
