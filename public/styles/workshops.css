@@ -5,7 +5,7 @@
 }
 
 .ws-title {
-  width: 50%;
+  /* width: 50%; */
   line-height: 1.5;
 }
 
@@ -38,9 +38,9 @@
   text-align: left;
 }
 
-#fourth-accordion {
+/* #fourth-accordion {
   margin-bottom: 10vh;
-}
+} */
 
 .accordion-flyer a {
   color: #db2a6f;
@@ -90,7 +90,7 @@
   clip-path: polygon(0 0, 100% 2%, 100% 100%, 0 100%);
   height: auto;
   padding-top: 10vh;
-  padding-bottom: 17vh;
+  padding-bottom: 5vh;
   margin-top: -10vh;
   background-color: #fff;
 }
@@ -98,12 +98,16 @@
 .extra-info {
   font-weight: bold;
 }
+#ws-kalender {
+  margin: 10% 0;
+}
 
 #table-ws {
   width: 50%;
   margin-bottom: 5vh;
   font-size: 18px;
-  margin-left: 25%
+  margin-left: 25%;
+  margin-top: 5vh;
 }
 
 #table-ws ul {
