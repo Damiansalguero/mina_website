@@ -202,10 +202,10 @@ small {
 }
 
 .helper-block {
-  clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0 95%) !important;
+  clip-path: polygon(0 0%, 100% 2%, 100% 100%, 0 95%) !important;
   background-color: #fff !important;
   padding-bottom: 10vh !important;
-  margin-top: -8vh !important;
+  margin-top: -5vh !important;
   margin-bottom: -5vh !important;
 }
 
