@@ -1,0 +1,43 @@
+#header-ukraine {
+    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%) !important;
+    height: auto;
+    padding-top: 10vh;
+    margin-top: -5vh;
+    margin-bottom:15vh;
+}
+
+.btn-box {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    margin: 5% 0 10% 0;
+}
+
+#releases-ukraine {
+    margin-top: -5vh !important;
+}
+
+#book {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20vh;
+}
+
+#book-box {
+    display: flex;
+    justify-content: center;
+    margin: 10px
+}
+
+.book-img {
+    margin: 0 2vw;
+    height: 300px;
+    border: 1px solid #000;
+}
+
+#ukraine-text {
+    width: 75%;
+    text-align: justify;
+}

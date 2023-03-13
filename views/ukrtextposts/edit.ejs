@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="/styles/forms.css">
+<% layout("layouts/boilerplate") %>
+<div class="row">
+  <h1 class="text-center"><span class="title-line line-pink">Ukraine Text Bearbeiten</span></h1>
+   <div id="form-ukrtext-edit" class="col-6 offset-3">
+    <form action="/ukraine-text/<%=ukrtext._id%>?_method=PUT" method="post" novalidate class="validated-form">
+      <div class="mb-3">
+        <label class="form-label" for="titleone">Überschrift</label>
+        <input class="form-control" type="text" id="titleone" name="ukrtext[title]"  value="<%=ukrtext.title%>">
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="descriptionone">Text</label>
+        <textarea class="form-control" type="text" id="description" name="ukrtext[description]" required><%=ukrtext.description%></textarea>
+        <script type="text/javascript">
+          CKEDITOR.replace('description');
+        </script>
+      </div>
+      <div class="mb-3">
+        <button class="btn btn-aktuelles-blue">Aktuallisieren</button>
+      </div>
+    </form>
+    <a class="btn btn-success btn-mina" href="/ukraine">Zurück</a>
+  </div>
+</div>

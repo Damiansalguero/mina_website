@@ -22,6 +22,7 @@ const {
   begleitungsGallerySchema,
   landingFlyerSchema,
   aboutSchema,
+  ukrTextSchema,
   bibSchema,
   testdataSchema,
   dataSchema,
@@ -341,6 +342,17 @@ module.exports.validateExpoFlyer = (req, res, next) => {
 /////////////// Expo Gallerie /////////////
 module.exports.validateExpoGallery = (req, res, next) => {
   const { error } = expoGallerySchema.validate(req.body);
+  if (error) {
+    const msg = error.details.map((el) => el.message).join(",");
+    throw new ExpressError(msg, 400);
+  } else {
+    next();
+  }
+};
+
+///////////// Expo Text /////////////
+module.exports.validateUkrtext = (req, res, next) => {
+  const { error } = ukrTextSchema.validate(req.body);
   if (error) {
     const msg = error.details.map((el) => el.message).join(",");
     throw new ExpressError(msg, 400);

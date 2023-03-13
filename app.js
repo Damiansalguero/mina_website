@@ -55,6 +55,8 @@ const expoflyerRoutes = require("./routes/expoflyers");
 const expogalleryRoutes = require("./routes/expogalleries");
 const processThreeRoutes = require("./routes/processesthree");
 const begleitungsRoutes = require("./routes/begleitungs");
+const ukrtextRoutes = require("./routes/ukrtexts");
+
 
 //* MONGO DB SETUP //
 // Online DB dbUrl //
@@ -149,6 +151,7 @@ app.use("/partizip-flyers", partflyerRoutes);
 app.use("/wander-ausstellung", expotextRoutes);
 app.use("/wander-ausstellung-flyers", expoflyerRoutes);
 app.use("/wander-ausstellung-gallerien", expogalleryRoutes);
+app.use("/ukraine-text", ukrtextRoutes);
 app.use("/bibliothek", bibRoutes);
 app.use("/posts", postRoutes);
 app.use("/test", testRoutes);

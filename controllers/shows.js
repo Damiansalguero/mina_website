@@ -22,6 +22,7 @@ const Timeline = require("../models/timeline");
 const Timelinetwo = require("../models/timelinetwo");
 const Timelinethree = require("../models/timelinethree.js");
 const Flyer = require("../models/landingflyer");
+const Ukrtext = require("../models/ukrtext")
 const Bib = require("../models/bib");
 const nodemailer = require("nodemailer");
 const { cloudinary } = require("../cloudinary");
@@ -108,6 +109,11 @@ module.exports.renderProzessThree = async (req, res) => {
   // const bglgs = await Begleitungsgallery.find({});
 
   res.render("prozessthree", {przthree,  processthreeflyer, przgthrees, timelinethree});
+};
+
+module.exports.renderUkraine = async (req, res) => {
+  const ukrtext = await Ukrtext.findOne({});
+  res.render("ukraine", {ukrtext});
 };
 
 module.exports.renderDoku = (req, res) => {

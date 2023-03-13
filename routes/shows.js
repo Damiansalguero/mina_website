@@ -13,6 +13,7 @@ router.get("/wanderausstellung", shows.renderExpo);
 router.get("/2020-2021-prozess-begleitung", shows.renderProzess);
 router.get("/prozess-begleitung", shows.renderProzessThree);
 router.get("/2022-prozess-begleitung", shows.renderProzessTwo);
+router.get("/ukraine", shows.renderUkraine);
 router.get("/dokumentation", shows.renderDoku);
 router.get("/dokumentation/praxisseminare-2019", shows.renderZweiNeunzehn);
 router.get("/dokumentation/Fachtagung", shows.renderFach);

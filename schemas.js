@@ -272,6 +272,14 @@ module.exports.partizipGallerySchema = Joi.object({
   deleteImages: Joi.array(),
 });
 
+module.exports.ukrTextSchema = Joi.object({
+  ukrtext: Joi.object({
+    title: Joi.string().optional().allow(""),
+    description: Joi.string().required(),
+  }).required(),
+  deleteImages: Joi.array(),
+});
+
 module.exports.bibSchema = Joi.object({
   bib: Joi.object({
     title: Joi.string().required(),

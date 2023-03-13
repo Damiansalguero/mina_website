@@ -43,7 +43,6 @@ h1 {
   height: auto;
   width: 100%;
   background-color: #fff;
-  margin: 2% 0;
 }
 
 .aktuelles {
@@ -355,7 +354,12 @@ a {
   margin-top: 5vh;
 }
 .img-error {
-  height: 300px;
+  height: 200px;
+  margin-bottom: 5vh;
+}
+
+.alert-heading {
+  font-size: 10px !important;
 }
 /********** ALERT STYLES ***********/
 
