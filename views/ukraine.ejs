@@ -3,20 +3,18 @@
 <!-- NAV + HEADER -->
 <main>
   <div class="container-fluid">
-    <div class="header-bg">
-      <img id="header-img" src="/img/gesamt/Projekt/bg-ukraine-2.jpg" class="img-fluid cover-header">
-    </div>
     <!-- TEXT BLOCK -->
     <div class="block" id="header-ukraine">
       <!-- <img class="logo" src="/img/gesamt/Logos/WBM_Flucht-Migration-Behin.gif" alt=""> -->
-      <h1 id="" class="ws-title title-line"><span><%= ukrtext.title %></span></h1>
+      <h1 id="" class="ws-title title-line white"><span><%= ukrtext.title %></span></h1>
       <div id="ukraine-text"><%-ukrtext.description %></div>
+      <% if(currentUser) {%>
+        <div class="btn-box">
+          <a href="/ukraine-text/<%=ukrtext._id%>/edit" class="btn btn-aktuelles-blue">Text Bearbeiten</a>
+        </div>
+        <% } %>
     </div>
-    <% if(currentUser) {%>
-    <div class="btn-box">
-      <a href="/ukraine-text/<%=ukrtext._id%>/edit" class="btn btn-aktuelles-blue">Text Bearbeiten</a>
-    </div>
-    <% } %>
+    
     <!-- VERÖFFENTLICHUNGEN BLOCK -->
     <div class="block blue gallery-block" id="releases-ukraine">
       <h1 class="white"><span class="title-line line-blue">Veröffentlichungen</span></h1>

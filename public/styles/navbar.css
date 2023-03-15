@@ -17,6 +17,7 @@
 
 .navbar-dark .navbar-nav .nav-link {
   color: #000;
+  padding: 0.5rem;
 }
 
 .navbar-dark .navbar-nav .nav-link.active {
