@@ -12,12 +12,11 @@
 }
 .navbar-nav {
   border-top: 2px solid #db2a6f;
-  font-size: 12px;
+  font-size: 18px;
 }
 
 .navbar-dark .navbar-nav .nav-link {
   color: #000;
-  padding: 1.5rem;
 }
 
 .navbar-dark .navbar-nav .nav-link.active {
@@ -122,6 +121,6 @@
 
 @media screen and (min-width: 1199.98px) and (max-width: 1499.98px) {
   .navbar-nav {
-    font-size: 12px;
+    font-size: 18px;
   }
 }
