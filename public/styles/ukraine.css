@@ -1,9 +1,10 @@
 #header-ukraine {
     clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%) !important;
     height: auto;
-    padding-top: 10vh;
+    padding: 15vh 0;
     margin-top: -5vh;
     background-color: #db2a6f;
+
 }
 
 .btn-box {
