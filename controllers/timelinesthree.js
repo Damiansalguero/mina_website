@@ -19,6 +19,12 @@ module.exports.renderNewTimelinethree = (req, res) => {
     res.render("timelinethreeposts/edit", { timelinethree });
   };
 
+  module.exports.renderEditTimelinethree = async (req, res) => {
+    const { id } = req.params;
+    const timelinethree = await Timelinethree.findById(req.params.id);
+    res.render("timelinethreeposts/edit", { timelinethree });
+  };
+
   module.exports.updateTimelinethree = async (req, res) => {
     const { id } = req.params;
     const timelinethree = await Timelinethree.findByIdAndUpdate(id, {
