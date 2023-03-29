@@ -85,6 +85,13 @@ module.exports.workshopFlyerSchema = Joi.object({
   deleteImages: Joi.array(),
 });
 
+module.exports.workshopThreeTextSchema = Joi.object({
+  wsthreetext: Joi.object({
+    title: Joi.string().optional().allow(""),
+    description: Joi.string().required(),
+  }).required(),
+  deleteImages: Joi.array(),
+});
 module.exports.timelineSchema = Joi.object({
   timeline: Joi.object({
     bewerbung: Joi.string().required(),

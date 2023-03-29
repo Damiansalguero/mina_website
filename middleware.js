@@ -5,6 +5,7 @@ const {
   workshopGallerySchema,
   wsnewSchema,
   workshopFlyerSchema,
+  workshopThreeTextSchema,
   partizipSchema,
   partizipGallerySchema,
   partFlyerSchema,
@@ -100,6 +101,17 @@ module.exports.validateWorkshopGallery = (req, res, next) => {
 //* WORKSHOP FLYER //
 module.exports.validateWorkshopFlyer = (req, res, next) => {
   const { error } = workshopFlyerSchema.validate(req.body);
+  if (error) {
+    const msg = error.details.map((el) => el.message).join(",");
+    throw new ExpressError(msg, 400);
+  } else {
+    next();
+  }
+};
+
+//* Workshop Three Text // 
+module.exports.validateWorkshopThreeText = (req, res, next) => {
+  const { error } = workshopThreeTextSchema.validate(req.body);
   if (error) {
     const msg = error.details.map((el) => el.message).join(",");
     throw new ExpressError(msg, 400);

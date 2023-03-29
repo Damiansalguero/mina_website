@@ -8,6 +8,7 @@ router.get("/", shows.renderLanding);
 router.get("/home", shows.renderhome);
 router.get("/workshops", shows.renderWorkshops);
 router.get("/2020-2021-workshops", shows.renderWorkshopsTwo);
+router.get("/2022-workshops", shows.renderWorkshopsThree);
 router.get("/partizipatives-projekt", shows.renderPartizip);
 router.get("/wanderausstellung", shows.renderExpo);
 router.get("/2020-2021-prozess-begleitung", shows.renderProzess);
