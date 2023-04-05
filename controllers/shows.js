@@ -84,12 +84,12 @@ module.exports.renderPartizip = async (req, res) => {
 };
 
 module.exports.renderExpo = async (req, res) => {
-  const expoflyer = await Expoflyer.findOne({});
+  const expoflyers = await Expoflyer.find({});
   const expotext = await Expotext.findOne({});
   const partizip = await Partizip.findOne({});
   const egls = await Expogallery.find({});
 
-  res.render("expo", { partizip, expoflyer, expotext, egls });
+  res.render("expo", { partizip, expoflyers, expotext, egls });
 };
 module.exports.renderProzess = async (req, res) => {
   const timeline = await Timeline.findOne({});

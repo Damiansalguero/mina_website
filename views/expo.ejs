@@ -4,35 +4,39 @@
 <!-- NAV + HEADER -->
 <main>
   <!-- <div class="container-fluid"> -->
-    <div class="header-bg">
-      <img id="header-img" src="/img/gesamt/Projekt/bg-expo-2.png" class="img-fluid cover-header">
+  <div class="header-bg">
+    <img id="header-img" src="/img/gesamt/Projekt/bg-expo-2.png" class="img-fluid cover-header">
+  </div>
+  <!-- TABLE BLOCK -->
+  <div class="block" id="header-expo">
+    <img class="logo" src="/img/gesamt/Logos/WBM_Flucht-Migration-Behin.gif" alt="">
+    <h1 id="" class="ws-title title-line"><span>Wanderausstellung</span></h1>
+    <div class="expo-text" id="ws-intro"><%-expotext.description%></div>
+  </div>
+  <div class="prz-btn-box">
+    <% if(currentUser && expoflyers ) {%>
+      <% for(let expoflyer of expoflyers) {%>
+    <a href="/wander-ausstellung-flyers/<%=expoflyer._id %>" class="btn btn-info btn-prz-text"><%=expoflyer.title %> Ansehen</a>
+    <% } %>
+    <% } %>
+    <% if (currentUser) { %>
+    <a href="/wander-ausstellung-flyers/neu" class="btn btn-mina btn-prz-text">Flyer Hinzufügen</a>
+    <a href="/wander-ausstellung/<%=expotext._id %>/edit" class="btn btn-aktuelles-blue btn-prz-text">Text bearbeiten</a>
+    <a href="/wander-ausstellung-gallerien/neu" class="btn btn-mina btn-prz-text">Galerie Hinzufügen</a>
+    <%  } %>
+    <% if(expoflyers) {%>
+    <% for(let expoflyer of expoflyers) {%>
+    <% expoflyer.images.forEach((img, i) => { %>
+    <a href="<%=img.attach%>" download class="btn btn-mina btn-prz-text" id="btn-flyer" target="_blank"><%=expoflyer.title%></a>
+    <% }) %>
+    <% } %>
+    <% } else { %>
+    <div class="no-flyer-space-holder">
     </div>
-    <!-- TABLE BLOCK -->
-    <div class="block" id="header-expo">
-      <img class="logo" src="/img/gesamt/Logos/WBM_Flucht-Migration-Behin.gif" alt="">
-      <h1 id="" class="ws-title title-line"><span>Wanderausstellung</span></h1>
-      <div class="expo-text" id="ws-intro"><%-expotext.description%></div>
-    </div>
-    <div class="prz-btn-box">
-      <% if(currentUser && expoflyer ) {%>
-      <a href="/wander-ausstellung-flyers/<%=expoflyer._id %>" class="btn btn-info btn-prz-text">Flyer Ansehen</a>
-      <% } %>
-      <% if (currentUser) { %>
-      <a href="/wander-ausstellung-flyers/neu" class="btn btn-mina btn-prz-text">Flyer Hinzufügen</a>
-      <a href="/wander-ausstellung/<%=expotext._id %>/edit" class="btn btn-aktuelles-blue btn-prz-text">Text bearbeiten</a>
-      <a href="/wander-ausstellung-gallerien/neu" class="btn btn-mina btn-prz-text">Galerie Hinzufügen</a>
-      <%  } %>
-      <% if(expoflyer) {%>
-      <% expoflyer.images.forEach((img, i) => { %>
-      <a href="<%=img.attach%>" download class="btn btn-mina btn-prz-text" id="btn-flyer" target="_blank"><%=expoflyer.title%></a>
-      <% }) %>
-      <% } else { %>
-      <div class="no-flyer-space-holder">
-      </div>
-      <% }%>
-    </div>
+    <% }%>
+  </div>
 
-    <!-- Video Block -->
+  <!-- Video Block -->
   <div class="about-block" id="video-block">
     <h1><span class="title-line">Material zur Ausstellung</span></h1>
     <div class="video-box">
@@ -47,50 +51,49 @@
     </div>
     <div class="video-box" id="box-last">
       <h3>Audioguide</h3>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/6Fyd25ZlElg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/6Fyd25ZlElg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
 
-    <!-- IMAGE BLOCK -->
-    <% if(egls) {%>
-    <div class="block blue gallery-block" id="expo-gallery">
-      <h1 class="white"><span class="title-line line-blue">Bildergalerien</span></h1>
-      <% for(let egl of egls) {%>
-          <!-- Test Gallery -->
-          <div class="gallery-container">
-            <h3 class="gallerie-titel"><%= egl.title %></h3>
-          <div class="gallery2" id="gallery2">
-          <% egl.images.forEach((img, i) => { %>
-                <img src="<%= img.thumbnail %>" class="d-block gallery-img-card"  alt="">
-          <% }) %>
-          </div>
-          <a class="gallerie-link" href="/wander-ausstellung-gallerien/<%= egl._id %>">Galerie ansehen</a>
-        </div>
-      <% }%>
-      <% if(currentUser) {%>
-        <a class="card-link btn btn-mina m-auto" href="/wander-ausstellung-gallerien/neu">Galerie Hinzufügen</a>
-      <% }%>
+  <!-- IMAGE BLOCK -->
+  <% if(egls) {%>
+  <div class="block blue gallery-block" id="expo-gallery">
+    <h1 class="white"><span class="title-line line-blue">Bildergalerien</span></h1>
+    <% for(let egl of egls) {%>
+    <!-- Test Gallery -->
+    <div class="gallery-container">
+      <h3 class="gallerie-titel"><%= egl.title %></h3>
+      <div class="gallery2" id="gallery2">
+        <% egl.images.forEach((img, i) => { %>
+        <img src="<%= img.thumbnail %>" class="d-block gallery-img-card" alt="">
+        <% }) %>
       </div>
+      <a class="gallerie-link" href="/wander-ausstellung-gallerien/<%= egl._id %>">Galerie ansehen</a>
+    </div>
     <% }%>
-    <!-- IMAGE BLOCK -->
+    <% if(currentUser) {%>
+    <a class="card-link btn btn-mina m-auto" href="/wander-ausstellung-gallerien/neu">Galerie Hinzufügen</a>
+    <% }%>
+  </div>
+  <% }%>
+  <!-- IMAGE BLOCK -->
 
-    <!-- Kontakt -->
-    <div class="container-fluid contact-box" id="prozess-contact">
-      <h1 class="white"><span class="title-line">Ansprechperson</span></h1>
-      <div class="row">
-        <div class="worker col">
-          <img class="contact-img" src="/img/gesamt/Mitarbeiter/04_Wendy.jpg" alt="">
-          <div class="worker-info">
-            <ul>
-              <li class="worker-title">Wanderausstellung</li>
-              <li>Wendy Taranowski</li>
-              <li>030 – 62 93 40 31</li>
-              <li>0159 – 06 70 38 98</li>
-              <li><a href="mailto:w.taranowksi@mina-berlin.de">w.taranowksi@mina-berlin.de</a> </li>
-            </ul>
-          </div>
+  <!-- Kontakt -->
+  <div class="container-fluid contact-box" id="prozess-contact">
+    <h1 class="white"><span class="title-line">Ansprechperson</span></h1>
+    <div class="row">
+      <div class="worker col">
+        <img class="contact-img" src="/img/gesamt/Mitarbeiter/04_Wendy.jpg" alt="">
+        <div class="worker-info">
+          <ul>
+            <li class="worker-title">Wanderausstellung</li>
+            <li>Wendy Taranowski</li>
+            <li>030 – 62 93 40 31</li>
+            <li>0159 – 06 70 38 98</li>
+            <li><a href="mailto:w.taranowksi@mina-berlin.de">w.taranowksi@mina-berlin.de</a> </li>
+          </ul>
         </div>
       </div>
     </div>
+  </div>
   <!-- </div> -->
