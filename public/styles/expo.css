@@ -12,6 +12,10 @@
   margin: 10vh 0;
 }
 
+.video-box h3 {
+  color: #72c5d5;
+}
+
 .video-box video,
 .video-box iframe {
   border: 3px solid #0dcaf0;
