@@ -303,6 +303,10 @@ video {
     margin-top: -5vh;
     padding-top: 5%;
 }
+
+#podcast-player-box {
+  margin-bottom: 10%;
+}
 /* Flyer Styles */
 @media screen and (min-width: 0) and (max-width: 575.98px) {
   .part-text {
