@@ -10,65 +10,13 @@
     <img class="logo-ws img-fluid" src="/img/gesamt/Logos/icon_netzwerk.png" alt="">
     <h1 class="ws-title title-line"><%= wsnew.title %></h1>
     <div class="ws-text" id="ws-intro"><%-wsnew.description %></div>
-    
+
     <div class="ws-btn-box" id="current-static-flyers">
       <a href="/img/gesamt/Projekt/WS/2023_Infoblatt_Grundlage_BH.pdf" class="btn btn-mina"><i class="fa-solid fa-download"></i> Download<br>Grundlagenworkshops Behinderung und Teilhabe</a>
       <a href="/img/gesamt/Projekt/WS/2023_Infoblatt_Grundlage_MSO.pdf" class="btn btn-mina"><i class="fa-solid fa-download"></i> Download<br>Grundlagenworkshops Flucht und Migration</a>
       <a href="/img/gesamt/Projekt/WS/2023_Infoblatt_Vertiefung.pdf" class="btn btn-mina"><i class="fa-solid fa-download"></i> Download<br>Vertiefungsworkshops </a>
     </div>
-  </div>
-  <div id="ws-kalender">
-    <h1 class="ws-title"><span class="title-line">Workshop-Termine</span></h1>
-    <!-- Table 1 -->
-    <% if(!workshops) {%>
-    <div></div>
-    <% } else { %>
-    <table class="table table-responsive table-hover" id="table-ws">
-      <thead>
-        <tr>
-          <th scope="col">Datum</th>
-          <th scope="col">Workshop</th>
-          <th scope="col">Ort</th>
-          <th scope="col">Verfügbarkeit</th>
-          <th scope="col">Info</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% for(let workshop of workshops) {%>
-        <tr>
-          <td><%= workshop.date %></td>
-          <td><%= workshop.title %></td>
-          <td>
-            <ul>
-              <li><%= workshop.location %></li>
-              <li> <%= workshop.location2%></li>
-              <li> <%= workshop.location3%></li>
-            </ul>
-          </td>
-          <% if(workshop.capacity === "ausgebucht") { %>
-          <td class="ausgebucht"><%= workshop.capacity %></td>
-          <%} else { %>
-          <td class="anmelden"><a href="/anmeldung/<%= workshop._id %>/new""><%= workshop.capacity %></a></td>
-              <% } %>
-              <td><a href=" /workshop/<%= workshop._id %>""> Mehr ...</a></td>
-        </tr>
-        <% }%>
-      </tbody>
-    </table>
-    <% } %>
-    <% if(currentUser) {%>
-    <div class="ws-btn-box">
-      <a href="/workshop/new" class="btn btn btn-mina">Workshop Hinzufügen</a>
-    </div>
-    <% } %>
-    <!-- <div class="ws-btn-box-2">
-        <a  href="/downloads/2022_Infoblatt_Grundlage_MSO.pdf" target="_blank" class="btn btn-ws-flyer"  target="_blank">Grundlagen Workshops für die Bereiche Flucht und Migration</a>
-        <a  href="/downloads/2022_Infoblatt_Grundlage_BH.pdf" class="btn btn-ws-flyer"  target="_blank">Grundlagen Workshops für den Bereich Behindertenhilfe</a>
-        <a href="/downloads/2022_Infoblatt_Vertiefung.pdf" class="btn btn-ws-flyer"  target="_blank">Vertiefungsworkshops Flucht, Migration und Behinderung</a>
-      </div> -->
-  </div>
-  <div id="accordion-box">
-  <% if(wsnew.accordiontitleone) {%>
+    <% if(wsnew.accordiontitleone) {%>
     <div class="accordion-item" id="first-accordion">
       <h2 class="accordion-header" id="flush-headingOne">
         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
@@ -129,11 +77,64 @@
     </div>
     <% } %>
   </div>
+
+  <% if(currentUser) {%>
+  <div class="ws-btn-box">
+    <a href="/ueberworkshops/<%=wsnew._id%>/edit" class="btn btn-aktuelles-blue">Workshop Text/Akkordion Bearbeiten</a>
+  </div>
+  <% } %>
+
+
+  <div id="ws-kalender">
+    <h1 class="ws-title"><span class="title-line">Workshop-Termine</span></h1>
+    <!-- Table 1 -->
+    <% if(!workshops) {%>
+    <div></div>
+    <% } else { %>
+    <table class="table table-responsive table-hover" id="table-ws">
+      <thead>
+        <tr>
+          <th scope="col">Datum</th>
+          <th scope="col">Workshop</th>
+          <th scope="col">Ort</th>
+          <th scope="col">Verfügbarkeit</th>
+          <th scope="col">Info</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for(let workshop of workshops) {%>
+        <tr>
+          <td><%= workshop.date %></td>
+          <td><%= workshop.title %></td>
+          <td>
+            <ul>
+              <li><%= workshop.location %></li>
+              <li> <%= workshop.location2%></li>
+              <li> <%= workshop.location3%></li>
+            </ul>
+          </td>
+          <% if(workshop.capacity === "ausgebucht") { %>
+          <td class="ausgebucht"><%= workshop.capacity %></td>
+          <%} else { %>
+          <td class="anmelden"><a href="/anmeldung/<%= workshop._id %>/new""><%= workshop.capacity %></a></td>
+              <% } %>
+              <td><a href=" /workshop/<%= workshop._id %>""> Mehr ...</a></td>
+        </tr>
+        <% }%>
+      </tbody>
+    </table>
+    <% } %>
     <% if(currentUser) {%>
-      <div class="ws-btn-box">
-        <a href="/ueberworkshops/<%=wsnew._id%>/edit" class="btn btn-aktuelles-blue">Workshop Text/Akkordion Bearbeiten</a>
-      </div>
-      <% } %>
+    <div class="ws-btn-box">
+      <a href="/workshop/new" class="btn btn btn-mina">Workshop Hinzufügen</a>
+    </div>
+    <% } %>
+    <!-- <div class="ws-btn-box-2">
+        <a  href="/downloads/2022_Infoblatt_Grundlage_MSO.pdf" target="_blank" class="btn btn-ws-flyer"  target="_blank">Grundlagen Workshops für die Bereiche Flucht und Migration</a>
+        <a  href="/downloads/2022_Infoblatt_Grundlage_BH.pdf" class="btn btn-ws-flyer"  target="_blank">Grundlagen Workshops für den Bereich Behindertenhilfe</a>
+        <a href="/downloads/2022_Infoblatt_Vertiefung.pdf" class="btn btn-ws-flyer"  target="_blank">Vertiefungsworkshops Flucht, Migration und Behinderung</a>
+      </div> -->
+  </div>
 </div>
 <!-- IMAGE BLOCK -->
 <% if(wsgs) {%>
