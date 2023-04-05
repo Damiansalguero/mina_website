@@ -122,12 +122,12 @@ module.exports.timelinetwoSchema = Joi.object({
 
 module.exports.timelinethreeSchema = Joi.object({
   timelinethree: Joi.object({
-    auswahl: Joi.string().required(),
-    kennenlern: Joi.string().required(),
-    bedarf: Joi.string().required(),
-    auswertung: Joi.string().required(),
-    idee: Joi.string().required(),
-    evaluation: Joi.string().required()
+    auswahl: Joi.string().optional().allow(""),
+    kennenlern: Joi.string().optional().allow(""),
+    bedarf: Joi.string().optional().allow(""),
+    auswertung: Joi.string().optional().allow(""),
+    idee: Joi.string().optional().allow(""),
+    evaluation: Joi.string().optional().allow("")
   }).required(),
 });
 
