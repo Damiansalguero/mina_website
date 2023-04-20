@@ -83,6 +83,10 @@ module.exports.renderPartizip = async (req, res) => {
   res.render("partizip", { partizip, ptgs, partflyer });
 };
 
+module.exports.renderPodcast = async (req, res) => {
+  res.render("podcast");
+};
+
 module.exports.renderExpo = async (req, res) => {
   const expoflyers = await Expoflyer.find({});
   const expotext = await Expotext.findOne({});

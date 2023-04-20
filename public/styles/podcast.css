@@ -1,0 +1,85 @@
+#intro-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    clip-path: polygon(0 0, 100% 2%, 100% 100%, 0 100%);
+    height: auto;
+    padding-top: 10vh;
+    padding-bottom: 5vh;
+    margin-top: -10vh;
+    background-color: #fff;
+}
+
+#episode-list {
+    margin-top: 20px !important;
+}
+
+#episode-list strong {
+    color: #db2a6f !important;
+}
+
+#header-podcast {
+    margin-bottom: 5%;
+}
+
+#podcast-block {
+    background-color: #72c5d5;
+}
+
+#podcast-box {
+    display: flex;
+    justify-content: space-around;
+}
+
+#accordion-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10%;
+}
+
+#first-accordion,
+#second-accordion,
+#third-accordion,
+#fourth-accordion {
+    width: 50%;
+}
+
+.strong-ws {
+    color: #db2a6f;
+    text-align: letter-spacing;
+}
+
+.accordion-button.collapsed {
+    text-align: left;
+}
+
+
+#accordion-block {
+    clip-path: polygon(0 0%, 100% 2%, 100% 100%, 0% 100%);
+    background-color: #72c5d5;
+    padding: 5% 0;
+}
+
+.accordion-item {
+    background-color: #fff;
+}
+
+#logo-spotify-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2%;
+    width: 25%;
+    border: 3px solid #db2a6f;
+}
+
+#logo-spotify{
+    color: #db2a6f;
+}
+
+#text-spotify {
+    text-align: center;
+    font-weight: bold;
+    font-size: 26px;;
+}

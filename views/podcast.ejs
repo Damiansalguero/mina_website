@@ -1,19 +1,136 @@
-<div id="podcast-block">
-<h1 class="white"><span class="title-line line-blue">Podcast XY</span></h1>
-<div class="exposition-text-block">
-  <% if(partizip.descriptionfour) {%>
-  <div class="part-text" id="part-text-two"><%-partizip.descriptionfour %></div>
-  <% } else { %>
-  <p id="exposition-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  <% } %>
+<link rel="stylesheet" href="/styles/workshops.css">
+<link rel="stylesheet" href="/styles/podcast.css">
+<% layout("layouts/boilerplate") %>
+<!-- NAV + HEADER -->
+<div class="container-fluid">
+  <div class="header-bg">
+    <img src="/img/gesamt/Projekt/bg-podcast.png" class="img-fluid cover-header" id="img-header-ws">
   </div>
-  <!-- PLAYER -->
-  <audio controls>
-    <source src="/downloads/Tyga1.mp3" type="audio/ogg">
-  Your browser does not support the audio element.
-  </audio>
-  <!-- PLAYER -->
-  <h1>PODCAST</h1>
-  <h1>PODCAST</h1>
-</div>
+  <!-- TABLE BLOCK -->
+  <div id="intro-block">
+    <h1 class="ws-title title-line">Podcast</h1>
+    <div class="ws-text" id="ws-intro">Der Podcast Vielfalt inklusiv ist Teil des gleichnamigen Projekts von MINA - Leben in Vielfalt e.V. und wird gefördert durch die Beauftragte der Bundesregierung für Migration, Flüchtlinge und Integration und für Antirassismus. MINA ist eine Beratungs- und Kontaktstelle, die Menschen mit Flucht- und/oder Migrationserfahrung und Behinderung sowie deren Angehörige berät und begleitet. Das Projekt Vielfalt inklusiv existiert seit 2019 mit dem Ziel, die Erfahrungen und das Wissen von MINA an der Schnittstelle Flucht, Migration und Behinderung bundesweit weiterzugeben, u.a. durch Workshops. Mehr zum Projekt erfahrt ihr unter: mina-vielfalt.de Der Podcast besteht aus vier Folgen. Jede Folge thematisiert ein Thema an der Schnittstelle und lädt Selbstvertreter*innen und Akteur*innen ein, ihre Erfahrungen zu teilen.
+      <ul id="episode-list">
+        <li><strong>Folge 1:</strong> Theater kennt keine Grenzen</li>
+        <li><strong>Folge 2:</strong> Gemeinsam sind wir stark! Sportangebote an der Schnittstelle Flucht, Migration und Behinderung </li>
+        <li><strong>Folge 3:</strong> Mut durch den anderen! Angebote zur Selbsthilfe an der Schnittstelle Flucht, Migration und Behinderung </li>
+        <li><strong>Folge 4:</strong> Teilhabe am Arbeitsleben an der Schnittstelle Flucht, Migration und Behinderung.</li>
+      </ul>
+    </div>
+    <div id="podcast-player-box">
+      <iframe title="Vielfalt inklusiv" allowtransparency="true" height="315" width="100%" style="border: none; min-width: min(100%, 430px);" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?i=prtni-f73e40-pbblog-playlist&share=1&download=1&rtl=0&fonts=Arial&skin=8bbb4e&font-color=ffffff&logo_link=podcast_page&order=serial&limit=10&filter=all&ss=5c93d19bc8104d72a2a9db056be5a5f2&btn-skin=fb0584&size=315" allowfullscreen=""></iframe>
+    </div>
+    <div id="logo-spotify-box">
+      <p id="text-spotify">Auf Spotify hören</p>
+      <a href="https://open.spotify.com/show/2VMcO7ZpsBS04wxK8vqRw0" target="_blank"><i id="logo-spotify" class="fa-brands fa-spotify fa-2x"></i></a>
+    </div>
+  </div>
+
+  <div id="accordion-block">
+    <h1 class="white"><span class=" line-blue">Folgenbeschreibungen</span></h1>
+    <div id="accordion-box">
+      <div class="accordion-item" id="first-accordion">
+        <h2 class="accordion-header" id="flush-headingOne">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            <strong class="strong-ws">Folge 1</strong>
+          </button>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            Wie werden kreative Freizeitangebote an der Schnittstelle Flucht, Migration und Behinderung gestaltet? Welche Wirkung hat ein solches Angebot auf Menschen und ihren Alltag? In der ersten Folge der vierteiligen Podcast Reihe Vielfalt inklusiv sprechen wir u.a. über diese Fragen mit einigen Schauspielerinnen und Organisator*innen einer inklusiven und migrantischen Theatergruppe. Als Selbstvertreter*innen und Akteur*innen berichten sie, wie die Theatergruppe entstanden ist, wie sie arbeiten und welche Erfahrungen sie durch das gemeinsame Theaterspielen gemacht haben. Links zur Folge:
+            Den Backstage Film zur Produktion Mondjunge: http://mina-berlin.eu/videos/
+            Webseite von Hülya Karci, Theaterpädagogin und Dramaturgin: hulyakarci.com/
+            Handreichung „Flucht, Migration und Behinderung – Wege zu Teilhabe und Engagement“:
+            mina-vielfalt.de/home
+            Vielfalt inklusiv – Theater kennt keine Grenzen ist ein Podcast von MINA – Leben in Vielfalt e. V. und Teil des Projekts Vielfalt inklusiv. Das Projekt wird gefördert durch die Beauftragte der Bundesregierung für Migration, Flüchtlinge und Integration und für Antirassismus. Vielen Dank an Yildiz Akgün, Hülya Karcı, Gizem Akman, Sebiha und Buse Uslu, Ciğdem und Sinem Eroğlu, Sevgi und Samet Erkabalci und Ayşe Aytan für ihre Unterstützung und für das Teilen ihrer Erfahrungen.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item" id="second-accordion">
+        <h2 class="accordion-header" id="flush-headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+            <strong class="strong-ws">Folge 2</strong>
+          </button>
+        </h2>
+        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            Sportangebote an der Schnittstelle Flucht, Migration und Behinderung
+            Wie werden Sportangebote an der Schnittstelle Flucht, Migration und Behinderung gestaltet? Welche Wirkung hat ein solches Angebot auf Menschen und ihren Alltag? In dieser Folge geht es um Sportangebote an der Schnittstelle Flucht, Migration und Behinderung. Dazu sprechen wir mit zwei Akteur*innen, die ihr Sportangebot vorstellen. Cem Taşdelen von MINA – Leben in Vielfalt e.V. und zuständig für die Koordination der inklusiven Basketballgruppe für Menschen mit Flucht- und/oder Migrationserfahrung und Behinderung sowie Cornelia Neubauer vom FED Leipzig e. V., die zusammen mit Kolleg*innen eine Fußballgruppe ins Leben gerufen hat. Cem und Cornelia berichten von ihren Perspektiven und Erfahrungen, Angebote an der Schnittstelle zu konzipieren und nachhaltig zu gestalten. Weiterführende Informationen: Wer nach der Folge mehr über vielfaltsensible Freizeitangebote erfahren möchte, unter mina-vielfalt.de könnt ihr euch die Handreichung Flucht, Migration und Behinderung – Wege zu Teilhabe und Engagement herunterladen. Sie enthält zahlreiche Tipps und Hinweise zu dem Thema. Ebenfalls dort findet ihr das Buch Unsere Wege – Erfahrungsberichte geflüchteter und migrierter Familien mit Kindern mit Behinderung, in diesem berichten 20 Familien von ihren Erfahrungen an der Schnittstelle. Außerdem tourt die Wanderausstellung des Projekts auch dieses Jahr wieder durch Deutschland. Aktuelle Daten findet ihr hier: mina-vielfalt.de/wanderausstellung.
+            Handreichung „Flucht, Migration und Behinderung – Wege zu Teilhabe und Engagement“, Buch „Unsere Wege“ und Informationen zur Wanderausstellung: mina-vielfalt.de/wanderausstellung
+            Elterninitiative FED Leipzig e.V., Fußballgruppe in Leipzig: www.fed-leipzig.de/de/
+            MINA- Leben in Vielfalt e.V., MINA-Basket in Berlin: mina-berlin.eu/kreative-gruppen/
+            Special Olympics Deutschland: specialolympics.de/startseite
+            Freie Basketball Liga Berlin: fbl.berlin/
+            Vielfalt inklusiv – Gemeinsam sind wir stark! Sportangebote an der Schnittstelle Fluch, Migration und Behinderung ist ein Podcast von MINA – Leben in Vielfalt e. V. und Teil des Projekts Vielfalt inklusiv. Das Projekt wird gefördert durch die Beauftragte der Bundesregierung für Migration, Flüchtlinge und Integration und für Antirassismus. Vielen Dank an Cem Tasdelen, Cornelia Neubauer und dem Team von MINA Basket für ihre Unterstützung und das Teilen ihrer Erfahrungen.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item" id="third-accordion">
+        <h2 class="accordion-header" id="flush-headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+            <strong class="strong-ws">Folge 3</strong>
+          </button>
+        </h2>
+        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            Wie werden Angebote zur Selbsthilfe an der Schnittstelle Flucht, Migration und Behinderung gestaltet? Was können diese Angebote bei Menschen bewirken? In der dritten Folge der Podcast Reihe Vielfalt inklusiv sprechen wir u.a. über diese Fragen mit drei Frauen, die als Selbstvertreter*innen an der Schnittstelle seit Jahren gemeinsam in der Selbsthilfe aktiv sind.
+            Weitere Informationen: Wer nach der Folge mehr über vielfaltsensible Angebote zur Selbsthilfe erfahren möchte, unter mina-vielfalt.de könnt ihr euch die Handreichung Flucht, Migration und Behinderung – Wege zu Teilhabe und Engagement herunterladen. Sie enthält zahlreiche Tipps und Hinweise zu dem Thema. Ebenfalls dort findet ihr das Buch Unsere Wege – Erfahrungsberichte geflüchteter und migrierter Familien mit Kindern mit Behinderung, in diesem berichten 20 Familien von ihren Erfahrungen an der Schnittstelle. Außerdem tourt die Wanderausstellung des Projekts auch dieses Jahr wieder durch Deutschland. Aktuelle Daten findet ihr hier: mina-vielfalt.de/wanderausstellung.
+            Handreichung „Flucht, Migration und Behinderung – Wege zu Teilhabe und Engagement“ und Buch „Unsere Wege. Erfahrungsberichte geflüchteter und migrierter Familien mit Kindern mit Behinderung“: mina-vielfalt.de/home
+            NAKOS: Auf der Internetseite der „Nationalen Kontakt- und Informationsstelle zur Anregung und Unterstützung von Selbsthilfegruppen“ gibt es die Möglichkeit, nach passenden Gruppen vor Ort suchen. NAKOS hilft auch dabei, eine neue Selbsthilfegruppe zu gründen: www.nakos.de
+            Vielfalt inklusiv – Mut durch den anderen! Angebote zur Selbsthilfe an der Schnittstelle Flucht, Migration und Behinderung ist ein Podcast von MINA – Leben in Vielfalt e. V. und Teil des Projekts Vielfalt inklusiv. Das Projekt wird gefördert durch die Beauftragte der Bundesregierung für Migration, Flüchtlinge und Integration und für Antirassismus. Vielen Dank an Yildiz Akgün, Nilüfer Sever und Mediha Yilmaz für ihre Unterstützung und das Teilen ihrer Erfahrungen.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item" id="fourth-accordion">
+        <h2 class="accordion-header" id="flush-headingFour">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+            <strong class="strong-ws">Folge 4</strong>
+          </button>
+        </h2>
+        <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            Wie ist der Zugang zum Arbeitsmarkt für Menschen mit Lernschwierigkeiten und Flucht-und/oder Migrationserfahrung? Welche Barrieren erleben Personen an der Schnittstelle hinsichtlich Arbeitsleben und Ausbildung? In der vierten und letzten Folge der Podcast Reihe Vielfalt inklusiv geht es um das komplexe Thema Teilhabe am Arbeitsleben. Im ersten Teil der Folge berichtet uns Laura Schödermaier, Beraterin an der Schnittstelle, von ihren Erfahrungen aus der Beratung. Im zweiten Teil hören wir Duygu Özen. Für Duygu ist schon während der Schulzeit klar, dass sie inklusiv arbeiten möchte, doch der Weg dorthin ist alles andere als einfach. Weitere Informationen zu Hintergründen und Diskussionen rund um das Thema "inklusiv arbeiten"(Auswahl)
+            „Wie das System der Behindertenwerkstätten Inklusion verhindert und niemand etwas daran ändert“ vom 14.09.2020: jobinklusive.org/2020/09/14/wie-das-system-der-behindertenwerkstaetten-inklusion-verhindert-und-niemand-etwas-daran-aendert/
+            „Das überholte Konzept der Werkstätten“ vom 29.11.2021: www.deutschlandfunk.de/das-ueberholte-konzept-der-werkstaetten-100.html
+            „Deutschland behindert sich selbst“ vom 01.11.2022 www.deutschlandfunkkultur.de/inklusion-und-arbeitsmarkt-deutschland-behindert-sich-selbst-100.html
+            „Wie weiter mit den Behinderten-Werkstätten?“ vom 10.10.2022 www.mdr.de/religion/thema-behinderten-werkstaetten-wie-weiter-100.html
+            Beiträge rund um das Thema Inklusion am Arbeitsplatz: www.aktion-mensch.de/inklusion/arbeit
+            Förderung des inklusiven Arbeitsmarkts Mehr Menschen mit Behinderungen in reguläre Arbeit bringen vom 21.12.2022: www.bundesregierung.de/breg-de/themen/arbeit-und-soziales/inklusiver-arbeitsmarkt-2154512
+            Vielfalt inklusiv – Teilhabe am Arbeitsleben an der Schnittstelle Flucht, Migration und Behinderung. Ein Podcast von MINA – Leben in Vielfalt e. V. und Teil des Projekts Vielfalt inklusiv. Das Projekt wird gefördert durch die Beauftragte der Bundesregierung für Migration, Flüchtlinge und Integration und für Antirassismus. Vielen Dank an Duygu Özen und Laura Schödermaier für ihre Unterstützung und das Teilen ihrer Erfahrungen.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MITARBEITER BLOCK -->
+  <!-- <div class="container-fluid contact-box" id="ws-contact">
+    <h1 class="white"><span class="title-line">Ansprechpersonen</span></h1>
+    <div class="row">
+      <div class="worker col">
+        <img class="contact-img" src="/img/gesamt/Mitarbeiter/07_Laura.jpg" alt="">
+        <div class="worker-info">
+          <ul>
+            <li class="worker-title">Inhalte und Konzept</li>
+            <li>Laura Schödermaier</li>
+            <li>030 – 62 93 40 31</li>
+            <li><a href="mailto:l.schoedermaier@mina-berlin.de">l.schoedermaier@mina-berlin.de</a> </li>
+          </ul>
+        </div>
+      </div>
+      <div class="worker col">
+        <img class="contact-img" src="/img/gesamt/Mitarbeiter/11_Abdurrahman.png" alt="">
+        <div class="worker-info">
+          <ul>
+            <li class="worker-title">Teamassistenz Workshops & Öffentlichkeitsarbeit</li>
+            <li>Abdurrahman Gügercin</li>
+            <li>030 – 62 93 40 31</li>
+            <li><a href="mailto:a.guegercin@mina-berlin.de">a.guegercin@mina-berlin.de</a> </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div> -->

@@ -94,7 +94,7 @@ video {
 }
 
 #part-contact {
-  clip-path: polygon(0 0%, 100% 2%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 0%, 100% 4%, 100% 100%, 0% 100%);
   background-color: #db2a6f;
   padding: 6vh 0 5vh 0;
   height: auto;
@@ -218,7 +218,7 @@ video {
 #partflyer-how-title {
   color: #db2a6f;
   font-weight: bold;
-}
+}4%
 
 .publications-block {
   clip-path: polygon(0 0, 100% 7%, 100% 100%, 0 100%);
