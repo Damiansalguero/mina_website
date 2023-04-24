@@ -8,15 +8,14 @@
   </div>
   <!-- TABLE BLOCK -->
   <div id="intro-block">
-    <h1 class="ws-title title-line">Podcast</h1>
-    <div class="ws-text" id="ws-intro">Der Podcast Vielfalt inklusiv ist Teil des gleichnamigen Projekts von MINA - Leben in Vielfalt e.V. und wird gefördert durch die Beauftragte der Bundesregierung für Migration, Flüchtlinge und Integration und für Antirassismus. MINA ist eine Beratungs- und Kontaktstelle, die Menschen mit Flucht- und/oder Migrationserfahrung und Behinderung sowie deren Angehörige berät und begleitet. Das Projekt Vielfalt inklusiv existiert seit 2019 mit dem Ziel, die Erfahrungen und das Wissen von MINA an der Schnittstelle Flucht, Migration und Behinderung bundesweit weiterzugeben, u.a. durch Workshops. Mehr zum Projekt erfahrt ihr unter: mina-vielfalt.de Der Podcast besteht aus vier Folgen. Jede Folge thematisiert ein Thema an der Schnittstelle und lädt Selbstvertreter*innen und Akteur*innen ein, ihre Erfahrungen zu teilen.
-      <ul id="episode-list">
-        <li><strong>Folge 1:</strong> Theater kennt keine Grenzen</li>
-        <li><strong>Folge 2:</strong> Gemeinsam sind wir stark! Sportangebote an der Schnittstelle Flucht, Migration und Behinderung </li>
-        <li><strong>Folge 3:</strong> Mut durch den anderen! Angebote zur Selbsthilfe an der Schnittstelle Flucht, Migration und Behinderung </li>
-        <li><strong>Folge 4:</strong> Teilhabe am Arbeitsleben an der Schnittstelle Flucht, Migration und Behinderung.</li>
-      </ul>
+    <h1 class="ws-title title-line"><%=podcasttext.title%></h1>
+    <div class="ws-text" id="ws-intro"><%-podcasttext.description%>
     </div>
+    <% if(currentUser) {%>
+      <div class="btn-box">
+        <a href="/podcasts/<%=podcasttext._id%>/edit" class="btn btn-aktuelles-blue">Text Bearbeiten</a>
+      </div>
+      <% } %>
     <div id="podcast-player-box">
       <iframe title="Vielfalt inklusiv" allowtransparency="true" height="315" width="100%" style="border: none; min-width: min(100%, 430px);" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?i=prtni-f73e40-pbblog-playlist&share=1&download=1&rtl=0&fonts=Arial&skin=8bbb4e&font-color=ffffff&logo_link=podcast_page&order=serial&limit=10&filter=all&ss=5c93d19bc8104d72a2a9db056be5a5f2&btn-skin=fb0584&size=315" allowfullscreen=""></iframe>
     </div>

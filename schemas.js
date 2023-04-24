@@ -279,6 +279,22 @@ module.exports.partizipGallerySchema = Joi.object({
   deleteImages: Joi.array(),
 });
 
+module.exports.podcastTextSchema = Joi.object({
+  podcasttext: Joi.object({
+    title: Joi.string().required(),
+    description: Joi.string().required(),
+  }).required(),
+  deleteImages: Joi.array(),
+});
+
+module.exports.podcastAccordionSchema = Joi.object({
+  podcastaccordion: Joi.object({
+    accordiontitle: Joi.string().required(),
+    accordiontext: Joi.string().required(),
+  }).required(),
+  deleteImages: Joi.array(),
+});
+
 module.exports.ukrTextSchema = Joi.object({
   ukrtext: Joi.object({
     title: Joi.string().optional().allow(""),

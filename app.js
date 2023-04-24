@@ -2,7 +2,7 @@ if (process.env.NODE_ENV !== "production") {
   require("dotenv").config();
 }
 
-///////// NPM PACKAGES //////////////
+//* NPM PACKAGES //
 const express = require("express");
 const app = express();
 const path = require("path");
@@ -26,10 +26,11 @@ const LocalStrategy = require("passport-local");
 // const dbUrl = process.env.DB_URL;
 const dbUrl = process.env.DB_URL;
 const MongoStore = require("connect-mongo")(session);
-//////////////// MODEL IMPORT //////////////////
+
+//* MODEL IMPORT //
 const User = require("./models/user");
 
-//////////////// ROUTES IMPORT ///////////////////
+//* ROUTES IMPORT //
 const aktuellesRoutes = require("./routes/aktuelles");
 const calendarRoutes = require("./routes/calendars");
 const aboutRoutes = require("./routes/abouts");
@@ -54,6 +55,7 @@ const prozessflyerRoutes = require("./routes/prozessflyers");
 const expotextRoutes = require("./routes/expotexts");
 const expoflyerRoutes = require("./routes/expoflyers");
 const expogalleryRoutes = require("./routes/expogalleries");
+const podcastRoutes = require("./routes/podcasts");
 const processThreeRoutes = require("./routes/processesthree");
 const begleitungsRoutes = require("./routes/begleitungs");
 const ukrtextRoutes = require("./routes/ukrtexts");
@@ -153,6 +155,7 @@ app.use("/partizip-flyers", partflyerRoutes);
 app.use("/wander-ausstellung", expotextRoutes);
 app.use("/wander-ausstellung-flyers", expoflyerRoutes);
 app.use("/wander-ausstellung-gallerien", expogalleryRoutes);
+app.use("/podcasts", podcastRoutes);
 app.use("/ukraine-text", ukrtextRoutes);
 app.use("/bibliothek", bibRoutes);
 app.use("/posts", postRoutes);
