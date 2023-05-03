@@ -20,6 +20,7 @@ const Expotext = require("../models/expotext");
 const Expoflyer = require("../models/expoflyer");
 const Expogallery = require("../models/expogallery");
 const Podcasttext = require("../models/podcasttext");
+const Podcastaccordion = require("../models/podcastaccordion");
 const Timeline = require("../models/timeline");
 const Timelinetwo = require("../models/timelinetwo");
 const Timelinethree = require("../models/timelinethree.js");
@@ -53,7 +54,7 @@ module.exports.renderhome = async (req, res) => {
     aktuell,
     calendars: formatedDate,
     about,
-    flyer,
+    flyer
   });
 };
 
@@ -85,8 +86,9 @@ module.exports.renderPartizip = async (req, res) => {
 };
 
 module.exports.renderPodcast = async (req, res) => {
+  const podcastaccordions = await Podcastaccordion.find({});
   const podcasttext = await Podcasttext.findOne({});
-  res.render("podcast", {podcasttext});
+  res.render("podcast", {podcasttext, podcastaccordions});
 };
 
 module.exports.renderExpo = async (req, res) => {
