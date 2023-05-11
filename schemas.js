@@ -289,8 +289,13 @@ module.exports.podcastTextSchema = Joi.object({
 
 module.exports.podcastAccordionSchema = Joi.object({
   podcastaccordion: Joi.object({
-    accordiontitle: Joi.string().required(),
-    accordiontext: Joi.string().required(),
+    accordiontitleone: Joi.string().optional().allow(""),
+    accordiontextone: Joi.string().optional().allow(""),
+    accordiontitletwo: Joi.string().optional().allow(""),
+    accordiontextwo: Joi.string().optional().allow(""),accordiontitlethree: Joi.string().optional().allow(""),
+    accordiontexthree: Joi.string().optional().allow(""),
+    accordiontitlefour: Joi.string().optional().allow(""),
+    accordiontextfour: Joi.string().optional().allow(""),
   }).required(),
   deleteImages: Joi.array(),
 });

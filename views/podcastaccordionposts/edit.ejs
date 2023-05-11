@@ -1,0 +1,58 @@
+<link rel="stylesheet" href="/styles/forms.css">
+<% layout("layouts/boilerplate") %>
+<div class="row">
+  <h1 class="text-center"><span class="title-line line-pink">Podcast Akkordion Bearbeiten</span></h1>
+  <div id="form-ws-aktuell-edit" class="col-6 offset-3">
+    <form action="/podcasts/akkordion/<%=podcastaccordion._id%>?_method=PUT" method="post" novalidate class="validated-form">
+      <div class="mb-3">
+        <label class="form-label" for="accordiontitleone">Überschrift Akkordion 1</label>
+        <input class="form-control" type="text" id="title1" name="podcastaccordion[accordiontitleone]" required value="<%=podcastaccordion.accordiontitleone%>">
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="accordiontextone">Text Akkordion 1</label>
+        <textarea class="form-control" type="text" id="accordiontextone" name="podcastaccordion[accordiontextone]" required><%=podcastaccordion.accordiontextone%></textarea>
+        <script type="text/javascript">
+          CKEDITOR.replace('accordiontextone');
+        </script>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="accordiontitletwo">Überschrift Akkordion 2</label>
+        <input class="form-control" type="text" id="title1" name="podcastaccordion[accordiontitletwo]" required value="<%=podcastaccordion.accordiontitletwo%>">
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="accordiontextwo">Text Akkordion 2</label>
+        <textarea class="form-control" type="text" id="accordiontextwo" name="podcastaccordion[accordiontextwo]" required><%=podcastaccordion.accordiontextwo%></textarea>
+        <script type="text/javascript">
+          CKEDITOR.replace('accordiontextwo');
+        </script>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="accordiontitlethree">Überschrift Akkordion 3</label>
+        <input class="form-control" type="text" id="title1" name="podcastaccordion[accordiontitlethree]" required value="<%=podcastaccordion.accordiontitlethree%>">
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="accordiontexthree">Text Akkordion 3</label>
+        <textarea class="form-control" type="text" id="accordiontexthree" name="podcastaccordion[accordiontexthree]" required><%=podcastaccordion.accordiontexthree%></textarea>
+        <script type="text/javascript">
+          CKEDITOR.replace('accordiontexthree');
+        </script>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label" for="accordiontitlefour">Überschrift Akkordion 4</label>
+        <input class="form-control" type="text" id="title1" name="podcastaccordion[accordiontitlefour]" required value="<%=podcastaccordion.accordiontitlefour%>">
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="accordiontextfour">Text Akkordeon 4</label>
+        <textarea class="form-control" type="text" id="accordiontextfour" name="podcastaccordion[accordiontextfour]" required><%=podcastaccordion.accordiontextfour%></textarea>
+        <script type="text/javascript">
+          CKEDITOR.replace('accordiontextfour');
+        </script>
+      </div>
+      <div class="mb-3">
+        <button class="btn btn-info">Aktuallisieren</button>
+      </div>
+    </form>
+    <a class="btn btn-primary btn-mina" href="/podcast">Zurück</a>
+  </div>
+</div>

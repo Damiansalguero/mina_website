@@ -1,0 +1,59 @@
+<link rel="stylesheet" href="/styles/forms.css">
+<% layout("layouts/boilerplate") %>
+<div class="row">
+  <h1 class=""><span class="title-line line-pink"> Podcast Akkordion Hinzufügen</span></h1>
+  <div id="form-podcasttext-new" class="col-6 offset-3">
+    <form action="/podcasts/akkordion" method="post" novalidate class="validated-form">
+      <div class="mb-3">
+        <label class="form-label" for="accordiontitleone">Überschrift Akkordion 1</label>
+        <input class="form-control" type="text" id="accordiontitleone" name="podcastaccordion[accordiontitleone]">
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="accordiontextone">Text Akkordion 1</label>
+        <textarea class="form-control" type="text" id="accordiontextone" name="podcastaccordion[accordiontextone]"></textarea>
+        <script>
+          CKEDITOR.replace('accordiontextone');
+        </script>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="accordiontitletwo">Überschrift Akkordion 2</label>
+        <input class="form-control" type="text" id="accordiontitletwo" name="podcastaccordion[accordiontitletwo]">
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="accordiontextwo">Text Akkordion 2</label>
+        <textarea class="form-control" type="text" id="accordiontextwo" name="podcastaccordion[accordiontextwo]"></textarea>
+        <script>
+          CKEDITOR.replace('accordiontextwo');
+        </script>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="accordiontitlethree">Überschrift Akkordion 3</label>
+        <input class="form-control" type="text" id="accordiontitlethree" name="podcastaccordion[accordiontitlethree]">
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="accordiontexthree">Text Akkordion 3</label>
+        <textarea class="form-control" type="text" id="accordiontexthree" name="podcastaccordion[accordiontexthree]"></textarea>
+        <script>
+          CKEDITOR.replace('accordiontexthree');
+        </script>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="accordiontitlefour">Überschrift Akkordion 4</label>
+        <input class="form-control" type="text" id="accordiontitlefour" name="podcastaccordion[accordiontitlefour]">
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="accordiontextfour">Text Akkordeon 4</label>
+        <textarea class="form-control" type="text" id="accordiontextfour" name="podcastaccordion[accordiontextfour]"></textarea>
+        <script>
+          CKEDITOR.replace('accordiontextfour');
+        </script>
+      </div>
+
+      <div class="mb-3">
+        <button class="btn btn-aktuelles-blue ">Speichern</button>
+      </div>
+    </form>
+    <a class="btn btn-success btn-mina" href="/podcast">Zurück</a>
+  </div>
+</div>
+<!--  -->

@@ -86,9 +86,9 @@ module.exports.renderPartizip = async (req, res) => {
 };
 
 module.exports.renderPodcast = async (req, res) => {
-  const podcastaccordions = await Podcastaccordion.find({});
+  const podcastaccordion = await Podcastaccordion.findOne({});
   const podcasttext = await Podcasttext.findOne({});
-  res.render("podcast", {podcasttext, podcastaccordions});
+  res.render("podcast", {podcasttext, podcastaccordion});
 };
 
 module.exports.renderExpo = async (req, res) => {
