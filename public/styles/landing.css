@@ -242,6 +242,10 @@ small {
   .book-img {
     height: 200px !important;
   }
+  #book-box {
+    flex-wrap: wrap;
+    margin-bottom: 5vh;
+  }
 }
 @media screen and (min-width: 575.98px) and (max-width: 991.98px) {
   .aktuelles {
