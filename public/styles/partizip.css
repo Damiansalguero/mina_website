@@ -5,6 +5,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
 .gallery-partizip {
   width: 70%;
 }
@@ -19,10 +20,12 @@ p {
 p {
   font-weight: normal;
 }
+
 iframe {
   margin: 5vh 0;
   border: 5px solid #db2a6f;
 }
+
 video {
   height: 350px;
   width: auto;
@@ -41,31 +44,33 @@ video {
   padding-top: 12vh;
   height: 450px;
   margin-top: -4vh;
-  }
+}
 
-  #book {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20vh;
-  }
+#book {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20vh;
+}
 
-  #book-box {
-    display: flex;
-    justify-content: center;
-    margin: 10px
-  }
+#book-box {
+  display: flex;
+  justify-content: center;
+  margin: 10px
+}
 
 /********** PARTIZIP STYLES ***********/
 .logo-part {
   margin: 2vh 0;
 }
+
 .part-text {
   color: #000;
   width: 50%;
   text-align: justify;
   font-size: 18px;
 }
+
 .btn-aktuelles {
   border-color: #0dcaf0;
   color: #0dcaf0;
@@ -109,6 +114,7 @@ video {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
 .gallery-partizip {
   width: 70%;
 }
@@ -123,10 +129,12 @@ p {
 p {
   font-weight: normal;
 }
+
 iframe {
   margin: 5vh 0;
   border: 5px solid #db2a6f;
 }
+
 video {
   height: 400px;
   width: auto;
@@ -150,11 +158,13 @@ video {
   justify-content: space-around;
   margin-bottom: 5vh;
 }
+
 .gallery-ws {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .gallery-ws-link {
   height: 200px;
 }
@@ -171,6 +181,7 @@ video {
   border-radius: 0.25rem;
   align-items: center;
 }
+
 .card-part-gallery {
   width: 100%;
 }
@@ -204,6 +215,7 @@ video {
   margin-top: -18vh;
   padding-bottom: 15vh;
 }
+
 .form-check-inline {
   display: block;
 }
@@ -215,12 +227,13 @@ video {
   text-align: center;
   border: 2px solid #db2a6f;
 }
+
 #partflyer-how-title {
   color: #db2a6f;
   font-weight: bold;
-}4%
+}
 
-.publications-block {
+4% .publications-block {
   clip-path: polygon(0 0, 100% 7%, 100% 100%, 0 100%);
   background-color: #db2a6f;
   display: flex;
@@ -236,9 +249,11 @@ video {
   height: 250px;
   border: 1px solid #000;
 }
+
 #part-text-two {
   color: #fff;
 }
+
 .exposition-block {
   margin-top: -10vh;
   clip-path: polygon(0 0%, 100% 2%, 100% 100%, 0% 100%);
@@ -253,19 +268,21 @@ video {
   align-items: center;
 }
 
-#exposition-text, #puplications-text{
+#exposition-text,
+#puplications-text {
   width: 50%;
   font-size: 18px;
   color: white;
   text-align: center;
 }
-.btn-wander {
-    background-color: #ffffff;
-    border-color: #4caf50;
-    color: #9fb039;
-    font-weight: bold;
 
-    /* outline: none;
+.btn-wander {
+  background-color: #ffffff;
+  border-color: #4caf50;
+  color: #9fb039;
+  font-weight: bold;
+
+  /* outline: none;
     border: none;
     cursor: pointer;
     background: #db2a6f;
@@ -277,11 +294,11 @@ video {
 }
 
 .btn-wander:hover {
-    background-color: #9fb039;
-    border-color: #fff;
-    color: #fff;
-    font-weight: bold;
-    /* box-shadow: 0 1px #b4225a;
+  background-color: #9fb039;
+  border-color: #fff;
+  color: #fff;
+  font-weight: bold;
+  /* box-shadow: 0 1px #b4225a;
 	  top: 1px; */
 }
 
@@ -291,17 +308,18 @@ video {
 } */
 #podcast-block {
   clip-path: polygon(0 0%, 100% 2%, 100% 100%, 0% 100%);
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: -5vh;
-    padding-top: 5%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -5vh;
+  padding-top: 5%;
 }
 
 #podcast-player-box {
   margin-bottom: 10%;
 }
+
 /* Flyer Styles */
 @media screen and (min-width: 0) and (max-width: 575.98px) {
   .part-text {
@@ -309,24 +327,50 @@ video {
     text-align: justify;
     font-size: 14px;
   }
+
   video {
     height: auto;
     width: 90%;
   }
+
   #part-contact h1 {
     margin: 5vh 0 5vh 0;
   }
+
+  .book-img {
+    height: 200px;
+  }
+
+  #book-box {
+    flex-wrap: wrap;
+  }
+
+  #podcast-player-box {
+    margin-bottom: 40%;
+  }
+
+  .exposition-block {
+    padding-bottom: 10vh;
+  }
+
+  .exposition-block {
+    margin-top: -20vh;
+  }
 }
+
 @media screen and (min-width: 575.98px) and (max-width: 991.98px) {
   #bg-partizip {
     height: 500px;
   }
+
   video {
     height: 350px;
   }
+
   #part-contact h1 {
     margin: 5vh 0 5vh 0;
   }
+
   .part-text {
     min-width: 75%;
   }
