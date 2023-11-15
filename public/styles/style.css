@@ -505,7 +505,7 @@ a {
   #scrollBtn {
     border-radius: 50% !important;
     bottom: 150px !important;
-    right: 100px;
+    right: 4%;
   }
   #scrollBtn i {
     font-size: 30px !important;

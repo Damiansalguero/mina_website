@@ -74,8 +74,8 @@
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%) !important;
   }
   #header-img {
-    padding-top: 10vh !important;
-    margin-bottom: 5vh !important;
+    padding-top: 0 !important;
+    margin-bottom: 10vh !important;
   }
 }
 
