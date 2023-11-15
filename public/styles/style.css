@@ -439,7 +439,7 @@ a {
     margin-top: 0 !important;
   }
   .header-bg img {
-    height: 250px !important;
+    height: 180px !important;
   }
   h1 {
     font-size: 28px;
@@ -447,7 +447,7 @@ a {
   }
   .aktuelles {
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%) !important;
-    margin-top: 0 !important;
+    margin-top: 3vh !important;
     padding-top: 0 !important;
   }
   .text-box-aktuelles {
