@@ -453,19 +453,13 @@ a {
   .text-box-aktuelles {
     min-width: 80% !important;
   }
-  .calendar-block {
-    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%) !important;
-    padding-top: 5vh !important;
-  }
+  
   h3 {
     text-align: center !important;
   }
   .list-group {
     min-width: 85% !important;
     margin-top: 2vh !important;
-  }
-  .about-block {
-    clip-path: polygon(0 2%, 100% 0%, 100% 100%, 0% 100%) !important;
   }
   .text-block {
     min-width: 75% !important;
@@ -505,7 +499,7 @@ a {
   #scrollBtn {
     border-radius: 50% !important;
     bottom: 150px !important;
-    right: 4%;
+    right: 5%;
   }
   #scrollBtn i {
     font-size: 30px !important;

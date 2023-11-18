@@ -201,7 +201,7 @@ small {
 }
 
 .helper-block {
-  clip-path: polygon(0 0%, 100% 2%, 100% 100%, 0 95%) !important;
+  clip-path: polygon(0 0%, 100% 2%, 100% 100%, 0 95%);
   background-color: #fff !important;
   padding-bottom: 10vh !important;
   margin-top: -5vh !important;
@@ -222,6 +222,11 @@ small {
 
 #img-helper {
   height: 200px;
+}
+
+.btn-landing-download {
+  display: flex;
+  justify-content: center;
 }
 
 @media screen and (min-width: 0) and (max-width: 575.98px) {
@@ -246,6 +251,20 @@ small {
     flex-wrap: wrap;
     margin-bottom: 5vh;
   }
+  .calendar-block {
+    margin-top: 0;
+  }
+  .map-block,
+  .about-block,
+  .calendar-block,
+  .about-block,
+  .helper-block {
+    clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+  #img-helper {
+    height: 120px;
+  }
+
 }
 @media screen and (min-width: 575.98px) and (max-width: 991.98px) {
   .aktuelles {

@@ -1,125 +1,125 @@
 <link rel="stylesheet" href="/styles/landing.css">
 <% layout("layouts/boilerplate") %>
 <!-- Block Aktuelles -->
-<div class="container-fluid">
-  <!-- Path Nav -->
-  <div class="header-bg">
-    <img src="/img/gesamt/Projekt/bg-landing.png" class="img-fluid cover-header">
+<!-- Path Nav -->
+<div class="header-bg">
+  <img src="/img/gesamt/Projekt/bg-landing.png" class="img-fluid cover-header">
+</div>
+<div class="block aktuelles">
+  <h1 class=""><span class="title-line">Aktuelles</span></h1>
+  <div class="text-box-aktuelles">
+    <h3><%= aktuell.title %></h3>
+    <p class="text-aktuelles"><%- aktuell.description %></p>
+    <% if (aktuell.link) {%>
+    <p class="p-link">
+      Weitere Informationen finden Sie
+      <a target="_blank" href="<%= aktuell.link %>" class="card-link">hier</a>
+    </p>
+    <% } %>
   </div>
-  <div class="block aktuelles">
-    <h1 class=""><span class="title-line">Aktuelles</span></h1>
-    <div class="text-box-aktuelles">
-      <h3><%= aktuell.title %></h3>
-      <p class="text-aktuelles"><%- aktuell.description %></p>
-      <% if (aktuell.link) {%>
-        <p class="p-link">
-          Weitere Informationen finden Sie
-          <a target="_blank" href="<%= aktuell.link %>" class="card-link">hier</a>
-        </p>
-      <% } %>
-    </div>
-    <% if(currentUser) {%>
-    <a href="/aktuelles/<%= aktuell._id %>/edit" class="btn btn btn-aktuelles">Eintrag Bearbeiten</a>
-    <a href="/landing-flyers/<%=flyer._id %>/edit" class="btn btn btn-aktuelles">Flyer Bearbeiten</a>
-    <% } %>
-    <% if(flyer) {%>
-      <% flyer.images.forEach((img, i) => { %>
-        <a href="<%=img.attach%>" download class="btn" id="btn-flyer" target="_blank"><%=flyer.title%></a>
-        <% }) %>
-    <% } else { %>
-      <a href="/downloads/flyer-landing.pdf" class="btn" id="btn-flyer" target="_blank">Unser aktueller Flyer</a>
-    <% } %>
-    <div id="book">
-      <h1><span class="title-line">Veröffentlichungen</span></h1>
+</div>
+<div class="btn-landing-download">
+  <% if(currentUser) {%>
+  <a href="/aktuelles/<%= aktuell._id %>/edit" class="btn btn btn-aktuelles">Eintrag Bearbeiten</a>
+  <a href="/landing-flyers/<%=flyer._id %>/edit" class="btn btn btn-aktuelles">Flyer Bearbeiten</a>
+  <% } %>
+  <% if(flyer) {%>
+  <% flyer.images.forEach((img, i) => { %>
+  <a href="<%=img.attach%>" download class="btn" id="btn-flyer" target="_blank"><%=flyer.title%></a>
+  <% }) %>
+  <% } else { %>
+  <a href="/downloads/flyer-landing.pdf" class="btn" id="btn-flyer" target="_blank">Unser aktueller Flyer</a>
+  <% } %>
+</div>
+  <div id="book">
+    <h1><span class="title-line">Veröffentlichungen</span></h1>
     <div id="book-box">
-      <a href="/downloads/2023_Familienportraits_deutsch.pdf" target="_blank"><img class="book-img"src="/img/gesamt/Projekt/Buch.png" alt=""></a>
-      <a href="/downloads/Handreichung_deutsch_2023.pdf" target="_blank"><img class="book-img"src="/img/gesamt/Projekt/Buch2.png" alt=""></a>
+      <a href="/downloads/2023_Familienportraits_deutsch.pdf" target="_blank"><img class="book-img" src="/img/gesamt/Projekt/Buch.png" alt=""></a>
+      <a href="/downloads/Handreichung_deutsch_2023.pdf" target="_blank"><img class="book-img" src="/img/gesamt/Projekt/Buch2.png" alt=""></a>
       <a href="/downloads/MINA_Handreichung_ukrainisch-WEB_verlinkt.pdf" target="_blank"><img class="book-img" src="/img/gesamt/Projekt/Buch-Ukrainisch-1.jpg" alt=""></a>
       <a href="/downloads/MINA-Handreichung_russ_web_verlinkt.pdf" target="_blank"><img class="book-img" src="/img/gesamt/Projekt/Buch-Russisch-1.jpg" alt=""></a>
     </div>
     <div id="book-box">
-      <a href="/downloads/MINA_Familienbroschüre_arabisch.pdf" target="_blank"><img class="book-img"src="/img/gesamt/Projekt/Buch3.png" alt=""></a>
-      <a href="/downloads/MINA_Familienbroschüre_tuerkisch.pdf" target="_blank"><img class="book-img"src="/img/gesamt/Projekt/Buch4.png" alt=""></a>
+      <a href="/downloads/MINA_Familienbroschüre_arabisch.pdf" target="_blank"><img class="book-img" src="/img/gesamt/Projekt/Buch3.png" alt=""></a>
+      <a href="/downloads/MINA_Familienbroschüre_tuerkisch.pdf" target="_blank"><img class="book-img" src="/img/gesamt/Projekt/Buch4.png" alt=""></a>
       <a href="/downloads/MINA_Familienportraits_ukrainisch_web_verlinkt.pdf" target="_blank"><img class="book-img" src="/img/gesamt/Projekt/Buch-Ukrainisch-2.jpg" alt=""></a>
       <a href="/downloads/Familienportraits_MINA_russisch_web_verlinkt.pdf" target="_blank"><img class="book-img" src="/img/gesamt/Projekt/Buch-Russisch-2.jpg" alt=""></a>
     </div>
-    </div>
   </div>
-  <!-- Block Kalender -->
-  <div class="calendar-block">
-    <h1 class="white"><span class="title-line">Kalender</span> </h1>
-    <div class="list-group mb-3">
-      <% for(let calendar of calendars) {%>
-      <% if(!calendar || !calendars) {%>
-        <a href="#" class="list-group-item list-group-item-action" aria-current="true">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">Neueigkeiten</h5>
-            <small>08.02.2021</small>
-          </div>
-          <p class="mb-1">Hier informieren wie Sie in Kürze über unsere Termine</p>
-        </a>
-      <% } else { %>
-        <a href="/calendars/<%= calendar._id %>" class="list-group-item list-group-item-action" aria-current="true">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1"><%= calendar.title %></h5>
-            <div class="date-box">
-            <small><%= calendar.formatedDate %></small>
-            <% if (calendar.datetwo) {%>
-            <small>bis</small>
-            <small><%= calendar.datetwo %></small>
-            <% } %>
-          </div>
-
-          </div>
-          <p class="mb-1"><%- calendar.description %></p>
-          <small class="mehr">weitere Infos</small>
+<!-- Block Kalender -->
+<div class="calendar-block">
+  <h1 class="white"><span class="title-line">Kalender</span> </h1>
+  <div class="list-group mb-3">
+    <% for(let calendar of calendars) {%>
+    <% if(!calendar || !calendars) {%>
+    <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">Neueigkeiten</h5>
+        <small>08.02.2021</small>
+      </div>
+      <p class="mb-1">Hier informieren wie Sie in Kürze über unsere Termine</p>
+    </a>
+    <% } else { %>
+    <a href="/calendars/<%= calendar._id %>" class="list-group-item list-group-item-action" aria-current="true">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1"><%= calendar.title %></h5>
+        <div class="date-box">
+          <small><%= calendar.formatedDate %></small>
+          <% if (calendar.datetwo) {%>
+          <small>bis</small>
+          <small><%= calendar.datetwo %></small>
           <% } %>
-        </a>
-      <% }%>
-    </div>
-    <% if(currentUser) {%>
-    <a href="/calendars/neu" class="btn btn-mina-calendar">Eintrag Hinzufügen</a>
-    <% } %>
-    <a href="/calendars/alle" class="btn btn-mina-calendar" id="calendar-btn">Alle Kalender Einträge</a>
-  </div>
-  <!-- Über Block -->
-  <div class="about-block">
-    <h1 class="white"><span class="title-line line-green"><%= about.title %></span></h1>
-    <div class="text-block"><%- about.description %></div>
-    <h1 class="white"><span class="title-line line-green"><%= about.secondtitle %></span></h1>
-    <div class="text-block" id="last-text"><%- about.seconddescription %></div>
-    <% if(currentUser) {%>
-    <a href="/ueberehrenamt/<%= about._id %>/edit" class="btn btn-mina-about">Eintrag Bearbeiten</a>
-    <% } %>
-  </div>
-  <!-- Map Block -->
-  <div class="map-block">
-    <h1 class="white"><span class="title-line line-blue">MINA Standort</span></h1>
-    <div class="map-box box mt-5 mb-5 pb-5">
-      <img class="img-fluid" id="map" src="/img/gesamt/Logos/Map-final-dark.png" alt="">
-      <div class="text-box">
-        <h3>Berlin</h3>
-        <div id="standort">
-          <p>MINA – Leben in Vielfalt e. V.</p>
-          <p>Projekt Ehrenamt in Vielfalt</p>
-          <p>Friedrichstraße 1
-            <br>
-            10969 Berlin
-          </p>
-          <p></p>
-          <p>030 62 93 40 31</p>
         </div>
+
+      </div>
+      <p class="mb-1"><%- calendar.description %></p>
+      <small class="mehr">weitere Infos</small>
+      <% } %>
+    </a>
+    <% }%>
+  </div>
+  <% if(currentUser) {%>
+  <a href="/calendars/neu" class="btn btn-mina-calendar">Eintrag Hinzufügen</a>
+  <% } %>
+  <a href="/calendars/alle" class="btn btn-mina-calendar" id="calendar-btn">Alle Kalender Einträge</a>
+</div>
+<!-- Über Block -->
+<div class="about-block">
+  <h1 class="white"><span class="title-line line-green"><%= about.title %></span></h1>
+  <div class="text-block"><%- about.description %></div>
+  <h1 class="white"><span class="title-line line-green"><%= about.secondtitle %></span></h1>
+  <div class="text-block" id="last-text"><%- about.seconddescription %></div>
+  <% if(currentUser) {%>
+  <a href="/ueberehrenamt/<%= about._id %>/edit" class="btn btn-mina-about">Eintrag Bearbeiten</a>
+  <% } %>
+</div>
+<!-- Map Block -->
+<div class="map-block">
+  <h1 class="white"><span class="title-line line-blue">MINA Standort</span></h1>
+  <div class="map-box box mt-5 mb-5 pb-5">
+    <img class="img-fluid" id="map" src="/img/gesamt/Logos/Map-final-dark.png" alt="">
+    <div class="text-box">
+      <h3>Berlin</h3>
+      <div id="standort">
+        <p>MINA – Leben in Vielfalt e. V.</p>
+        <p>Projekt Ehrenamt in Vielfalt</p>
+        <p>Friedrichstraße 1
+          <br>
+          10969 Berlin
+        </p>
+        <p></p>
+        <p>030 62 93 40 31</p>
       </div>
     </div>
   </div>
-  <!-- Sponsor Block -->
-  <div class="helper-block">
-    <div class="block helper-box">
-      <!-- <h1 id="title-helper"><span id="span-helper" class="title-line line-pink">Unsere Partner und Kooperationen</span></h1> -->
-      <h1 id="title-helper"><span id="span-helper" class="title-line line-pink">Gefördert durch:</span></h1>
-      <div id="box-helper">
-        <a href="https://www.integrationsbeauftragte.de/ib-de#" target="_blank"><img href="" id="img-helper" src="/img/gesamt/Logos/Logo_Gefoerdert_2.png" alt=""></a>
-      </div>
+</div>
+<!-- Sponsor Block -->
+<div class="helper-block">
+  <div class="block helper-box">
+    <!-- <h1 id="title-helper"><span id="span-helper" class="title-line line-pink">Unsere Partner und Kooperationen</span></h1> -->
+    <h1 id="title-helper"><span id="span-helper" class="title-line line-pink">Gefördert durch:</span></h1>
+    <div id="box-helper">
+      <a href="https://www.integrationsbeauftragte.de/ib-de#" target="_blank"><img href="" id="img-helper" src="/img/gesamt/Logos/Logo_Gefoerdert_2.png" alt=""></a>
     </div>
   </div>
 </div>
