@@ -88,3 +88,20 @@
     font-weight: bold;
     font-size: 26px;;
 }
+@media screen and (min-width: 0) and (max-width: 575.98px) {
+    #intro-block {
+        margin-top: 0;
+    }
+    #accordion-block,
+    #intro-block {
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+    }
+
+    #logo-spotify-box,
+    #first-accordion, 
+    #second-accordion, 
+    #third-accordion, 
+    #fourth-accordion {
+        width: 80%;
+    }
+}
