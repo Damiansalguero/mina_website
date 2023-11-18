@@ -3,3 +3,16 @@
     font-size: 24px;
     font-weight: bold;
     margin: 0;
+}
+
+@media screen and (min-width: 0) and (max-width: 575.98px) {
+    .card-title {
+        font-size: 20px;
+        text-align: center;
+    }
+    #gallery-part-show {
+        width: 100%;
+        margin-left: 0;
+
+    }
+}

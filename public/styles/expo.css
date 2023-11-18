@@ -70,13 +70,26 @@
     height: auto;
     width: 90%;
   }
-  #header-expo {
+  .video-box,
+  #video-box-last {
+    margin-bottom: 5vh;
+  }
+
+  #header-expo,
+  #video-block {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%) !important;
   }
   #header-img {
     padding-top: 0 !important;
     margin-bottom: 10vh !important;
   }
+  #header-expo {
+    padding-bottom: 0;
+  }
+  .gallery2 {
+    justify-content: space-evenly !important;
+    
+}
 }
 
 @media screen and (min-width: 575.98px) and (max-width: 991.98px) {
