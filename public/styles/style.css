@@ -532,6 +532,7 @@ a {
   }
   .gallery2{
     justify-content: space-between;
+    margin-bottom: 5vh;
   }
   .gallery-container {
     width: 90%;
