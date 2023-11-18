@@ -1,28 +1,38 @@
-.prz-btn-box{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 0vh
-  }
+.prz-btn-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0vh
+}
 
 .btn-prz-flyer {
-    background-color: #db2a6f;
-    color: #fff;
-    font-size: 16px;
-    z-index: 2;
-    margin: 2vh 0 1vh 0;
-    text-align: center;
-    font-weight: bold;
-  }
+  background-color: #db2a6f;
+  color: #fff;
+  font-size: 16px;
+  z-index: 2;
+  margin: 2vh 0 1vh 0;
+  text-align: center;
+  font-weight: bold;
+}
 
-  #block-prozess-three{
-    clip-path: polygon(0 0, 100% 4%, 100% 100%, 0 100%);
-    height: auto;
-    padding-top: 9vh;
-    margin-top: -9vh;
-    margin-bottom: 10vh;
-  }
+#block-prozess-three {
+  clip-path: polygon(0 0, 100% 4%, 100% 100%, 0 100%);
+  height: auto;
+  padding-top: 9vh;
+  margin-top: -9vh;
+  margin-bottom: 10vh;
+}
 
-  #timeline-block-three{
-    margin-top: 0;
+#timeline-block-three {
+  margin-top: 0;
+}
+
+@media screen and (min-width: 0) and (max-width: 575.98px) {
+  #block-prozess-three {
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+    margin-bottom: 5vh;
   }
+  .prz-btn-box {
+    margin-bottom: 5vh
+  }
+}
