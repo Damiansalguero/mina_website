@@ -446,10 +446,17 @@ a {
     margin: 3vh 0;
   }
   .aktuelles {
-    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%) !important;
+    
     margin-top: 3vh !important;
     padding-top: 0 !important;
   }
+  .aktuelles ,
+  .contact-box{
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%) !important;
+  }
+  .contact-box h1 {
+    margin: -10vh 0 10vh 0;
+}
   .text-box-aktuelles {
     min-width: 80% !important;
   }
@@ -519,6 +526,16 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  .gallery-img-card {
+    height: 100px;
+  }
+  .gallery2{
+    justify-content: space-between;
+  }
+  .gallery-container {
+    width: 90%;
+    margin: 5vh 0;
   }
 }
 @media screen and (min-width: 575.98px) and (max-width: 991.98px) {

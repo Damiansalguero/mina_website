@@ -363,14 +363,19 @@ h5,
   #img-header-ws{
     padding-top: 0;
   }
-
+  #current-static-flyers {
+    flex-direction: column;
+    align-items: center;
+  }
+  #current-static-flyers a {
+    font-size: 12px;
+  }
   .tabelle-block {
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
     margin-top: 0;
   }
 
   .ws-title {
-    width: 85%;
     font-size: 28px;
   }
 
@@ -381,14 +386,15 @@ h5,
 
   #first-accordion,
   #second-accordion,
-  #third-accordion {
+  #third-accordion,
+  #fourth-accordion {
     width: 85%;
   }
 
   #table-ws {
-    font-size: 12px;
-    width: 90%;
-    margin-left: 2%
+    font-size: 11px;
+    margin-left: 0;
+    width: 100%;
   }
 
   .ws-btn-box-2 {
@@ -398,7 +404,7 @@ h5,
 
   #ws-gallery {
     margin-top: 5vh;
-    clip-path: polygon(0 1%, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
   }
 
   .gallery-img-2 {
