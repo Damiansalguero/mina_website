@@ -445,6 +445,9 @@ a {
     font-size: 28px;
     margin: 3vh 0;
   }
+  .title-line {
+    width: 85%;
+  }
   .aktuelles {
     
     margin-top: 3vh !important;
@@ -537,6 +540,10 @@ a {
   .gallery-container {
     width: 90%;
     margin: 5vh 0;
+  }
+  .gallery-block {
+    clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
+    padding: 5vh 0;  
   }
 }
 @media screen and (min-width: 575.98px) and (max-width: 991.98px) {

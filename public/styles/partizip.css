@@ -359,6 +359,10 @@ video {
   .exposition-block {
     margin-top: -20vh;
   }
+  .exposition-block,
+  #podcast-block {
+    clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
 }
 
 @media screen and (min-width: 575.98px) and (max-width: 991.98px) {
