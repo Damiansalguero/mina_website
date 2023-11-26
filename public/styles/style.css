@@ -458,7 +458,7 @@ a {
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%) !important;
   }
   .contact-box h1 {
-    margin: -10vh 0 10vh 0;
+    margin: -10vh 0 5vh 0;
 }
   .text-box-aktuelles {
     min-width: 80% !important;

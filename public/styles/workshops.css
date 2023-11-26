@@ -381,7 +381,7 @@ h5,
 
   #ws-intro {
     min-width: 80%;
-    margin-bottom: 0;
+    margin-bottom: 5vh;
   }
 
   #first-accordion,
@@ -436,7 +436,6 @@ h5,
 
   h1 {
     font-size: 24px;
-    margin: 5vh 0;
     line-height: 1.75;
   }
 
@@ -444,6 +443,12 @@ h5,
   .btn-mina {
     margin-top: 2vh;
     margin-bottom: 2vh;
+  }
+  #h1-concept {
+    margin-top: 0 !important;
+  }
+  #ws-contact {
+    margin-top: -1vh;
   }
 }
 

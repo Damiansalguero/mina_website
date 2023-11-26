@@ -47,3 +47,35 @@
   flex-direction: column;
   align-items: center;
 }
+
+@media screen and (min-width: 0) and (max-width: 575.98px) { 
+  #diagramm {
+    width: 100%;
+    height: auto;
+  }
+  #diagram-block {
+    padding-bottom: 5vh;
+  }
+
+  #block-blue,
+  #diagram-block {
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+  }
+  #block-blue {
+    padding: 0%;
+    margin-top: -5vh;
+  }
+
+  #h1-concept {
+    margin-top: 0 !important;
+  }
+
+  .img-box {
+    margin-bottom: 0;
+  }
+
+  .ws-dok-text {
+    width: 80%;
+  }
+  
+}
