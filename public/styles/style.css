@@ -534,7 +534,7 @@ a {
     height: 90px;
   }
   .gallery2{
-    justify-content: space-between;
+    justify-content: space-around;
     margin-bottom: 5vh;
   }
   .gallery-container {
@@ -544,6 +544,11 @@ a {
   .gallery-block {
     clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
     padding: 5vh 0;  
+  }
+
+  #gallery-process-show {
+    margin-left: 0 !important;
+    width: 100% !important;
   }
 }
 @media screen and (min-width: 575.98px) and (max-width: 991.98px) {
