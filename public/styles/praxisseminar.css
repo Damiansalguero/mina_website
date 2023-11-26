@@ -26,6 +26,7 @@
 
 #block-konzeption {
   clip-path: polygon(0 5%, 100% 0%, 100% 100%, 0% 100%);
+  background-color: #db2a6f;
 }
 
 #block-konzeption {
@@ -87,6 +88,10 @@
   }
   .praxis-list li {
     margin: 5px 0;
+  }
+
+  #block-konzeption {
+    clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);  
   }
 }
 

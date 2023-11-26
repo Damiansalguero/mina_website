@@ -544,6 +544,7 @@ a {
   .gallery-block {
     clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
     padding: 5vh 0;  
+    margin-top: 0;;
   }
 
   #gallery-process-show {
