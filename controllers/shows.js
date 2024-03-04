@@ -149,10 +149,10 @@ module.exports.renderDatenschutz = (req, res) => {
   res.render("datenschutz");
 };
 
-module.exports.renderBib = async (req, res) => {
-  const bibs = await Bib.find({});
-  res.render("bib", { bibs });
-};
+// module.exports.renderBib = async (req, res) => {
+//   const bibs = await Bib.find({});
+//   res.render("bib", { bibs });
+// };
 
 module.exports.renderKontakt = (req, res) => {
   res.render("kontakt");
