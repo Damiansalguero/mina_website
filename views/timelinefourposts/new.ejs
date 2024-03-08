@@ -1,0 +1,77 @@
+<link rel="stylesheet" href="/styles/forms.css">
+<% layout("layouts/boilerplate") %>
+<div class="row">
+  <h1 class=""><span class="title-line line-pink">Zeitstrahl 2024 Text Hinzufügen</span></h1>
+  <div id="timeline-form-new" class="col-6 offset-3">
+    <form action="/zeitstrahl2024" method="post" novalidate class="validated-form">
+      <div class="mb-3">
+        <label class="form-label label-bold" for="auswahl">Februar bis April 20233 – Auswahlphase</label>
+        <textarea class="form-control" type="text" id="auswahl" name="timelinefour[auswahl]"></textarea>
+        <script>
+                CKEDITOR.replace( 'auswahl' );
+            </script>
+      </div>
+      <div class="mb-3">
+        <label class="form-label label-bold" for="auftakt">August 2024 – Auftakt</label>
+        <textarea class="form-control" type="text" id="auftakt" name="timelinefour[auftakt]"></textarea>
+        <script>
+                CKEDITOR.replace( 'auftakt' );
+            </script>
+      </div>
+      <div class="mb-3">
+        <label class="form-label label-bold" for="grundlage">bis Dezember 2024 – Inhaltliche Grundlagen</label>
+        <textarea class="form-control" type="text" id="grundlage" name="timelinefour[grundlage]"></textarea>
+        <script>
+                CKEDITOR.replace( 'grundlage' );
+            </script>
+      </div>
+      <div class="mb-3">
+        <label class="form-label label-bold" for="bedarf">Februar bis April 2024 – Bedarfsanalyse</label>
+        <textarea class="form-control" type="text" id="bedarf" name="timelinefour[bedarf]"></textarea>
+        <script>
+                CKEDITOR.replace( 'bedarf' );
+            </script>
+      </div>
+      <div class="mb-3">
+        <label class="form-label label-bold" for="idee">Kreativphase – Ideen- und Lösungsentwicklung</label>
+        <textarea class="form-control" type="text" id="idee" name="timelinefour[idee]"></textarea>
+        <script>
+                CKEDITOR.replace( 'idee' );
+            </script>
+      </div>
+      <div class="mb-3">
+        <label class="form-label label-bold" for="konzipierung">Gestaltungsphase – Konzipierung und Planung der Maßnahmen</label>
+        <textarea class="form-control" type="text" id="konzipierung" name="timelinefour[konzipierung]"></textarea>
+        <script>
+                CKEDITOR.replace( 'konzipierung' );
+            </script>
+      </div>
+      <div class="mb-3">
+        <label class="form-label label-bold" for="evaluation">Test- und Transferphase – Durchführung und Evaluation der Maßnahmen</label>
+        <textarea class="form-control" type="text" id="evaluation" name="timelinefour[evaluation]"></textarea>
+        <script>
+                CKEDITOR.replace( 'evaluation' );
+            </script>
+      </div>
+      <div class="mb-3">
+        <label class="form-label label-bold" for="vernetzung">Oktober 2024 – Vernetzungstreffen</label>
+        <textarea class="form-control" type="text" id="vernetzung" name="timelinefour[vernetzung]"></textarea>
+        <script>
+                CKEDITOR.replace( 'vernetzung' );
+            </script>
+      </div>
+      <div class="mb-3">
+        <label class="form-label label-bold" for="abschluss">November 2024 – Abschluss</label>
+        <textarea class="form-control" type="text" id="abschluss" name="timelinefour[abschluss]"></textarea>
+        <script>
+                CKEDITOR.replace( 'abschluss' );
+            </script>
+      </div>
+      <div class="mb-3">
+        <button class="btn btn-success btn-mina">Speichern</button>
+      </div>
+    </form>
+    <a class="btn btn-aktuelles-blue" href="/prozess-begleitung">Zurück</a>
+  </div>
+</div>
+<!--  -->

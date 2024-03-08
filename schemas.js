@@ -131,6 +131,20 @@ module.exports.timelinethreeSchema = Joi.object({
   }).required(),
 });
 
+module.exports.timelinefourSchema = Joi.object({
+  timelinefour: Joi.object({
+    auswahl: Joi.string().optional().allow(""),
+    auftakt: Joi.string().optional().allow(""),
+    grundlage: Joi.string().optional().allow(""),
+    bedarf: Joi.string().optional().allow(""),
+    idee: Joi.string().optional().allow(""),
+    konzipierung: Joi.string().optional().allow(""),
+    evaluation: Joi.string().optional().allow(""),
+    vernetzung: Joi.string().optional().allow(""),
+    abschluss: Joi.string().optional().allow("")
+  }).required(),
+});
+
 module.exports.prozessSchema = Joi.object({
   prozess: Joi.object({
     title: Joi.string().required(),

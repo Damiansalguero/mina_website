@@ -17,6 +17,7 @@ const {
   timelineSchema,
   timelinetwoSchema,
   timelinethreeSchema,
+  timelinefourSchema,
   prozessTextSchema,
   processGallerySchema,
   processThreeSchema,
@@ -144,7 +145,7 @@ module.exports.validateTimelinetwo = (req, res, next) => {
   }
 };
 
-//* TIMELINETHREE //
+//* TIMELINETHREE 2023//
 module.exports.validateTimelinethree = (req, res, next) => {
   const { error } = timelinethreeSchema.validate(req.body);
   if (error) {
@@ -154,6 +155,18 @@ module.exports.validateTimelinethree = (req, res, next) => {
     next();
   }
 };
+
+//* TIMELINETHREE 2024//
+module.exports.validateTimelinefour = (req, res, next) => {
+  const { error } = timelinefourSchema.validate(req.body);
+  if (error) {
+    const msg = error.details.map((el) => el.message).join(",");
+    throw new ExpressError(msg, 400);
+  } else {
+    next();
+  }
+};
+
 
 //* Flyer //
 module.exports.validateLandingFlyer = (req, res, next) => {

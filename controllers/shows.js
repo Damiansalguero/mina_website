@@ -24,6 +24,7 @@ const Podcastaccordion = require("../models/podcastaccordion");
 const Timeline = require("../models/timeline");
 const Timelinetwo = require("../models/timelinetwo");
 const Timelinethree = require("../models/timelinethree.js");
+const Timelinefour = require("../models/timelinefour.js");
 const Flyer = require("../models/landingflyer");
 const Ukrtext = require("../models/ukrtext")
 const Bib = require("../models/bib");
@@ -120,9 +121,8 @@ module.exports.renderProzessThree = async (req, res) => {
   const processthreeflyer = await Prozessthreeflyer.findOne({});
   const przgthrees = await Processthreegallery.find({});
   const timelinethree = await Timelinethree.findOne({});
-  // const bglgs = await Begleitungsgallery.find({});
-
-  res.render("prozessthree", {przthree,  processthreeflyer, przgthrees, timelinethree});
+  const timelinefour = await Timelinefour.findOne({});
+  res.render("prozessthree", {przthree,  processthreeflyer, przgthrees, timelinethree, timelinefour});
 };
 
 module.exports.renderUkraine = async (req, res) => {

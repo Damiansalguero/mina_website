@@ -28,8 +28,8 @@
             <a  href="/2020-2021-prozess-begleitung" class="btn btn-mina btn-prz-text">Rückblick Prozessbegleitung <br> 2020-2021</a>
       </div>
 
-      <!---------- ZEITSTRAHL------------ -->
-      <div class="timeline-block" id="timeline-block-three">
+      <!---------- ZEITSTRAHL 2023------------ -->
+      <!-- <div class="timeline-block" id="timeline-block-three">
         <h1 class="white"><span class="title-line line-green">Über die Prozessbegleitung</span></h1>
         <div class="container">
           <div id="timeline">
@@ -85,8 +85,93 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
+    <!---------- ZEITSTRAHL 2023------------ -->
+    
 
+    <!---------- ZEITSTRAHL 2024------------ -->
+    <div class="timeline-block" id="timeline-block-three">
+      <h1 class="white"><span class="title-line line-green">Über die Prozessbegleitung</span></h1>
+      <div class="container">
+        <div id="timeline">
+          <div class="timeline-item">
+            <div class="timeline-icon">
+            </div>
+            <div class="timeline-content">
+              <h2>Februar bis April 2023</h2>
+              
+              <a href="#" data-bs-toggle="modal" data-bs-target="#timeline-modal-1">Auswahlphase <i class="fa-solid fa-circle-info"></i></a>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-icon">
+            </div>
+            <div class="timeline-content right">
+              <h2>August 2023</h2>
+              <a href="#" data-bs-toggle="modal" data-bs-target="#timeline-modal-2">Auftakt <i class="fa-solid fa-circle-info"></i></a>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-icon">
+            </div>
+            <div class="timeline-content">
+              <h2>Bis Dezember 2023</h2>
+              <a href="#" data-bs-toggle="modal" data-bs-target="#timeline-modal-3">Inhaltliche Grundlagen <i class="fa-solid fa-circle-info"></i></a>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-icon">
+            </div>
+            <div class="timeline-content right">
+              <h2>Februar bis April 2024</h2>
+              <a href="#" data-bs-toggle="modal" data-bs-target="#timeline-modal-4">Bedarfsanalyse <i class="fa-solid fa-circle-info"></i></a>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-icon">
+            </div>
+            <div class="timeline-content">
+              <h2>Kreativphase</h2>
+              <a href="#" data-bs-toggle="modal" data-bs-target="#timeline-modal-5">Ideen- und Lösungsentwicklung <i class="fa-solid fa-circle-info"></i></a>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-icon">
+            </div>
+            <div class="timeline-content right">
+              <h2>Gestaltungsphase</h2>
+              <a href="#" data-bs-toggle="modal" data-bs-target="#timeline-modal-6">Konzipierung und Planung der Maßnahmen <i class="fa-solid fa-circle-info"></i></a>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-icon">
+            </div>
+            <div class="timeline-content">
+              <h2>Test- und Transferphase</h2>
+              <a href="#" data-bs-toggle="modal" data-bs-target="#timeline-modal-7">Durchführung und Evaluation der Maßnahmen <i class="fa-solid fa-circle-info"></i></a>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-icon">
+            </div>
+            <div class="timeline-content right">
+              <h2>Oktober 2024</h2>
+              <a href="#" data-bs-toggle="modal" data-bs-target="#timeline-modal-8">Vernetzungstreffen <i class="fa-solid fa-circle-info"></i></a>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-icon">
+            </div>
+            <div class="timeline-content">
+              <h2>November 2024</h2>
+              <a href="#" data-bs-toggle="modal" data-bs-target="#timeline-modal-9">Abschluss <i class="fa-solid fa-circle-info"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!---------- ZEITSTRAHL 2024------------ -->
     <!-- IMAGE BLOCK -->
     <% if(currentUser) {%>
     <% if(przgthrees) {%>
@@ -138,15 +223,15 @@
   <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable ">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Bewerbungsphase</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Auswahlphase</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <%- timelinethree.auswahl %>
+        <%- timelinefour.auswahl %>
       </div>
       <div class="modal-footer">
           <% if(currentUser) {%>
-          <a href="/zeitstrahl2023/<%=timelinethree._id%>/edit" class="btn btn-aktuelles-blue">Texte Bearbeiten</a>
+          <a href="/zeitstrahl2024/<%=timelinefour._id%>/edit" class="btn btn-aktuelles-blue">Texte Bearbeiten</a>
           <% } %>
         <button type="button" class="btn btn-secondary btn-mina" data-bs-dismiss="modal">Schließen</button>
       </div>
@@ -159,15 +244,15 @@
   <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable ">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Kennenlernphase</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Auftakt</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <%- timelinethree.kennenlern %>
+        <%- timelinefour.auftakt %>
       </div>
       <div class="modal-footer">
           <% if(currentUser) {%>
-          <a href="/zeitstrahl2023/<%=timelinethree._id%>/edit" class="btn btn-aktuelles-blue">Texte Bearbeiten</a>
+          <a href="/zeitstrahl2024/<%=timelinefour._id%>/edit" class="btn btn-aktuelles-blue">Texte Bearbeiten</a>
           <% } %>
         <button type="button" class="btn btn-secondary btn-mina" data-bs-dismiss="modal">Schließen</button>
       </div>
@@ -180,15 +265,15 @@
   <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable ">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Bedarfsanalyse</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Inhaltliche Grundlagen</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <%- timelinethree.bedarf %>
+        <%- timelinefour.grundlage %>
       </div>
       <div class="modal-footer">
           <% if(currentUser) {%>
-          <a href="/zeitstrahl2023/<%=timelinethree._id%>/edit" class="btn btn-aktuelles-blue">Texte Bearbeiten</a>
+          <a href="/zeitstrahl2024/<%=timelinefour._id%>/edit" class="btn btn-aktuelles-blue">Texte Bearbeiten</a>
           <% } %>
         <button type="button" class="btn btn-secondary btn-mina" data-bs-dismiss="modal">Schließen</button>
       </div>
@@ -201,15 +286,15 @@
   <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable ">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Auswertung</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Bedarfsanalyse</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <%- timelinethree.auswertung %>
+        <%- timelinefour.bedarf %>
       </div>
       <div class="modal-footer">
           <% if(currentUser) {%>
-          <a href="/zeitstrahl2023/<%=timelinethree._id%>/edit" class="btn btn-aktuelles-blue">Texte Bearbeiten</a>
+          <a href="/zeitstrahl2024/<%=timelinefour._id%>/edit" class="btn btn-aktuelles-blue">Texte Bearbeiten</a>
           <% } %>
         <button type="button" class="btn btn-secondary btn-mina" data-bs-dismiss="modal">Schließen</button>
       </div>
@@ -222,15 +307,15 @@
   <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable ">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Ideenfindung</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Ideen- und Lösungsentwicklung</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <%- timelinethree.idee %>
+        <%- timelinefour.idee %>
       </div>
       <div class="modal-footer">
           <% if(currentUser) {%>
-          <a href="/zeitstrahl2023/<%=timelinethree._id%>/edit" class="btn btn-aktuelles-blue">Texte Bearbeiten</a>
+          <a href="/zeitstrahl2024/<%=timelinefour._id%>/edit" class="btn btn-aktuelles-blue">Texte Bearbeiten</a>
           <% } %>
         <button type="button" class="btn btn-secondary btn-mina" data-bs-dismiss="modal">Schließen</button>
       </div>
@@ -243,15 +328,57 @@
   <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable ">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Evaluation</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Konzipierung und Planung der Maßnahmen</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <%- timelinethree.evaluation %>
+        <%- timelinefour.konzipierung %>
       </div>
       <div class="modal-footer">
           <% if(currentUser) {%>
-          <a href="/zeitstrahl2023/<%=timelinethree._id%>/edit" class="btn btn-aktuelles-blue">Texte Bearbeiten</a>
+          <a href="/zeitstrahl2024/<%=timelinefour._id%>/edit" class="btn btn-aktuelles-blue">Texte Bearbeiten</a>
+          <% } %>
+        <button type="button" class="btn btn-secondary btn-mina" data-bs-dismiss="modal">Schließen</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL 7 Timeline -->
+<div class="modal fade" id="timeline-modal-7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Durchführung und Evaluation der Maßnahmen</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <%- timelinefour.evaluation %>
+      </div>
+      <div class="modal-footer">
+          <% if(currentUser) {%>
+          <a href="/zeitstrahl2024/<%=timelinefour._id%>/edit" class="btn btn-aktuelles-blue">Texte Bearbeiten</a>
+          <% } %>
+        <button type="button" class="btn btn-secondary btn-mina" data-bs-dismiss="modal">Schließen</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL 8 Timeline -->
+<div class="modal fade" id="timeline-modal-8" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Vernetzungstreffen</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <%- timelinefour.vernetzung %>
+      </div>
+      <div class="modal-footer">
+          <% if(currentUser) {%>
+          <a href="/zeitstrahl2024/<%=timelinefour._id%>/edit" class="btn btn-aktuelles-blue">Texte Bearbeiten</a>
           <% } %>
         <button type="button" class="btn btn-secondary btn-mina" data-bs-dismiss="modal">Schließen</button>
       </div>
@@ -259,3 +386,23 @@
   </div>
 </div>
   
+<!-- MODAL 9 Timeline -->
+<div class="modal fade" id="timeline-modal-9" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Abschluss</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <%- timelinefour.abschluss %>
+      </div>
+      <div class="modal-footer">
+          <% if(currentUser) {%>
+          <a href="/zeitstrahl2024/<%=timelinefour._id%>/edit" class="btn btn-aktuelles-blue">Texte Bearbeiten</a>
+          <% } %>
+        <button type="button" class="btn btn-secondary btn-mina" data-bs-dismiss="modal">Schließen</button>
+      </div>
+    </div>
+  </div>
+</div>
